@@ -35,7 +35,7 @@ function Header() {
               src="/images/brewcode-logo.png"
               alt="Brewcode logo"
               width={30}
-              height={25}
+              height={30}
               className="logo"
             />
           </Link>

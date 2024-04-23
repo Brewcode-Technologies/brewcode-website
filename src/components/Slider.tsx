@@ -22,10 +22,12 @@ function SamplePrevArrow({ onClick }) {
 
 function SliderMain() {
   const images = [
-    "images/img1.jpg",
-    "images/img2.jpg",
-    "images/img3.jpg",
-    "images/img4.jpg",
+    "images/slider-img-1.png",
+    "images/slider-img-2.png",
+    "images/slider-img-3.png",
+    // "images/slider-img-4.png",
+    "images/slider-img-5.png",
+    "images/slider-img-6.png",
   ];
   const [slideIndex, setSlideIndex] = useState(0);
 
