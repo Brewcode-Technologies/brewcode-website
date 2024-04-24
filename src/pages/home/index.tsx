@@ -139,7 +139,9 @@ const Home: React.FC = () => {
           </div>
         </div>
       </div>
-      <section className="container-fluid who-we-are-section pb-5">
+
+      {/* who we are section */}
+      <section className="container-fluid who-we-are-section  pb-5">
         <div className="container">
           <div className="row">
             <div className="col-12 text-center">
@@ -295,6 +297,7 @@ const Home: React.FC = () => {
         </div>
       </section>
       {/* Scale Innovatively */}
+
       <section className="scale-innovatively-bg py-5">
         <div className="container my-4">
           <div className="col-12">
@@ -348,7 +351,9 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
+
       {/* Insights styles ------------------start */}
+
       <section className="insights-bg py-5">
         <div className="container">
           <div className="row">
@@ -401,7 +406,9 @@ const Home: React.FC = () => {
           </div>
         </div>
       </section>
+
       {/* Our Clients styles------------------start */}
+
       <section className="our-clients-bg">
         <div className="container py-5">
           <div className="row">
@@ -409,13 +416,135 @@ const Home: React.FC = () => {
               <h1 className="section-heading industries-we-serve-heading">
                 Our Clients
               </h1>
-              <p className="pleasure-to-work-with-text mb-5 mt-4">
+              <p className="pleasure-to-work-with-text mb-5 mt-5">
                 Pleasure to Work With
               </p>
             </div>
-          </div>
-          <div className="row">
-            <div className="col-12 col-md-4 col-lg-2"></div>
+            <div className="col-12 col-md-6 col-lg-6">
+              {/* Main container for the first set of logos */}
+              <div className="row mb-4 company-logo-container-main">
+                <div className="col-lg-4 company-logo-container">
+                  <Image
+                    src="/images/st-jude.svg"
+                    alt="St. Jude logo"
+                    className="company-logo mb-4"
+                    width={30}
+                    height={30}
+                  />
+                </div>
+                <div className="col-lg-4 company-logo-container">
+                  <Image
+                    src="/images/agilo.svg"
+                    alt="Agilo logo"
+                    className="company-logo mb-4"
+                    width={30}
+                    height={30}
+                  />
+                </div>
+                <div className="col-lg-4 company-logo-container">
+                  <Image
+                    src="/images/dhanika.svg"
+                    alt="Dhanika logo"
+                    className="company-logo mb-4"
+                    width={30}
+                    height={30}
+                  />
+                </div>
+              </div>
+
+              {/* Second set of logos */}
+              <div className="row mb-4 company-logo-container-main">
+                <div className="col-lg-4 company-logo-container">
+                  <Image
+                    src="/images/soctor.svg"
+                    alt="Soctor logo"
+                    className="company-logo mb-4"
+                    width={30}
+                    height={30}
+                  />
+                </div>
+                <div className="col-lg-4 company-logo-container">
+                  <Image
+                    src="/images/Oilvebay.svg"
+                    alt="CorpEq logo"
+                    className=" mb-4 Oilvebay-logo company-logo"
+                    width={30}
+                    height={30}
+                  />
+                </div>
+                <div className="col-lg-4 company-logo-container">
+                  <Image
+                    src="/images/corpeq.svg"
+                    alt="CorpEq logo"
+                    className="company-logo corpeq-logo mb-4"
+                    width={30}
+                    height={30}
+                  />
+                </div>
+              </div>
+
+              {/* Third set of logos */}
+              <div className="row mb-5 company-logo-container-main">
+                <div className="col-lg-4 company-logo-container">
+                  <Image
+                    src="/images/enpersonal.png"
+                    alt="enpersonal logo"
+                    className=" enpersonal-logo mb-4"
+                    width={30}
+                    height={30}
+                  />
+                </div>
+                <div className="col-lg-4 company-logo-container">
+                  <Image
+                    src="/images/ojas.png"
+                    alt="Ojas logo"
+                    className=" ojas-logo mb-4"
+                    width={30}
+                    height={30}
+                  />
+                </div>
+                <div className="col-lg-4 company-logo-container">
+                  <Image
+                    src="/images/humancloud.png"
+                    alt="Humancloud logo"
+                    className=" humancloud-logo mb-4"
+                    width={30}
+                    height={30}
+                  />
+                </div>
+              </div>
+
+              {/* Fourth set of logos */}
+              <div className="row mb-4 company-logo-container-main">
+                <div className="col-lg-4 company-logo-container">
+                  <Image
+                    src="/images/sarci.svg"
+                    alt="SARCI logo"
+                    className=" sarci-logo"
+                    width={30}
+                    height={30}
+                  />
+                </div>
+                <div className="col-lg-4 company-logo-container">
+                  <Image
+                    src="/images/rh.svg"
+                    alt="RH logo"
+                    className=" rh-logo"
+                    width={30}
+                    height={30}
+                  />
+                </div>
+                <div className="col-lg-4 company-logo-container">
+                  <Image
+                    src="/images/dhanika.svg"
+                    alt="Dhanika logo"
+                    className="company-logo"
+                    width={30}
+                    height={30}
+                  />
+                </div>
+              </div>
+            </div>
           </div>
         </div>
       </section>

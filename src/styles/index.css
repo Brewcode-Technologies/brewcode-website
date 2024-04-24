@@ -80,17 +80,11 @@ input {
 }
 
 .logo {
-  font-size: 24px;
-  font-weight: bold;
-  color: white;
-  width: 40px;
-  height: auto;
-  text-decoration: none;
-  aspect-ratio: 1/2;
+  width: 30px;
+  height: 30px;
 }
-
-.logo {
-  aspect-ratio: 16 / 9;
+.logo-container {
+  width: 50px;
 }
 
 .navbar-nav .nav-link {
@@ -184,19 +178,17 @@ footer {
   }
 }
 
-.logo {
-  aspect-ratio: 16 / 9;
-}
 .hero-image {
   width: 100%;
-  max-height: 700px;
-  height: auto;
+  height: 100vh;
+  min-height: 120vh;
   background-color: #000;
   background-image: url("../../public/images/Hero-section.png");
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
-  padding: 112px 0;
+  padding: 100px 0px;
+  scroll-snap-align: start;
 }
 
 /* Responsive styles */
@@ -315,6 +307,7 @@ footer {
   height: 30px;
   cursor: pointer;
   border: 1.4px solid #ffffff;
+  border-radius: 15px;
 }
 
 .dropdown-mega .dropdown-menu {
@@ -346,8 +339,7 @@ footer {
 
 .who-we-are-section {
   width: 100%;
-  height: auto;
-
+  min-height: 120vh;
   background-color: #000;
   background-image: url("../../public/images/who-we-are-bg.png");
   background-repeat: no-repeat;
@@ -463,7 +455,8 @@ footer {
 
 .industries-we-serve-bg {
   width: 100%;
-  height: auto;
+  height: 100vh;
+  min-height: 120vh;
   background-color: #000;
   background-image: url("../../public/images/industries-we-serve.png");
   background-repeat: no-repeat;
@@ -477,11 +470,14 @@ footer {
   width: 100%;
   max-width: 1300px;
   margin: 0 auto;
+  overflow: hidden;
+  position: relative;
 }
 
 .slider {
   width: 100%;
-  height: 400px;
+  height: auto;
+  padding: 50px 0px;
 }
 .header {
   margin: 50px auto;
@@ -492,11 +488,10 @@ footer {
 .slide,
 .slide img {
   width: 100%;
-  height: 350px;
+  height: 60vh;
+  display: block;
 }
-img {
-  border-radius: 20px !important;
-}
+
 .slide {
   /* opacity: .5; */
   transform: scale(0.7);
@@ -511,16 +506,20 @@ img {
 }
 .arrow {
   font-size: 30px;
-  padding: 5px 15px;
-  border-radius: 10px;
+  text-align: center;
+  border-radius: 25px;
   box-shadow: 0 0 5px 3px #ccc;
   display: flex;
   width: 50px;
+  height: 50px;
   position: absolute;
-  top: 200px;
+  padding-top: 10px;
+  padding-left: 10px;
+  top: 180px;
   z-index: 100;
   color: #ffffff;
   cursor: pointer;
+  background-color: #000;
 }
 .arrow-right {
   right: 20px;
@@ -534,6 +533,7 @@ img {
   height: 10px;
   border-radius: 50%;
   box-shadow: 0 0 5px 3px #ccc;
+  background-color: #000;
 }
 .dot-active {
   background: #ffffff;
@@ -544,13 +544,19 @@ img {
     font-size: 7vw;
   }
 }
+
+.image-slide {
+  border-radius: 20px;
+}
 /* Scale Innovatively styles ------start */
 .scale-innovatively-bg {
   width: 100%;
-  height: 100%;
+  height: auto;
+  min-height: 100vh;
   background: linear-gradient(to right top, #000 80%, #8784843f 100%, #000 10%);
   overflow: hidden;
   background-position: center;
+  scroll-snap-align: start;
 }
 .Scale-Innovatively-sub-heading {
   color: #ffffff;
@@ -595,7 +601,8 @@ img {
 /* insights styles -------------start */
 .insights-bg {
   width: 100%;
-  height: 100%;
+  min-height: 100vh;
+  height: auto;
   background-color: #000;
   background-image: url("../../public/images/insight-bg.png");
   background-repeat: no-repeat;
@@ -632,12 +639,56 @@ img {
 /* our-clients styles -------------------start */
 .our-clients-bg {
   background-color: #000000;
-  height: 100%;
+  width: 100%;
+  /* min-height: 100vh; */
+  height: auto;
 }
 
 .pleasure-to-work-with-text {
-  color: #333;
-  font-weight: 600;
+  color: #bdb8b8;
+  font-weight: 500;
   font-size: 24px;
   font-family: "Inter";
+}
+
+.company-logo-container {
+  display: flex;
+  justify-content: center;
+}
+
+.company-logo {
+  width: 120px;
+  height: 120px;
+  aspect-ratio: 1 / 1;
+}
+
+.corpeq-logo {
+  width: 120px;
+  height: 80px;
+  aspect-ratio: 3 / 2;
+}
+
+.Oilvebay-logo {
+  width: 120px;
+  height: 40px;
+  aspect-ratio: 3/ 1;
+  background-color: #ffffff;
+  margin-top: 40px;
+}
+
+.enpersonal-logo,
+.ojas-logo,
+.humancloud-logo {
+  width: 120px;
+  height: 40px;
+  margin-bottom: 40px;
+  aspect-ratio: 3 / 1;
+}
+
+.sarci-logo,
+.rh-logo {
+  width: 100px;
+  height: 80px;
+  margin-bottom: 40px;
+  aspect-ratio: 5 / 4;
 }

@@ -26,10 +26,10 @@ function Header() {
       expand="lg"
       // bg="dark"
       // variant="dark"
-      className="navbar navbar-expand-lg sticky-top navbar-custom"
+      className="navbar navbar-expand-lg fixed-top navbar-custom"
     >
       <Container>
-        <Navbar.Brand>
+        <Navbar.Brand className="logo-container">
           <Link href="/">
             <Image
               src="/images/brewcode-logo.png"

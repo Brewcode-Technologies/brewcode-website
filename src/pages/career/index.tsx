@@ -4,7 +4,7 @@ import React from "react";
 const Career = () => {
   return (
     <Layout>
-      <h1 className="text-center">Career</h1>
+      <h1 className="text-center mt-5">Career</h1>
     </Layout>
   );
 };

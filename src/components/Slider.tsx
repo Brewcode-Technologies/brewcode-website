@@ -45,7 +45,7 @@ function SliderMain() {
     prevArrow: <SamplePrevArrow />,
     appendDots: (dots) => (
       <div>
-        <ul style={{ margin: "0px" }}> {dots} </ul>
+        <ul style={{ margin: "0" }}> {dots} </ul>
       </div>
     ),
     customPaging: (current, next) => (
@@ -75,10 +75,9 @@ function SliderMain() {
               key={index}
             >
               <img
-                style={{ borderRadius: "30px !important" }}
                 src={img}
                 alt={`Slide ${index + 1}`}
-                className="image"
+                className="image-slide"
               />
             </div>
           ))}
