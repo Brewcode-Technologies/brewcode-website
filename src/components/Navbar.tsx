@@ -4,6 +4,7 @@ import { Navbar, Nav, Container, Dropdown } from "react-bootstrap";
 import Link from "next/link";
 import { BiChevronUp, BiChevronDown } from "react-icons/bi";
 import Image from "next/image";
+import ImageIcon from "./ImageIcon";
 
 function Header() {
   const router = useRouter();
@@ -30,12 +31,10 @@ function Header() {
     >
       <Container>
         <Navbar.Brand className="logo-container">
-          <Link href="/">
-            <Image
+          <Link href="/" passHref>
+            <ImageIcon
               src="/images/brewcode-logo.png"
               alt="Brewcode logo"
-              width={30}
-              height={30}
               className="logo"
             />
           </Link>
@@ -47,7 +46,12 @@ function Header() {
         <Navbar.Collapse id="navbarSupportedContent">
           <Nav className="mx-auto mb-2 mb-lg-0">
             <li className="nav-item" id="nav-text">
-              <Link className="nav-link active" aria-current="page" href="/">
+              <Link
+                className="nav-link active"
+                aria-current="page"
+                href="/"
+                passHref
+              >
                 Home
               </Link>
             </li>
@@ -58,6 +62,7 @@ function Header() {
                 onClick={handleDropdownToggle}
                 data-bs-toggle="dropdown"
                 data-bs-auto-close="outside"
+                passHref
               >
                 What We Do
                 {isDropdownOpen ? (
@@ -178,6 +183,7 @@ function Header() {
                 className="nav-link active"
                 aria-current="page"
                 href="/whoweare"
+                passHref
               >
                 Who We Are
               </Link>
@@ -187,6 +193,7 @@ function Header() {
                 className="nav-link active"
                 aria-current="page"
                 href="/insights"
+                passHref
               >
                 Insights
               </Link>
@@ -196,6 +203,7 @@ function Header() {
                 className="nav-link active"
                 aria-current="page"
                 href="/career"
+                passHref
               >
                 Career
               </Link>

@@ -1,3 +1,5 @@
+import ImageIcon from "@component/components/ImageIcon ";
+import Header from "@component/components/Navbar ";
 import SliderMain from "@component/components/Slider ";
 import {
   decrement,
@@ -7,10 +9,17 @@ import {
 } from "@component/reducers/counterSlice ";
 import Image from "next/image";
 import Link from "next/link";
-import React from "react";
+import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 const Home: React.FC = () => {
+  function handleClickButtom() {
+    window.scrollTo({
+      top: document.body.scrollHeight,
+      behavior: "smooth",
+    });
+  }
+
   // const dispatch = useDispatch();
   // const count: number = useSelector(selectCount);
 
@@ -109,32 +118,29 @@ const Home: React.FC = () => {
 
           <div className="row">
             <div className="col-12 social-media-icons-main d-flex flex-column justify-content-between">
-              <Image
-                alt="instagram-icon"
+              <ImageIcon
                 src="/images/icons/instagram.png"
-                width={30}
-                height={30}
-                className="mb-2 instagram-icon"
+                alt="instagram-icon"
+                className="instagram-icon"
               />
-              <Image
-                alt="Linkedin-icon"
+              <ImageIcon
                 src="/images/icons/Linkedin.png"
-                width={30}
-                height={30}
-                className="mb-2 instagram-icon"
+                alt="Linkedin-icon"
+                className="instagram-icon"
               />
-              <Image
-                alt="facebook-icon"
+              <ImageIcon
                 src="/images/icons/facebook.png"
-                width={30}
-                height={30}
-                className="mb-1 instagram-icon"
+                alt="facebook-icon"
+                className="instagram-icon"
               />
             </div>
           </div>
           <div className="row col-12 mb-5">
             <div className="down-arrow-icon-main d-flex justify-content-center mb-4">
-              <i className="bi bi-arrow-down-short"></i>
+              <i
+                className="bi bi-arrow-down-short"
+                onClick={() => handleClickButtom()}
+              ></i>
             </div>
           </div>
         </div>
@@ -424,30 +430,24 @@ const Home: React.FC = () => {
               {/* Main container for the first set of logos */}
               <div className="row mb-4 company-logo-container-main">
                 <div className="col-lg-4 company-logo-container">
-                  <Image
+                  <ImageIcon
                     src="/images/st-jude.svg"
                     alt="St. Jude logo"
                     className="company-logo mb-4"
-                    width={30}
-                    height={30}
                   />
                 </div>
                 <div className="col-lg-4 company-logo-container">
-                  <Image
+                  <ImageIcon
                     src="/images/agilo.svg"
                     alt="Agilo logo"
                     className="company-logo mb-4"
-                    width={30}
-                    height={30}
                   />
                 </div>
                 <div className="col-lg-4 company-logo-container">
-                  <Image
+                  <ImageIcon
                     src="/images/dhanika.svg"
                     alt="Dhanika logo"
                     className="company-logo mb-4"
-                    width={30}
-                    height={30}
                   />
                 </div>
               </div>
@@ -455,30 +455,24 @@ const Home: React.FC = () => {
               {/* Second set of logos */}
               <div className="row mb-4 company-logo-container-main">
                 <div className="col-lg-4 company-logo-container">
-                  <Image
+                  <ImageIcon
                     src="/images/soctor.svg"
                     alt="Soctor logo"
                     className="company-logo mb-4"
-                    width={30}
-                    height={30}
                   />
                 </div>
                 <div className="col-lg-4 company-logo-container">
-                  <Image
+                  <ImageIcon
                     src="/images/Oilvebay.svg"
                     alt="CorpEq logo"
                     className=" mb-4 Oilvebay-logo company-logo"
-                    width={30}
-                    height={30}
                   />
                 </div>
                 <div className="col-lg-4 company-logo-container">
-                  <Image
+                  <ImageIcon
                     src="/images/corpeq.svg"
                     alt="CorpEq logo"
                     className="company-logo corpeq-logo mb-4"
-                    width={30}
-                    height={30}
                   />
                 </div>
               </div>
@@ -486,30 +480,24 @@ const Home: React.FC = () => {
               {/* Third set of logos */}
               <div className="row mb-5 company-logo-container-main">
                 <div className="col-lg-4 company-logo-container">
-                  <Image
+                  <ImageIcon
                     src="/images/enpersonal.png"
                     alt="enpersonal logo"
                     className=" enpersonal-logo mb-4"
-                    width={30}
-                    height={30}
                   />
                 </div>
                 <div className="col-lg-4 company-logo-container">
-                  <Image
+                  <ImageIcon
                     src="/images/ojas.png"
                     alt="Ojas logo"
                     className=" ojas-logo mb-4"
-                    width={30}
-                    height={30}
                   />
                 </div>
                 <div className="col-lg-4 company-logo-container">
-                  <Image
+                  <ImageIcon
                     src="/images/humancloud.png"
                     alt="Humancloud logo"
                     className=" humancloud-logo mb-4"
-                    width={30}
-                    height={30}
                   />
                 </div>
               </div>
@@ -517,30 +505,26 @@ const Home: React.FC = () => {
               {/* Fourth set of logos */}
               <div className="row mb-4 company-logo-container-main">
                 <div className="col-lg-4 company-logo-container">
-                  <Image
+                  <ImageIcon
                     src="/images/sarci.svg"
                     alt="SARCI logo"
                     className=" sarci-logo"
-                    width={30}
-                    height={30}
                   />
                 </div>
                 <div className="col-lg-4 company-logo-container">
-                  <Image
+                  <ImageIcon
                     src="/images/rh.svg"
                     alt="RH logo"
                     className=" rh-logo"
-                    width={30}
-                    height={30}
                   />
                 </div>
                 <div className="col-lg-4 company-logo-container">
-                  <Image
+                  <ImageIcon
                     src="/images/dhanika.svg"
                     alt="Dhanika logo"
                     className="company-logo"
-                    width={30}
-                    height={30}
+                    width={100}
+                    height={100}
                   />
                 </div>
               </div>

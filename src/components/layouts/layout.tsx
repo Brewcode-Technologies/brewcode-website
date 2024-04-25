@@ -1,7 +1,6 @@
 import React, { ReactNode } from "react";
-import Footer from "../footer";
 import Navbar from "../Navbar";
-import SmoothScroll from "../SmoothScroll";
+import Footer from "../footer";
 
 type LayoutProps = {
   children: ReactNode;
@@ -10,17 +9,11 @@ type LayoutProps = {
 
 const Layout: React.FC<LayoutProps> = ({ children, isHome }) => {
   return (
-    <>
+    <main className={`${isHome ? "homepage" : ""} min-h-screen flex-grow`}>
       <Navbar />
-      <div className="min-h-screen">
-        <main className={isHome ? "homepage" : ""}>
-          {/* <SmoothScroll> */}
-          {children}
-          {/* </SmoothScroll> */}
-        </main>
-      </div>
-      {/* <Footer /> */}
-    </>
+      <div className="flex-grow">{children}</div>
+      <Footer />
+    </main>
   );
 };
 
