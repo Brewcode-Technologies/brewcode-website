@@ -15,7 +15,7 @@ function ImageIcon({
       alt={alt}
       width={width}
       height={height}
-      className={`mb-2 ${className}`}
+      className={className}
       loading={loading}
     />
   );

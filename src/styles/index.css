@@ -662,6 +662,7 @@ footer {
   width: 120px;
   height: 50px;
   aspect-ratio: 1/1;
+  cursor: pointer;
 }
 
 .corpeq-logo {
@@ -727,34 +728,62 @@ footer {
   font-family: "Inter";
 }
 
-.footer-icon {
-  margin-right: 20px;
-}
-
-.footer-links {
-  color: #ffffff;
-}
-
-.Link {
-  margin-right: 20px;
-}
-
 .footer-links-list {
   list-style: none;
-  display: flex;
   font-size: 14px;
-}
-
-.footer-links-list,
-li {
-  margin-right: 20px;
-  color: #333;
 }
 
 .footer-link {
   text-decoration: none;
+  color: #fff;
 }
-.footer-link li {
-  padding: 5px;
-  display: inline;
+
+.footer-link-policy {
+  color: #757575 !important;
+  text-decoration: none;
+  font-weight: 500;
+  font-size: 14px;
+}
+
+@media (max-width: 768px) {
+  .footer-icon {
+    width: 50px;
+    height: 50px;
+  }
+  .footer-link,
+  .footer-link-policy {
+    padding: 10px;
+    font-size: 12px;
+  }
+
+  @media (max-width: 480px) {
+    .company-logo-container {
+      flex-basis: 50%;
+      justify-content: center;
+    }
+  }
+}
+
+.footer-icon {
+  width: 30px;
+  height: 30px;
+}
+
+@media (max-width: 768px) {
+  .footer-link,
+  .footer-link-policy {
+    font-size: 14px;
+    padding: 5px;
+  }
+
+  .footer-icon {
+    width: 24px;
+    height: 24px;
+  }
+}
+
+@media (max-width: 576px) {
+  .brew-code-letter {
+    font-size: 20px;
+  }
 }

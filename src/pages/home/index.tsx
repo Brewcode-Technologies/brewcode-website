@@ -1,3 +1,10 @@
+import HerosectionComponent from "@component/components/HomepageComponent/HerosectionComponent ";
+import IndustriesWeComponent from "@component/components/HomepageComponent/IndustriesWeComponent ";
+import InsightsComponent from "@component/components/HomepageComponent/InsightsComponent ";
+import OurClients from "@component/components/HomepageComponent/OurClientsComponent ";
+import OurSolutionsComponent from "@component/components/HomepageComponent/OurSolutionsComponent ";
+import ScaleInnovativelyComponent from "@component/components/HomepageComponent/ScaleInnovativelyComponent ";
+import WhoWeAreComponent from "@component/components/HomepageComponent/WhoWeAreComponent ";
 import ImageIcon from "@component/components/ImageIcon ";
 import Header from "@component/components/Navbar ";
 import SliderMain from "@component/components/Slider ";
@@ -13,30 +20,6 @@ import React, { useEffect } from "react";
 import { useDispatch, useSelector } from "react-redux";
 
 const Home: React.FC = () => {
-  function handleClickButtom() {
-    window.scrollTo({
-      top: document.body.scrollHeight,
-      behavior: "smooth",
-    });
-  }
-
-  // const dispatch = useDispatch();
-  // const count: number = useSelector(selectCount);
-
-  // const handleIncrement = () => {
-  //   dispatch(increment());
-  // };
-
-  // const handleDecrement = () => {
-  //   if (count > 0) {
-  //     dispatch(decrement());
-  //   }
-  // };
-
-  // const handleReset = () => {
-  //   dispatch(reset());
-  // };
-
   return (
     // <div
     //   style={{
@@ -95,7 +78,7 @@ const Home: React.FC = () => {
     //   </div>
     // </div>
     <>
-      <div className="hero-image">
+      {/* <div className="hero-image">
         <div className="container">
           <div className="row hero-section-column">
             <div className="col-12 hero-heading">
@@ -118,420 +101,58 @@ const Home: React.FC = () => {
 
           <div className="row">
             <div className="col-12 social-media-icons-main d-flex flex-column justify-content-between">
-              <ImageIcon
-                src="/images/icons/instagram.png"
-                alt="instagram-icon"
-                className="instagram-icon"
-              />
-              <ImageIcon
-                src="/images/icons/Linkedin.png"
-                alt="Linkedin-icon"
-                className="instagram-icon"
-              />
-              <ImageIcon
-                src="/images/icons/facebook.png"
-                alt="facebook-icon"
-                className="instagram-icon"
-              />
+              <Link href="https://www.instagram.com" passHref>
+                <ImageIcon
+                  src="/images/icons/instagram.png"
+                  alt="instagram-icon"
+                  className="instagram-icon mb-2"
+                />
+              </Link>
+              <Link href="https://www.linkedin.com" passHref>
+                <ImageIcon
+                  src="/images/icons/Linkedin.png"
+                  alt="Linkedin-icon"
+                  className="instagram-icon mb-2"
+                />
+              </Link>
+              <Link href="https://www.facebook.com" passHref>
+                <ImageIcon
+                  src="/images/icons/facebook.png"
+                  alt="facebook-icon"
+                  className="instagram-icon"
+                />
+              </Link>
             </div>
           </div>
           <div className="row col-12 mb-5">
             <div className="down-arrow-icon-main d-flex justify-content-center mb-4">
               <i
                 className="bi bi-arrow-down-short"
-                onClick={() => handleClickButtom()}
+                onClick={handleClickButtom}
               ></i>
             </div>
           </div>
         </div>
-      </div>
+      </div> */}
+
+      <HerosectionComponent />
 
       {/* who we are section */}
-      <section className="container-fluid who-we-are-section  pb-5">
-        <div className="container">
-          <div className="row">
-            <div className="col-12 text-center">
-              <h2 className="who-we-are-heading section-heading py-5">
-                Who We Are
-              </h2>
-            </div>
-            <div className="d-flex flex-column-reverse flex-md-row justify-content-between">
-              <div className="col-12 col-md-6 mb-4">
-                <p className="text-brewcode-only">
-                  We Create Unique Enhanced
-                  <br /> Experience In
-                  <br />
-                  <Link
-                    className="brewcode-link"
-                    href={"https://www.brewcode.co/"}
-                  >
-                    Brewcode
-                  </Link>
-                </p>
-                <p className="who-we-are-text my-4 pt-4">
-                  Working with Brewcode evolves willing to offer the best
-                  immersion
-                  <br /> to clients and audiences but also investing in smart
-                  solutions to
-                  <br /> reduce costs when it comes to finding flexible
-                  solutions to refine and
-                  <br /> adapt the brand message in different contexts.
-                </p>
-                <div className="d-flex justify-content-start">
-                  <button
-                    type="button"
-                    className="explore-btn mb-4 btn btn-dark"
-                  >
-                    Explore
-                  </button>
-                </div>
-              </div>
-              <div className="col-12 col-md-6 text-center  mb-md-0 mb-4">
-                <Image
-                  src="/images/services-img.png"
-                  width={400}
-                  height={400}
-                  className="services-img"
-                  alt="services image"
-                />
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <WhoWeAreComponent />
       {/* Our Solutions --- section */}
 
-      <section className="our-solution-bg py-5">
-        <div className="container my-4">
-          <div className="col-12">
-            <h1 className="section-heading">Our Solutions</h1>
-
-            <p className="our-solution-description mb-5">
-              Design and deliver new digital experiences, revenue streams and
-              business models to <br />
-              meet rising customer expectations and accelerate your growth
-            </p>
-          </div>
-          <div className="row d-flex justify-content-between">
-            <div className="col-12 col-md-5">
-              <div className="d-flex flex-column mb-3">
-                <div className="d-flex justify-content-between border-bottom pb-1">
-                  <h1 className="our-solution-sub-text">Cloud Security</h1>
-                  <i className="bi bi-arrow-up-right mt-0 "></i>
-                </div>
-                {/* <hr className="our-solution-hr" /> */}
-              </div>
-              <div className="d-flex flex-column mb-3">
-                <div className="d-flex justify-content-between border-bottom pb-1">
-                  <h1 className="our-solution-sub-text">Cyber Security</h1>
-                  <i className="bi bi-arrow-up-right mt-0"></i>
-                </div>
-                {/* <hr className="our-solution-hr" /> */}
-              </div>
-              <div className="d-flex flex-column">
-                <div className="d-flex justify-content-between border-bottom pb-1">
-                  <h1 className="our-solution-sub-text">E-commerce Solution</h1>
-                  <i className="bi bi-arrow-up-right mt-0"></i>
-                </div>
-                {/* <hr className="our-solution-hr" /> */}
-              </div>
-              <div className="d-flex flex-column">
-                <div className="d-flex justify-content-between mt-3">
-                  <h1 className="our-solution-sub-text">
-                    Software Development
-                  </h1>
-                  <i className="bi bi-arrow-up-right  fa-5x mt-0"></i>
-                </div>
-              </div>
-            </div>
-            <div className="col-12 col-md-5">
-              <div className="d-flex flex-column mb-3">
-                <div className="d-flex justify-content-between border-bottom pb-1">
-                  <h1 className="our-solution-sub-text">
-                    Robotic Process Automation (RPA)y
-                  </h1>
-                  <i className="bi bi-arrow-up-right mt-0 "></i>
-                </div>
-                {/* <hr className="our-solution-hr" /> */}
-              </div>
-              <div className="d-flex flex-column mb-3">
-                <div className="d-flex justify-content-between border-bottom pb-1">
-                  <h1 className="our-solution-sub-text">
-                    Software Audits/Testing as-a-service
-                  </h1>
-                  <i className="bi bi-arrow-up-right mt-0"></i>
-                </div>
-                {/* <hr className="our-solution-hr" /> */}
-              </div>
-              <div className="d-flex flex-column">
-                <div className="d-flex justify-content-between border-bottom pb-1">
-                  <h1 className="our-solution-sub-text">Resource Staffing</h1>
-                  <i className="bi bi-arrow-up-right mt-0"></i>
-                </div>
-                {/* <hr className="our-solution-hr" /> */}
-              </div>
-              <div className="d-flex flex-column">
-                <div className="d-flex justify-content-between mt-3">
-                  <h1 className="our-solution-sub-text">
-                    Infrastructure Solution
-                  </h1>
-                  <i className="bi bi-arrow-up-right  fa-5x mt-0"></i>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <OurSolutionsComponent />
       {/* Industries We Serve */}
-      <section className="industries-we-serve-bg py-4">
-        <div className="container my-4">
-          <div className="col-12">
-            <h1 className="section-heading industries-we-serve-heading">
-              Industries We Serve
-            </h1>
-
-            <p className="our-solution-description industries-we-serve-description mb-5">
-              Design and deliver new digital experiences, revenue streams and
-              business models to
-              <br /> meet rising customer expectations and accelerate your
-              growth
-            </p>
-          </div>
-          <div className="my-4">
-            <SliderMain />
-          </div>
-        </div>
-      </section>
+      <IndustriesWeComponent />
       {/* Scale Innovatively */}
 
-      <section className="scale-innovatively-bg py-5">
-        <div className="container my-4">
-          <div className="col-12">
-            <h1 className="section-heading industries-we-serve-heading">
-              Scale Innovatively
-            </h1>
-            <h3 className="Scale-Innovatively-sub-heading my-2">
-              Solve Problems & Build Solutions
-            </h3>
-            <p className="our-solution-description industries-we-serve-description mb-5">
-              At scale, for tomorrow. Established enterprises and emerging
-              startups need a perfect balance of strategy, technology,
-              analytics, and knowhow to solve everyday
-              <br /> business challenges.
-            </p>
-          </div>
-          <div className="row">
-            <div className="col-12 col-sm-4">
-              <div className="num-flex d-flex">
-                <span className="num">1</span>
-                <h3 className="emerging-heading">Emerging</h3>
-              </div>
-              <p className="emerging-text mt-4">
-                Evaluate business needs and build strategic
-                <br /> technical roadmaps to make your product
-                <br /> vision a reality
-              </p>
-            </div>
-            <div className="col-12 col-sm-4 emerging-left-right-border-line">
-              <div className="num-flex d-flex">
-                <span className="num">2</span>
-                <h3 className="emerging-heading">Growing</h3>
-              </div>
-              <p className="emerging-text mt-4">
-                Fuel your growth with process automation
-                <br /> and custom applications and build failsafe
-                <br /> systems for the future.
-              </p>
-            </div>
-            <div className="col-12 col-sm-4 ">
-              <div className="num-flex d-flex">
-                <span className="num">3</span>
-                <h3 className="emerging-heading">Enterprise</h3>
-              </div>
-              <p className="emerging-text mt-4">
-                Integrate your systems for enterprise agility
-                <br /> and build your Agile/DevOps capability for
-                <br /> accelerated growth.
-              </p>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <ScaleInnovativelyComponent />
       {/* Insights styles ------------------start */}
 
-      <section className="insights-bg py-5">
-        <div className="container">
-          <div className="row">
-            <h1 className="section-heading industries-we-serve-heading">
-              Insights
-            </h1>
-            <p className="insights-description mb-5 mt-4">
-              Design and deliver new digital experiences, revenue streams and
-              business models to <br /> meet rising customer expectations and
-              accelerate your growth
-            </p>
-          </div>
-          <div className="row">
-            <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-              <div className="blog-card">
-                <p className="blog-sub-heading">Blog</p>
-                <p className="blog-text pt-2">
-                  The cube interview series: Driving enhanced security and
-                  higher value in Financial services generative Ai
-                </p>
-              </div>
-            </div>
-            <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-              <div className="blog-card">
-                <p className="blog-sub-heading">Blog</p>
-                <p className="blog-text pt-2">
-                  The cube interview series: Driving enhanced security and
-                  higher value in Financial services generative Ai
-                </p>
-              </div>
-            </div>
-            <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-              <div className="blog-card">
-                <p className="blog-sub-heading">Blog</p>
-                <p className="blog-text pt-2">
-                  The cube interview series: Driving enhanced security and
-                  higher value in Financial services generative Ai
-                </p>
-              </div>
-            </div>
-            <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-              <div className="blog-card">
-                <p className="blog-sub-heading">Blog</p>
-                <p className="blog-text pt-2">
-                  The cube interview series: Driving enhanced security and
-                  higher value in Financial services generative Ai
-                </p>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
-
+      <InsightsComponent />
       {/* Our Clients styles------------------start */}
 
-      <section className="our-clients-bg">
-        <div className="container py-5">
-          <div className="row">
-            <div className="col-12 col-md-6 col-lg-6">
-              <h1 className="section-heading industries-we-serve-heading">
-                Our Clients
-              </h1>
-              <p className="pleasure-to-work-with-text mb-5 mt-5">
-                Pleasure to Work With
-              </p>
-            </div>
-            <div className="col-12 col-md-6 col-lg-6">
-              {/* Main container for the first set of logos */}
-              <div className="row mb-4 company-logo-container-main">
-                <div className="col-lg-4 company-logo-container">
-                  <ImageIcon
-                    src="/images/st-jude.svg"
-                    alt="St. Jude logo"
-                    className="company-logo mb-4"
-                  />
-                </div>
-                <div className="col-lg-4 company-logo-container">
-                  <ImageIcon
-                    src="/images/agilo.svg"
-                    alt="Agilo logo"
-                    className="company-logo mb-4"
-                  />
-                </div>
-                <div className="col-lg-4 company-logo-container">
-                  <ImageIcon
-                    src="/images/dhanika.svg"
-                    alt="Dhanika logo"
-                    className="company-logo mb-4"
-                  />
-                </div>
-              </div>
-
-              {/* Second set of logos */}
-              <div className="row mb-4 company-logo-container-main">
-                <div className="col-lg-4 company-logo-container">
-                  <ImageIcon
-                    src="/images/soctor.svg"
-                    alt="Soctor logo"
-                    className="company-logo mb-4"
-                  />
-                </div>
-                <div className="col-lg-4 company-logo-container">
-                  <ImageIcon
-                    src="/images/Oilvebay.svg"
-                    alt="CorpEq logo"
-                    className=" mb-4 Oilvebay-logo company-logo"
-                  />
-                </div>
-                <div className="col-lg-4 company-logo-container">
-                  <ImageIcon
-                    src="/images/corpeq.svg"
-                    alt="CorpEq logo"
-                    className="company-logo corpeq-logo mb-4"
-                  />
-                </div>
-              </div>
-
-              {/* Third set of logos */}
-              <div className="row mb-5 company-logo-container-main">
-                <div className="col-lg-4 company-logo-container">
-                  <ImageIcon
-                    src="/images/enpersonal.png"
-                    alt="enpersonal logo"
-                    className=" enpersonal-logo mb-4"
-                  />
-                </div>
-                <div className="col-lg-4 company-logo-container">
-                  <ImageIcon
-                    src="/images/ojas.png"
-                    alt="Ojas logo"
-                    className=" ojas-logo mb-4"
-                  />
-                </div>
-                <div className="col-lg-4 company-logo-container">
-                  <ImageIcon
-                    src="/images/humancloud.png"
-                    alt="Humancloud logo"
-                    className=" humancloud-logo mb-4"
-                  />
-                </div>
-              </div>
-
-              {/* Fourth set of logos */}
-              <div className="row mb-4 company-logo-container-main">
-                <div className="col-lg-4 company-logo-container">
-                  <ImageIcon
-                    src="/images/sarci.svg"
-                    alt="SARCI logo"
-                    className=" sarci-logo"
-                  />
-                </div>
-                <div className="col-lg-4 company-logo-container">
-                  <ImageIcon
-                    src="/images/rh.svg"
-                    alt="RH logo"
-                    className=" rh-logo"
-                  />
-                </div>
-                <div className="col-lg-4 company-logo-container">
-                  <ImageIcon
-                    src="/images/dhanika.svg"
-                    alt="Dhanika logo"
-                    className="company-logo"
-                    width={100}
-                    height={100}
-                  />
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </section>
+      <OurClients />
     </>
   );
 };
