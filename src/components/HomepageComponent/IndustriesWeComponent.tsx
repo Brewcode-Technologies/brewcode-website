@@ -15,7 +15,7 @@ const IndustriesWeComponent = () => {
             <br /> meet rising customer expectations and accelerate your growth
           </p>
         </div>
-        <div className="my-4">
+        <div className="col-12 col-md-8">
           <SliderMain />
         </div>
       </div>

@@ -36,6 +36,8 @@ function Header() {
               src="/images/brewcode-logo.png"
               alt="Brewcode logo"
               className="logo"
+              width={40}
+              height={40}
             />
           </Link>
         </Navbar.Brand>

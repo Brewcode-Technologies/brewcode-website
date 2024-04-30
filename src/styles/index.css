@@ -10,6 +10,19 @@
   box-sizing: border-box;
 }
 
+.section {
+  height: 100vh;
+}
+
+#fullpage-wrapper .section {
+  height: 100vh;
+}
+
+.social-media-icons-main {
+  display: flex;
+  align-items: flex-start !important;
+}
+
 .navbar-custom {
   background-color: #000 !important;
   color: #ffffff;
@@ -186,9 +199,7 @@ footer {
   background-image: url("../../public/images/Hero-section.png");
   background-repeat: no-repeat;
   background-size: cover;
-  overflow: hidden;
-  padding: 100px 0px;
-  scroll-snap-align: start;
+  padding-top: 100px;
 }
 
 /* Responsive styles */
@@ -340,7 +351,7 @@ footer {
 
 .who-we-are-section {
   width: 100%;
-  min-height: 120vh;
+  height: 120vh;
   background-color: #000;
   background-image: url("../../public/images/who-we-are-bg.png");
   background-repeat: no-repeat;
@@ -406,9 +417,9 @@ footer {
 
 .our-solution-bg {
   width: 100%;
-  height: auto;
-  background-color: #000;
   background-image: url("../../public/images/our-solution-bg.png");
+  height: 101vh;
+  background-color: #000;
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
@@ -456,29 +467,24 @@ footer {
 
 .industries-we-serve-bg {
   width: 100%;
-  height: 100vh;
-  min-height: 120vh;
+  height: 120vh;
   background-color: #000;
   background-image: url("../../public/images/industries-we-serve.png");
   background-repeat: no-repeat;
   background-size: cover;
-  overflow: hidden;
   background-position: center;
 }
 
 /* Custom styling for slick-slider */
 .container-slider {
   width: 100%;
-  max-width: 1300px;
-  margin: 0 auto;
-  overflow: hidden;
-  position: relative;
+  /* overflow: hidden;
+  position: relative; */
 }
 
 .slider {
-  width: 100%;
   height: auto;
-  padding: 50px 0px;
+  /* padding: 20px 0px; */
 }
 .header {
   margin: 50px auto;
@@ -488,8 +494,7 @@ footer {
 
 .slide,
 .slide img {
-  width: 100%;
-  height: 60vh;
+  height: 300px;
   display: block;
 }
 
@@ -498,6 +503,7 @@ footer {
   transform: scale(0.7);
   transition: 0.5s;
   filter: blur(5px);
+  padding: 10px;
 }
 
 .slide-active {
@@ -535,9 +541,10 @@ footer {
   border-radius: 50%;
   box-shadow: 0 0 5px 3px #ccc;
   background-color: #000;
+  margin: 0 5px;
 }
 .dot-active {
-  background: #ffffff;
+  background-color: #717171;
   box-shadow: 0 0 15px 10px #ccc;
 }
 @media screen and (max-width: 768px) {
@@ -548,17 +555,19 @@ footer {
 
 .image-slide {
   border-radius: 20px;
+  border: 2px solid #fff;
 }
+
+/* -------------------------------------------------------------- */
 /* Scale Innovatively styles ------start */
 .scale-innovatively-bg {
   width: 100%;
-  height: auto;
-  min-height: 100vh;
+  height: 101vh;
   background: linear-gradient(to right top, #000 80%, #8784843f 100%, #000 10%);
   overflow: hidden;
   background-position: center;
-  scroll-snap-align: start;
 }
+
 .Scale-Innovatively-sub-heading {
   color: #ffffff;
   font-size: 24px;
@@ -602,8 +611,8 @@ footer {
 /* insights styles -------------start */
 .insights-bg {
   width: 100%;
-  min-height: 100vh;
-  /* height: auto; */
+  min-height: 101vh;
+  height: auto;
   background-color: #000;
   background-image: url("../../public/images/insight-bg.png");
   background-repeat: no-repeat;
@@ -641,8 +650,8 @@ footer {
 .our-clients-bg {
   background-color: #000000;
   width: 100%;
-  min-height: 100vh;
-  height: auto;
+  /* min-height: 100vh; */
+  /* height: auto; */
 }
 
 .pleasure-to-work-with-text {
