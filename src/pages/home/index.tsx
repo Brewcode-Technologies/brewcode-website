@@ -4,6 +4,8 @@ import ImageIcon from "@component/components/ImageIcon ";
 import Link from "next/link";
 import Image from "next/image";
 
+import SwiperComponent from "@component/components/Carousel ";
+
 const anchors = [
   "HeroSection",
   "WhoWeAre",
@@ -64,6 +66,7 @@ const Home: React.FC = () => {
       { src: "/images/dhanika.svg", url: "https://dhanika.example.com" },
     ],
   ];
+
   return (
     <ReactFullpage
       licenseKey={"YOUR_KEY_HERE"}
@@ -283,6 +286,11 @@ const Home: React.FC = () => {
                         <br /> meet rising customer expectations and accelerate
                         your growth
                       </p>
+                    </div>
+                    <div className="row">
+                      <div className="col-12">
+                        <SwiperComponent />
+                      </div>
                     </div>
                   </div>
                 </section>

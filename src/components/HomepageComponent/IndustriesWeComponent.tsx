@@ -1,5 +1,5 @@
 import React from "react";
-import SliderMain from "../Slider";
+import SliderMain from "../Carousel/slider";
 
 const IndustriesWeComponent = () => {
   return (
