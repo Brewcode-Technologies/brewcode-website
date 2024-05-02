@@ -89,7 +89,12 @@ const Home: React.FC = () => {
         return (
           <div>
             <div className="section">
-              <div style={{ width: "100%", height: "100vh" }}>
+              <div
+                style={{
+                  width: "100%",
+                  height: "100vh",
+                }}
+              >
                 <div className="hero-image">
                   <div className="container">
                     <div className="row hero-section-column">
@@ -146,8 +151,14 @@ const Home: React.FC = () => {
                         </Link>
                       </div>
                     </div>
-                    <div className="row col-12 mb-5">
-                      <div className="down-arrow-icon-main d-flex justify-content-center mb-4">
+                    <div className="row col-12 ">
+                      <div
+                        className="down-arrow-icon-main d-flex justify-content-center"
+                        style={{
+                          position: "relative",
+                          top: -20,
+                        }}
+                      >
                         <i className="bi bi-arrow-down-short"></i>
                       </div>
                     </div>
@@ -157,16 +168,16 @@ const Home: React.FC = () => {
             </div>
             <div className="section">
               <div style={{ width: "100%", height: "100vh" }}>
-                <section className=" who-we-are-section py-5">
+                <section className="who-we-are-section pt-4">
                   <div className="container">
                     <div className="row">
                       <div className="col-12 text-center">
-                        <h2 className="who-we-are-heading section-heading py-5">
+                        <h2 className="who-we-are-heading section-heading pt-5">
                           Who We Are
                         </h2>
                       </div>
                       <div className="d-flex flex-column-reverse flex-md-row justify-content-between">
-                        <div className="col-12 col-md-6 mb-4">
+                        <div className="col-12 col-md-6 d-flex flex-column justify-content-between">
                           <p className="text-brewcode-only">
                             We Create Unique Enhanced
                             <br /> Experience In
@@ -198,14 +209,13 @@ const Home: React.FC = () => {
                             </button>
                           </div>
                         </div>
-                        <div className="col-12 col-md-6 text-center mb-md-0 mb-4">
+                        <div className="col-12 col-md-6 text-center ">
                           <Image
                             src="/images/services-img.png"
-                            width={400}
-                            height={400}
+                            width={250}
+                            height={250}
                             alt="services image"
                             className="services-img"
-                            loading="eager"
                           />
                         </div>
                       </div>
@@ -273,11 +283,11 @@ const Home: React.FC = () => {
               </div>
             </div>
             <div className="section">
-              <div style={{ width: "100%", height: "120vh" }}>
-                <section className="industries-we-serve-bg py-5">
-                  <div className="container my-5">
-                    <div className="col-12">
-                      <h1 className="industries-we-serve-heading">
+              <div style={{ width: "100%", height: "100vh" }}>
+                <section className="industries-we-serve-bg ">
+                  <div className="container">
+                    <div className="col-12 pt-5">
+                      <h1 className="industries-we-serve-heading ">
                         Industries We Serve
                       </h1>
                       <p className="our-solution-description industries-we-serve-description mb-5">
@@ -298,7 +308,7 @@ const Home: React.FC = () => {
             </div>
             <div className="section">
               <div style={{ width: "100%", height: "100vh" }}>
-                <section className="scale-innovatively-bg py-5">
+                <section className="scale-innovatively-bg">
                   <div className="container my-5">
                     <div className="col-12">
                       <h1 className="section-heading industries-we-serve-heading">
@@ -415,7 +425,6 @@ const Home: React.FC = () => {
                                       logo.src.split("/").pop().split(".")[0]
                                     } logo`}
                                     className="company-logo mb-4"
-                                    loading="eager"
                                   />
                                 </Link>
                               </div>
