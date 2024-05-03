@@ -1,5 +1,4 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
-/* @import url("https://fonts.cdnfonts.com/css/instagram-sans-script"); */
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
@@ -11,10 +10,6 @@
 }
 
 .section {
-  height: 100vh;
-}
-
-#fullpage-wrapper .section {
   height: 100vh;
 }
 
@@ -191,21 +186,26 @@ footer {
   }
 }
 
+body {
+  padding-top: 58px !important;
+  overflow-y: hidden !important;
+}
+
 .navbar {
-  position: absolute;
+  position: fixed;
+  width: 100%;
+  z-index: 999;
+  top: 0;
 }
 .hero-image {
   width: 100%;
-  height: calc(100vh - 58px);
   height: 100vh;
   background-color: #000;
   background-image: url("../../public/images/Hero-section.png");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
-  background-position: center top -24px;
-  /* top: 58px; */
-  padding-top: 40px;
+  background-position: center top -60px;
 }
 
 .fp-is-overflow .fp-overflow.fp-auto-height,
@@ -230,9 +230,19 @@ footer {
   }
 }
 
-.hero-section-heading {
-  text-align: center;
-  font-size: 66px;
+.hero-section-heading,
+.solutions-heading,
+.insights-heading,
+.clients-heading {
+  text-align: left;
+  font-size: 70px;
+  color: #ffffff;
+  font-weight: 700;
+  font-family: "Inter" !important;
+}
+.solutions-heading {
+  text-align: left;
+  font-size: 70px;
   color: #ffffff;
   font-weight: 700;
   font-family: "Inter" !important;
@@ -243,7 +253,7 @@ footer {
     font-size: 50px;
     padding-top: 60px;
   }
-  .description {
+  .hero-description {
     font-size: 16px;
     padding: 0px;
   }
@@ -261,18 +271,18 @@ footer {
   }
 }
 
-.hero-section-column {
+.hero-section {
   display: flex;
   flex-direction: column;
   justify-content: space-between;
 }
-.hero-heading {
+.hero-title {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.hero-stroke {
+.hero-heading-highlight {
   -webkit-text-fill-color: #000;
   -webkit-text-stroke-width: 1px;
   -webkit-text-stroke-color: #fff;
@@ -311,7 +321,7 @@ footer {
   }
 }
 
-.description {
+.hero-description {
   color: #ddd;
   font-family: "Inter";
   font-style: inherit;
@@ -320,12 +330,15 @@ footer {
   padding-top: 75px;
 }
 
-.description-strong {
+.highlight {
   color: #ffffff;
   font-size: 22px;
 }
 
-.instagram-icon {
+.social-icon,
+.instagram,
+.linkedin,
+.facebook {
   width: 30px;
   height: 30px;
   cursor: pointer;
@@ -361,7 +374,7 @@ footer {
   cursor: pointer;
 }
 
-.who-we-are-section {
+.about-section {
   width: 100%;
   height: 100vh;
   background-color: #000;
@@ -374,38 +387,46 @@ footer {
   overflow: hidden;
 }
 
-.who-we-are-heading {
+.about-heading {
   color: #ffffff;
   font-family: "Inter";
   font-weight: 700;
   font-size: 70px;
   text-align: left;
 }
-.our-solution-description {
+.solutions-description {
   font-family: "Inter";
   font-size: 12px;
+  color: #ffffff;
 }
 
 .section-heading,
-.industries-we-serve-heading {
+.innovation-heading {
   color: #ffffff;
   font-family: "Inter";
   font-weight: 700;
   font-size: 70px;
-  padding-top: 30px !important;
 }
 
-.text-brewcode-only {
+.industries-heading {
   color: #ffffff;
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 70px;
+}
+
+.about-description {
+  color: #ddd;
   font-size: 24px;
   font-family: "Inter";
   text-align: left;
   font-weight: 700;
 }
-.brewcode-link {
+.about-link {
   text-decoration: none;
+  color: #74a8ff !important;
 }
-.explore-btn {
+.about-explore-btn {
   width: 120px;
   height: 40px;
   background-color: #ffffff;
@@ -413,25 +434,30 @@ footer {
   border-radius: 4px;
 }
 
-.who-we-are-text {
+.about-details {
   color: #ffffff;
   text-align: justify;
   font-family: "Inter";
-  font-size: 12px;
-  line-height: 25px;
+  font-size: 16px;
+  line-height: 30px;
+  font-weight: 300;
 }
 
-.services-img {
-  width: 100%;
-  max-width: 65%;
-  height: auto;
-  padding: 10px;
-  aspect-ratio: 1/ 1;
+.about-image {
+  width: 370px;
+  height: auto !important;
+  aspect-ratio: 1/1;
+  cursor: pointer;
 }
 
+.about-content {
+  display: flex;
+  justify-content: space-between !important;
+  float: right;
+}
 /* our solution styles------------- */
 
-.our-solution-bg {
+.solutions-section {
   width: 100%;
   background-image: url("../../public/images/our-solution-bg.png");
   height: 100vh;
@@ -443,7 +469,8 @@ footer {
 }
 
 .our-solution-description,
-.industries-we-serve-description {
+.industries-description,
+.innovation-description {
   color: #ffffff;
   font-family: "Inter";
   font-size: 12px;
@@ -456,7 +483,7 @@ footer {
   height: 10px;
 }
 
-.our-solution-sub-text {
+.solutions-title {
   font-size: 14px;
   color: #ffffff;
   margin-top: 13px;
@@ -481,7 +508,7 @@ footer {
 
 /* industries-we-serve styles------------------ */
 
-.industries-we-serve-bg {
+.industries-section {
   width: 100%;
   height: 100vh;
   background-color: #000;
@@ -576,7 +603,7 @@ footer {
 
 /* -------------------------------------------------------------- */
 /* Scale Innovatively styles ------start */
-.scale-innovatively-bg {
+.innovation-section {
   width: 100%;
   height: 100vh;
   background: linear-gradient(to right top, #000 80%, #8784843f 100%, #000 10%);
@@ -584,28 +611,28 @@ footer {
   background-position: center;
 }
 
-.Scale-Innovatively-sub-heading {
+.innovation-sub-heading {
   color: #ffffff;
   font-size: 24px;
   font-family: "Inter";
   font-weight: 500;
 }
 
-.emerging-left-right-border-line {
+.innovation-step-border-lined {
   color: #ffffff;
   border: 2px solid #ffff;
   border-top: none;
   border-bottom: none;
 }
 
-.emerging-heading {
-  font-size: 18px;
+.innovation-step-title {
+  font-size: 22px;
   font-family: "Inter";
   color: #ffffff;
-  margin-top: 3px;
+  font-weight: bold;
 }
 
-.num {
+.innovation-step-number {
   width: 26px;
   height: 26px;
   background-color: #333;
@@ -619,13 +646,13 @@ footer {
   border: 1.5px solid #ffffff;
 }
 
-.emerging-text {
+.innovation-step-description {
   color: #ffffff;
   font-family: "Inter";
-  font-size: 12px;
+  font-size: 16px;
 }
 /* insights styles -------------start */
-.insights-bg {
+.insights-section {
   width: 100%;
   min-height: 100vh;
   background-color: #000;
@@ -642,47 +669,47 @@ footer {
   font-size: 12px;
 }
 
-.blog-card {
+.insight-card {
   background-color: #151515;
   height: 150px;
   padding: 10px 12px;
   border-bottom: 2px solid #ffffff;
 }
 
-.blog-sub-heading {
+.insight-card-category {
   color: #ffffff;
   font-family: "Inter";
   font-size: 12px;
 }
 
-.blog-text {
+.insight-card-title {
   color: #ffffff;
   font-family: "Inter";
   font-size: 12px;
 }
 
 /* our-clients styles -------------------start */
-.our-clients-bg {
+.clients-section {
   background-color: #000000;
   width: 100%;
   height: 100vh;
   /* height: auto; */
 }
 
-.pleasure-to-work-with-text {
+.clients-subtitle {
   color: #bdb8b8;
   font-weight: 500;
-  font-size: 24px;
+  font-size: 30px;
   font-family: "Inter";
 }
 
-.company-logo-container {
+.clients-logo-container {
   display: flex;
   justify-content: center;
   align-items: center;
 }
 
-.company-logo {
+.client-logo {
   width: 120px;
   height: 50px;
   aspect-ratio: 1/1;
@@ -848,8 +875,8 @@ footer {
 /* Navigation Buttons */
 .swiper-button-next,
 .swiper-button-prev {
-  background-color: #fff;
-  color: #000 !important;
+  background-color: #000;
+  color: #fff !important;
   border-radius: 50px;
   width: 50px !important;
   height: 50px !important;
