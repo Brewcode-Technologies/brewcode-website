@@ -15,11 +15,27 @@ function Header() {
     router.push("/login");
   };
 
+  const navigateToServices = () => {
+    router.push("/services");
+  };
+
   const handleDropdownToggle = () => {
     setIsDropdownOpen((prevIsDropdownOpen) => !prevIsDropdownOpen);
-    setTimeout(() => {
-      router.push("/whatwedo");
-    }, 3000);
+    // setTimeout(() => {
+    //   router.push("/whatwedo");
+    // }, 3000);
+  };
+
+  const navigateToCould = () => {
+    router.push("/couldServices");
+  };
+
+  const handleMouseEnter = () => {
+    setIsDropdownOpen(true);
+  };
+
+  const handleMouseLeave = () => {
+    setIsDropdownOpen(false);
   };
 
   return (
@@ -58,11 +74,15 @@ function Header() {
                   Home
                 </Link>
               </li>
-              <li className="nav-item dropdown dropdown-mega position-static">
+              <li
+                className="nav-item dropdown dropdown-mega position-static"
+                onMouseEnter={handleMouseEnter}
+                onMouseLeave={handleMouseLeave}
+              >
                 <Link
                   className="nav-link dropdown-toggle active"
                   href="/whatwedo"
-                  onClick={handleDropdownToggle}
+                  // onClick={handleDropdownToggle}
                   data-bs-toggle="dropdown"
                   data-bs-auto-close="outside"
                   passHref
@@ -84,7 +104,18 @@ function Header() {
                           </h5>
                           <div className="">
                             <p>
-                              <a className="list-group-item" href="#">
+                              <a
+                                className="list-group-item"
+                                onClick={navigateToServices}
+                              >
+                                Services
+                              </a>
+                            </p>
+                            <p>
+                              <a
+                                className="list-group-item"
+                                onClick={navigateToCould}
+                              >
                                 Colud
                               </a>
                             </p>

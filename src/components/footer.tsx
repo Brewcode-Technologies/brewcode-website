@@ -4,7 +4,10 @@ import ImageIcon from "./ImageIcon";
 
 function Footer() {
   return (
-    <footer className="footer-bg">
+    <footer
+      className="footer-bg"
+      style={{ position: "absolute", bottom: 0, width: "100%" }}
+    >
       <div className="container">
         <div className="row d-flex justify-content-center align-items-center">
           <div className="col-4 col-md-3 col-lg-2">

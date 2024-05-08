@@ -21,6 +21,7 @@
 .navbar-custom {
   background-color: #000 !important;
   color: #ffffff;
+  padding-bottom: 10px !important;
 }
 
 .custom-toggler .navbar-toggler-icon {
@@ -89,10 +90,7 @@ input {
 
 .logo {
   width: 30px;
-  height: 30px;
-}
-.logo-container {
-  width: 50px;
+  height: 25px;
 }
 
 .navbar-nav .nav-link {
@@ -113,14 +111,6 @@ input {
 }
 
 /* footer styles----------- */
-footer {
-  background-color: #333;
-  color: #fff;
-  padding: 20px;
-  position: absolute;
-  bottom: 0;
-  width: 100%;
-}
 
 /* Responsive Styles */
 @media screen and (max-width: 600px) {
@@ -188,7 +178,7 @@ footer {
 
 body {
   padding-top: 58px !important;
-  overflow-y: hidden !important;
+  /* overflow-y: hidden !important; */
 }
 
 .navbar {
@@ -302,6 +292,7 @@ body {
   font-weight: bold;
   width: 400px;
   width: 100%;
+  cursor: pointer;
 }
 
 @media screen and (max-width: 768px) {
@@ -749,19 +740,18 @@ body {
 
 .footer-bg {
   background-color: #000000;
-  height: auto;
+  width: 100%;
   padding: 20px 0;
-  position: absolute;
-  left: 0;
+  position: fixed;
+  z-index: 1000;
   bottom: 0;
-  right: 0;
+  left: 0;
 }
 footer {
   background-color: #000000 !important;
   position: relative !important;
   left: 0 !important;
   bottom: 0 !important;
-  right: 0 !important;
 }
 .footer-logo {
   width: 80px;
@@ -935,3 +925,333 @@ footer {
   font-size: 20px;
   padding: 20px;
 }
+
+/* serviecs section styles start--------------------------------------------- */
+.services-background {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  color: #ffffff;
+}
+
+.services-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  height: 90vh;
+  color: #ffffff;
+}
+
+.services-header {
+  text-align: center;
+  line-height: 60px;
+  margin-bottom: 30px;
+  font-family: "Inter";
+  font-weight: 600;
+}
+
+.services-description {
+  font-size: 14px;
+  font-family: "Inter";
+}
+
+.services-menu {
+  background-color: #151515;
+  width: 100%;
+  list-style: none;
+  display: flex;
+  padding: 10px 76px;
+  justify-content: space-between;
+  position: absolute;
+  left: 0;
+  bottom: -20px;
+  cursor: pointer;
+  font-family: "Inter";
+  font-weight: 500;
+}
+
+.overview-main {
+  padding: 60px 0px;
+  background-color: #000;
+  color: #ffffff;
+}
+
+.overview-image {
+  width: 100%;
+  height: 400px;
+}
+.overview-title,
+.our-section-heading {
+  font-size: 26px;
+  font-weight: 500;
+  font-family: "Lato";
+}
+
+.overview-short-description,
+.our-section-subheading {
+  font-family: "Lato";
+  font-size: 24px;
+  font-weight: 300;
+  line-height: 26px;
+}
+
+.overview-detail,
+.our-section-text,
+.service-description {
+  font-size: 12px;
+}
+
+.our-distenctive-div {
+  padding: 50px 0px !important;
+}
+.service-title {
+  font-size: 16px;
+  font-weight: 500;
+  font-family: "Inter";
+}
+
+.Application-card-heading {
+  font-size: 20px;
+  font-family: "Inter";
+}
+
+.Services-card {
+  border: none;
+  border-radius: none !important;
+  background-color: #151515 !important;
+  color: #ffffff !important;
+  height: 470px !important;
+  box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
+}
+
+.card-title {
+  font-size: 16px;
+  font-family: "Inter";
+}
+
+.card-body {
+  padding: 10px 20px !important;
+}
+
+.card-text {
+  font-size: 14px;
+  margin-top: 10px;
+  font-family: "Inter";
+  text-align: flex-start;
+}
+
+.framework {
+  padding-top: 10px;
+}
+
+.card-img-top {
+  width: 100%;
+  height: 150px !important;
+}
+
+/* serviecs section styles End--------------------------------------------- */
+
+/* Could Services styles start  */
+.could-services-background {
+  width: 100%;
+  background-color: #000;
+  background-image: url("../../public/images/Hero-cloud.png");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  color: #ffffff;
+}
+
+.could-services-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-end;
+  align-items: flex-start;
+  height: 80vh;
+  padding-bottom: 50px;
+  color: #ffffff;
+}
+
+.could-services-header {
+  margin-bottom: 30px;
+  font-family: "Inter";
+  font-weight: 600;
+  font-size: 30px;
+}
+.could-services-description {
+  font-size: 16px;
+  font-family: "Inter";
+  font-weight: 600;
+}
+
+.dark-container {
+  background-color: #000;
+  color: #ffffff;
+}
+
+.cloud-image {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  z-index: -1;
+  top: 0;
+  left: 0;
+  color: #ffffff !important;
+}
+
+.cloud-card-image {
+  width: 100%;
+  height: 380px;
+}
+.chart-of-detail {
+  font-size: 14px;
+}
+
+.chart-of-heading {
+  font-size: 18px;
+}
+/* Could Services styles End  */
+
+/* capabilities styles - start */
+
+.section-capabilities {
+  background-color: #151515;
+  width: 100%;
+}
+
+.section-heading-with-button-flex {
+  display: flex;
+  justify-content: space-between;
+  color: #ffffff;
+}
+
+.capabilities-heading {
+  font-size: 18px;
+  font-size: "Lato";
+  font-weight: 500;
+}
+
+.btn-explore-capabilities {
+  background-color: #151515;
+  color: #ffffff;
+  padding: 6px 15px;
+  border: 1px solid #ffffff;
+  font-size: 16px;
+  font-family: "Inter";
+  border-radius: 2px;
+}
+
+.capability-card-img {
+  color: #ffffff;
+}
+
+.could-migration-heading {
+  font-family: "Lato";
+  font-size: 24px;
+  margin-bottom: 20px;
+}
+
+.could-migration-description {
+  font-family: "Inter";
+  font-size: 12px;
+}
+
+.explore-btn {
+  padding: 5px;
+  border: 1px solid #ffffff;
+  border-radius: 4px;
+  background-color: #000;
+  width: 100px;
+  color: #ffffff;
+  font-weight: 500;
+}
+
+.hero-cloud {
+  height: auto;
+}
+/* capabilities styles - End */
+
+/* related-Service- styles start */
+.related-Service-background {
+  background-color: #000000;
+  color: #ffffff;
+}
+
+.related-Service-heading {
+  font-size: 24px !important;
+  margin-bottom: 15px;
+  font-family: "Lato";
+}
+.related-Service-sub-heading {
+  font-family: "Lato";
+  font-size: 30px;
+  margin-bottom: 20px;
+}
+
+.related-Service-description {
+  font-family: "Inter";
+  font-size: 12px;
+  margin-bottom: 30px;
+}
+
+.related-service-image {
+  width: 100%;
+  height: 300px;
+  height: auto !important;
+}
+/* related-Service- styles End */
+
+/* got-project styles Start */
+.got-project {
+  border: 2px solid #ffffff;
+  height: 380px;
+  border-radius: 50px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.got-project-small {
+  font-family: "Inter";
+  font-weight: 500;
+  font-size: 22px;
+}
+
+.let-connect-heading {
+  font-family: "Lato";
+  font-weight: 600;
+  font-size: 70px;
+}
+
+.write-msg-div {
+  font-size: 14px;
+  color: #ffffff;
+  border: 1px solid #ffffff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100px;
+  height: 100px;
+  padding-top: 10px;
+  border-radius: 50px;
+  font-weight: 500;
+  font-family: "Inter";
+}
+
+.message {
+  margin-left: 15px;
+}
+
+.small-colud-img {
+  width: 200px;
+  height: 150px;
+  margin-right: 10px;
+  margin-top: 20px;
+}
+/* got-project styles End */
