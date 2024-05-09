@@ -2,7 +2,7 @@ import Layout from "@component/components/layouts/layout ";
 import Image from "next/image";
 import React from "react";
 
-const CouldServices = () => {
+const ECommerce = () => {
   return (
     <Layout>
       <div
@@ -18,7 +18,7 @@ const CouldServices = () => {
             alt="cloud image"
             layout="fill"
             objectFit="cover"
-            priority={true}
+            priority
             className="hero-cloud"
           />
         </div>
@@ -46,7 +46,7 @@ const CouldServices = () => {
                 width={300}
                 height={300}
                 className="cloud-card-image"
-                priority={true}
+                priority
               />
             </div>
             <div className="col-6">
@@ -107,11 +107,11 @@ const CouldServices = () => {
               <div>
                 <Image
                   src="/images/ep_odometer.svg"
-                  alt="icon"
+                  alt=""
                   width={50}
                   height={50}
                   className=""
-                  priority={true}
+                  priority
                 />
                 <hr />
                 <p className="chart-of-detail">
@@ -127,7 +127,7 @@ const CouldServices = () => {
                   height={50}
                   className=""
                   src="/images/group.svg"
-                  priority={true}
+                  priority
                 />
                 <hr />
                 <p className="chart-of-detail">
@@ -142,7 +142,7 @@ const CouldServices = () => {
                   width={50}
                   height={50}
                   className=""
-                  priority={true}
+                  priority
                 />
                 <hr />
                 <p className="chart-of-detail">
@@ -171,7 +171,7 @@ const CouldServices = () => {
                   alt="capabilities image"
                   width={20}
                   height={200}
-                  priority={true}
+                  priority
                   className="small-colud-img"
                 />
                 <div className="d-flex flex-column">
@@ -195,7 +195,7 @@ const CouldServices = () => {
                   alt="capabilities image"
                   width={100}
                   height={100}
-                  priority={true}
+                  priority
                   className="small-colud-img"
                 />
                 <div className="d-flex flex-column">
@@ -241,7 +241,7 @@ const CouldServices = () => {
                 width={300}
                 height={300}
                 className="related-service-image"
-                priority={true}
+                priority
               />
             </div>
           </div>
@@ -262,4 +262,4 @@ const CouldServices = () => {
   );
 };
 
-export default CouldServices;
+export default ECommerce;

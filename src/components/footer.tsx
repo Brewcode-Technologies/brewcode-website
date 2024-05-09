@@ -4,10 +4,7 @@ import ImageIcon from "./ImageIcon";
 
 function Footer() {
   return (
-    <footer
-      className="footer-bg"
-      style={{ position: "absolute", bottom: 0, width: "100%" }}
-    >
+    <footer className="footer-bg">
       <div className="container">
         <div className="row d-flex justify-content-center align-items-center">
           <div className="col-4 col-md-3 col-lg-2">
@@ -29,7 +26,7 @@ function Footer() {
           ))}
         </div>
 
-        <div className="row d-flex justify-content-center my-4 mt-5">
+        <div className="row d-flex justify-content-center my-4">
           {["instagram", "linkedin", "facebook", "twitter"].map(
             (icon, index) => (
               <div
@@ -40,7 +37,6 @@ function Footer() {
                   src={`/images/icons/${icon}.png`}
                   alt={`${icon} icon`}
                   className="footer-icon"
-                  loading="eager"
                 />
               </div>
             )

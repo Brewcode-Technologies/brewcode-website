@@ -7,13 +7,13 @@ type LayoutProps = {
   isHome?: boolean;
 };
 
-const Layout: React.FC<LayoutProps> = ({ children, isHome }) => {
+const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
-    <main className={`${isHome ? "homepage" : ""} min-h-screen flex-grow`}>
+    <div className="site-container">
       <Navbar />
-      <div className="flex-grow">{children}</div>
+      <main className="content">{children}</main>
       <Footer />
-    </main>
+    </div>
   );
 };
 

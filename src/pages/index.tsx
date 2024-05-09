@@ -5,7 +5,7 @@ import Home from "./home";
 export default function Index() {
   return (
     <>
-      <Layout isHome={true}>
+      <Layout>
         <Head>
           <title>next.js boilerplate with javascript</title>
         </Head>

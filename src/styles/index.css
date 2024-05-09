@@ -13,6 +13,9 @@
   height: 100vh;
 }
 
+#hero-section {
+  overflow-y: hidden !important;
+}
 .social-media-icons-main {
   display: flex;
   align-items: flex-start !important;
@@ -88,11 +91,6 @@ input {
   margin-right: 10px;
 }
 
-.logo {
-  width: 30px;
-  height: 25px;
-}
-
 .navbar-nav .nav-link {
   color: white !important;
   text-decoration: none;
@@ -166,21 +164,24 @@ input {
 }
 
 /* Responsive */
-@media (max-width: 991.5px) {
+/* @media (max-width: 991.5px) {
   .navbar-brand {
     font-size: 30px;
-  }
+  } */
 
-  .navbar-nav .nav-item {
+/* .navbar-nav .nav-item {
     margin: 5px 10px;
   }
-}
+} */
 
 body {
   padding-top: 58px !important;
   /* overflow-y: hidden !important; */
 }
 
+.section::-webkit-scrollbar {
+  display: none;
+}
 .navbar {
   position: fixed;
   width: 100%;
@@ -188,14 +189,15 @@ body {
   top: 0;
 }
 .hero-image {
-  width: 100%;
-  height: 100vh;
+  width: 100wv;
+  /* height: 100vh; */
   background-color: #000;
   background-image: url("../../public/images/Hero-section.png");
   background-repeat: no-repeat;
   background-size: cover;
   position: relative;
   background-position: center top -60px;
+  overflow-y: hidden !important;
 }
 
 .fp-is-overflow .fp-overflow.fp-auto-height,
@@ -342,7 +344,7 @@ body {
   top: 60px;
   width: 100%;
   max-height: 80vh;
-  overflow-y: auto;
+  /* overflow-y: auto; */
   background-color: #000;
   color: #fff;
   z-index: 999;
@@ -425,13 +427,24 @@ body {
   border-radius: 4px;
 }
 
-.about-details {
+/* .about-details {
   color: #ffffff;
   text-align: justify;
   font-family: "Inter";
   font-size: 16px;
   line-height: 30px;
   font-weight: 300;
+} */
+
+.down-arrow-icon-main {
+  position: relative;
+  top: -60px;
+}
+
+.who-about-details {
+  color: #ffffff;
+  font-family: "Inter";
+  font-size: 12px;
 }
 
 .about-image {
@@ -694,6 +707,10 @@ body {
   font-family: "Inter";
 }
 
+.logo {
+  position: relative;
+  /* width: 100%; */
+}
 .clients-logo-container {
   display: flex;
   justify-content: center;
@@ -706,7 +723,9 @@ body {
   aspect-ratio: 1/1;
   cursor: pointer;
 }
-
+.fullpage-container {
+  height: calc(100vh-50px);
+}
 .corpeq-logo {
   width: 120px;
   height: 50px;
@@ -752,6 +771,7 @@ footer {
   position: relative !important;
   left: 0 !important;
   bottom: 0 !important;
+  height: 300px;
 }
 .footer-logo {
   width: 80px;
@@ -808,6 +828,7 @@ footer {
 .footer-icon {
   width: 30px;
   height: 30px;
+  cursor: pointer;
 }
 
 @media (max-width: 768px) {
@@ -1109,11 +1130,12 @@ footer {
   height: 380px;
 }
 .chart-of-detail {
-  font-size: 14px;
+  font-size: 12px;
 }
 
 .chart-of-heading {
-  font-size: 18px;
+  font-size: 22px;
+  font-family: "Lato";
 }
 /* Could Services styles End  */
 
@@ -1171,9 +1193,9 @@ footer {
   font-weight: 500;
 }
 
-.hero-cloud {
+/* .hero-cloud {
   height: auto;
-}
+} */
 /* capabilities styles - End */
 
 /* related-Service- styles start */
@@ -1255,3 +1277,105 @@ footer {
   margin-top: 20px;
 }
 /* got-project styles End */
+
+/* cyber cecurity styles start */
+.cyber-security-services-heading {
+  line-height: 60px;
+  font-family: "Inter";
+  font-weight: 600;
+}
+.cyber-security-services-content {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 80vh;
+  color: #ffffff;
+}
+
+.cyber-security-services-description {
+  font-size: 22px;
+  font-family: "Inter";
+  font-weight: 600;
+  color: #ffffff;
+}
+
+.cyber-security-the-challenge-card {
+  width: 350px !important;
+  height: auto;
+  padding: 0px 30px !important;
+  background-color: #151515;
+}
+.card-margin-right {
+  margin-right: 40px;
+}
+
+.cyber-security-the-challenge-card-title {
+  font-size: 18px;
+  font-family: "Inter";
+}
+
+.cyber-security-the-challenge-card-description {
+  font-size: 14px;
+  font-family: "Inter";
+  text-align: justify;
+}
+
+.what-brewcode-delivers {
+  height: 80vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.bi-arrow-right-short {
+  font-size: 40px;
+  margin-left: -8px;
+  margin-right: 10px;
+}
+
+.prevention-title {
+  font-size: 20px;
+  font-family: "Inter";
+  font-weight: bold;
+}
+
+.what-brewcode {
+  font-size: 30px;
+}
+
+.lateral-movement-underline {
+  text-decoration-line: underline;
+  text-underline-offset: 1px;
+}
+
+.card-black {
+  width: 340px !important;
+  background-color: #151515 !important;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding: 30px;
+}
+.card-black,
+.icon {
+  margin-right: 20px;
+}
+
+.icon-title {
+  font-size: 16px;
+  font-family: "Inter";
+  font-weight: 600;
+  /* padding-top: 10px; */
+}
+
+.experienced-breach-image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  width: 80% !important;
+  height: 50vh;
+  border-radius: 40px;
+  background-color: yellow;
+}
+/* cyber cecurity styles End */

@@ -5,6 +5,7 @@ import Link from "next/link";
 import { BiChevronUp, BiChevronDown } from "react-icons/bi";
 
 import ImageIcon from "./ImageIcon";
+import Image from "next/image";
 
 function Header() {
   const router = useRouter();
@@ -18,6 +19,9 @@ function Header() {
   const navigateToServices = () => {
     router.push("/services");
   };
+  const navigateToECommerce = () => {
+    router.push("/e-commerce");
+  };
 
   const handleDropdownToggle = () => {
     setIsDropdownOpen((prevIsDropdownOpen) => !prevIsDropdownOpen);
@@ -29,7 +33,9 @@ function Header() {
   const navigateToCould = () => {
     router.push("/couldServices");
   };
-
+  const navigateToCyberSecurity = () => {
+    router.push("/cyberSecurity");
+  };
   const handleMouseEnter = () => {
     setIsDropdownOpen(true);
   };
@@ -47,14 +53,14 @@ function Header() {
         className="navbar navbar-expand-lg fixed-top navbar-custom"
       >
         <Container>
-          <Navbar.Brand className="logo-container">
+          <Navbar.Brand>
             <Link href="/" passHref>
-              <ImageIcon
+              <Image
                 src="/images/brewcode-logo.png"
                 alt="Brewcode logo"
                 className="logo"
-                width={40}
-                height={40}
+                width={25}
+                height={25}
               />
             </Link>
           </Navbar.Brand>
@@ -120,12 +126,18 @@ function Header() {
                               </a>
                             </p>
                             <p>
-                              <a className="list-group-item" href="#">
+                              <a
+                                className="list-group-item"
+                                onClick={navigateToCyberSecurity}
+                              >
                                 Cyber Security
                               </a>
                             </p>
                             <p>
-                              <a className="list-group-item" href="#">
+                              <a
+                                className="list-group-item"
+                                onClick={navigateToECommerce}
+                              >
                                 E-Commerce
                               </a>
                             </p>

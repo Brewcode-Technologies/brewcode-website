@@ -16,6 +16,7 @@ const anchors = [
   "ScaleInnovatively",
   "Insights",
   "OurClients",
+  "Footer",
 ];
 
 const Home: React.FC = () => {
@@ -70,7 +71,7 @@ const Home: React.FC = () => {
   ];
 
   return (
-    <>
+    <Layout>
       <ReactFullpage
         licenseKey={"YOUR_KEY_HERE"}
         scrollingSpeed={900}
@@ -90,8 +91,8 @@ const Home: React.FC = () => {
         }}
         render={({ state, fullpageApi }) => {
           return (
-            <div>
-              <div className="section">
+            <div className="fullpage-container">
+              <div className="section" id="hero-section">
                 <div className="hero-image">
                   <div className="container">
                     <div className="row hero-section">
@@ -140,13 +141,7 @@ const Home: React.FC = () => {
                       </div>
                     </div>
                     <div className="row col-12 ">
-                      <div
-                        className="down-arrow-icon-main d-flex justify-content-center"
-                        style={{
-                          position: "relative",
-                          top: -20,
-                        }}
-                      >
+                      <div className="down-arrow-icon-main d-flex justify-content-center">
                         <i className="bi bi-arrow-down-short"></i>
                       </div>
                     </div>
@@ -174,7 +169,7 @@ const Home: React.FC = () => {
                               Brewcode
                             </Link>
                           </p>
-                          <p className=" about-details">
+                          <p className="who-about-details">
                             Working with Brewcode evolves willing to offer the
                             best immersion
                             <br /> to clients and audiences but also investing
@@ -221,8 +216,14 @@ const Home: React.FC = () => {
                     </div>
                     <div className="row d-flex justify-content-between solutions-list">
                       {[
-                        { title: "Cloud Security", icon: "bi-arrow-up-right" },
-                        { title: "Cyber Security", icon: "bi-arrow-up-right" },
+                        {
+                          title: "Cloud Security",
+                          icon: "bi-arrow-up-right",
+                        },
+                        {
+                          title: "Cyber Security",
+                          icon: "bi-arrow-up-right",
+                        },
                         {
                           title: "E-commerce Solution",
                           icon: "bi-arrow-up-right",
@@ -405,11 +406,14 @@ const Home: React.FC = () => {
                   </div>
                 </section>
               </div>
+              <div className="section">
+                <Footer />
+              </div>
             </div>
           );
         }}
       />
-    </>
+    </Layout>
   );
 };
 
