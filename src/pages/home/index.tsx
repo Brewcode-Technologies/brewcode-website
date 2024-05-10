@@ -1,15 +1,23 @@
 import React from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
-
 import Link from "next/link";
 import Image from "next/image";
-
 import SwiperComponent from "@component/components/Carousel ";
-import Layout from "@component/components/layouts/layout ";
 import Footer from "@component/components/Footer ";
 import ImageIcon from "@component/components/ImageIcon ";
 
-const anchors = [
+interface Blog {
+  id: number;
+  title: string;
+  category: string;
+}
+
+interface ClientLogo {
+  src: string;
+  url: string;
+}
+
+const anchors: string[] = [
   "HeroSection",
   "WhoWeAre",
   "OurSolutions",
@@ -21,7 +29,7 @@ const anchors = [
 ];
 
 const Home: React.FC = () => {
-  const blogs = [
+  const blogs: Blog[] = [
     {
       id: 1,
       title:
@@ -48,7 +56,7 @@ const Home: React.FC = () => {
     },
   ];
 
-  const OurClientlogos = [
+  const OurClientlogos: ClientLogo[][] = [
     [
       { src: "/images/st-jude.svg", url: "https://stjude.example.com" },
       { src: "/images/agilo.svg", url: "https://agilo.example.com" },
@@ -79,14 +87,6 @@ const Home: React.FC = () => {
         anchors={anchors}
         navigation
         navigationTooltips={anchors}
-        // sectionsColor={[
-        //   "#7fff00",
-        //   "#00ffff",
-        //   "#29ab87",
-        //   "#ff6347",
-        //   "#ffd700",
-        //   "#6a5acd",
-        // ]}
         onLeave={(origin, destination, direction) => {
           console.log("Leaving section", origin.index);
         }}

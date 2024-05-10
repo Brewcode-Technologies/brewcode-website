@@ -3,7 +3,7 @@ import React from "react";
 import ImageIcon from "./ImageIcon";
 import Image from "next/image";
 
-function Footer() {
+const Footer: React.FC = () => {
   return (
     <footer className="">
       <div className="container">
@@ -109,6 +109,6 @@ function Footer() {
       </div>
     </footer>
   );
-}
+};
 
 export default Footer;

@@ -1,8 +1,21 @@
 import Image from "next/image";
-import React from "react";
 
-const ImageIcon = ({ src, alt, className }) => (
-  <Image src={src} alt={alt} className={className} width={40} height={40} />
-);
+export interface ImageIconProps {
+  src: string;
+  alt: string;
+  className?: string;
+}
+
+const ImageIcon: React.FC<ImageIconProps> = ({ src, alt, className }) => {
+  return (
+    <Image
+      src={src}
+      alt={alt}
+      className={className || ""}
+      width={40}
+      height={40}
+    />
+  );
+};
 
 export default ImageIcon;
