@@ -5,17 +5,7 @@ import React from "react";
 const Services: React.FC = () => {
   return (
     <Layout>
-      <div style={{ position: "relative", height: "100vh", width: "100%" }}>
-        <div className="services-background">
-          <Image
-            src="/images/hero-application.jpg"
-            alt="Decorative background"
-            layout="fill"
-            objectFit="cover"
-            priority
-          />
-        </div>
-
+      <div className="services-background">
         <div className="container">
           <div className="row">
             <div className="services-content">
@@ -40,7 +30,6 @@ const Services: React.FC = () => {
           </div>
         </div>
       </div>
-
       <div className="overview-main">
         <div className="container">
           <div className="row d-flex justify-content-between my-5">

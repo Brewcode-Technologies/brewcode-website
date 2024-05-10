@@ -11,6 +11,7 @@ function Header() {
   const router = useRouter();
 
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const [dropdownTimeout, setDropdownTimeout] = useState(null);
 
   const navigateToLogin = () => {
     router.push("/login");
@@ -37,11 +38,18 @@ function Header() {
     router.push("/cyberSecurity");
   };
   const handleMouseEnter = () => {
+    if (dropdownTimeout) {
+      clearTimeout(dropdownTimeout);
+      setDropdownTimeout(null);
+    }
     setIsDropdownOpen(true);
   };
 
   const handleMouseLeave = () => {
-    setIsDropdownOpen(false);
+    const timeout = setTimeout(() => {
+      setIsDropdownOpen(false);
+    }, 300); // 300ms delay before closing the menu
+    setDropdownTimeout(timeout);
   };
 
   return (
@@ -50,18 +58,21 @@ function Header() {
         expand="lg"
         // bg="dark"
         // variant="dark"
-        className="navbar navbar-expand-lg fixed-top navbar-custom"
+        className=" fixed-top navbar-custom"
       >
-        <Container>
+        <div className="container">
           <Navbar.Brand>
             <Link href="/" passHref>
-              <Image
-                src="/images/brewcode-logo.png"
-                alt="Brewcode logo"
-                className="logo"
-                width={25}
-                height={25}
-              />
+              <div className="logo-wrapper">
+                <Image
+                  src="/images/brewcode-logo.png"
+                  alt="Brewcode logo"
+                  className="logo"
+                  width={40}
+                  height={40}
+                  layout="responsive"
+                />
+              </div>
             </Link>
           </Navbar.Brand>
           <Navbar.Toggle
@@ -69,7 +80,7 @@ function Header() {
             className="custom-toggler"
           />
           <Navbar.Collapse id="navbarSupportedContent">
-            <Nav className="mx-auto mb-2 mb-lg-0">
+            <Nav className="mx-auto mb-2">
               <li className="nav-item" id="nav-text">
                 <Link
                   className="nav-link active"
@@ -82,8 +93,8 @@ function Header() {
               </li>
               <li
                 className="nav-item dropdown dropdown-mega position-static"
-                onMouseEnter={handleMouseEnter}
-                onMouseLeave={handleMouseLeave}
+                onMouseEnter={() => setIsDropdownOpen(true)}
+                onMouseLeave={() => setIsDropdownOpen(false)}
               >
                 <Link
                   className="nav-link dropdown-toggle active"
@@ -94,13 +105,25 @@ function Header() {
                   passHref
                 >
                   What We Do
-                  {isDropdownOpen ? (
-                    <BiChevronDown fontSize={"20px"} />
-                  ) : (
-                    <BiChevronUp fontSize={"20px"} />
-                  )}
+                  <i
+                    className={`bi ${
+                      isDropdownOpen ? "bi-chevron-up" : "bi-chevron-down"
+                    }`}
+                    style={{
+                      fontSize: "14px",
+                      marginLeft: "4px",
+                      fontWeight: "bold",
+                    }}
+                    onMouseEnter={handleMouseEnter}
+                    onMouseLeave={handleMouseLeave}
+                  ></i>
                 </Link>
-                <div className="dropdown-menu shadow">
+                <div
+                  className={`dropdown-menu shadow ${
+                    isDropdownOpen ? "show" : ""
+                  }`}
+                  style={{ width: "100%" }}
+                >
                   <div className="mega-content px-md-4">
                     <div className="container-fluid">
                       <div className="row">
@@ -262,7 +285,7 @@ function Header() {
               Contact Us
             </button>
           </Navbar.Collapse>
-        </Container>
+        </div>
       </Navbar>
     </>
   );

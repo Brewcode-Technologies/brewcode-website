@@ -7,7 +7,7 @@ export default function Index() {
     <>
       <Layout>
         <Head>
-          <title>next.js boilerplate with javascript</title>
+          <title>Brewcode Home page</title>
         </Head>
         <Home />
       </Layout>

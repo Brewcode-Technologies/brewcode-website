@@ -1,18 +1,23 @@
 import Link from "next/link";
 import React from "react";
 import ImageIcon from "./ImageIcon";
+import Image from "next/image";
 
 function Footer() {
   return (
-    <footer className="footer-bg">
+    <footer className="">
       <div className="container">
-        <div className="row d-flex justify-content-center align-items-center">
-          <div className="col-4 col-md-3 col-lg-2">
+        <div className="row d-flex justify-content-between  mb-5">
+          <div className="col-4 col-md-3 col-lg-1 align-self-center">
             <Link href="/" passHref>
-              <ImageIcon
+              <Image
                 src="/images/brewcode-logo.png"
                 alt="Brewcode logo"
                 className="footer-logo"
+                width={40}
+                height={40}
+                layout="responsive"
+                priority
               />
             </Link>
           </div>
@@ -26,23 +31,39 @@ function Footer() {
           ))}
         </div>
 
-        <div className="row d-flex justify-content-center my-4">
-          {["instagram", "linkedin", "facebook", "twitter"].map(
-            (icon, index) => (
-              <div
-                className="col-2 col-sm-2 col-md-2 col-lg-1 d-flex justify-content-center align-items-center"
-                key={index}
-              >
-                <ImageIcon
-                  src={`/images/icons/${icon}.png`}
-                  alt={`${icon} icon`}
-                  className="footer-icon"
-                />
-              </div>
-            )
-          )}
-        </div>
+        <div className="d-flex justify-content-center align-items-center">
+          <div className="flex-footer-icons d-flex justify-content-between align-items-center my-4">
+            <Link href="/">
+              <ImageIcon
+                src="/images/icons/facebook.png"
+                alt="icon"
+                className="footer-icon"
+              />
+            </Link>
+            <Link href="/">
+              <ImageIcon
+                src="/images/icons/twitter.png"
+                alt="icon"
+                className="footer-icon"
+              />
+            </Link>
 
+            <Link href="/">
+              <ImageIcon
+                src="/images/icons/instagram.png"
+                alt="icon"
+                className="footer-icon"
+              />
+            </Link>
+            <Link href="/">
+              <ImageIcon
+                src="/images/icons/Linkedin.png"
+                alt="icon"
+                className="footer-icon"
+              />
+            </Link>
+          </div>
+        </div>
         <div className="container ">
           <div className="row d-flex justify-content-center">
             <div className="col-12 col-md-8 col-lg-6 d-flex justify-content-around mb-3 ">

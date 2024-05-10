@@ -1,12 +1,13 @@
 import React from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
-import ImageIcon from "@component/components/ImageIcon ";
+
 import Link from "next/link";
 import Image from "next/image";
 
 import SwiperComponent from "@component/components/Carousel ";
 import Layout from "@component/components/layouts/layout ";
 import Footer from "@component/components/Footer ";
+import ImageIcon from "@component/components/ImageIcon ";
 
 const anchors = [
   "HeroSection",
@@ -71,7 +72,7 @@ const Home: React.FC = () => {
   ];
 
   return (
-    <Layout>
+    <div style={{ overflowY: "hidden" }}>
       <ReactFullpage
         licenseKey={"YOUR_KEY_HERE"}
         scrollingSpeed={900}
@@ -92,10 +93,10 @@ const Home: React.FC = () => {
         render={({ state, fullpageApi }) => {
           return (
             <div className="fullpage-container">
-              <div className="section" id="hero-section">
+              <div className="section">
                 <div className="hero-image">
                   <div className="container">
-                    <div className="row hero-section">
+                    <div className="row">
                       <div className="col-12 hero-title">
                         <h1 className="hero-section-heading mt-5">
                           <span className="hero-heading-highlight">We're</span>{" "}
@@ -151,27 +152,22 @@ const Home: React.FC = () => {
               <div className="section">
                 <section className="about-section">
                   <div className="container">
-                    <div className="row">
-                      <div className="col-12  my-5">
-                        <h2 className=" about-heading">Who We Are</h2>
-                      </div>
-                      <div className=" about-content">
-                        <div className="col-12 col-md-6 d-flex flex-column">
-                          <p className=" about-description mb-4">
+                    <div className="row my-5">
+                      <div className="col-12 col-md-6">
+                        <h2 className="about-heading mb-4">Who We Are</h2>
+
+                        <div className="about-content d-flex flex-column">
+                          <p className="about-description mb-4">
                             We Create Unique Enhanced
                             <br /> Experience In
                             <br />
-                            <Link
-                              href="https://www.brewcode.co/"
-                              passHref
-                              className="about-link"
-                            >
+                            <Link href="https://www.brewcode.co/" passHref>
                               Brewcode
                             </Link>
                           </p>
                           <p className="who-about-details">
-                            Working with Brewcode evolves willing to offer the
-                            best immersion
+                            Working with Brewcode involves willingness to offer
+                            the best immersion
                             <br /> to clients and audiences but also investing
                             in smart solutions to
                             <br /> reduce costs when it comes to finding
@@ -182,21 +178,22 @@ const Home: React.FC = () => {
                           <div className="d-flex justify-content-start">
                             <button
                               type="button"
-                              className=" about-explore-btn mb-4 btn btn-dark"
+                              className="about-explore-btn mb-4 btn btn-dark"
                             >
                               Explore
                             </button>
                           </div>
                         </div>
-                        <div className="col-12 col-md-6 text-center ">
-                          <Image
-                            src="/images/services-img.png"
-                            width={300}
-                            height={300}
-                            alt="about image"
-                            className="about-image"
-                          />
-                        </div>
+                      </div>
+
+                      <div className="col-12 col-md-6 text-center">
+                        <Image
+                          src="/images/services-img.png"
+                          width={300}
+                          height={300}
+                          alt="about image"
+                          className="about-image img-fluid"
+                        />
                       </div>
                     </div>
                   </div>
@@ -263,7 +260,7 @@ const Home: React.FC = () => {
                 </section>
               </div>
               <div className="section">
-                <section className=" industries-section ">
+                <section className="industries-section ">
                   <div className="container">
                     <div className="col-12">
                       <h1 className="industries-heading industries-heading pt-2">
@@ -307,7 +304,7 @@ const Home: React.FC = () => {
                           <span className="innovation-step-number">1</span>
                           <h3 className=" innovation-step-title">Emerging</h3>
                         </div>
-                        <p className=" mb-5 innovation-step-description">
+                        <p className="mb-5 innovation-step-description">
                           Evaluate business needs and build strategic
                           <br /> technical roadmaps to make your product
                           <br /> vision a reality
@@ -324,7 +321,7 @@ const Home: React.FC = () => {
                           <br /> systems for the future.
                         </p>
                       </div>
-                      <div className="col-12 col-sm-4 pl-4">
+                      <div className="col-12 col-sm-4 pl-4 enterprise-line">
                         <div className="num-flex d-flex mb-4">
                           <span className="innovation-step-number">3</span>
                           <h3 className="innovation-step-title">Enterprise</h3>
@@ -371,9 +368,9 @@ const Home: React.FC = () => {
                 </section>
               </div>
               <div className="section">
-                <section className=" clients-section py-5">
-                  <div className="container my-5">
-                    <div className="row ">
+                <section className="clients-section py-5">
+                  <div className="container">
+                    <div className="row">
                       <div className="col-12 col-md-6 col-lg-6">
                         <h1 className="  clients-heading">Our Clients</h1>
                         <p className=" my-5 clients-subtitle">
@@ -406,14 +403,14 @@ const Home: React.FC = () => {
                   </div>
                 </section>
               </div>
-              <div className="section">
+              <div className="section" style={{ backgroundColor: "#000" }}>
                 <Footer />
               </div>
             </div>
           );
         }}
       />
-    </Layout>
+    </div>
   );
 };
 
