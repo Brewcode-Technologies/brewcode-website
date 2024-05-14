@@ -17,42 +17,42 @@ interface ClientLogo {
   url: string;
 }
 
-const anchors: string[] = [
-  "HeroSection",
-  "WhoWeAre",
-  "OurSolutions",
-  "IndustriesWeServe",
-  "ScaleInnovatively",
-  "Insights",
-  "OurClients",
-  "Footer",
-];
-
 const Home: React.FC = () => {
   const blogs: Blog[] = [
     {
       id: 1,
-      title:
-        "The cube interview series: Driving enhanced security and higher value in Financial services generative Ai",
+      title: "Exploring Alternative JavaScript Frameworks",
+      description:
+        "JavaScript frameworks have become an integral part of web development, empowering developers to build robust and efficient applications. Amongst these frameworks, React has emerged as the go-to choice for many developers due to its flexibility, performance, and the extensive community support it enjoys.",
       category: "Blog",
+      link: "https://brewcode.medium.com/beyond-react-exploring-alternative-javascript-frameworks-4ff7d960dcc9",
     },
     {
       id: 2,
       title:
-        "The cube interview series: Driving enhanced security and higher value in Financial services generative Ai",
+        "Server Side Rendering vs Client Side Rendering: Unveiling the Key Differences",
+      description:
+        "Server-side rendering and client-side rendering are two prominent techniques used in web development to display content to users. Understanding the basics of rendering is essential to grasp the nuances of these approaches.",
       category: "Blog",
+      link: "https://brewcode.medium.com/server-side-rendering-vs-client-side-rendering-unveiling-the-key-differences-d182d857cd77",
     },
     {
       id: 3,
       title:
-        "The cube interview series: Driving enhanced security and higher value in Financial services generative Ai",
+        "Optimizing Technology Strategies: Brewcode’s Guide to Microservices and Monolithic Architectures",
+      description:
+        "Choosing between microservices and monolithic architectures involves weighing various factors, as each approach has distinct advantages and challenges. Below is an explanation of why organizations might favor microservices over monolithic architectures, and how Brewcode Technologies Private Limited (Brewcode) can assist in navigating these architectural choices.",
       category: "Blog",
+      link: "https://brewcode.medium.com/optimizing-technology-strategies-brewcodes-guide-to-microservices-and-monolithic-architectures-2e51925b7456",
     },
     {
       id: 4,
       title:
         "The cube interview series: Driving enhanced security and higher value in Financial services generative Ai",
+      description:
+        "Financial services are increasingly turning to generative AI to enhance security measures and drive higher value. In this interview series, we explore how AI is transforming the financial sector and the benefits it brings.",
       category: "Blog",
+      link: "https://brewcode.medium.com/beyond-react-exploring-alternative-javascript-frameworks-4ff7d960dcc9",
     },
   ];
 
@@ -78,34 +78,35 @@ const Home: React.FC = () => {
       { src: "/images/dhanika.svg", url: "https://dhanika.example.com" },
     ],
   ];
-
+  const truncateText = (text, lines) => {
+    const textLines = text.split("\n");
+    const truncatedText = textLines.slice(0, lines).join("\n");
+    if (textLines.length > lines) {
+      return truncatedText + "...";
+    }
+    return truncatedText;
+  };
   return (
     <div style={{ overflowY: "hidden" }}>
       <ReactFullpage
-        licenseKey={"YOUR_KEY_HERE"}
         scrollingSpeed={900}
-        anchors={anchors}
         navigation
-        navigationTooltips={anchors}
-        onLeave={(origin, destination, direction) => {
-          console.log("Leaving section", origin.index);
-        }}
         render={({ state, fullpageApi }) => {
           return (
             <div className="fullpage-container">
               <div className="section">
                 <div className="hero-image">
                   <div className="container">
-                    <div className="row">
+                    <div className="row hero-title-section">
                       <div className="col-12 hero-title">
-                        <h1 className="hero-section-heading mt-5">
+                        <h1 className="hero-section-heading">
                           <span className="hero-heading-highlight">We're</span>{" "}
                           Here To Solve Your
                           <br />
                           Critical Challenges
                         </h1>
                       </div>
-                      <p className="hero-description text-center">
+                      <p className="hero-description text-center mt-3">
                         In today’s{" "}
                         <strong className="highlight">fast-paced</strong>{" "}
                         climate, companies are required to
@@ -160,10 +161,7 @@ const Home: React.FC = () => {
                           <p className="about-description mb-4">
                             We Create Unique Enhanced
                             <br /> Experience In
-                            <br />
-                            <Link href="https://www.brewcode.co/" passHref>
-                              Brewcode
-                            </Link>
+                            <span className="brewcode-link">Brewcode</span>
                           </p>
                           <p className="who-about-details">
                             Working with Brewcode involves willingness to offer
@@ -201,77 +199,99 @@ const Home: React.FC = () => {
               </div>
               <div className="section">
                 <section className="solutions-section">
-                  <div className="container">
-                    <div className="col-12 my-3">
-                      <h1 className=" solutions-heading">Our Solutions</h1>
-                      <p className=" solutions-description">
-                        Design and deliver new digital experiences, revenue
-                        streams and business models to <br />
-                        meet rising customer expectations and accelerate your
-                        growth
-                      </p>
-                    </div>
-                    <div className="row d-flex justify-content-between solutions-list">
-                      {[
-                        {
-                          title: "Cloud Security",
-                          icon: "bi-arrow-up-right",
-                        },
-                        {
-                          title: "Cyber Security",
-                          icon: "bi-arrow-up-right",
-                        },
-                        {
-                          title: "E-commerce Solution",
-                          icon: "bi-arrow-up-right",
-                        },
-                        {
-                          title: "Software Development",
-                          icon: "bi-arrow-up-right fa-5x",
-                        },
-                        {
-                          title: "Robotic Process Automation (RPA)",
-                          icon: "bi-arrow-up-right",
-                        },
-                        {
-                          title: "Software Audits/Testing as-a-service",
-                          icon: "bi-arrow-up-right",
-                        },
-                        {
-                          title: "Resource Staffing",
-                          icon: "bi-arrow-up-right",
-                        },
-                        {
-                          title: "Infrastructure Solution",
-                          icon: "bi-arrow-up-right fa-5x",
-                        },
-                      ].map((item, index) => (
-                        <div className="col-12 col-md-5 mt-3" key={index}>
-                          <div className="d-flex flex-column mb-3 solutions-item">
-                            <div className="d-flex justify-content-between border-bottom pb-1 solutions-item-header">
-                              <h1 className=" solutions-title">{item.title}</h1>
-                              <i className={`bi ${item.icon} mt-0`}></i>
+                  <div className="container my-3">
+                    <div className="row">
+                      <div className="col-12">
+                        <h1 className="solutions-heading mt-2">
+                          Our Solutions
+                        </h1>
+                        <p className=" solutions-description">
+                          Design and deliver new digital experiences, revenue
+                          streams and business models to <br />
+                          meet rising customer expectations and accelerate your
+                          growth
+                        </p>
+                      </div>
+                      <div className="row d-flex justify-content-between solutions-list">
+                        {[
+                          {
+                            title: "Cloud Security",
+                            icon: "bi-arrow-up-right",
+                            link: "/cloud-security",
+                          },
+                          {
+                            title: "Cyber Security",
+                            icon: "bi-arrow-up-right",
+                            link: "/Cyber Security",
+                          },
+                          {
+                            title: "E-commerce Solution",
+                            icon: "bi-arrow-up-right",
+                            link: "/E-commerce Solution",
+                          },
+                          {
+                            title: "Software Development",
+                            icon: "bi-arrow-up-right fa-5x",
+                            link: "/Software Development",
+                          },
+                          {
+                            title: "Robotic Process Automation (RPA)",
+                            icon: "bi-arrow-up-right",
+                            link: "/Robotic Process Automation (RPA)",
+                          },
+                          {
+                            title: "Software Audits/Testing as-a-service",
+                            icon: "bi-arrow-up-right",
+                            link: "/services",
+                          },
+                          {
+                            title: "Resource Staffing",
+                            icon: "bi-arrow-up-right",
+                            link: "/Resource Staffing",
+                          },
+                          {
+                            title: "Infrastructure Solution",
+                            icon: "bi-arrow-up-right fa-5x",
+                            link: "/Infrastructure Solution",
+                          },
+                        ].map((item, index) => (
+                          <div
+                            className="col-12 mt-3 solutions-item-section"
+                            key={index}
+                          >
+                            <div className="d-flex flex-column mb-3 solutions-item">
+                              <Link
+                                href={item.link}
+                                className="d-flex justify-content-between border-bottom pb-1 solutions-item-header"
+                              >
+                                <h1 className="solutions-title">
+                                  {item.title}
+                                </h1>
+                                <i className={`bi ${item.icon} mt-0`}></i>
+                              </Link>
                             </div>
                           </div>
-                        </div>
-                      ))}
+                        ))}
+                      </div>
                     </div>
                   </div>
                 </section>
               </div>
               <div className="section">
                 <section className="industries-section ">
-                  <div className="container">
-                    <div className="col-12">
-                      <h1 className="industries-heading industries-heading pt-2">
-                        Industries We Serve
-                      </h1>
-                      <p className="  industries-description pt-2">
-                        Design and deliver new digital experiences, revenue
-                        streams and business models to
-                        <br /> meet rising customer expectations and accelerate
-                        your growth
-                      </p>
+                  <div className="container ">
+                    <div className="row pt-3">
+                      <div className="col-12">
+                        <h1 className="industries-heading industries-heading mt-2">
+                          Industries We Serve
+                        </h1>
+                        <p className="  industries-description pt-2">
+                          Design and deliver new digital experiences, revenue
+                          streams and business models to
+                          <br /> meet rising customer expectations and
+                          accelerate your growth
+                        </p>
+                      </div>
                     </div>
                     <div className="row">
                       <div className="col-12 mt-4">
@@ -282,65 +302,70 @@ const Home: React.FC = () => {
                 </section>
               </div>
               <div className="section">
-                <section className=" innovation-section">
+                <section className="innovation-section">
                   <div className="container">
-                    <div className="col-12 d-flex flex-column justify-content-between">
-                      <h1 className="  my-4 innovation-heading">
-                        Scale Innovatively
-                      </h1>
-                      <h3 className="innovation-sub-heading mb-3">
-                        Solve Problems & Build Solutions
-                      </h3>
-                      <p className="innovation-description">
+                    <div className="row my-3">
+                      <div className="col-12d-flex flex-column justify-content-between">
+                        <h1 className="my-4 innovation-heading mt-2">
+                          Scale Innovatively
+                        </h1>
+                        <h3 className="innovation-sub-heading mb-3">
+                          Solve Problems & Build Solutions
+                        </h3>
+                      </div>
+                      <p className="innovation-description mb-4">
                         At scale, for tomorrow. Established enterprises and
                         emerging startups need a perfect balance of strategy,
                         technology, analytics, and knowhow to solve everyday
                         <br /> business challenges.
                       </p>
-                    </div>
-                    <div className="row py-4">
-                      <div className="col-12 col-sm-4">
-                        <div className=" innovation-step-header d-flex mb-4">
-                          <span className="innovation-step-number">1</span>
-                          <h3 className=" innovation-step-title">Emerging</h3>
+
+                      <div className="row mt-5">
+                        <div className="col-12 col-sm-4 mb-3">
+                          <div className=" innovation-step-header d-flex mb-4">
+                            <span className="innovation-step-number">1</span>
+                            <h3 className=" innovation-step-title">Emerging</h3>
+                          </div>
+                          <p className="mb-5 innovation-step-description mb-3">
+                            Evaluate business needs and build strategic
+                            <br /> technical roadmaps to make your product
+                            <br /> vision a reality
+                          </p>
                         </div>
-                        <p className="mb-5 innovation-step-description">
-                          Evaluate business needs and build strategic
-                          <br /> technical roadmaps to make your product
-                          <br /> vision a reality
-                        </p>
-                      </div>
-                      <div className="col-12 col-sm-4  innovation-step-border-lined pl-4">
-                        <div className="innovation-step-header d-flex mb-4">
-                          <span className="innovation-step-number">2</span>
-                          <h3 className="innovation-step-title">Growing</h3>
+                        <div className="col-12 col-sm-4  innovation-step-border-lined pl-4 mb-3">
+                          <div className="innovation-step-header d-flex mb-4">
+                            <span className="innovation-step-number">2</span>
+                            <h3 className="innovation-step-title">Growing</h3>
+                          </div>
+                          <p className="innovation-step-description mb-5">
+                            Fuel your growth with process automation
+                            <br /> and custom applications and build failsafe
+                            <br /> systems for the future.
+                          </p>
                         </div>
-                        <p className="innovation-step-description mb-5">
-                          Fuel your growth with process automation
-                          <br /> and custom applications and build failsafe
-                          <br /> systems for the future.
-                        </p>
-                      </div>
-                      <div className="col-12 col-sm-4 pl-4 enterprise-line">
-                        <div className="num-flex d-flex mb-4">
-                          <span className="innovation-step-number">3</span>
-                          <h3 className="innovation-step-title">Enterprise</h3>
+                        <div className="col-12 col-sm-4 pl-4 enterprise-line">
+                          <div className="num-flex d-flex mb-4">
+                            <span className="innovation-step-number">3</span>
+                            <h3 className="innovation-step-title">
+                              Enterprise
+                            </h3>
+                          </div>
+                          <p className="innovation-step-description mb-5">
+                            Integrate your systems for enterprise agility
+                            <br /> and build your Agile/DevOps capability for
+                            <br /> accelerated growth.
+                          </p>
                         </div>
-                        <p className="innovation-step-description mb-5">
-                          Integrate your systems for enterprise agility
-                          <br /> and build your Agile/DevOps capability for
-                          <br /> accelerated growth.
-                        </p>
                       </div>
                     </div>
                   </div>
                 </section>
               </div>
               <div className="section">
-                <section className=" insights-section">
-                  <div className="container my-4">
+                <section className="insights-section">
+                  <div className="container my-3">
                     <div className="row">
-                      <h1 className=" my-2 insights-heading">Insights</h1>
+                      <h1 className=" my-2 insights-heading mt-2">Insights</h1>
                       <p className=" insights-description my-2">
                         Design and deliver new digital experiences, revenue
                         streams and business models to <br /> meet rising
@@ -353,14 +378,23 @@ const Home: React.FC = () => {
                           key={blog.id}
                           className="col-12 col-sm-6 col-md-4 col-lg-3"
                         >
-                          <div className="insight-card">
-                            <p className=" insight-card-category">
-                              {blog.category}
-                            </p>
-                            <p className=" pt-2 insight-card-title">
-                              {blog.title}
-                            </p>
-                          </div>
+                          <Link
+                            href={blog.link}
+                            target="_blank"
+                            className="insight-card-link"
+                          >
+                            <div className="insight-card card-body mb-3">
+                              <p className="insight-card-category">
+                                {blog.category}
+                              </p>
+                              <h5 className="pt-2 insight-card-title card-title">
+                                {blog.title}
+                              </h5>
+                              <p className="insight-card-description card-text">
+                                {truncateText(blog.description, 3)}
+                              </p>
+                            </div>
+                          </Link>
                         </div>
                       ))}
                     </div>
@@ -372,7 +406,7 @@ const Home: React.FC = () => {
                   <div className="container">
                     <div className="row">
                       <div className="col-12 col-md-6 col-lg-6">
-                        <h1 className="  clients-heading">Our Clients</h1>
+                        <h1 className="clients-heading">Our Clients</h1>
                         <p className=" my-5 clients-subtitle">
                           Pleasure to Work With
                         </p>
