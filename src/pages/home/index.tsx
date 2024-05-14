@@ -96,7 +96,14 @@ const Home: React.FC = () => {
             <div className="fullpage-container">
               <div className="section">
                 <div className="hero-image">
-                  <div className="container">
+                  <video
+                    src="./videos/hero-section-video.mp4"
+                    autoPlay
+                    loop
+                    muted
+                  />
+
+                  <div className="hero-section">
                     <div className="row hero-title-section">
                       <div className="col-12 hero-title">
                         <h1 className="hero-section-heading">
@@ -117,7 +124,7 @@ const Home: React.FC = () => {
                       </p>
                     </div>
 
-                    <div className="row">
+                    <div className="container social-media-icons-section">
                       <div className="col-12 social-media-icons-main d-flex flex-column justify-content-between">
                         <Link href="https://www.instagram.com" passHref>
                           <ImageIcon
@@ -150,7 +157,7 @@ const Home: React.FC = () => {
                   </div>
                 </div>
               </div>
-              <div className="section">
+              <div className="section" style={{ marginTop: "-10px" }}>
                 <section className="about-section">
                   <div className="container">
                     <div className="row my-5">
