@@ -21,10 +21,13 @@
 
 .navbar-custom {
   background-color: #000 !important;
-  color: #ffffff;
-  padding: 10px 0px !important ;
-  display: flex;
-  justify-content: space-between;
+  position: fixed;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbarActive {
+  background-color: #007bff;
 }
 
 .custom-toggler .navbar-toggler-icon {
@@ -157,11 +160,6 @@ input {
     margin: 5px 10px;
   }
 } */
-
-body {
-  padding-top: 60px !important;
-  /* overflow-y: hidden !important; */
-}
 
 /* .section::-webkit-scrollbar {
   display: none;

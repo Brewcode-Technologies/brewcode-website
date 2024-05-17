@@ -5,12 +5,10 @@ import Home from "./home";
 export default function Index() {
   return (
     <>
-      <Layout>
-        <Head>
-          <title>Brewcode Home page</title>
-        </Head>
-        <Home />
-      </Layout>
+      <Head>
+        <title>Brewcode Home page</title>
+      </Head>
+      <Home />
     </>
   );
 }

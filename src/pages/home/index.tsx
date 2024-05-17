@@ -1,10 +1,11 @@
-import React from "react";
+import React, { useEffect, useState } from "react";
 import ReactFullpage from "@fullpage/react-fullpage";
 import Link from "next/link";
 import Image from "next/image";
 import SwiperComponent from "@component/components/Carousel ";
 import Footer from "@component/components/Footer ";
 import ImageIcon from "@component/components/ImageIcon ";
+import Layout from "@component/components/layouts/layout ";
 
 interface Blog {
   id: number;
@@ -86,8 +87,9 @@ const Home: React.FC = () => {
     }
     return truncatedText;
   };
+
   return (
-    <div style={{ overflowY: "hidden" }}>
+    <Layout>
       <ReactFullpage
         scrollingSpeed={900}
         navigation
@@ -97,7 +99,7 @@ const Home: React.FC = () => {
               <div className="section">
                 <div className="hero-image">
                   <video
-                    src="./videos/hero-section-video.mp4"
+                    src="./videos/hero-section-video2.mp4"
                     autoPlay
                     loop
                     muted
@@ -451,7 +453,7 @@ const Home: React.FC = () => {
           );
         }}
       />
-    </div>
+    </Layout>
   );
 };
 
