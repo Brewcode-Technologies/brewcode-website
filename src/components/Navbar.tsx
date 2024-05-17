@@ -86,19 +86,18 @@ const Header: React.FC<HeaderProps> = () => {
       };
 
       window.addEventListener("scroll", handleScroll);
-
-      // Cleanup event listener on component unmount
       return () => {
         window.removeEventListener("scroll", handleScroll);
       };
     }
   }, []);
+
   return (
     <Navbar
       expand="lg"
-      // bg="dark"
-      // variant="dark"
-      className={`${scroll ? "navbarActive" : "navbar-custom"} sticky-top`}
+      className={`${
+        scroll ? "navbarActive" : "navbar-custom"
+      } sticky-top navbar`}
     >
       <div className="container">
         <Navbar.Brand>
@@ -120,14 +119,9 @@ const Header: React.FC<HeaderProps> = () => {
           className="custom-toggler"
         />
         <Navbar.Collapse id="navbarSupportedContent">
-          <Nav className="mx-auto mb-2">
+          <Nav className="mx-auto">
             <li className="nav-item" id="nav-text">
-              <Link
-                className="nav-link active"
-                aria-current="page"
-                href="/"
-                passHref
-              >
+              <Link className="nav-link" aria-current="page" href="/" passHref>
                 Home
               </Link>
             </li>
@@ -318,7 +312,6 @@ const Header: React.FC<HeaderProps> = () => {
               </Link>
             </li>
           </Nav>
-
           <button className="contact-us-btn" onClick={navigateToLogin}>
             Contact Us
           </button>

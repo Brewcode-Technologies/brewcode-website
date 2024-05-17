@@ -60,23 +60,29 @@ const Home: React.FC = () => {
   const OurClientlogos: ClientLogo[][] = [
     [
       { src: "/images/st-jude.svg", url: "https://stjude.example.com" },
-      { src: "/images/agilo.svg", url: "https://agilo.example.com" },
-      { src: "/images/dhanika.svg", url: "https://dhanika.example.com" },
+      { src: "/images/svg/agilo.svg", url: "https://agilo.example.com" },
+      { src: "/images/svg/dhanika.svg", url: "https://dhanika.example.com" },
     ],
     [
-      { src: "/images/soctor.svg", url: "https://soctor.example.com" },
-      { src: "/images/Oilvebay.svg", url: "https://oilvebay.example.com" },
+      { src: "/images/svg/soctor.svg", url: "https://soctor.example.com" },
+      { src: "/images/svg/Oilvebay.svg", url: "https://oilvebay.example.com" },
       { src: "/images/corpeq.svg", url: "https://corpeq.example.com" },
     ],
     [
-      { src: "/images/Enpersoll.svg", url: "https://enpersoll.example.com" },
-      { src: "/images/ojas.svg", url: "https://ojas.example.com" },
-      { src: "/images/humancloud.svg", url: "https://humancloud.example.com" },
+      {
+        src: "/images/svg/Enpersoll.svg",
+        url: "https://enpersoll.example.com",
+      },
+      { src: "/images/svg/ojas.svg", url: "https://ojas.example.com" },
+      {
+        src: "/images/svg/humancloud.svg",
+        url: "https://humancloud.example.com",
+      },
     ],
     [
       { src: "/images/sarci.svg", url: "https://sarci.example.com" },
       { src: "/images/rh.svg", url: "https://rh.example.com" },
-      { src: "/images/dhanika.svg", url: "https://dhanika.example.com" },
+      { src: "/images/svg/dhanika.svg", url: "https://dhanika.example.com" },
     ],
   ];
   const truncateText = (text, lines) => {
@@ -88,6 +94,20 @@ const Home: React.FC = () => {
     return truncatedText;
   };
 
+  const [scrollPosition, setScrollPosition] = useState(0);
+
+  useEffect(() => {
+    const handleScroll = () => {
+      const position = window.scrollY;
+      setScrollPosition(position);
+    };
+
+    window.addEventListener("scroll", handleScroll);
+
+    return () => {
+      window.removeEventListener("scroll", handleScroll);
+    };
+  }, []);
   return (
     <Layout>
       <ReactFullpage

@@ -17,14 +17,12 @@ import "swiper/css/effect-coverflow";
 
 const SwiperComponent = () => {
   const images = [
-    { url: "/images/img5.jpg", caption: "Caption for Image 5" },
-    { url: "/images/img6.jpg", caption: "Caption for Image 6" },
-    { url: "/images/img7.jpg", caption: "Caption for Image 7" },
-    { url: "/images/img5.jpg", caption: "Another Caption for Image 5" },
-    { url: "/images/img6.jpg", caption: "Another Caption for Image 6" },
-    { url: "/images/img7.jpg", caption: "Another Caption for Image 7" },
-    { url: "/images/img8.jpg", caption: "Caption for Image 8" },
-    { url: "/images/img8.jpg", caption: "Another Caption for Image 8" },
+    { url: "/images/slider-img-1.png", caption: "Caption for Image 5" },
+    { url: "/images/slider-img-2.png", caption: "Caption for Image 6" },
+    { url: "/images/slider-img-3.png", caption: "Caption for Image 7" },
+    { url: "/images/slider-img-3.png", caption: "Another Caption for Image 5" },
+    { url: "/images/slider-img-5.png", caption: "Another Caption for Image 6" },
+    { url: "/images/slider-img-6.png", caption: "Another Caption for Image 7" },
   ];
 
   return (
