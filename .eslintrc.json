@@ -1,3 +1,32 @@
 {
-  "extends": "next/core-web-vitals"
+  "extends": ["next", "next/core-web-vitals"],
+  "rules": {
+    "@next/next/no-img-element": "off",
+    "react/jsx-no-undef": "off",
+    "react/no-unescaped-entities": "off"
+  },
+  "overrides": [
+    {
+      "files": ["src/components/Carousel.tsx", "src/pages/services/index.tsx"],
+      "rules": {
+        "@next/next/no-img-element": "off"
+      }
+    },
+    {
+      "files": ["src/components/FullPage.tsx"],
+      "rules": {
+        "react/jsx-no-undef": "off"
+      }
+    },
+    {
+      "files": [
+        "src/components/HomepageComponent/HerosectionComponent.tsx",
+        "src/pages/home/index.tsx",
+        "src/pages/services/index.tsx"
+      ],
+      "rules": {
+        "react/no-unescaped-entities": "off"
+      }
+    }
+  ]
 }
