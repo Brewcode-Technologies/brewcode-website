@@ -11,6 +11,8 @@ interface Blog {
   id: number;
   title: string;
   category: string;
+  description: string;
+  link: string;
 }
 
 interface ClientLogo {
