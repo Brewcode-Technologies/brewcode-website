@@ -453,9 +453,6 @@ const Home: React.FC = () => {
             </div>
           </section>
         </div>
-        <div className="section" style={{ backgroundColor: "#000" }}>
-          <Footer />
-        </div>
       </div>
     </Layout>
   );
