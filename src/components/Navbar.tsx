@@ -158,7 +158,11 @@ const Header: React.FC<HeaderProps> = () => {
                 onMouseEnter={handleDropdownMouseEnter}
                 onMouseLeave={handleDropdownMouseLeave}
               >
-                <div className="mega-content px-md-4">
+                <div
+                  className={`${
+                    scroll ? "navbarActive" : "navbar-custom"
+                  } mega-content px-md-4 margin-top`}
+                >
                   <div className="container-fluid">
                     <div className="row">
                       <div className="col-lg-3 col-sm-6 py-4 px-xl-5 px-4">
