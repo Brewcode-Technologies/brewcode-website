@@ -9,7 +9,7 @@ const CouldServices = () => {
         style={{
           position: "relative",
           width: "100%",
-          height: "100%",
+          height: "100vh",
         }}
       >
         <div className="cloud-image">
@@ -22,20 +22,21 @@ const CouldServices = () => {
             className="hero-cloud"
           />
         </div>
-        <div className="container">
-          <div className="row">
-            <div className="could-services-content">
-              <h1 className="services-header">Could Services Platform</h1>
-              <p className="could-services-description">
-                Increase agility, modernize SAP and enterprise applications,
-                <br /> and simplify operations with automation, expertise
-                <br /> and cloud-native services.
-              </p>
+        <div className="colud-content">
+          <div className="container">
+            <div className="row">
+              <div className="could-services-content">
+                <h1 className="services-header">Could Services Platform</h1>
+                <p className="could-services-description">
+                  Increase agility, modernize SAP and enterprise applications,
+                  <br /> and simplify operations with automation, expertise
+                  <br /> and cloud-native services.
+                </p>
+              </div>
             </div>
           </div>
         </div>
       </div>
-
       <div className="dark-container pt-5">
         <div className="container">
           <div className="row d-flex justify-content-between">
@@ -106,7 +107,7 @@ const CouldServices = () => {
             <div className="col-6">
               <div>
                 <Image
-                  src="/images/ep_odometer.svg"
+                  src="/images/svg/ep_odometer.svg"
                   alt="icon"
                   width={50}
                   height={50}
@@ -126,7 +127,7 @@ const CouldServices = () => {
                   width={50}
                   height={50}
                   className=""
-                  src="/images/group.svg"
+                  src="/images/svg/group.svg"
                   priority={true}
                 />
                 <hr />
@@ -137,7 +138,7 @@ const CouldServices = () => {
               </div>
               <div>
                 <Image
-                  src="/images/setting-arrow.svg"
+                  src="/images/svg/setting-arrow.svg"
                   alt=""
                   width={50}
                   height={50}
@@ -241,7 +242,7 @@ const CouldServices = () => {
                 width={300}
                 height={300}
                 className="related-service-image"
-                priority={true}
+                priority
               />
             </div>
           </div>

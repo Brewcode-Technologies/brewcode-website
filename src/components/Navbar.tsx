@@ -97,7 +97,7 @@ const Header: React.FC<HeaderProps> = () => {
       expand="lg"
       className={`${
         scroll ? "navbarActive" : "navbar-custom"
-      } sticky-top navbar`}
+      } fixed-top navbar`}
     >
       <div className="container">
         <Navbar.Brand>
@@ -160,7 +160,7 @@ const Header: React.FC<HeaderProps> = () => {
               >
                 <div
                   className={`${
-                    scroll ? "navbarActive" : "navbar-custom"
+                    scroll ? "navbar-custom" : "navbarActive"
                   } mega-content px-md-4 margin-top`}
                 >
                   <div className="container-fluid">

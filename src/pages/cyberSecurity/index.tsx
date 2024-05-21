@@ -1,4 +1,4 @@
-import Layout from "@component/components/layouts/layout ";
+import Layout from "@component/components/layouts/layout";
 import Image from "next/image";
 import React from "react";
 
@@ -9,13 +9,13 @@ const CyberSecurity = () => {
         style={{
           position: "relative",
           width: "100%",
-          height: "100%",
+          height: "100vh",
         }}
       >
-        <div className="cloud-image">
+        <div className="cloud-image p-4">
           <Image
-            src="/images/hero-cloud.png"
-            alt="cloud image"
+            src="/images/Hero-sec-cyber.png"
+            alt="cyber security image"
             layout="fill"
             objectFit="cover"
             priority
@@ -151,7 +151,7 @@ const CyberSecurity = () => {
             <div className="row grid gap-4 column-gap-2 py-5 d-flex justify-content-center align-items-center">
               <div className="col-12 col-sm-6 col-md-4 col-lg-4 card-black d-flex">
                 <Image
-                  src="/images/cloud4.png"
+                  src="/images/svg/network-security-svg1.svg"
                   alt=""
                   width={50}
                   height={50}
@@ -161,7 +161,7 @@ const CyberSecurity = () => {
               </div>
               <div className="col-12 col-sm-6 col-md-4 col-lg-4 card-black d-flex">
                 <Image
-                  src="/images/cloud4.png"
+                  src="/images/svg/network-security-svg2.svg"
                   alt=""
                   width={50}
                   height={50}
@@ -171,7 +171,7 @@ const CyberSecurity = () => {
               </div>
               <div className="col-12 col-sm-6 col-md-4 col-lg-4 card-black d-flex">
                 <Image
-                  src="/images/cloud4.png"
+                  src="/images/svg/network-security-svg6.svg"
                   alt=""
                   width={50}
                   height={50}
@@ -184,7 +184,7 @@ const CyberSecurity = () => {
               </div>
               <div className="col-12 col-sm-6 col-md-4 col-lg-4 card-black d-flex">
                 <Image
-                  src="/images/cloud4.png"
+                  src="/images/svg/network-security-svg4.svg"
                   alt=""
                   width={50}
                   height={50}
@@ -197,7 +197,7 @@ const CyberSecurity = () => {
               </div>
               <div className="col-12 col-sm-6 col-md-4 col-lg-4 card-black d-flex">
                 <Image
-                  src="/images/cloud4.png"
+                  src="/images/svg/network-security-svg5.svg"
                   alt=""
                   width={50}
                   height={50}
@@ -210,7 +210,7 @@ const CyberSecurity = () => {
               </div>
               <div className="col-12 col-sm-6 col-md-4 col-lg-4 card-black d-flex">
                 <Image
-                  src="/images/cloud4.png"
+                  src="/images/svg/NetworkSecurity-svg.svg"
                   alt=""
                   width={50}
                   height={50}
@@ -224,6 +224,14 @@ const CyberSecurity = () => {
             </div>
           </div>
           <div className="row d-flex justify-content-center">
+            {/* <Image
+              alt="Background image"
+              src="/images/footer-image-cyber.png"
+              layout="fill"
+              objectFit="cover"
+              priority={true}
+              className="hidden-image"
+            /> */}
             <div className="experienced-breach-image">
               <h2 className="experienced-breach-title mb-5">
                 Experienced Breach?

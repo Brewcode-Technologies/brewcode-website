@@ -1,9 +1,7 @@
 import React, { useEffect, useState } from "react";
-import ReactFullpage from "@fullpage/react-fullpage";
 import Link from "next/link";
 import Image from "next/image";
 import SwiperComponent from "@component/components/Carousel";
-import Footer from "@component/components/Footer";
 import ImageIcon from "@component/components/ImageIcon";
 import Layout from "@component/components/layouts/layout";
 
