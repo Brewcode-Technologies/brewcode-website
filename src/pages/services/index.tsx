@@ -5,7 +5,23 @@ import React from "react";
 const Services: React.FC = () => {
   return (
     <Layout>
-      <div className="services-background">
+      <div
+        style={{
+          position: "relative",
+          width: "100%",
+          height: "100vh",
+        }}
+      >
+        <div className="cloud-image">
+          <Image
+            alt="Comprehensive application services icon"
+            layout="fill"
+            objectFit="cover"
+            priority
+            src="/images/services-hero-application.jpg"
+            className="mb-3 hero-cloud"
+          />
+        </div>
         <div className="container">
           <div className="row">
             <div className="services-content">
@@ -17,19 +33,19 @@ const Services: React.FC = () => {
                 Enhancing business resilience by addressing the complexity{" "}
                 <br /> of the application landscape
               </p>
-
               <ul className="services-menu">
                 <li>Overview</li>
                 <li>Capabilities</li>
                 <li>Services</li>
                 <li>Success Stories</li>
                 <li>Partner</li>
-                <li>Recognitions </li>
+                <li>Recognitions</li>
               </ul>
             </div>
           </div>
         </div>
       </div>
+
       <div className="overview-main">
         <div className="container">
           <div className="row d-flex justify-content-between my-5">
@@ -102,7 +118,7 @@ const Services: React.FC = () => {
                   alt="Comprehensive application services icon"
                   width={50}
                   height={50}
-                  src="/images/Comprehencive.svg"
+                  src="images/svg/Comprehencive.svg"
                   className="mb-3"
                   priority
                 />
@@ -120,12 +136,12 @@ const Services: React.FC = () => {
                   alt="Harnessing technology icon"
                   width={50}
                   height={50}
-                  src="/images/Harnesing.svg"
+                  src="/images/svg/Harnesing.svg"
                   className="mb-3"
                   priority
                 />
                 <h4 className="service-title mb-3">
-                  Comprehensive application services
+                  Harnessing industry expertise
                 </h4>
                 <p className="service-description">
                   We deliver a full range of change- the-business,
@@ -138,7 +154,7 @@ const Services: React.FC = () => {
                   alt="Innovative accelerators icon"
                   width={50}
                   height={50}
-                  src="/images/Innovative.svg"
+                  src="/images/svg/Innovative.svg"
                   className="mb-3"
                   priority
                 />
@@ -154,7 +170,7 @@ const Services: React.FC = () => {
                   alt="Advanced methodologies icon"
                   width={50}
                   height={50}
-                  src="/images/Innovative_.svg"
+                  src="/images/svg/Innovative_.svg"
                   className="mb-3"
                   priority
                 />

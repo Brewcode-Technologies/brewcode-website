@@ -1,4 +1,4 @@
-import Layout from "@component/components/layouts/layout ";
+import Layout from "@component/components/layouts/layout";
 import Image from "next/image";
 import React from "react";
 
@@ -9,13 +9,13 @@ const ECommerce = () => {
         style={{
           position: "relative",
           width: "100%",
-          height: "100%",
+          height: "100vh",
         }}
       >
         <div className="cloud-image">
           <Image
-            src="/images/hero-cloud.png"
-            alt="cloud image"
+            src="/images/Hero-sec-ecommerce.png"
+            alt="ecommerce image"
             layout="fill"
             objectFit="cover"
             priority
@@ -106,7 +106,7 @@ const ECommerce = () => {
             <div className="col-6">
               <div>
                 <Image
-                  src="/images/ep_odometer.svg"
+                  src="/images/svg/ep_odometer.svg"
                   alt=""
                   width={50}
                   height={50}
@@ -126,7 +126,7 @@ const ECommerce = () => {
                   width={50}
                   height={50}
                   className=""
-                  src="/images/group.svg"
+                  src="/images/svg/group.svg"
                   priority
                 />
                 <hr />
@@ -137,7 +137,7 @@ const ECommerce = () => {
               </div>
               <div>
                 <Image
-                  src="/images/setting-arrow.svg"
+                  src="/images/svg/setting-arrow.svg"
                   alt=""
                   width={50}
                   height={50}
@@ -243,17 +243,6 @@ const ECommerce = () => {
                 className="related-service-image"
                 priority
               />
-            </div>
-          </div>
-          <div className="row py-5">
-            <div className="d-flex flex-column got-project">
-              <p className="got-project-small mb-3">GOT PROJECT IN MIND</p>
-              <h1 className="let-connect-heading mb-3">Let’s Connect</h1>
-              <div className="write-msg-div">
-                <p className="write-msg">
-                  Write A<br /> <span className="message">Message</span>
-                </p>
-              </div>
             </div>
           </div>
         </div>
