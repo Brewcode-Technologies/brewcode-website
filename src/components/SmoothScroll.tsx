@@ -1,8 +1,11 @@
-"use client";
-
+import { ReactNode } from "react";
 import { ReactLenis } from "@studio-freight/react-lenis";
 
-function SmoothScroll({ children }) {
+interface SmoothScrollProps {
+  children: ReactNode;
+}
+
+function SmoothScroll({ children }: SmoothScrollProps) {
   return <ReactLenis root>{children}</ReactLenis>;
 }
 
