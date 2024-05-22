@@ -1,4 +1,4 @@
-import LoginPage from "@component/components/LoginPage ";
+import LoginPage from "@component/components/LoginPage";
 import React from "react";
 
 const Login: React.FC = () => {
