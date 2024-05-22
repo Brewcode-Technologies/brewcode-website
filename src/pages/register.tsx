@@ -1,4 +1,4 @@
-import RegisterPage from "@component/components/Register ";
+import RegisterPage from "@component/components/Register";
 import React from "react";
 
 const Register: React.FC = () => {
