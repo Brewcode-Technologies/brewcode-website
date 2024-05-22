@@ -1,14 +1,23 @@
-import type { AppProps } from "next/app";
+import { AppProps } from "next/app";
 import { Provider } from "react-redux";
-import "../styles/index.css";
-import "bootstrap/dist/css/bootstrap.min.css";
 import { useEffect } from "react";
+import { store } from "@component/store";
+
+import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "swiper/css/bundle";
-import { store } from "@component/store";
-import "bootstrap/dist/js/bootstrap";
-export default function App({ Component, pageProps }: AppProps) {
-  useEffect(() => {}, []);
+import "../styles/index.css";
+
+async function importBootstrap() {
+  if (typeof window !== "undefined") {
+    await import("bootstrap/dist/js/bootstrap");
+  }
+}
+
+function MyApp({ Component, pageProps }: AppProps) {
+  useEffect(() => {
+    importBootstrap();
+  }, []);
 
   return (
     <Provider store={store}>
@@ -16,3 +25,5 @@ export default function App({ Component, pageProps }: AppProps) {
     </Provider>
   );
 }
+
+export default MyApp;

@@ -22,7 +22,6 @@ const counterSlice = createSlice({
     reset: (state) => {
       state.value = 0;
     },
-    // Add other actions as needed
   },
 });
 

@@ -5,9 +5,9 @@ import Image from "next/image";
 
 const Footer: React.FC = () => {
   return (
-    <footer className="">
+    <footer>
       <div className="container">
-        <div className="row d-flex justify-content-between  mb-5">
+        <div className="row d-flex justify-content-between">
           <div className="col-4 col-md-3 col-lg-1 align-self-center">
             <Link href="/" passHref>
               <Image
@@ -32,7 +32,7 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="d-flex justify-content-center align-items-center">
-          <div className="flex-footer-icons d-flex justify-content-between align-items-center my-4">
+          <div className="flex-footer-icons  my-4">
             <Link href="/">
               <ImageIcon
                 src="/images/icons/facebook.png"
@@ -64,7 +64,7 @@ const Footer: React.FC = () => {
             </Link>
           </div>
         </div>
-        <div className="container ">
+        <div className="container">
           <div className="row d-flex justify-content-center">
             <div className="col-12 col-md-8 col-lg-6 d-flex justify-content-around mb-3 ">
               <Link href="/" passHref className="footer-link footer-link-home">
@@ -81,7 +81,7 @@ const Footer: React.FC = () => {
               </Link>
             </div>
           </div>
-          <div className="row d-flex justify-content-center">
+          <div className="row d-flex justify-content-center mb-4">
             <div className="col-12 col-md-8 col-lg-6 d-flex justify-content-between">
               <Link
                 href="/privacy-policy"

@@ -1,16 +1,15 @@
 import { useRouter } from "next/router";
+import React from "react";
 
-function ProductIdPage() {
+const ProductIdPage: React.FC = () => {
   const router = useRouter();
-  const productId = router.query.productId;
+  const { productId } = router.query;
 
   return (
-    <div>
-      <center>
-        <h2>Product Id Details {productId}</h2>
-      </center>
+    <div className="text-center">
+      <h2>Product Id Details {productId}</h2>
     </div>
   );
-}
+};
 
 export default ProductIdPage;

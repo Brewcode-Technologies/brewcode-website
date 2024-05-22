@@ -10,8 +10,10 @@ type HeaderProps = {
 
 const Header: React.FC<HeaderProps> = () => {
   const [isDropdownOpen, setIsDropdownOpen] = useState(false);
-  const [dropdownTimeout, setDropdownTimeout] = useState(null);
-  const dropdownRef = useRef(null);
+  const [dropdownTimeout, setDropdownTimeout] = useState<NodeJS.Timeout | null>(
+    null
+  );
+  const dropdownRef = useRef<HTMLLIElement>(null);
 
   const handleMouseEnter = () => {
     if (dropdownTimeout) {
@@ -55,25 +57,21 @@ const Header: React.FC<HeaderProps> = () => {
   const navigateToServices = () => {
     router.push("/services");
   };
+
   const navigateToECommerce = () => {
     router.push("/e-commerce");
   };
 
-  const handleDropdownToggle = () => {
-    setIsDropdownOpen((prevIsDropdownOpen) => !prevIsDropdownOpen);
-    // setTimeout(() => {
-    //   router.push("/whatwedo");
-    // }, 3000);
+  const navigateToCloud = () => {
+    router.push("/cloudServices");
   };
 
-  const navigateToCould = () => {
-    router.push("/couldServices");
-  };
   const navigateToCyberSecurity = () => {
     router.push("/cyberSecurity");
   };
 
   const [scroll, setScroll] = useState(false);
+
   useEffect(() => {
     // Client-side check
     if (typeof window !== "undefined") {
@@ -179,9 +177,9 @@ const Header: React.FC<HeaderProps> = () => {
                           <p>
                             <a
                               className="list-group-item"
-                              onClick={navigateToCould}
+                              onClick={navigateToCloud}
                             >
-                              Colud
+                              Cloud
                             </a>
                           </p>
                           <p>
@@ -207,12 +205,12 @@ const Header: React.FC<HeaderProps> = () => {
                           </p>
                           <p>
                             <a className="list-group-item" href="#">
-                              Resourse Planning
+                              Resource Planning
                             </a>
                           </p>
                           <p>
                             <a className="list-group-item" href="#">
-                              Infrastrucure
+                              Infrastructure
                             </a>
                           </p>
                         </div>
@@ -220,12 +218,12 @@ const Header: React.FC<HeaderProps> = () => {
                       <div className="col-lg-3 col-sm-6 py-4 px-xl-5 px-4 ">
                         <p className="mt-5 padding-top">
                           <a className="list-group-item" href="#">
-                            Robotic Proccess Automation
+                            Robotic Process Automation
                           </a>
                         </p>
                         <p>
                           <a className="list-group-item" href="#">
-                            Full Stack Developement
+                            Full Stack Development
                           </a>
                         </p>
                         <p>
@@ -240,7 +238,7 @@ const Header: React.FC<HeaderProps> = () => {
                         </p>
                         <p>
                           <a className="list-group-item" href="#">
-                            UX/UI designing
+                            UX/UI Designing
                           </a>
                         </p>
                       </div>
@@ -265,7 +263,7 @@ const Header: React.FC<HeaderProps> = () => {
                           </p>
                           <p>
                             <a className="list-group-item" href="#">
-                              Communication & Modie
+                              Communication & Media
                             </a>
                           </p>
                           <p>

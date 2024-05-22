@@ -1,7 +1,7 @@
 import Layout from "@component/components/layouts/layout";
 import React from "react";
 
-function index() {
+const Contact: React.FC = () => {
   return (
     <Layout>
       <div className="text-center">
@@ -9,6 +9,6 @@ function index() {
       </div>
     </Layout>
   );
-}
+};
 
-export default index;
+export default Contact;
