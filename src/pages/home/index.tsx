@@ -19,6 +19,10 @@ interface ClientLogo {
 }
 
 const Home: React.FC = () => {
+  const [isBrowser, setIsBrowser] = useState<boolean>(false);
+  useEffect(() => {
+    setIsBrowser(true);
+  }, []);
   const blogs: Blog[] = [
     {
       id: 1,
@@ -85,7 +89,8 @@ const Home: React.FC = () => {
       { src: "/images/svg/dhanika.svg", url: "https://dhanika.example.com" },
     ],
   ];
-  const truncateText = (text, lines) => {
+
+  const truncateText = (text: string, lines: number): string => {
     const textLines = text.split("\n");
     const truncatedText = textLines.slice(0, lines).join("\n");
     if (textLines.length > lines) {
@@ -94,7 +99,7 @@ const Home: React.FC = () => {
     return truncatedText;
   };
 
-  const [scrollPosition, setScrollPosition] = useState(0);
+  const [scrollPosition, setScrollPosition] = useState<number>(0);
 
   useEffect(() => {
     const handleScroll = () => {
@@ -426,9 +431,9 @@ const Home: React.FC = () => {
                   </p>
                 </div>
                 <div className="col-12 col-md-6 col-lg-6">
-                  {OurClientlogos.map((row, idx) => (
-                    <div key={idx} className="row mb-4 ">
-                      {row.map((logo, index) => (
+                  {OurClientlogos.map((row: ClientLogo[], idx: number) => (
+                    <div key={idx} className="row mb-4">
+                      {row.map((logo: ClientLogo, index: number) => (
                         <div
                           key={index}
                           className="col-lg-4 clients-logo-container"
@@ -436,10 +441,14 @@ const Home: React.FC = () => {
                           <Link href={logo.url} passHref>
                             <ImageIcon
                               src={logo.src}
-                              alt={`${
-                                logo.src.split("/").pop().split(".")[0]
-                              } logo`}
-                              className=" client-logo mb-4"
+                              alt={
+                                logo.src
+                                  ? `${
+                                      logo.src.split("/").pop()?.split(".")[0]
+                                    } logo`
+                                  : "Logo"
+                              }
+                              className="client-logo mb-4"
                             />
                           </Link>
                         </div>
