@@ -12,7 +12,7 @@ const CouldServices: React.FC = () => {
           height: "100vh",
         }}
       >
-        <div className="cloud-image">
+        <div className="cloud-image cloud-services-image">
           <Image
             src="/images/hero-cloud.png"
             alt="cloud image"
@@ -127,7 +127,7 @@ const CouldServices: React.FC = () => {
                   width={50}
                   height={50}
                   className=""
-                  src="/images/svg/group.svg"
+                  src="/images/svg/mission_svg8.svg"
                   priority={true}
                 />
                 <hr />
@@ -166,10 +166,10 @@ const CouldServices: React.FC = () => {
               </button>
             </div>
             <div className="row d-flex justify-content-between my-5">
-              <div className="col-5 d-flex capability-card-img">
+              <div className="col-6 d-flex capability-card-img">
                 <Image
-                  src="/images/small-colud3.png"
-                  alt="capabilities image"
+                  src="/images/Cloud-Migration-image.jpeg"
+                  alt="Cloud Migration and Strategy image"
                   width={20}
                   height={200}
                   priority={true}
@@ -190,9 +190,9 @@ const CouldServices: React.FC = () => {
                   </div>
                 </div>
               </div>
-              <div className="col-5 d-flex capability-card-img">
+              <div className="col-6 d-flex capability-card-img">
                 <Image
-                  src="/images/small-cloud1.png"
+                  src="/images/Infrastructure-image.jpeg"
                   alt="capabilities image"
                   width={100}
                   height={100}
@@ -237,7 +237,7 @@ const CouldServices: React.FC = () => {
             </div>
             <div className="col-6">
               <Image
-                src="/images/cloud4.png"
+                src="/images/Software-as-Service.jpeg"
                 alt="related service image"
                 width={300}
                 height={300}
