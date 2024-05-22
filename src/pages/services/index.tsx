@@ -80,7 +80,7 @@ const Services: React.FC = () => {
             <div className="col-md-4">
               <img
                 alt="Detailed view of application service offerings"
-                src="/images/overview-img1.png"
+                src="/images/overview-img1.jpeg"
                 width={300}
                 height={300}
                 className="overview-image"
@@ -227,7 +227,7 @@ const Services: React.FC = () => {
               <div className="col-3">
                 <div className="Services-card">
                   <Image
-                    src="/images/our-services-img3.png"
+                    src="/images/our-services-img5.jpeg"
                     className="card-img-top"
                     alt="application support and services Image"
                     width={200}
@@ -250,7 +250,7 @@ const Services: React.FC = () => {
               <div className="col-3">
                 <div className="Services-card">
                   <Image
-                    src="/images/our-services-img4.png"
+                    src="/images/our-services-img3.png"
                     className="card-img-top"
                     alt="application support and services Image"
                     width={200}

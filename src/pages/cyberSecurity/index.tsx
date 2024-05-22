@@ -56,7 +56,7 @@ const CyberSecurity: React.FC = () => {
           </div>
           <div className="row">
             <div className="cyber-security-the-challenge-card col-3 py-5 card-margin-right my-5">
-              <h3 className="cyber-security-the-challenge-card-title text-center mb-5">
+              <h3 className="cyber-security-the-challenge-card-title text-center mb-5 pt-4">
                 Persistent attacks
               </h3>
               <p className="cyber-security-the-challenge-card-description">
@@ -67,7 +67,7 @@ const CyberSecurity: React.FC = () => {
               </p>
             </div>
             <div className="cyber-security-the-challenge-card col-3 py-5 card-margin-right my-5">
-              <h3 className="cyber-security-the-challenge-card-title text-center mb-5">
+              <h3 className="cyber-security-the-challenge-card-title text-center mb-5 pt-4">
                 Advanced threats
               </h3>
               <p className="cyber-security-the-challenge-card-description">
@@ -77,7 +77,7 @@ const CyberSecurity: React.FC = () => {
               </p>
             </div>
             <div className="cyber-security-the-challenge-card col-3 py-5 my-5">
-              <h3 className="cyber-security-the-challenge-card-title text-center mb-5">
+              <h3 className="cyber-security-the-challenge-card-title text-center mb-5 pt-4">
                 Business interruption
               </h3>
               <p className="cyber-security-the-challenge-card-description">
@@ -151,8 +151,8 @@ const CyberSecurity: React.FC = () => {
             <div className="row grid gap-4 column-gap-2 py-5 d-flex justify-content-center align-items-center">
               <div className="col-12 col-sm-6 col-md-4 col-lg-4 card-black d-flex">
                 <Image
-                  src="/images/svg/network-security-svg1.svg"
-                  alt=""
+                  src="/images/svg/etwork_svg1.svg"
+                  alt="Network Security image"
                   width={50}
                   height={50}
                   className="icon"
@@ -161,8 +161,8 @@ const CyberSecurity: React.FC = () => {
               </div>
               <div className="col-12 col-sm-6 col-md-4 col-lg-4 card-black d-flex">
                 <Image
-                  src="/images/svg/network-security-svg2.svg"
-                  alt=""
+                  src="/images/svg/endpoint_svg2.svg"
+                  alt="Endpoint Security image"
                   width={50}
                   height={50}
                   className="icon"
@@ -171,8 +171,8 @@ const CyberSecurity: React.FC = () => {
               </div>
               <div className="col-12 col-sm-6 col-md-4 col-lg-4 card-black d-flex">
                 <Image
-                  src="/images/svg/network-security-svg6.svg"
-                  alt=""
+                  src="/images/svg/Incident_svg3.svg"
+                  alt="Incident Response image"
                   width={50}
                   height={50}
                   className="icon"
@@ -184,8 +184,8 @@ const CyberSecurity: React.FC = () => {
               </div>
               <div className="col-12 col-sm-6 col-md-4 col-lg-4 card-black d-flex">
                 <Image
-                  src="/images/svg/network-security-svg4.svg"
-                  alt=""
+                  src="/images/svg/security_svg4.svg"
+                  alt=" Security Compliance image"
                   width={50}
                   height={50}
                   className="icon"
@@ -197,8 +197,8 @@ const CyberSecurity: React.FC = () => {
               </div>
               <div className="col-12 col-sm-6 col-md-4 col-lg-4 card-black d-flex">
                 <Image
-                  src="/images/svg/network-security-svg5.svg"
-                  alt=""
+                  src="/images/svg/awareness_svg6.svg"
+                  alt="Security Awareness image"
                   width={50}
                   height={50}
                   className="icon"
@@ -210,8 +210,8 @@ const CyberSecurity: React.FC = () => {
               </div>
               <div className="col-12 col-sm-6 col-md-4 col-lg-4 card-black d-flex">
                 <Image
-                  src="/images/svg/NetworkSecurity-svg.svg"
-                  alt=""
+                  src="/images/svg/vulnerability_svg5.svg"
+                  alt="Vulnerability Assessment image"
                   width={50}
                   height={50}
                   className="icon"
@@ -224,14 +224,6 @@ const CyberSecurity: React.FC = () => {
             </div>
           </div>
           <div className="row d-flex justify-content-center">
-            {/* <Image
-              alt="Background image"
-              src="/images/footer-image-cyber.png"
-              layout="fill"
-              objectFit="cover"
-              priority={true}
-              className="hidden-image"
-            /> */}
             <div className="experienced-breach-image">
               <h2 className="experienced-breach-title mb-5">
                 Experienced Breach?

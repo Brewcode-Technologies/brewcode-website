@@ -119,7 +119,7 @@ const Home: React.FC = () => {
         <div className="section">
           <div className="hero-image">
             <video
-              src="./videos/hero-section-video2.mp4"
+              src="./videos/hero-section-video.mp4"
               autoPlay
               loop
               muted
@@ -150,31 +150,31 @@ const Home: React.FC = () => {
                 <div className="col-12 social-media-icons-main d-flex flex-column justify-content-between">
                   <Link href="https://www.instagram.com" passHref>
                     <ImageIcon
-                      src="/images/icons/instagram.png"
+                      src="/images/svg/instagram_svg.svg"
                       alt="instagram-icon"
                       className="social-icon instagram  mb-2"
                     />
                   </Link>
                   <Link href="https://www.linkedin.com" passHref>
                     <ImageIcon
-                      src="/images/icons/Linkedin.png"
+                      src="/images/svg/LinkedIn_svg.svg"
                       alt="Linkedin-icon"
                       className="social-icon linkedin mb-2"
                     />
                   </Link>
                   <Link href="https://www.facebook.com" passHref>
                     <ImageIcon
-                      src="/images/icons/facebook.png"
+                      src="/images/svg/facebook_svg.svg"
                       alt="facebook-icon"
                       className="social-icon facebook"
                     />
                   </Link>
                 </div>
               </div>
-              <div className="row col-12 ">
-                <div className="down-arrow-icon-main d-flex justify-content-center">
+              <div className="row">
+                <span className="down-arrow-icon-main d-flex justify-content-center align-items-center">
                   <i className="bi bi-arrow-down-short"></i>
-                </div>
+                </span>
               </div>
             </div>
           </div>
@@ -301,7 +301,7 @@ const Home: React.FC = () => {
           </section>
         </div>
         <div className="section">
-          <section className="industries-section ">
+          <section className="industries-section">
             <div className="container ">
               <div className="row pt-3">
                 <div className="col-12">

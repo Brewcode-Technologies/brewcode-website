@@ -102,7 +102,7 @@ const Header: React.FC<HeaderProps> = () => {
           <Link href="/" passHref>
             <div className="logo-wrapper">
               <Image
-                src="/images/brewcode-logo.png"
+                src="/images/svg/brewcode_logo_svg.svg"
                 alt="Brewcode logo"
                 className="logo"
                 width={40}

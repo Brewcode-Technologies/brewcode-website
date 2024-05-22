@@ -7,11 +7,11 @@ const Footer: React.FC = () => {
   return (
     <footer>
       <div className="container">
-        <div className="row d-flex justify-content-between">
+        <div className="row d-flex justify-content-between mb-4">
           <div className="col-4 col-md-3 col-lg-1 align-self-center">
             <Link href="/" passHref>
               <Image
-                src="/images/brewcode-logo.png"
+                src="/images/svg/brewcode_logo_svg.svg"
                 alt="Brewcode logo"
                 className="footer-logo"
                 width={40}
@@ -35,30 +35,30 @@ const Footer: React.FC = () => {
           <div className="flex-footer-icons  my-4">
             <Link href="/">
               <ImageIcon
-                src="/images/icons/facebook.png"
-                alt="icon"
+                src="/images/svg/facebook_svg.svg"
+                alt=" facebook icon"
                 className="footer-icon"
               />
             </Link>
             <Link href="/">
               <ImageIcon
-                src="/images/icons/twitter.png"
-                alt="icon"
+                src="/images/svg/x_svg.svg"
+                alt="twitter icon"
                 className="footer-icon"
               />
             </Link>
 
             <Link href="/">
               <ImageIcon
-                src="/images/icons/instagram.png"
+                src="/images/svg/instagram_svg.svg"
                 alt="icon"
                 className="footer-icon"
               />
             </Link>
             <Link href="/">
               <ImageIcon
-                src="/images/icons/Linkedin.png"
-                alt="icon"
+                src="/images/svg/LinkedIn_svg.svg"
+                alt="LinkedIn icon"
                 className="footer-icon"
               />
             </Link>
@@ -73,35 +73,23 @@ const Footer: React.FC = () => {
               <Link href="/about" passHref className="footer-link">
                 About
               </Link>
-              <Link href="/services" passHref className="footer-link">
-                Services
-              </Link>
+
               <Link href="/contact" passHref className="footer-link">
                 Contact
+              </Link>
+              <Link href="/contact" passHref className="footer-link">
+                Cookie Policy
               </Link>
             </div>
           </div>
           <div className="row d-flex justify-content-center mb-4">
-            <div className="col-12 col-md-8 col-lg-6 d-flex justify-content-between">
+            <div className="col-12 col-md-8 col-lg-6 d-flex justify-content-center">
               <Link
                 href="/privacy-policy"
                 passHref
-                className="footer-link-policy"
+                className="footer-link-policy text-center"
               >
-                © 2023 Brewcode
-              </Link>
-              <Link
-                href="/privacy-policy"
-                passHref
-                className="footer-link-policy"
-              >
-                Privacy Policy
-              </Link>
-              <Link href="/terms" passHref className="footer-link-policy">
-                Terms of Services
-              </Link>
-              <Link href="/terms" passHref className="footer-link-policy">
-                All Rights Reserved
+                © 2024 Brewcode Pvt Ltd All Rights Reserved
               </Link>
             </div>
           </div>
