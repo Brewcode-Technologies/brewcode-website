@@ -8,17 +8,16 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import "swiper/css/bundle";
 import "../styles/index.css";
 
-async function importBootstrap() {
-  if (typeof window !== "undefined") {
-    await import("bootstrap/dist/js/bootstrap");
-  }
-}
-
 function MyApp({ Component, pageProps }: AppProps) {
   useEffect(() => {
-    importBootstrap();
+    if (typeof window !== "undefined") {
+      import("bootstrap/dist/js/bootstrap")
+        .then((bootstrap) => {})
+        .catch((error) => {
+          console.error("Error loading Bootstrap:", error);
+        });
+    }
   }, []);
-
   return (
     <Provider store={store}>
       <Component {...pageProps} />
