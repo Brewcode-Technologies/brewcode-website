@@ -1,7 +1,6 @@
-import Layout from "@component/components/layouts/layout ";
+import Layout from "@component/components/layouts/layout";
 import React from "react";
-
-const WhoWeAre = () => {
+const WhoWeAre: React.FC = () => {
   return (
     <Layout>
       <h1 className="text-center">What we do</h1>

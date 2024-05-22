@@ -2,7 +2,7 @@ import Layout from "@component/components/layouts/layout";
 import Image from "next/image";
 import React from "react";
 
-const CouldServices = () => {
+const CouldServices: React.FC = () => {
   return (
     <Layout>
       <div

@@ -1,13 +1,11 @@
 import React from "react";
 
-function sweater() {
+const Sweater: React.FC = () => {
   return (
     <div>
-      <center>
-        <h2>Loanding page for sweater page</h2>
-      </center>
+      <h2>Loading page for sweater page</h2>
     </div>
   );
-}
+};
 
-export default sweater;
+export default Sweater;

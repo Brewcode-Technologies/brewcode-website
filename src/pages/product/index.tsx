@@ -1,13 +1,11 @@
 import React from "react";
 
-function Product() {
+const Product: React.FC = () => {
   return (
-    <div>
-      <center>
-        <h2>Product Details </h2>
-      </center>
+    <div className="text-center">
+      <h2>Product Details</h2>
     </div>
   );
-}
+};
 
 export default Product;

@@ -1,14 +1,17 @@
 import Head from "next/head";
-import Layout from "@component/components/layouts/layout";
 import Home from "./home";
+import React from "react";
 
-export default function Index() {
+const Index: React.FC = () => {
   return (
     <>
       <Head>
         <title>Brewcode Home page</title>
       </Head>
+
       <Home />
     </>
   );
-}
+};
+
+export default Index;
