@@ -250,7 +250,7 @@ const Services: React.FC = () => {
               <div className="col-3">
                 <div className="Services-card">
                   <Image
-                    src="/images/our-services-img3.png"
+                    src="/images/services-card-img2.jpeg"
                     className="card-img-top"
                     alt="application support and services Image"
                     width={200}
@@ -273,7 +273,7 @@ const Services: React.FC = () => {
               <div className="col-3">
                 <div className="Services-card">
                   <Image
-                    src="/images/our-services-img2.png"
+                    src="/images/our-services-img2.jpeg"
                     className="card-img-top"
                     alt="application support and services Image"
                     width={200}
