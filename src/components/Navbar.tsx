@@ -107,7 +107,7 @@ const Header: React.FC<HeaderProps> = () => {
                 className="logo"
                 width={40}
                 height={40}
-                layout="responsive"
+                priority
               />
             </div>
           </Link>
