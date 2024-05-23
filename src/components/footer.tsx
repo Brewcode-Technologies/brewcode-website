@@ -16,7 +16,6 @@ const Footer: React.FC = () => {
                 className="footer-logo"
                 width={40}
                 height={40}
-                layout="responsive"
                 priority
               />
             </Link>
