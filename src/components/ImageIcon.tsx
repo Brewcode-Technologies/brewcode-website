@@ -14,6 +14,7 @@ const ImageIcon: React.FC<ImageIconProps> = ({ src, alt, className }) => {
       className={className || ""}
       width={40}
       height={40}
+      priority
     />
   );
 };

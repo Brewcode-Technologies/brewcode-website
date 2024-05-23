@@ -16,7 +16,7 @@ const CouldServices: React.FC = () => {
           <Image
             src="/images/hero-cloud.png"
             alt="cloud image"
-            layout="fill"
+            // layout="fill"
             objectFit="cover"
             priority={true}
             className="hero-cloud"
