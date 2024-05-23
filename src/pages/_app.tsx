@@ -9,15 +9,15 @@ import "swiper/css/bundle";
 import "../styles/index.css";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  useEffect(() => {
-    if (typeof window !== "undefined") {
-      import("bootstrap/dist/js/bootstrap")
-        .then((bootstrap) => {})
-        .catch((error) => {
-          console.error("Error loading Bootstrap:", error);
-        });
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (typeof window !== "undefined") {
+  //     import("bootstrap/dist/js/bootstrap")
+  //       .then((bootstrap) => {})
+  //       .catch((error) => {
+  //         console.error("Error loading Bootstrap:", error);
+  //       });
+  //   }
+  // }, []);
   return (
     <Provider store={store}>
       <Component {...pageProps} />
