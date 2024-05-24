@@ -1,7 +1,6 @@
 import { useRouter } from "next/router";
 import { Route } from "../types";
 
-// Define the route map
 export const routeMap: Record<Route, string> = {
   "/": "/",
   login: "/login",
@@ -34,6 +33,7 @@ export const routeMap: Record<Route, string> = {
   "dhanika-solutions": "/case-studies/dhanika-solutions",
   "brewcode-meet": "/case-studies/brewcode-meet",
   "vodafone-italia": "/case-studies/vodafone-italia",
+  "case-studies": "/case-studies",
 };
 
 const useNavigation = () => {
