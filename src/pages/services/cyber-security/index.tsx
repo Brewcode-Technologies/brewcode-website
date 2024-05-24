@@ -16,10 +16,9 @@ const CyberSecurity: React.FC = () => {
           <Image
             src="/images/Hero-sec-cyber.png"
             alt="cyber security image"
-            // layout="fill"
-            objectFit="cover"
-            priority
-            className="hero-cloud"
+            fill
+            className="mb-3 hero-cloud"
+            // style={{ objectFit: "cover" }}
           />
         </div>
         <div className="container">

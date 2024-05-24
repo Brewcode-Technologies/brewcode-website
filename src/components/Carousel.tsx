@@ -31,47 +31,49 @@ const SwiperComponent = () => {
   ];
 
   return (
-    <Swiper
-      modules={[Navigation, Pagination, EffectCoverflow]}
-      effect="coverflow"
-      grabCursor={true}
-      centeredSlides={true}
-      slidesPerView="auto"
-      coverflowEffect={{
-        rotate: 0,
-        stretch: 0,
-        depth: 100,
-        modifier: 1,
-        slideShadows: true,
-      }}
-      loop={true}
-      navigation={{
-        nextEl: ".swiper-button-next",
-        prevEl: ".swiper-button-prev",
-      }}
-      autoplay={{
-        delay: 1000,
-        disableOnInteraction: true,
-      }}
-    >
-      {images.map((image, index) => (
-        <SwiperSlide key={index}>
-          <div className="image-container">
-            <img src={image.url} alt={`Slide ${index + 1}`} />
-            <div className="overlay">
-              <p className="image-caption">{image.caption}</p>
+    <div className="swiper-container">
+      <Swiper
+        modules={[Navigation, Pagination, EffectCoverflow]}
+        effect="coverflow"
+        grabCursor={true}
+        centeredSlides={true}
+        slidesPerView="auto"
+        coverflowEffect={{
+          rotate: 0,
+          stretch: 0,
+          depth: 100,
+          modifier: 1,
+          slideShadows: true,
+        }}
+        loop={true}
+        navigation={{
+          nextEl: ".swiper-button-next",
+          prevEl: ".swiper-button-prev",
+        }}
+        autoplay={{
+          delay: 1000,
+          disableOnInteraction: true,
+        }}
+      >
+        {images.map((image, index) => (
+          <SwiperSlide key={index}>
+            <div className="image-container">
+              <img src={image.url} alt={`Slide ${index + 1}`} />
+              <div className="overlay">
+                <p className="image-caption">{image.caption}</p>
+              </div>
             </div>
-          </div>
-        </SwiperSlide>
-      ))}
+          </SwiperSlide>
+        ))}
 
-      <div>
-        <FaArrowLeftLong className="swiper-button-prev" />
-      </div>
-      <div>
-        <FaArrowRightLong fontSize={10} className="swiper-button-next" />
-      </div>
-    </Swiper>
+        <div>
+          <FaArrowLeftLong className="swiper-button-prev" />
+        </div>
+        <div>
+          <FaArrowRightLong fontSize={10} className="swiper-button-next" />
+        </div>
+      </Swiper>
+    </div>
   );
 };
 

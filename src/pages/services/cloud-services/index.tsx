@@ -16,10 +16,9 @@ const CouldServices: React.FC = () => {
           <Image
             src="/images/hero-cloud.png"
             alt="cloud image"
-            // layout="fill"
-            objectFit="cover"
-            priority={true}
-            className="hero-cloud"
+            fill
+            className="mb-3 hero-cloud"
+            style={{ objectFit: "cover" }}
           />
         </div>
         <div className="colud-content">
@@ -42,7 +41,7 @@ const CouldServices: React.FC = () => {
           <div className="row d-flex justify-content-between">
             <div className="col-6">
               <Image
-                src="/images/cloud.png"
+                src="/images/cloud.jpeg"
                 alt="cloud image"
                 width={300}
                 height={300}
@@ -244,17 +243,6 @@ const CouldServices: React.FC = () => {
                 className="related-service-image"
                 priority
               />
-            </div>
-          </div>
-          <div className="row py-5">
-            <div className="d-flex flex-column got-project">
-              <p className="got-project-small mb-3">GOT PROJECT IN MIND</p>
-              <h1 className="let-connect-heading mb-3">Let’s Connect</h1>
-              <div className="write-msg-div">
-                <p className="write-msg">
-                  Write A<br /> <span className="message">Message</span>
-                </p>
-              </div>
             </div>
           </div>
         </div>

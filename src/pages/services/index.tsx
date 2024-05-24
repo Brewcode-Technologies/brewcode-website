@@ -15,11 +15,10 @@ const Services: React.FC = () => {
         <div className="cloud-image">
           <Image
             alt="Comprehensive application services icon"
-            // layout="fill"
-            objectFit="cover"
-            priority
             src="/images/services-hero-application.jpg"
+            fill
             className="mb-3 hero-cloud"
+            style={{ objectFit: "cover" }}
           />
         </div>
         <div className="container">
@@ -80,7 +79,7 @@ const Services: React.FC = () => {
             <div className="col-md-4">
               <img
                 alt="Detailed view of application service offerings"
-                src="/images/overview-img1.jpeg"
+                src="/images/overview-img.jpeg"
                 width={300}
                 height={300}
                 className="overview-image"
@@ -201,7 +200,7 @@ const Services: React.FC = () => {
               <div className="col-3">
                 <div className="Services-card">
                   <Image
-                    src="/images/services-card-img1.png"
+                    src="/images/services-card-img2.jpeg"
                     className="card-img-top"
                     alt="application support and services Image"
                     width={200}
@@ -227,7 +226,7 @@ const Services: React.FC = () => {
               <div className="col-3">
                 <div className="Services-card">
                   <Image
-                    src="/images/our-services-img5.jpeg"
+                    src="/images/our-services-img2.jpeg"
                     className="card-img-top"
                     alt="application support and services Image"
                     width={200}
@@ -250,7 +249,7 @@ const Services: React.FC = () => {
               <div className="col-3">
                 <div className="Services-card">
                   <Image
-                    src="/images/services-card-img2.jpeg"
+                    src="/images/our-services-img5.jpeg"
                     className="card-img-top"
                     alt="application support and services Image"
                     width={200}
@@ -273,7 +272,7 @@ const Services: React.FC = () => {
               <div className="col-3">
                 <div className="Services-card">
                   <Image
-                    src="/images/our-services-img2.jpeg"
+                    src="/images/services-card-img1.png"
                     className="card-img-top"
                     alt="application support and services Image"
                     width={200}

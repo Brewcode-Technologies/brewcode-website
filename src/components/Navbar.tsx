@@ -3,72 +3,89 @@ import { useRouter } from "next/router";
 import { Navbar, Nav } from "react-bootstrap";
 import Link from "next/link";
 import Image from "next/image";
+import useNavigation, { routeMap } from "./customHooks/useNavigation";
 
 type HeaderProps = {
   scroll?: boolean;
 };
 
 const Header: React.FC<HeaderProps> = () => {
-  const [isDropdownOpen, setIsDropdownOpen] = useState(false);
+  const { navigate } = useNavigation();
+  const [isWhatWeDoOpen, setIsWhatWeDoOpen] = useState<boolean>(false);
+  const [isOurWorkOpen, setIsOurWorkOpen] = useState<boolean>(false);
   const [dropdownTimeout, setDropdownTimeout] = useState<NodeJS.Timeout | null>(
     null
   );
-  const dropdownRef = useRef<HTMLLIElement>(null);
 
-  const handleMouseEnter = () => {
+  const whatWeDoRef = useRef<HTMLLIElement>(null);
+  const ourWorkRef = useRef<HTMLLIElement>(null);
+
+  const handleMouseEnterWhatWeDo = () => {
     if (dropdownTimeout) {
       clearTimeout(dropdownTimeout);
       setDropdownTimeout(null);
     }
-    setIsDropdownOpen(true);
+    setIsWhatWeDoOpen(true);
   };
 
-  const handleMouseLeave = () => {
-    if (dropdownRef.current) {
+  const handleMouseLeaveWhatWeDo = () => {
+    if (whatWeDoRef.current) {
       const timeout = setTimeout(() => {
-        setIsDropdownOpen(false);
+        setIsWhatWeDoOpen(false);
       }, 300);
       setDropdownTimeout(timeout);
     }
   };
 
-  const handleDropdownMouseEnter = () => {
+  const handleDropdownMouseEnterWhatWeDo = () => {
     if (dropdownTimeout) {
       clearTimeout(dropdownTimeout);
       setDropdownTimeout(null);
     }
   };
 
-  const handleDropdownMouseLeave = () => {
-    if (dropdownRef.current) {
+  const handleDropdownMouseLeaveWhatWeDo = () => {
+    if (whatWeDoRef.current) {
       const timeout = setTimeout(() => {
-        setIsDropdownOpen(false);
+        setIsWhatWeDoOpen(false);
       }, 1000);
       setDropdownTimeout(timeout);
     }
   };
 
+  const handleMouseEnterOurWork = () => {
+    if (dropdownTimeout) {
+      clearTimeout(dropdownTimeout);
+      setDropdownTimeout(null);
+    }
+    setIsOurWorkOpen(true);
+  };
+
+  const handleMouseLeaveOurWork = () => {
+    if (ourWorkRef.current) {
+      const timeout = setTimeout(() => {
+        setIsOurWorkOpen(false);
+      }, 300);
+      setDropdownTimeout(timeout);
+    }
+  };
+
+  const handleDropdownMouseEnterOurWork = () => {
+    if (dropdownTimeout) {
+      clearTimeout(dropdownTimeout);
+      setDropdownTimeout(null);
+    }
+  };
+
+  const handleDropdownMouseLeaveOurWork = () => {
+    if (ourWorkRef.current) {
+      const timeout = setTimeout(() => {
+        setIsOurWorkOpen(false);
+      }, 1000);
+      setDropdownTimeout(timeout);
+    }
+  };
   const router = useRouter();
-
-  const navigateToLogin = () => {
-    router.push("/login");
-  };
-
-  const navigateToServices = () => {
-    router.push("/services");
-  };
-
-  const navigateToECommerce = () => {
-    router.push("/e-commerce");
-  };
-
-  const navigateToCloud = () => {
-    router.push("/cloudServices");
-  };
-
-  const navigateToCyberSecurity = () => {
-    router.push("/cyberSecurity");
-  };
 
   const [scroll, setScroll] = useState(false);
 
@@ -119,19 +136,24 @@ const Header: React.FC<HeaderProps> = () => {
         <Navbar.Collapse id="navbarSupportedContent">
           <Nav className="mx-auto">
             <li className="nav-item" id="nav-text">
-              <Link className="nav-link" aria-current="page" href="/" passHref>
+              <Link
+                className="nav-link"
+                aria-current="page"
+                href={routeMap["/"]}
+                passHref
+              >
                 Home
               </Link>
             </li>
             <li
               className="nav-item dropdown dropdown-mega position-static"
-              onMouseEnter={handleMouseEnter}
-              onMouseLeave={handleMouseLeave}
-              ref={dropdownRef}
+              onMouseEnter={handleMouseEnterWhatWeDo}
+              onMouseLeave={handleMouseLeaveWhatWeDo}
+              ref={whatWeDoRef}
             >
               <Link
                 className="nav-link dropdown-toggle active"
-                href="/whatwedo"
+                href="#"
                 data-bs-toggle="dropdown"
                 data-bs-auto-close="outside"
                 passHref
@@ -139,7 +161,7 @@ const Header: React.FC<HeaderProps> = () => {
                 What We Do
                 <i
                   className={`bi ${
-                    isDropdownOpen ? "bi-chevron-up" : "bi-chevron-down"
+                    isWhatWeDoOpen ? "bi-chevron-up" : "bi-chevron-down"
                   }`}
                   style={{
                     fontSize: "14px",
@@ -150,11 +172,11 @@ const Header: React.FC<HeaderProps> = () => {
               </Link>
               <div
                 className={`dropdown-menu shadow ${
-                  isDropdownOpen ? "show" : ""
+                  isWhatWeDoOpen ? "show" : ""
                 }`}
                 style={{ width: "100%" }}
-                onMouseEnter={handleDropdownMouseEnter}
-                onMouseLeave={handleDropdownMouseLeave}
+                onMouseEnter={handleDropdownMouseEnterWhatWeDo}
+                onMouseLeave={handleDropdownMouseLeaveWhatWeDo}
               >
                 <div
                   className={`${
@@ -164,117 +186,170 @@ const Header: React.FC<HeaderProps> = () => {
                   <div className="container-fluid">
                     <div className="row">
                       <div className="col-lg-3 col-sm-6 py-4 px-xl-5 px-4">
-                        <h5 className="mb-3 dropdown-heading">Capabilities</h5>
+                        <h5 className="mb-3 dropdown-heading"> Services</h5>
                         <div className="">
-                          <p>
-                            <a
+                          <p className="pb-1">
+                            <Link
                               className="list-group-item"
-                              onClick={navigateToServices}
+                              href={routeMap["cloud-services"]}
+                              passHref
                             >
-                              Services
-                            </a>
+                              Cloud Services
+                            </Link>
                           </p>
-                          <p>
-                            <a
+                          <p className="pb-1">
+                            <Link
                               className="list-group-item"
-                              onClick={navigateToCloud}
-                            >
-                              Cloud
-                            </a>
-                          </p>
-                          <p>
-                            <a
-                              className="list-group-item"
-                              onClick={navigateToCyberSecurity}
+                              href={routeMap["cyber-security"]}
+                              passHref
                             >
                               Cyber Security
-                            </a>
+                            </Link>
                           </p>
-                          <p>
-                            <a
+                          <p className="pb-1">
+                            <Link
                               className="list-group-item"
-                              onClick={navigateToECommerce}
+                              href={routeMap["e-commerce"]}
+                              passHref
                             >
                               E-Commerce
-                            </a>
+                            </Link>{" "}
                           </p>
-                          <p>
-                            <a className="list-group-item" href="#">
+                          <p className="pb-1">
+                            <Link
+                              className="list-group-item"
+                              href={
+                                routeMap["enterprise-application-development"]
+                              }
+                              passHref
+                            >
                               Enterprise Application Development
-                            </a>
+                            </Link>
                           </p>
-                          <p>
-                            <a className="list-group-item" href="#">
+                          <p className="pb-1">
+                            <Link
+                              className="list-group-item"
+                              href={routeMap["resource-planning"]}
+                              passHref
+                            >
                               Resource Planning
-                            </a>
+                            </Link>
                           </p>
-                          <p>
-                            <a className="list-group-item" href="#">
+                          <p className="pb-1">
+                            <Link
+                              className="list-group-item"
+                              href={routeMap["infrastructure"]}
+                              passHref
+                            >
                               Infrastructure
-                            </a>
+                            </Link>
                           </p>
                         </div>
                       </div>
-                      <div className="col-lg-3 col-sm-6 py-4 px-xl-5 px-4 ">
-                        <p className="mt-5 padding-top">
-                          <a className="list-group-item" href="#">
+                      <div className="col-lg-3 col-sm-6 py-4 px-xl-5 px-4 mt-1">
+                        <p className="mt-5 pb-1">
+                          <Link
+                            className="list-group-item"
+                            href={routeMap["robotic-process-automation"]}
+                            passHref
+                          >
                             Robotic Process Automation
-                          </a>
+                          </Link>
                         </p>
-                        <p>
-                          <a className="list-group-item" href="#">
+                        <p className="pb-1">
+                          <Link
+                            className="list-group-item"
+                            href={routeMap["full-stack-development"]}
+                            passHref
+                          >
                             Full Stack Development
-                          </a>
+                          </Link>
                         </p>
-                        <p>
-                          <a className="list-group-item" href="#">
+                        <p className="pb-1">
+                          <Link
+                            className="list-group-item"
+                            href={routeMap["digital-assurance"]}
+                            passHref
+                          >
                             Digital Assurance
-                          </a>
+                          </Link>
                         </p>
-                        <p>
-                          <a className="list-group-item" href="#">
+                        <p className="pb-1">
+                          <Link
+                            className="list-group-item"
+                            href={routeMap["web-development"]}
+                            passHref
+                          >
                             Web Development
-                          </a>
+                          </Link>
                         </p>
-                        <p>
-                          <a className="list-group-item" href="#">
+                        <p className="pb-1">
+                          <Link
+                            className="list-group-item"
+                            href={routeMap["ux-ui-designing"]}
+                            passHref
+                          >
                             UX/UI Designing
-                          </a>
+                          </Link>
                         </p>
                       </div>
 
                       <div className="col-lg-3 col-sm-6 py-4 px-xl-5 px-4">
                         <h5 className="mb-3 dropdown-heading">Industries</h5>
                         <div className="">
-                          <p>
-                            <a className="list-group-item" href="#">
+                          <p className="pb-1">
+                            <Link
+                              className="list-group-item"
+                              href={routeMap.automotive}
+                              passHref
+                            >
                               Automotive
-                            </a>
+                            </Link>
                           </p>
-                          <p>
-                            <a className="list-group-item" href="#">
+                          <p className="pb-1">
+                            <Link
+                              className="list-group-item"
+                              href={routeMap.banking}
+                              passHref
+                            >
                               Banking
-                            </a>
+                            </Link>
                           </p>
-                          <p>
-                            <a className="list-group-item" href="#">
+                          <p className="pb-1">
+                            <Link
+                              className="list-group-item"
+                              href={routeMap["capital-markets"]}
+                              passHref
+                            >
                               Capital Markets
-                            </a>
+                            </Link>
                           </p>
-                          <p>
-                            <a className="list-group-item" href="#">
+                          <p className="pb-1">
+                            <Link
+                              className="list-group-item"
+                              href={routeMap["communication-media"]}
+                              passHref
+                            >
                               Communication & Media
-                            </a>
+                            </Link>
                           </p>
-                          <p>
-                            <a className="list-group-item" href="#">
+                          <p className="pb-1">
+                            <Link
+                              className="list-group-item"
+                              href={routeMap.health}
+                              passHref
+                            >
                               Health
-                            </a>
+                            </Link>
                           </p>
-                          <p>
-                            <a className="list-group-item" href="#">
+                          <p className="pb-1">
+                            <Link
+                              className="list-group-item"
+                              href={routeMap["high-tech"]}
+                              passHref
+                            >
                               High Tech
-                            </a>
+                            </Link>
                           </p>
                         </div>
                       </div>
@@ -283,11 +358,27 @@ const Header: React.FC<HeaderProps> = () => {
                 </div>
               </div>
             </li>
+            <li
+              className="nav-item dropdown  position-static "
+              onMouseEnter={handleMouseEnterOurWork}
+              onMouseLeave={handleMouseLeaveOurWork}
+              ref={ourWorkRef}
+            >
+              <Link
+                className="nav-link dropdown-toggle active"
+                href={routeMap["our-work"]}
+                data-bs-toggle="dropdown"
+                data-bs-auto-close="outside"
+                passHref
+              >
+                Our Work
+              </Link>
+            </li>
             <li className="nav-item">
               <Link
                 className="nav-link active"
                 aria-current="page"
-                href="/whoweare"
+                href={routeMap["who-we-are"]}
                 passHref
               >
                 Who We Are
@@ -297,7 +388,7 @@ const Header: React.FC<HeaderProps> = () => {
               <Link
                 className="nav-link active"
                 aria-current="page"
-                href="/insights"
+                href={routeMap.insights}
                 passHref
               >
                 Insights
@@ -307,14 +398,14 @@ const Header: React.FC<HeaderProps> = () => {
               <Link
                 className="nav-link active"
                 aria-current="page"
-                href="/career"
+                href={routeMap.career}
                 passHref
               >
                 Career
               </Link>
             </li>
           </Nav>
-          <button className="contact-us-btn" onClick={navigateToLogin}>
+          <button className="contact-us-btn" onClick={() => navigate("login")}>
             Contact Us
           </button>
         </Navbar.Collapse>
