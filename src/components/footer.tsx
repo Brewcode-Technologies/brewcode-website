@@ -2,12 +2,13 @@ import Link from "next/link";
 import React from "react";
 import ImageIcon from "./ImageIcon";
 import Image from "next/image";
+import { routeMap } from "./customHooks/useNavigation";
 
 const Footer: React.FC = () => {
   return (
     <footer>
       <div className="container">
-        <div className="row d-flex justify-content-between mb-4">
+        <div className="row d-flex justify-content-between mb-5">
           <div className="col-4 col-md-3 col-lg-1 align-self-center">
             <Link href="/" passHref>
               <Image
@@ -31,8 +32,8 @@ const Footer: React.FC = () => {
         </div>
 
         <div className="d-flex justify-content-center align-items-center">
-          <div className="flex-footer-icons  my-4">
-            <Link href="/">
+          <div className="flex-footer-icons">
+            <Link href={routeMap["/"]} passHref>
               <ImageIcon
                 src="/images/svg/facebook_svg.svg"
                 alt=" facebook icon"

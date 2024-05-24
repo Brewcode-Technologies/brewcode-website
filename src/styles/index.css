@@ -22,15 +22,9 @@
 .hero-image {
   position: relative;
   width: 100%;
-  height: 100%;
+  /* height: 100%; */
   overflow: hidden;
-}
-
-.section {
-  position: relative;
-  height: 100vh;
-  scroll-snap-align: start;
-  scroll-snap-stop: always;
+  padding: 40px 0px;
 }
 
 .social-media-icons-main {
@@ -146,15 +140,19 @@ input {
   right: 0;
 }
 
+/* .custom-dropdown-bg {
+  background-color: #f8f9fa !important;
+} */
+
 .contact-us-btn {
   background-color: #ffffff;
   border: none;
   border-radius: 5px;
   font-size: 14px;
   font-family: "Inter";
-  font-weight: 500;
+  font-weight: 600;
   text-transform: uppercase;
-  padding: 5px 8px;
+  padding: 8px 14px;
 }
 
 .dropdown-mega h5 {
@@ -187,6 +185,7 @@ video {
 
 .hero-description {
   color: #fff;
+  text-transform: capitalize;
 }
 
 .social-media-icons-section {
@@ -219,6 +218,18 @@ video {
   color: #ffffff;
   font-weight: 700;
   font-family: "Inter" !important;
+}
+
+.bg-color-blind {
+  /* background-color: red !important; */
+  background: rgba(1, 3, 10, 0.7);
+  z-index: 1000;
+  width: 100%;
+  height: auto;
+  padding: 5px;
+  position: absolute;
+  background-blend-mode: darken;
+  margin-top: -10px;
 }
 
 @media (max-width: 1200px) {
@@ -288,8 +299,34 @@ video {
   width: 400px;
   width: 100%;
   cursor: pointer;
+  color: #ffffff;
 }
 
+.case-studies-left-dropdown-list {
+  position: relative;
+}
+
+.robotic-process-list {
+  position: absolute;
+  top: 60;
+}
+
+.our-work-dropdown {
+  background-color: #000 !important;
+  left: 50%;
+  transform: translateX(-50%);
+  width: fit-content;
+}
+
+/* .case-studies-left-dropdown-list span {
+  position: absolute;
+  top: 60;
+} */
+
+.full-stack-list {
+  position: absolute;
+  top: 105;
+}
 @media screen and (max-width: 768px) {
   .list-group-item {
     font-size: 12px;
@@ -344,7 +381,7 @@ video {
   top: 60px;
   width: 100%;
   max-height: 80vh;
-  background-color: #000;
+  /* background-color: #000; */
   color: #fff;
   z-index: 999;
 }
@@ -375,7 +412,7 @@ video {
 
 .about-section {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: #000;
   background-image: url("../../public/images/who-we-are-bg.svg");
   background-repeat: no-repeat;
@@ -384,6 +421,7 @@ video {
   background-position: center;
   position: relative;
   overflow: hidden;
+  padding: 30px 0px;
 }
 
 .about-heading {
@@ -428,11 +466,12 @@ video {
 .about-explore-btn {
   width: 120px;
   height: 40px;
-  background-color: #ffffff;
-  color: #000;
+  background-color: #000;
+  color: #ffffff;
   border: none;
   border-radius: 4px;
   font-family: "Inter";
+  border: 1px solid #ffffff;
 }
 
 .down-arrow-icon-main {
@@ -444,11 +483,12 @@ video {
   color: #ffffff;
   font-family: "Inter";
   font-size: 12px;
+  line-height: 20px;
 }
 
 .about-image {
-  width: 75%;
-  height: auto !important;
+  width: 100%;
+  height: auto;
   aspect-ratio: 1/1;
   cursor: pointer;
 }
@@ -463,12 +503,13 @@ video {
 .solutions-section {
   width: 100%;
   background-image: url("/images/svg/our-solution-bg.svg");
-  height: 100vh !important;
+  height: 100%;
   background-color: #000;
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
   background-position: center;
+  padding: 30px 0px;
 }
 
 .our-solution-description,
@@ -513,15 +554,21 @@ video {
 }
 
 /* industries-we-serve styles------------------ */
+.swiper-container {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
 
 .industries-section {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background-color: #000;
   background-image: url("/images/svg/industries-we-serve.svg");
   background-repeat: no-repeat;
   background-size: cover;
   background-position: center;
+  padding: 40px 0px;
 }
 
 /* Custom styling for slick-slider */
@@ -609,12 +656,19 @@ video {
 
 /* -------------------------------------------------------------- */
 /* Scale Innovatively styles ------start */
+.bg-blind {
+  background-color: #000;
+  padding: 10px;
+  z-index: 1000;
+  margin-top: -10px;
+}
 .innovation-section {
   width: 100%;
-  height: 100vh;
+  height: 100%;
   background: linear-gradient(to right top, #000 80%, #8784843f 100%, #000 10%);
   overflow: hidden;
   background-position: center;
+  padding: 40px 0px;
 }
 
 @media screen and (max-width: 600px) {
@@ -670,13 +724,14 @@ video {
 /* insights styles -------------start */
 .insights-section {
   width: 100%;
-  min-height: 100vh;
+  min-height: 100%;
   background-color: #000;
   background-image: url("/images/svg/insight-bg.svg");
   background-repeat: no-repeat;
   background-size: cover;
   overflow: hidden;
   background-position: center;
+  padding: 40px 0px;
 }
 
 .insights-description {
@@ -723,7 +778,8 @@ video {
 .clients-section {
   background-color: #000000;
   width: 100%;
-  height: 100vh;
+  height: 100%;
+  padding: 50px 0px 80px 0px;
 }
 
 @media screen and (max-width: 600px) {
@@ -739,6 +795,13 @@ video {
   font-family: "Inter";
 }
 
+.client-logo-card {
+  width: 220px;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
 .logo-wrapper {
   width: 34px;
   height: auto;
@@ -746,11 +809,6 @@ video {
 
 .logo-wrapper :global(img) {
   object-fit: cover;
-}
-.clients-logo-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
 }
 
 .client-logo {
@@ -764,14 +822,14 @@ video {
 }
 .corpeq-logo {
   width: 120px;
-  height: 50px;
-  aspect-ratio: 3/2;
+  height: auto;
+  aspect-ratio: 4/4;
 }
 
 .Olivebay-logo {
   width: 120px;
-  height: 40px;
-  aspect-ratio: 3/1;
+  height: auto;
+  aspect-ratio: 4/4;
   background-color: #ffffff;
 }
 
@@ -779,31 +837,28 @@ video {
 .ojas-logo,
 .humancloud-logo {
   width: 120px;
-  height: 40px;
-  aspect-ratio: 3/1;
+  height: auto;
+  aspect-ratio: 4/4;
 }
 
 .sarci-logo,
 .rh-logo {
   width: 100px;
-  height: 60px;
-  aspect-ratio: 5/4;
-  margin-bottom: 30px;
+  height: auto;
+  aspect-ratio: 4/4;
 }
 
 /* styles ---- footer-bg */
 
 footer {
-  background-color: #000000 !important;
-  position: relative !important;
-  left: 0 !important;
-  bottom: 0 !important;
+  background-color: #000000;
+  position: relative;
+  left: 0;
+  bottom: 0;
   display: flex;
   flex-direction: column;
   justify-content: center;
-  align-items: flex-end;
-  /* z-index: 1000; */
-  padding: 40px 0px 0px 0px;
+  padding: 40px 0px 10px 0px;
 }
 .footer-logo {
   width: 70px !important;
@@ -871,6 +926,7 @@ footer {
   display: flex !important;
   justify-content: space-between;
   width: 280px;
+  margin: 40px 0px 20px 0px;
 }
 
 @media (max-width: 768px) {
@@ -905,6 +961,7 @@ footer {
   display: flex;
   justify-content: center;
   align-items: center;
+  margin-top: 50px;
 }
 
 .swiper-slide-active {
@@ -937,7 +994,6 @@ footer {
   justify-content: center;
   align-items: center;
   opacity: 0.8;
-  font-size: 20px !important;
   padding: 10px !important;
 }
 
@@ -948,7 +1004,7 @@ footer {
 
 .swiper-button-next::after,
 .swiper-button-prev::after {
-  font-size: 18px;
+  font-size: 10px;
   font-weight: bold;
 }
 
@@ -973,8 +1029,9 @@ footer {
   background: rgba(0, 0, 0, 0.5); /* Semi-transparent overlay */
   color: white;
   display: flex;
+  flex-direction: column;
   align-items: center;
-  justify-content: center;
+  justify-content: flex-end;
   opacity: 0;
   transition: opacity 0.3s ease;
 }
@@ -987,23 +1044,10 @@ footer {
   text-align: center;
   font-size: 20px;
   padding: 20px;
+  margin: 0;
 }
 
 /* serviecs section styles start--------------------------------------------- */
-/* .services-background {
-  width: 100%;
-  background-color: #000;
-  background-image: url("../../public/images/hero-application.jpg");
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  position: relative;
-  z-index: 1;
-  width: 100%;
-  height: 100%;
-  top: 0;
-  color: #ffffff;
-} */
 
 .services-content {
   display: flex;
@@ -1162,6 +1206,11 @@ footer {
   height: 150px !important;
 }
 
+.innovation-text-card {
+  background-color: red;
+  width: 33%;
+  padding: 20px 0px;
+}
 /* serviecs section styles End--------------------------------------------- */
 
 /* Could Services styles start  */
@@ -1283,12 +1332,9 @@ footer {
   font-weight: 500;
 }
 
-/* .cloud-image-container {
-  position: relative;
-  width: 100%;
-  height: 50%;
-  overflow: hidden;
-} */
+.cloud-card-image {
+  border-radius: 10px;
+}
 
 .hero-cloud {
   position: absolute;
@@ -1297,6 +1343,7 @@ footer {
   width: 100%;
   height: 100%;
   z-index: -1;
+  object-fit: cover;
 }
 
 .cloud-content {
