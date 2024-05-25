@@ -1,3 +1,4 @@
+// types/index.ts
 export type Route =
   | "/"
   | "login"
@@ -29,4 +30,6 @@ export type Route =
   | "brewcode-meet"
   | "vodafone-italia"
   | "case-studies"
-  | "our-work";
+  | "our-work"
+  | "contact-us"
+  | "ar-vr";

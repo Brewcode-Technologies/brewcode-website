@@ -244,6 +244,15 @@ const Header: React.FC<HeaderProps> = () => {
                               Infrastructure
                             </Link>
                           </p>
+                          <p className="pb-1">
+                            <Link
+                              className="list-group-item"
+                              href={routeMap["ar-vr"]}
+                              passHref
+                            >
+                              AR/VR
+                            </Link>
+                          </p>
                         </div>
                       </div>
                       <div className="col-lg-3 col-sm-6 py-4 px-xl-5 px-4 mt-1">
@@ -398,14 +407,17 @@ const Header: React.FC<HeaderProps> = () => {
               <Link
                 className="nav-link active"
                 aria-current="page"
-                href={routeMap.career}
+                href={routeMap["case-studies"]}
                 passHref
               >
                 Career
               </Link>
             </li>
           </Nav>
-          <button className="contact-us-btn" onClick={() => navigate("login")}>
+          <button
+            className="contact-us-btn"
+            onClick={() => navigate("contact-us")}
+          >
             Contact Us
           </button>
         </Navbar.Collapse>

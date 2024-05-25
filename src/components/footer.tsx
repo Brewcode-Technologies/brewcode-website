@@ -83,13 +83,34 @@ const Footer: React.FC = () => {
             </div>
           </div>
           <div className="row d-flex justify-content-center mb-4">
-            <div className="col-12 col-md-8 col-lg-6 d-flex justify-content-center">
+            <div className="col-12 col-md-8 col-lg-6 d-flex justify-content-between px-4">
               <Link
                 href="/privacy-policy"
                 passHref
                 className="footer-link-policy text-center"
               >
-                © 2024 Brewcode Pvt Ltd All Rights Reserved
+                © 2024 Brewcode
+              </Link>
+              <Link
+                href="/privacy-policy"
+                passHref
+                className="footer-link-policy text-center"
+              >
+                Privacy Policy
+              </Link>
+              <Link
+                href="/privacy-policy"
+                passHref
+                className="footer-link-policy text-center"
+              >
+                Terms of Services
+              </Link>
+              <Link
+                href="/privacy-policy"
+                passHref
+                className="footer-link-policy text-center"
+              >
+                All Rights Reserved
               </Link>
             </div>
           </div>
