@@ -147,25 +147,22 @@ const Home: React.FC = () => {
 
             <div className="container social-media-icons-section">
               <div className="col-12 social-media-icons-main d-flex flex-column justify-content-between">
-                <Link href="https://www.instagram.com" passHref>
+                <Link
+                  href="https://brewcode.medium.com"
+                  target="_blank"
+                  passHref
+                >
                   <ImageIcon
-                    src="/images/svg/instagram_svg.svg"
-                    alt="instagram-icon"
+                    src="/images/blog-logo.png"
+                    alt="blogger-icon"
                     className="social-icon instagram  mb-2"
                   />
                 </Link>
-                <Link href="https://www.linkedin.com" passHref>
+                <Link href="https://www.linkedin.com" passHref target="_blank">
                   <ImageIcon
                     src="/images/svg/LinkedIn_svg.svg"
                     alt="Linkedin-icon"
                     className="social-icon linkedin mb-2"
-                  />
-                </Link>
-                <Link href="https://www.facebook.com" passHref>
-                  <ImageIcon
-                    src="/images/svg/facebook_svg.svg"
-                    alt="facebook-icon"
-                    className="social-icon facebook"
                   />
                 </Link>
               </div>
@@ -412,18 +409,15 @@ const Home: React.FC = () => {
         <section className="clients-section">
           <div className="container my-4 py-4">
             <div className="row">
-              <div className="col-12 col-md-5">
+              <div className="col-12 col-md-6">
                 <h1 className="clients-heading">Our Clients</h1>
                 <p className=" my-5 clients-subtitle">Pleasure to Work With</p>
               </div>
-              <div className="col-12 col-md-7 mt-4">
+              <div className="col-12 col-md-6 mt-4">
                 {OurClientlogos.map((row: ClientLogo[], idx: number) => (
-                  <div
-                    key={idx}
-                    className="row mb-4  d-flex justify-content-between flex-wrap justify-content-center align-items-center"
-                  >
+                  <div key={idx} className="row mb-4 ">
                     {row.map((logo: ClientLogo, index: number) => (
-                      <div key={index} className="client-logo-card">
+                      <div key={index} className="col-md-4 client-logo-card">
                         <Link href={logo.url} passHref>
                           <ImageIcon
                             src={logo.src}
