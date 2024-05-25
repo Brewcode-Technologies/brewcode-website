@@ -1,14 +1,12 @@
 import Layout from "@component/components/layouts/layout";
 import React from "react";
 
-const Contact: React.FC = () => {
+const Index: React.FC = () => {
   return (
     <Layout>
-      <div className="text-center">
-        <h4>Contact</h4>
-      </div>
+      <h1>AR VR</h1>
     </Layout>
   );
 };
 
-export default Contact;
+export default Index;
