@@ -1592,6 +1592,19 @@ footer {
   border: none;
   border-bottom: 1px solid #a2834b;
   color: #fff;
+  border-radius: none !important;
+}
+
+.checkbox {
+  border-radius: none !important;
+  height: 20px;
+  width: 20px;
+  position: relative;
+  margin-top: -0px;
+}
+
+.privacy-policy {
+  color: #ffffff;
 }
 
 .contact-form input:focus,
@@ -1628,7 +1641,7 @@ footer {
 .form-control {
   background-color: transparent;
   color: #fff;
-  border: 1px solid #ccc;
+  border-radius: 0;
 }
 
 .form-control::placeholder {
@@ -1639,9 +1652,63 @@ footer {
   color: #fff;
 }
 
+.text-area {
+  border: 1px solid #a2834b !important;
+  margin-top: 19px;
+  height: 196px;
+}
+
+.hyderabad-line {
+  border: 0.3px solid #a2834b !important;
+}
+
+.FaArrowRight {
+  background-color: #ffffff;
+  width: 40px;
+  height: 40px;
+  border-radius: 20px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #000 !important;
+  cursor: pointer;
+  margin: auto 0;
+}
+
+.arrow-parent {
+  padding-bottom: 15px;
+}
+
+.terms-and-conditions-text {
+  cursor: pointer;
+}
+.contact-address {
+  color: #ffffff;
+  font-size: 12px;
+  text-decoration: none;
+  line-height: 20px;
+}
+.mgs-label {
+  margin-top: -40px;
+}
+.submit-btn {
+  background-color: #ffffff;
+  color: #000;
+  font-family: "Inter";
+  padding: 8px 10px;
+  border-radius: 5px;
+  width: 90px;
+  font-size: 12px;
+  font-weight: bold;
+}
+
 .btn-light {
   background-color: #fff;
   color: #000;
+}
+
+.office-info {
+  padding: 100px 0px;
 }
 
 .office-info h5,
