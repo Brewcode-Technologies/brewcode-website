@@ -74,7 +74,7 @@ const Home: React.FC = () => {
     ],
     [
       {
-        src: "/images/svg/Enpersoll.svg",
+        src: "/images/svg/enpersoll.svg",
         url: "https://enpersoll.example.com",
       },
       { src: "/images/svg/ojas.svg", url: "https://ojas.example.com" },
