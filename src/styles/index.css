@@ -132,12 +132,14 @@ input {
 }
 
 .dropdown-mega .dropdown-menu {
-  width: 100% !important;
+  width: 100%;
+  left: 0 !important;
+  right: 0 !important;
+  padding: 0;
+  margin: 0;
+  border: none;
+  box-shadow: none;
   background-color: #000;
-  color: #fff;
-  position: absolute;
-  left: 0;
-  right: 0;
 }
 
 /* .custom-dropdown-bg {
@@ -1724,88 +1726,4 @@ footer {
 .form-label {
   padding: 0px;
   margin: 0px;
-}
-
-/* case studies styles ----------------------------------------------*/
-.container {
-  position: relative;
-  width: 100%;
-  height: 100%;
-}
-
-/* Flexbox centering */
-.flex-center {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  text-align: center;
-  top: 0;
-  left: 0;
-  width: 100%;
-}
-
-.case-study-content {
-  padding: 20px;
-  border-radius: 8px;
-  max-width: 600px;
-  color: #fff;
-  height: 30vh;
-}
-
-.case-study-heading {
-  font-size: 2.5rem;
-  font-weight: bold;
-  width: 100%;
-}
-
-.case-study-paragraph {
-  margin-top: 1rem;
-  font-size: 1.3rem;
-  line-height: 1.3;
-  width: 100%;
-}
-
-.parent-container {
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  width: 100%;
-  background-color: black;
-  padding: 50px 0;
-}
-
-.column-container {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  width: 95%;
-}
-
-.row-container {
-  display: flex;
-  flex-direction: row;
-  justify-content: space-between;
-  align-items: center;
-  width: 100%;
-  margin-bottom: 150px;
-}
-
-.child-div {
-  width: 460.61px;
-  height: 400px;
-  flex: 1;
-  padding: 10px;
-  background-color: #f0f0f0;
-}
-
-.left {
-  background-color: #d1e7ff;
-}
-
-.right {
-  background-color: #ffd1dc;
-}
-.child-img {
-  object-fit: cover;
 }
