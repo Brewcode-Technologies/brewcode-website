@@ -24,19 +24,32 @@ const Contact: React.FC = () => {
                       Name
                     </label>
                   </div>
-                  <input type="text" className="form-control" id="name" />
+                  <input
+                    type="text"
+                    className="form-control bg-transparent text-white"
+                    id="name"
+                    autoFocus
+                  />
                 </div>
                 <div className="form-group mb-4">
                   <label htmlFor="mobile" className="form-label">
                     Mobile Number
                   </label>
-                  <input type="text" className="form-control" id="mobile" />
+                  <input
+                    type="text"
+                    className="form-control bg-transparent text-white"
+                    id="mobile"
+                  />
                 </div>
                 <div className="form-group mb-4">
                   <label htmlFor="email" className="form-label">
                     E-Mail
                   </label>
-                  <input type="email" className="form-control" id="email" />
+                  <input
+                    type="email"
+                    className="form-control bg-transparent text-white"
+                    id="email"
+                  />
                 </div>
 
                 <div className="d-flex">
@@ -69,7 +82,7 @@ const Contact: React.FC = () => {
                   </label>
 
                   <textarea
-                    className="form-control text-area"
+                    className="form-control text-area bg-transparent text-white"
                     id="message"
                     rows={8}
                   ></textarea>
