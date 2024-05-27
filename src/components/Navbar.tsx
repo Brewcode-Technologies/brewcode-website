@@ -182,7 +182,6 @@ const Header: React.FC<HeaderProps> = () => {
                   className={`${
                     scroll ? "navbar-custom" : "navbarActive"
                   } mega-content px-md-4 margin-top`}
-                  style={{ width: "100%" }}
                 >
                   <div className="container-fluid">
                     <div className="row">
@@ -219,7 +218,9 @@ const Header: React.FC<HeaderProps> = () => {
                           <p className="pb-1">
                             <Link
                               className="list-group-item"
-                              href={routeMap.services}
+                              href={
+                                routeMap["enterprise-application-development"]
+                              }
                               passHref
                             >
                               Enterprise Application Development
