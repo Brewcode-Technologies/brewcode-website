@@ -218,9 +218,7 @@ const Header: React.FC<HeaderProps> = () => {
                           <p className="pb-1">
                             <Link
                               className="list-group-item"
-                              href={
-                                routeMap["enterprise-application-development"]
-                              }
+                              href={routeMap["services"]}
                               passHref
                             >
                               Enterprise Application Development

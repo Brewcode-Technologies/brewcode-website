@@ -153,7 +153,7 @@ const Home: React.FC = () => {
                   passHref
                 >
                   <ImageIcon
-                    src="/images/blog-logo.png"
+                    src="/images/svg/logo-blog.svg"
                     alt="blogger-icon"
                     className="social-icon instagram  mb-2"
                   />
