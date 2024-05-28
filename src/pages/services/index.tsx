@@ -15,7 +15,7 @@ const Services: React.FC = () => {
         <div className="cloud-image">
           <Image
             alt="Comprehensive application services icon"
-            src="/images/services-hero-application.jpg"
+            src="/images/img.jpg"
             fill
             className="mb-3 hero-cloud"
             style={{ objectFit: "cover" }}

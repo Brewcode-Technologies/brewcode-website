@@ -34,7 +34,7 @@ export const routeMap: Record<Route, string> = {
   "brewcode-meet": "/case-studies/brewcode-meet",
   "vodafone-italia": "/case-studies/vodafone-italia",
   "case-studies": "/case-studies",
-  "ar-vr": "/services/ar-vr",
+  "ar-vr-development": "/services/ar-vr-development",
   "contact-us": "/contact-us",
 };
 
