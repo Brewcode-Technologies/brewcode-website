@@ -14,7 +14,7 @@ const CyberSecurity: React.FC = () => {
       >
         <div className="cloud-image p-4">
           <Image
-            src="/images/Hero-sec-cyber.png"
+            src="/images/img.jpg"
             alt="cyber security image"
             fill
             className="mb-3 hero-cloud"
@@ -23,7 +23,7 @@ const CyberSecurity: React.FC = () => {
         </div>
         <div className="container">
           <div className="row">
-            <div className="cyber-security-services-content">
+            <div className="d-flex flex-column justify-content-center cyber-security-services-content align-content-center">
               <h1 className="cyber-security-services-heading mb-3">
                 Cyber Security
               </h1>

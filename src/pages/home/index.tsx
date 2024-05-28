@@ -63,30 +63,30 @@ const Home: React.FC = () => {
 
   const OurClientlogos: ClientLogo[][] = [
     [
-      { src: "/images/st-jude.svg", url: "https://stjude.example.com" },
-      { src: "/images/svg/agilo.svg", url: "https://agilo.example.com" },
-      { src: "/images/svg/dhanika.svg", url: "https://dhanika.example.com" },
+      { src: "/images/svg/st-jude.svg", url: "https://stjude.com" },
+      { src: "/images/svg/agilo.svg", url: "https://agilo.com" },
+      { src: "/images/svg/dhanika.svg", url: "https://dhanika.com" },
     ],
     [
-      { src: "/images/svg/soctor.svg", url: "https://soctor.example.com" },
-      { src: "/images/svg/Oilvebay.svg", url: "https://oilvebay.example.com" },
-      { src: "/images/corpeq.svg", url: "https://corpeq.example.com" },
+      { src: "/images/svg/soctor.svg", url: "https://soctor.com" },
+      { src: "/images/svg/Oilvebay.svg", url: "https://oilvebay.com" },
+      { src: "/images/corpeq.svg", url: "https://corpeq.com" },
     ],
     [
       {
         src: "/images/svg/enpersoll.svg",
-        url: "https://enpersoll.example.com",
+        url: "https://enpersoll.com",
       },
-      { src: "/images/svg/ojas.svg", url: "https://ojas.example.com" },
+      { src: "/images/svg/ojas.svg", url: "https://ojas.com" },
       {
         src: "/images/svg/humancloud.svg",
-        url: "https://humancloud.example.com",
+        url: "https://humancloud.com",
       },
     ],
     [
-      { src: "/images/sarci.svg", url: "https://sarci.example.com" },
-      { src: "/images/rh.svg", url: "https://rh.example.com" },
-      { src: "/images/svg/dhanika.svg", url: "https://dhanika.example.com" },
+      { src: "/images/sarci.svg", url: "https://sarci.com" },
+      { src: "/images/rh.svg", url: "https://rh.com" },
+      { src: "/images/svg/dhanika.svg", url: "https://dhanika.com" },
     ],
   ];
 

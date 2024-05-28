@@ -1463,7 +1463,7 @@ footer {
   display: flex;
   flex-direction: column;
   justify-content: center;
-  height: 80vh;
+  height: 100vh;
   color: #ffffff;
 }
 
@@ -1793,11 +1793,14 @@ footer {
 }
 
 .min-2-read {
-  position: relative;
+  position: absolute;
   top: 0;
+  left: 0;
   font-family: "Inter";
   font-size: 16px;
-  margin: 20px 0px 0px 5px;
+  margin: 10px 60px 0px 20px;
+  color: #04caa8 !important;
+  font-weight: 600;
 }
 
 .soctor-heading {
@@ -1842,4 +1845,219 @@ footer {
   font-weight: 600;
   font-size: 14px;
   text-transform: uppercase;
+}
+
+/* Ar VR styles----------------- */
+.ar-vr-hero-section {
+  width: 100%;
+  height: 100vh;
+  background-image: url("/images/ar-vr-hero-section-bg.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+}
+
+.overlay-ar-vr {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.ar-vr-heading {
+  letter-spacing: 4px;
+  word-spacing: 5px;
+  font-size: 40px;
+  font-family: "Lato";
+  font-weight: 600;
+}
+
+.ar-vr-card-heading {
+  font-family: "Lato";
+  color: #ffffff;
+  font-size: 20px;
+}
+
+.ar-vr-description {
+  font-size: 26px;
+  font-family: "Inter";
+  font-weight: 400;
+}
+.black-layer {
+  background-color: #000;
+  z-index: 999;
+  position: absolute;
+  top: 600;
+  bottom: 0;
+  width: 100%;
+  padding: 2px;
+}
+
+.ar-vr-description-brewcode {
+  color: #ffffff;
+  font-family: "Inter";
+  font-size: 16px;
+  margin-top: 10px;
+}
+/* Ar VR styles----------------- End-------------*/
+/* case study logo styles--------start */
+.small-logo {
+  width: 40px;
+  height: 40px;
+  margin-bottom: 50px !important;
+}
+
+.medium-logo {
+  width: 100px;
+  height: 100px;
+}
+
+.large-logo {
+  width: 300px;
+  height: auto;
+  margin-bottom: 50px !important;
+}
+
+.top-left-text {
+  position: absolute;
+  top: 0;
+  left: 0;
+  padding: 5px;
+  /* background-color: rgba(0, 0, 0, 0.5); */
+  color: white;
+}
+
+.ar-vr-image {
+  width: 100%;
+  border-radius: 5px;
+  height: 100%px;
+  cursor: pointer;
+}
+
+.ar-vr-left-flex {
+  height: 300px;
+}
+
+.arVr-flex-row {
+  display: flex;
+  justify-content: space-between;
+}
+
+/* case study logo styles--------End */
+
+/* get in touch image styles */
+.get-in-touch-hero-image {
+  width: 100%;
+  height: 80vh;
+  background-image: url("/images/get-in-touch-hero-image.jpeg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  position: relative;
+}
+
+.get-in-touch-overlay {
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.4);
+  padding: 100px 200px;
+}
+
+.get-in-touch-main {
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+.connect-with-us-button {
+  width: 180px !important;
+  font-size: 14px !important;
+  font-weight: 600 !important;
+}
+
+.get-in-touch-heading {
+  font-size: 40px;
+  font-family: "Inter";
+  font-weight: bold;
+}
+
+.get-in-touch-description {
+  font-family: "Inter";
+  font-size: 14px;
+}
+
+.bg-section-balck {
+  background-color: #000;
+  padding: 30px;
+  color: #ffffff;
+}
+
+.harnessing-heading {
+  font-family: "Lato";
+}
+
+.harnessing-description {
+  font-family: "Inter";
+  font-size: 12px;
+  padding: 0px 200px;
+}
+
+.unity-and-unreal-engine-card-container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+.unity-and-unreal-engine-card {
+  background-color: #000000;
+  padding: 10px 30px;
+  margin-bottom: 20px;
+}
+
+.unity-and-unreal-engine-images {
+  background-color: #151515;
+  padding: 20px;
+  width: 50px;
+  height: 50px;
+  border-radius: 25px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-right: 10px;
+  cursor: pointer;
+}
+
+.unity-and-unreal-engine-img1,
+.unity-and-unreal-engine-img2 {
+  width: 30px;
+}
+
+.unity-and-unreal-engine-heading {
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: 600;
+  text-align: center;
+}
+
+.unity-and-unreal-engine-description {
+  font-family: "Inter";
+  font-size: 12px;
+  text-align: center;
 }

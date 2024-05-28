@@ -158,7 +158,7 @@ const Header: React.FC<HeaderProps> = () => {
                 data-bs-auto-close="outside"
                 passHref
               >
-                What We Do
+                Solutions
                 <i
                   className={`bi ${
                     isWhatWeDoOpen ? "bi-chevron-up" : "bi-chevron-down"
@@ -245,10 +245,10 @@ const Header: React.FC<HeaderProps> = () => {
                           <p className="pb-1">
                             <Link
                               className="list-group-item"
-                              href={routeMap["ar-vr"]}
+                              href={routeMap["ar-vr-development"]}
                               passHref
                             >
-                              AR/VR
+                              AR/VR Development
                             </Link>
                           </p>
                         </div>
@@ -373,12 +373,12 @@ const Header: React.FC<HeaderProps> = () => {
             >
               <Link
                 className="nav-link dropdown-toggle active"
-                href={routeMap["our-work"]}
+                href={routeMap["case-studies"]}
                 data-bs-toggle="dropdown"
                 data-bs-auto-close="outside"
                 passHref
               >
-                Our Work
+                case-studies
               </Link>
             </li>
             <li className="nav-item">
@@ -399,16 +399,6 @@ const Header: React.FC<HeaderProps> = () => {
                 passHref
               >
                 Insights
-              </Link>
-            </li>
-            <li className="nav-item">
-              <Link
-                className="nav-link active"
-                aria-current="page"
-                href={routeMap["case-studies"]}
-                passHref
-              >
-                Career
               </Link>
             </li>
           </Nav>

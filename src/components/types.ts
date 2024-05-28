@@ -32,4 +32,4 @@ export type Route =
   | "case-studies"
   | "our-work"
   | "contact-us"
-  | "ar-vr";
+  | "ar-vr-development";

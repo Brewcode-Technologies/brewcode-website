@@ -14,7 +14,7 @@ const CouldServices: React.FC = () => {
       >
         <div className="cloud-image cloud-services-image">
           <Image
-            src="/images/hero-cloud.png"
+            src="/images/img.jpg"
             alt="cloud image"
             fill
             className="mb-3 hero-cloud"
