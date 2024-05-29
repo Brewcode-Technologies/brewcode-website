@@ -1,5 +1,6 @@
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
 @import url("https://fonts.googleapis.com/css2?family=Inter:wght@100..900&family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap");
+
 @import "~slick-carousel/slick/slick.css";
 @import "~slick-carousel/slick/slick-theme.css";
 
@@ -2033,10 +2034,9 @@ footer {
 
 .unity-and-unreal-engine-images {
   background-color: #151515;
-  padding: 20px;
-  width: 50px;
-  height: 50px;
-  border-radius: 25px;
+  width: 70px;
+  height: 70px;
+  border-radius: 50%;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -2046,18 +2046,182 @@ footer {
 
 .unity-and-unreal-engine-img1,
 .unity-and-unreal-engine-img2 {
-  width: 30px;
+  width: 50px;
+  height: 50px;
 }
 
 .unity-and-unreal-engine-heading {
   font-family: "Inter";
-  font-size: 14px;
+  font-size: 18px;
   font-weight: 600;
   text-align: center;
 }
 
 .unity-and-unreal-engine-description {
   font-family: "Inter";
-  font-size: 12px;
+  font-size: 14px;
   text-align: center;
 }
+
+.our-process-heading {
+  font-family: "Lato";
+  font-size: 24px;
+}
+
+.our-process-sub-heading {
+  font-family: "Inter";
+  font-weight: 700;
+  font-size: 20px;
+}
+
+/* styles/Timeline.css --------------------*/
+.time-line-containe {
+  margin: 100px 0px !important;
+}
+.timeline-circle {
+  width: 30px;
+  height: 30px;
+  background-color: #000000;
+  color: #fff;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 auto;
+  border: 1px solid #ffffff;
+}
+
+.timeline-connector {
+  height: 100%;
+  width: 2px;
+  background-color: #ffffff;
+  margin: 0px auto;
+}
+
+.timeline-title {
+  color: #04caa8;
+  font-family: "Inter";
+  font-size: 1.25rem;
+}
+
+.timeline-description {
+  color: #fff;
+  font-size: 1rem;
+  font-family: "Inter";
+}
+
+.projects-we-like-card {
+  border: 1px solid #ffffff;
+  padding: 20px 15px;
+  border-radius: 3px;
+  text-align: center;
+}
+
+.projects-we-like-card-img {
+  width: 100%;
+  border: 1px solid #ffffff;
+}
+
+.projects-we-like-card-heading {
+  font-size: 18px;
+  font-family: "Lato";
+  width: 100%;
+}
+
+.projects-we-like-card-description {
+  color: #04caa8;
+  font-size: 14px;
+  font-family: "Inter";
+}
+
+.projects-we-like-description {
+  font-family: "Inter";
+  font-family: 14px;
+}
+
+.virtual-reality-heading {
+  font-size: 22px;
+  font-family: "Inter";
+}
+
+/* loader styles  */
+
+.loader {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background: rgb(255, 255, 255);
+  z-index: 1000;
+}
+@keyframes spin {
+  0% {
+      transform: rotate(0deg);
+  }
+
+  100% {
+      transform: rotate(360deg);
+  }
+}
+
+
+
+/* E-commerce style start----------------------------------------------------------------------------- */
+.e-commerce-hero-section {
+  width: 100%;
+  height: 100vh;
+  background-image: url("/images/img.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+
+}
+
+.e-commerce-container {
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #ffffff;
+}
+
+.e-commerce-short-heading,.e-commerce-heading{
+  font-family: "Inter";
+  font-weight: bold;
+  color: #ffffff;
+  font-size: 30px;
+}
+.e-commerce-heading{
+  font-size: 60px;
+}
+.e-commerce-conatianer{
+  min-height: 300px !important;
+}
+
+.e-commerce-img{
+  width: 100%;
+  height: 600px;
+}
+
+.our-e-commerce-services-container{
+  width: 464px;
+}
+
+.our-e-commerce-services{
+  color: #ffffff;
+  padding: 10px;
+  font-size: 20px;
+  font-family: "Inter";
+
+}
+
+.e-commerce-accordion{
+  color: #ffffff;
+}
+
+
+/* E-commerce style End--------------------------------------------------------------------------------- */

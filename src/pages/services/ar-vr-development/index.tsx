@@ -1,6 +1,7 @@
 import Layout from "@component/components/layouts/layout";
-import React from "react";
-import Image from "next/image";
+import React, { useState } from "react";
+import { IoMdArrowDropright } from "react-icons/io";
+
 import BlackLayer from "@component/components/blackLayer";
 
 interface ArVr {
@@ -18,7 +19,30 @@ interface EngineCard {
   description: string;
 }
 
+interface TimelineStep {
+  id: number;
+  title: string;
+  description: string;
+}
+
+export interface CardData {
+  id: number;
+  title: string;
+  description: string;
+  imageUrl: string;
+}
 const Index: React.FC = () => {
+  const [isVisible, setIsVisible] = useState<boolean>(false);
+  const [isVirtualEvents, setIsVirtualEvents] = useState<boolean>(false);
+
+  const toggleVisibility = () => {
+    setIsVisible(prevIsVisible => !prevIsVisible);
+  };
+
+  const toggleVirtualEvents = () => {
+    setIsVirtualEvents(prevIsVirtualEvents => !prevIsVirtualEvents);
+  };
+
   const arVrDevelopment: ArVr[] = [
     {
       id: 1,
@@ -84,42 +108,92 @@ const Index: React.FC = () => {
     {
       id: 2,
       images: [
-        { src: "/images/svg/unreal.svg", alt: "Unreal Engine" },
-        { src: "/images/svg/unity_symbol.svg", alt: "Unity Engine" },
+        { src: "/images/svg/arkit.svg", alt: "arkit image" },
+        { src: "/images/svg/ARcore.svg", alt: "arCore image" },
       ],
-      heading: "Unity and Unreal Engine",
+      heading: "ARKit and ARCore",
       description:
-        "Industry-leading game engines used to create high-fidelity, interactive experiences.",
+        "Advanced frameworks for developing AR applications on iOS and Android platforms.",
     },
     {
       id: 3,
       images: [
-        { src: "/images/svg/unreal.svg", alt: "Unreal Engine" },
-        { src: "/images/svg/unity_symbol.svg", alt: "Unity Engine" },
+        { src: "/images/svg/spatial-audio.svg", alt: "spatial audio image" },
+        { src: "/images/svg/earbuds.svg", alt: "earbuds image " },
       ],
-      heading: "Unity and Unreal Engine",
+      heading: "Spatial Audio",
       description:
-        "Industry-leading game engines used to create high-fidelity, interactive experiences.",
+        "Incorporating directional sound to provide a more immersive and realistic user experience.",
+    },
+    {
+      id: 4,
+      images: [
+        { src: "/images/svg/maya.svg", alt: "maya image" },
+        { src: "/images/svg/XMLID.svg", alt: "maya image" },
+      ],
+      heading: "Autodesk Maya or 3ds max",
+      description:
+        "High-quality 3D assets and animations to enhance realism and immersion.",
     },
     {
       id: 5,
       images: [
-        { src: "/images/svg/unreal.svg", alt: "Unreal Engine" },
-        { src: "/images/svg/unity_symbol.svg", alt: "Unity Engine" },
+        { src: "/images/svg/microsoft-img.svg", alt: "microsoft image" },
+        { src: "/images/svg/Headset_Oculus.svg", alt: "Headset Oculus image" },
       ],
-      heading: "Unity and Unreal Engine",
+      heading: "Wearable Devices",
       description:
-        "Industry-leading game engines used to create high-fidelity, interactive experiences.",
+        "Integration with VR headsets like Oculus Rift, HTC Vive, and AR glasses like Microsoft HoloLens",
+    },
+  ];
+
+  const timelineSteps: TimelineStep[] = [
+    {
+      id: 1,
+      title: "Discovery and Planning",
+      description:
+        "We begin by understanding your business goals, target audience, and specific requirements. This phase involves detailed consultations and brainstorming sessions to define the project scope and objectives",
     },
     {
-      id: 5,
-      images: [
-        { src: "/images/svg/unreal.svg", alt: "Unreal Engine" },
-        { src: "/images/svg/unity_symbol.svg", alt: "Unity Engine" },
-      ],
-      heading: "Unity and Unreal Engine",
+      id: 2,
+      title: "Conceptualization and Design",
       description:
-        "Industry-leading game engines used to create high-fidelity, interactive experiences.",
+        "Our creative team develops initial concepts and wireframes, focusing on user experience and interaction design. We present these ideas to you for feedback and refinement.",
+    },
+    {
+      id: 3,
+      title: "Development and Testing",
+      description:
+        "Utilizing our technical expertise, we build the AR/VR application, ensuring it meets the highest standards of quality and performance.",
+    },
+    {
+      id: 4,
+      title: "Deployment and Support",
+      description:
+        "Once      the application is ready, we assist with deployment across the desired      platforms and provide training to your team. We offer ongoing support to      ensure the solution continues to perform optimally.",
+    },
+  ];
+
+  const cardData: CardData[] = [
+    {
+      id: 1,
+      title: "VR Industrial Training",
+      description: "Safety and Inspection Based Training",
+    
+      imageUrl: "/images/vr-industrial.jpeg",
+    },
+    {
+      id: 2,
+      title: "Real Estate Visualization",
+      description: "Real Estate Visualization On VR Headset",
+      imageUrl: "/images/real-estate-visualization.jpeg",
+    },
+    {
+      id: 3,
+      title: "BIM Visualization",
+      description: "BIM Visualization For Industries",
+      imageUrl: "/images/bim-visualization.jpeg",
+     
     },
   ];
 
@@ -203,14 +277,16 @@ const Index: React.FC = () => {
       </div>
       <div className="bg-section-balck">
         <div className="container">
-          <p className="harnessing-heading text-center mb-4">
-            Harnessing the Power of Cutting-Edge Technologies
-          </p>
-          <p className="text-center harnessing-description">
-            At Brewcode Technologies, we leverage the latest advancements in AR
-            and VR technologies to deliver exceptional solutions. Our expertise
-            includes
-          </p>
+          <div className="col-12">
+            <p className="harnessing-heading text-center mb-4">
+              Harnessing the Power of Cutting-Edge Technologies
+            </p>
+            <p className="text-center harnessing-description">
+              At Brewcode Technologies, we leverage the latest advancements in
+              AR and VR technologies to deliver exceptional solutions. Our
+              expertise includes
+            </p>
+          </div>
 
           <div className="my-5 unity-and-unreal-engine-card-container container-fluid">
             {engineCards.map((card) => (
@@ -239,6 +315,127 @@ const Index: React.FC = () => {
                 </div>
               </div>
             ))}
+          </div>
+
+          <div className="col-12 text-center">
+            <h3 className="our-process-heading mb-3">Our Process</h3>
+            <p className="our-process-sub-heading">
+              A Proven Approach to AR/VR Development
+            </p>
+          </div>
+
+          <div className="my-5 col-12 time-line-containe">
+            {timelineSteps.map((step) => (
+              <div className="row mb-4" key={step.id}>
+                <div
+                  className="col-2 col-sm-1 text-center"
+                  style={{ marginLeft: "-20px" }}
+                >
+                  <div className="timeline-circle">{step.id}</div>
+                  {step.id < timelineSteps.length && (
+                    <div className="timeline-connector"></div>
+                  )}
+                </div>
+                <div className="col-10 col-sm-11 col-md-8 pb-3">
+                  <h4 className="timeline-title mb-3">{step.title}</h4>
+                  <p className="timeline-description">{step.description}</p>
+                </div>
+              </div>
+            ))}
+          </div>
+          <div className="col-12 my-5">
+            <h3 className="text-center our-process-heading">
+              Projects We Like To Talk About
+            </h3>
+          </div>
+          <div className="container">
+            <div className="row d-flex justify-content-between my-5 ">
+              {cardData.map((data) => (
+                <div key={data.id} className="projects-we-like-card col-md-3 mb-3">
+                  <img
+                    src={data.imageUrl}
+                    alt={data.title}
+                    className="projects-we-like-card-img"
+                  />
+                  <div className="">
+                    <h3 className="projects-we-like-card-heading pt-5 pb-5">
+                      {data.title}
+                    </h3>
+                    <p className="projects-we-like-card-description">
+                      {data.description}
+                    </p>
+                  </div>
+                </div>
+              ))}
+            </div>
+            <div className="col-12">
+              <p className="projects-we-like-description py-5">
+                Our unique approach to AR, VR involves creating experiences that
+                are tailored to the needs of the user. We achieve this by
+                combining creative design, innovative technology, and a deep
+                understanding of user behavior to develop immersive experiences
+                that are both engaging and impactful.
+              </p>
+            </div>
+            <div className="col-12">
+              <div className="d-flex">
+                <IoMdArrowDropright
+                  onClick={toggleVisibility}
+                  style={{
+                    cursor: "pointer",
+                    padding: "0px",
+                    position: "relative",
+                    left: "-10",
+                    top: "-3",
+                  }}
+                  fontSize={32}
+                  className="IoMdArrowDropright"
+                />
+                <h3
+                  onClick={toggleVisibility}
+                  style={{ cursor: "pointer" }}
+                  className="virtual-reality-heading"
+                >
+                  Virtual Reality
+                </h3>
+              </div>
+              {isVisible && (
+                <p>
+                  This is the text that will be shown/hidden.
+                </p>
+              )}
+              <hr />
+            </div>
+            <div className="col-12">
+              <div className="d-flex">
+                <IoMdArrowDropright
+                  onClick={toggleVirtualEvents}
+                  style={{
+                    cursor: "pointer",
+                    padding: "0px",
+                    position: "relative",
+                    left: "-10",
+                    top: "-3",
+                  }}
+                  fontSize={32}
+                  className="IoMdArrowDropright"
+                />
+                <h3
+                  onClick={toggleVirtualEvents}
+                  style={{ cursor: "pointer" }}
+                  className="virtual-reality-heading"
+                >
+                  Virtual Events
+
+                </h3>
+              </div>
+              {isVirtualEvents && (
+                <p>
+                  This is the text that will be shown/hidden.
+                </p>
+              )}
+              <hr />
+            </div>
           </div>
         </div>
       </div>

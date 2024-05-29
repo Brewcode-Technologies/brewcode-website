@@ -378,7 +378,7 @@ const Header: React.FC<HeaderProps> = () => {
                 data-bs-auto-close="outside"
                 passHref
               >
-                case studies
+                Case Studies
               </Link>
             </li>
             <li className="nav-item">

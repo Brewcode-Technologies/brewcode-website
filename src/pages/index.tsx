@@ -6,7 +6,8 @@ const Index: React.FC = () => {
   return (
     <>
       <Head>
-        <title>Brewcode Home page</title>
+      {/* <img src = "/images/svg/brewcode_logo_svg.svg"/> */}
+      <title>Brewcode Home page</title>
       </Head>
 
       <Home />
