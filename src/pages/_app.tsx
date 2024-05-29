@@ -7,19 +7,13 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "swiper/css/bundle";
 import "../styles/index.css";
+import Loader from "@component/components/loader";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  // useEffect(() => {
-  //   if (typeof window !== "undefined") {
-  //     import("bootstrap/dist/js/bootstrap")
-  //       .then((bootstrap) => {})
-  //       .catch((error) => {
-  //         console.error("Error loading Bootstrap:", error);
-  //       });
-  //   }
-  // }, []);
+
   return (
     <Provider store={store}>
+      <Loader/>
       <Component {...pageProps} />
     </Provider>
   );
