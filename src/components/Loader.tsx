@@ -1,12 +1,13 @@
 import React, { useState, useEffect } from 'react'; 
 import { useRouter } from 'next/router'; 
+
  
 const Loader: React.FC = () => { 
   const [isLoading, setIsLoading] = useState(true);
   const router = useRouter(); 
  
   useEffect(() => { 
- 
+    let timer: NodeJS.Timeout
     const handleRouteChangeStart = (url: string) => { 
       if (url !== router.asPath) { 
         setIsLoading(true); 
