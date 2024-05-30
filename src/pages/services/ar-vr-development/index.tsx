@@ -36,11 +36,11 @@ const Index: React.FC = () => {
   const [isVirtualEvents, setIsVirtualEvents] = useState<boolean>(false);
 
   const toggleVisibility = () => {
-    setIsVisible(prevIsVisible => !prevIsVisible);
+    setIsVisible((prevIsVisible) => !prevIsVisible);
   };
 
   const toggleVirtualEvents = () => {
-    setIsVirtualEvents(prevIsVirtualEvents => !prevIsVirtualEvents);
+    setIsVirtualEvents((prevIsVirtualEvents) => !prevIsVirtualEvents);
   };
 
   const arVrDevelopment: ArVr[] = [
@@ -179,7 +179,7 @@ const Index: React.FC = () => {
       id: 1,
       title: "VR Industrial Training",
       description: "Safety and Inspection Based Training",
-    
+
       imageUrl: "/images/vr-industrial.jpeg",
     },
     {
@@ -193,7 +193,6 @@ const Index: React.FC = () => {
       title: "BIM Visualization",
       description: "BIM Visualization For Industries",
       imageUrl: "/images/bim-visualization.jpeg",
-     
     },
   ];
 
@@ -351,7 +350,10 @@ const Index: React.FC = () => {
           <div className="container">
             <div className="row d-flex justify-content-between my-5 ">
               {cardData.map((data) => (
-                <div key={data.id} className="projects-we-like-card col-md-3 mb-3">
+                <div
+                  key={data.id}
+                  className="projects-we-like-card col-md-3 mb-3"
+                >
                   <img
                     src={data.imageUrl}
                     alt={data.title}
@@ -399,11 +401,7 @@ const Index: React.FC = () => {
                   Virtual Reality
                 </h3>
               </div>
-              {isVisible && (
-                <p>
-                  This is the text that will be shown/hidden.
-                </p>
-              )}
+              {isVisible && <p>This is the text that will be shown/hidden.</p>}
               <hr />
             </div>
             <div className="col-12">
@@ -426,13 +424,10 @@ const Index: React.FC = () => {
                   className="virtual-reality-heading"
                 >
                   Virtual Events
-
                 </h3>
               </div>
               {isVirtualEvents && (
-                <p>
-                  This is the text that will be shown/hidden.
-                </p>
+                <p>This is the text that will be shown/hidden.</p>
               )}
               <hr />
             </div>
