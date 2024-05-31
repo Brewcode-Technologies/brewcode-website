@@ -3,7 +3,6 @@ import Layout from "@component/components/layouts/layout";
 import React from "react";
 import { IoMdArrowDropdown } from "react-icons/io";
 import { useState } from "react";
-import { Chrono } from "react-chrono";
 
 import Head from "next/head";
 import useNavigation from "@component/components/customHooks/useNavigation";
