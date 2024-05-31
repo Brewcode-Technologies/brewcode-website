@@ -32,4 +32,5 @@ export type Route =
   | "case-studies"
   | "our-work"
   | "contact-us"
+  | "soctor"
   | "ar-vr-development";

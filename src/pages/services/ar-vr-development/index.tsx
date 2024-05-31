@@ -401,7 +401,7 @@ const Index: React.FC = () => {
                   Virtual Reality
                 </h3>
               </div>
-              {isVisible && <p>This is the text that will be shown/hidden.</p>}
+              {isVisible && <p>Brewcode , an India-based VR and AR development service provider, is committed to providing the best experiences in cutting-edge AR and VR solutions, outstanding high-definition visuals, real-time adaptability, and highly immersive services for Virtual Reality applications .</p>}
               <hr />
             </div>
             <div className="col-12">
@@ -427,7 +427,7 @@ const Index: React.FC = () => {
                 </h3>
               </div>
               {isVirtualEvents && (
-                <p>This is the text that will be shown/hidden.</p>
+                <p>At Brewcode we combine the finest of in-person event experiences with online event capabilities, We provide a virtual event solution to meet the demands of the modern hybrid event, such as 3D immersive platforms, live streaming, and audience involvement.</p>
               )}
               <hr />
             </div>

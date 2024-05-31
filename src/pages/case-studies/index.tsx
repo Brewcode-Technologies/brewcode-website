@@ -2,6 +2,8 @@ import Layout from "@component/components/layouts/layout";
 import React from "react";
 import Image from "next/image";
 import BlackLayer from "@component/components/blackLayer";
+import { routeMap } from "@component/components/customHooks/useNavigation";
+import { useRouter } from "next/router";
 
 interface CaseStudy {
   id: number;
@@ -14,9 +16,11 @@ interface CaseStudy {
   colImageUrl: string;
   colImageName: string;
   size: "small" | "medium" | "large";
+
 }
 
 const Index: React.FC = () => {
+  const router = useRouter();
   const getClassName = (size: "small" | "medium" | "large"): string => {
     return size === "small"
       ? "small-logo"
@@ -32,11 +36,12 @@ const Index: React.FC = () => {
         "Universiti Malaya aimed to enhance its educational offerings by incorporating advanced technologies to create more immersive and interactive learning environments.",
       imageUrl: "/images/svg/soctor.svg",
       buttonText: "#Helthcare",
-      buttonUrl: "/case-study-1",
       read: ". 2 Min Read",
       colImageUrl: "/images/health-care-img.jpeg",
       colImageName: "health care",
       size: "medium",
+      buttonUrl: routeMap["soctor"],
+
     },
     {
       id: 2,
@@ -165,7 +170,7 @@ const Index: React.FC = () => {
                   <button className="health-care-button">
                     {study.buttonText}
                   </button>
-                  <button className="view-detais-sotry-button">
+                  <button className="view-detais-sotry-button" onClick={() => router.push(study.buttonUrl)}>
                     VIEW DETAILED STORY
                   </button>
                 </div>
