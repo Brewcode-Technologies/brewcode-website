@@ -2325,6 +2325,244 @@ footer {
 
 }
 
+.contact-bg{
+  background-image: url("/images/background-img-contact.jpg");
+  height: 100px;
+  width: 100%;
+  padding: 32px 0px !important;
+
+}
+
+.connect-with-brewcode{
+  font-family: "Inter";
+  font-size: 30px;
+  font-weight: 700;
+  padding: 4px;
+  letter-spacing: 2px;
+}
+
+.bg-block{
+  background-color: #000;
+}
+
+.socoter-img{
+  background-color: #373737;
+  padding: 20px 25px 20px 15px;
+  width: 400px;
+  border-radius: 10px;
+}
+
+.health-care-img{
+  width: 100%;
+  
+}
+
+.healthcare {
+  font-size: 3rem; 
+  font-weight: bold;
+  position: relative;
+  font-family: "Inter";
+}
+
+.healthcare::before {
+  content: 'Healthcare';
+  font-size: 6rem;
+  color: rgba(255, 255, 255, 0.1);
+  position: absolute;
+  top: -10px;
+  left: 50%;
+  transform: translateX(-50%);
+  z-index: -1; 
+}
+
+.user-adoption {
+  font-size: 1rem;
+  font-family: "Inter";
+  color: #ffffff;
+}
+
+.user-adoption span {
+  text-decoration: none;
+  
+}
+
+.socoter-hero-section-container{
+  display: flex !important;
+  justify-content: space-between !important;
+}
+
+.socoter-img-container{
+  display: flex;
+  justify-content: flex-end;
+ 
+}
+
+.soctor-logo{
+  display: flex;
+  justify-content: center;
+  text-align: center !important;
+}
+
+.healthcare-text-container{
+display: flex;
+flex-direction: column;
+justify-content: center !important;
+align-items: center;
+}
+
+.soctor-about-section {
+  display: flex;
+  align-items: center;
+  color: #fff; 
+  padding: 40px 0px;
+
+ 
+}
+
+.section-about-introduction {
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+  color: #04CAA8; 
+  margin-right: 20px;
+  margin-top: -100px;
+}
+.about-introduction {
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+  color: #04CAA8; 
+  margin-right: 20px;
+  margin-top: -15px;
+}
+
+.target-audience-about-introduction {
+  writing-mode: vertical-lr;
+  text-orientation: mixed;
+  color: #04CAA8; 
+  margin-right: 20px;
+}
+.about-content {
+  text-align: left;
+}
+
+.section-title {
+  font-size: 1.5rem;
+  margin-bottom: 1rem;
+}
+.icon {
+  font-size: 1.25rem;
+  color: #1E90FF;
+}
+
+.gap {
+  font-weight: bold;
+}
+.target-audience-list {
+  list-style: none;
+  padding-left: 0;
+}
+
+.audience-list-container{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.target-audience-item {
+  margin-bottom: 2rem;
+  display: flex;
+  color: #ffffff;
+  font-size: 12px;
+  font-family: "Inter";
+}
+
+.audience-list-heading{
+  color: #ffffff;
+  font-family: "Lato";
+
+}
 
 
+.target-audience-item strong {
+  font-size: 1.25rem;
+}
+.target-audience-item p {
+  margin-bottom: 0.5rem;
+}
+.target-audience-item .icon {
+  display: inline-block;
+  width: 2rem;
+  margin-right: 0.5rem;
+  text-align:center;
+}
+
+.about-content h2 {
+  font-size: 1.5rem; 
+  margin-bottom: 20px;
+  font-family: "Lato";
+}
+
+.about-content p {
+  font-size: 0.8rem; 
+  line-height: 1.8;
+}
+
+.section-title{
+  font-size: 20px;
+  font-family: "Inter";
+  font-weight: 600;
+}
+
+.section-description{
+  font-size: 14px;
+  font-family: "Inter";
+  text-align: justify;
+}
+
+.discover-bg{
+  background-color: #151515;
+}
+
+.step-number{
+  width: 50px;
+  height: 30px;
+  border-radius: 50%;
+  background-color: #151515 !important; 
+  color: white;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 1rem;
+  font-family: "Lato";
+  border: 1.5px solid #ffffff;
+  margin-right: 20px;
+  padding: 3px 2px 4px 2px;
+
+}
+
+.gap-that-container{
+  color: #ffffff;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+
+.gap-description{
+  font-style: "Inter";
+  font-size: 14px;
+}
+
+.process-image-container{
+  width: 100%;
+  height: 100%;
+}
+
+.process-image{
+  width: 100%;
+  height: auto;
+}
+
+.final-ui-screens{
+  font-family: "Lato";
+  color: #ffffff;
+  font-size: 24px;
+}
 /* E-commerce style End--------------------------------------------------------------------------------- */
