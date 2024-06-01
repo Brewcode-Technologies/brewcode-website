@@ -455,7 +455,7 @@ video {
 
 .about-description {
   color: #ddd;
-  font-size: 24px;
+  font-size: 24px !important;
   font-family: "Inter";
   text-align: left;
   font-weight: 700;
@@ -1055,7 +1055,7 @@ footer {
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  height: 90vh;
+  height: 100vh;
   color: #ffffff;
 }
 
@@ -1136,7 +1136,8 @@ footer {
 
 .overview-image {
   width: 100%;
-  height: 400px;
+  border-radius: 2px;
+
 }
 .overview-title,
 .our-section-heading {
@@ -1150,13 +1151,15 @@ footer {
   font-family: "Lato";
   font-size: 24px;
   font-weight: 300;
-  line-height: 26px;
+  line-height: 30px;
 }
 
 .overview-detail,
 .our-section-text,
 .service-description {
   font-size: 12px;
+  font-family: "Inter";
+  text-align: justify;
 }
 
 .our-distenctive-div {
@@ -1178,13 +1181,14 @@ footer {
   border-radius: none !important;
   background-color: #151515 !important;
   color: #ffffff !important;
-  height: 470px !important;
+  height: 420px;
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
 .card-title {
   font-size: 16px;
   font-family: "Inter";
+  margin: 20px 0px;
 }
 
 .card-body {
@@ -1192,23 +1196,29 @@ footer {
 }
 
 .card-text {
-  font-size: 14px;
+  font-size: 12px;
   margin-top: 10px;
   font-family: "Inter";
-  text-align: flex-start;
+  text-align: justify;
 }
 
 .framework {
   padding-top: 10px;
 }
 
-.card-img-top {
+.image-card-container,.image-icon-container,.image-container {
   width: 100%;
-  height: 150px !important;
+  height: auto;
 }
 
+.card-img-top {
+  width: 100%;
+  height: auto;
+}
+
+
+
 .innovation-text-card {
-  background-color: red;
   width: 33%;
   padding: 20px 0px;
 }
@@ -1761,7 +1771,7 @@ footer {
 }
 .case-studies-hero-section {
   width: 100%;
-  height: 90vh;
+  height: 100vh;
   background-image: url("/images/case-studies-hero-section-img.jpeg");
   background-position: center;
   background-size: cover;
@@ -2168,6 +2178,16 @@ footer {
   }
 }
 
+
+
+.url-link{
+  text-decoration: none;
+  border-bottom: 1px solid #fff;
+  color: #ffffff;
+  font-weight: bold;
+  font-family: "Inter";
+}
+
 /* E-commerce style start----------------------------------------------------------------------------- */
 .e-commerce-hero-section {
   width: 100%;
@@ -2345,10 +2365,14 @@ footer {
   background-color: #000;
 }
 
+/* .socoter-img-container{
+  width: 100%;
+  height: auto;
+} */
 .socoter-img{
   background-color: #373737;
   padding: 20px 25px 20px 15px;
-  width: 400px;
+  /* width: 400px !important; */
   border-radius: 10px;
 }
 
@@ -2379,6 +2403,7 @@ footer {
   font-size: 1rem;
   font-family: "Inter";
   color: #ffffff;
+  margin: 40px 0px;
 }
 
 .user-adoption span {
@@ -2552,7 +2577,7 @@ align-items: center;
 
 .process-image-container{
   width: 100%;
-  height: 100%;
+  height: auto;
 }
 
 .process-image{
@@ -2566,3 +2591,35 @@ align-items: center;
   font-size: 24px;
 }
 /* E-commerce style End--------------------------------------------------------------------------------- */
+
+.stroke-text {
+  h2 {
+    color: transparent;
+    -webkit-text-stroke: 1px #555;
+   font-size: 100px;
+   z-index: -20;
+   text-align: center;
+ 
+  }
+}
+
+
+.reflect {
+  position: relative;
+  display: inline-block;
+  font-size: 50px;
+  
+}
+
+.reflect::after {
+  content: "Healthcare";
+  position: absolute;
+  top: 37%;
+  left: 14%;
+  z-index: 100;
+  color: transparent;
+  text-shadow: 0 0 1px white;
+  font-weight: bold;
+  font-family: "Inter";
+  font-size: 64px;
+}

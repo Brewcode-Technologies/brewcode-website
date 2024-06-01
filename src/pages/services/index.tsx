@@ -1,8 +1,11 @@
+import ReusableButton from "@component/components/customHooks/reusableContactButton";
+import useNavigation from "@component/components/customHooks/useNavigation";
 import Layout from "@component/components/layouts/layout";
 import Image from "next/image";
 import React from "react";
 
 const Services: React.FC = () => {
+  const { navigate } = useNavigation();
   return (
     <Layout>
       <div
@@ -74,7 +77,10 @@ const Services: React.FC = () => {
                 beyond cost optimization, focusing on building true value,
                 enhancing customer experiences, and fostering innovation.
               </p>
-              <button className="contact-us-btn">CONTACT US</button>
+              <ReusableButton
+                label="Contact Us"
+                navigateTo={() => navigate("contact-us")}
+              />
             </div>
             <div className="col-md-4">
               <img
@@ -87,98 +93,106 @@ const Services: React.FC = () => {
               />
             </div>
           </div>
-          <div className="row my-4  our-distenctive-div">
-            <div className="col-4">
-              <h3 className="our-section-heading mb-5">
-                Our Distenctive Approch
-              </h3>
-              <p className="our-section-subheading mb-5">
-                Redefining Application Success
-                <br /> through the Symphony of
-                <br />
-                Expertise, Innovation and Results
-              </p>
-              <p className="our-section-text mb-4">
-                With our deep industry expertise and continuous investments in
-                cutting-edge innovation, we don't just meet your expectations —
-                we exceed them. Our focus on reducing costs, enhancing
-                predictability, and fostering agility in a dynamic business
-                landscape sets us apart.
-              </p>
-              <p className="our-section-text">
-                As a trusted partner, we aspire to shape the future of
-                enterprise applications, ensuring lasting value for you and
-                driving innovation.
-              </p>
-            </div>
-            <div className="row col-8 d-flex justify-content-between">
-              <div className="col-5 mb-3">
-                <Image
-                  alt="Comprehensive application services icon"
-                  width={50}
-                  height={50}
-                  src="images/svg/Comprehencive.svg"
-                  className="mb-3"
-                  priority
-                />
-                <h4 className="service-title mb-3">
-                  Comprehensive application services
-                </h4>
-                <p className="service-description ">
-                  We deliver a full range of change- the-business,
-                  run-the-business and cross-functional IT application services
-                  that are scalable, robust, secure and maintainable.
+          <div className="container my-4 our-distenctive-div">
+            <div className="row d-flex justify-content-between">
+              <div className="col-lg-4 col-md-6 col-12 mb-4">
+                <h3 className="our-section-heading mb-5">
+                  Iaas architecture and <br /> related components
+                </h3>
+                <p className="our-section-subheading mb-5">
+                  Redefining Application Success
+                  <br /> through the Symphony of
+                  <br /> Expertise, Innovation and
+                  <br /> Results
+                </p>
+                <p className="our-section-text mb-4">
+                  IaaS architecture comprises several core components that
+                  enable efficient and scalable operations. The primary compute
+                  resources include Virtual Machines (VMs) and containers, which
+                  provide the essential computing power needed for various
+                  applications. Storage solutions in IaaS encompass block
+                  storage for raw volumes, object storage for unstructured data
+                  like files and multimedia, and file storage for shared access
+                  across multiple VMs.
+                </p>
+                <p className="our-section-text">
+                  Networking is facilitated through Virtual Private Clouds
+                  (VPCs), load balancers to ensure high availability, and
+                  firewalls or security groups for traffic control.
                 </p>
               </div>
-              <div className="col-5 mb-3">
-                <Image
-                  alt="Harnessing technology icon"
-                  width={50}
-                  height={50}
-                  src="/images/svg/Harnesing.svg"
-                  className="mb-3"
-                  priority
-                />
-                <h4 className="service-title mb-3">
-                  Harnessing industry expertise
-                </h4>
-                <p className="service-description">
-                  We deliver a full range of change- the-business,
-                  run-the-business and cross-functional IT application services
-                  that are scalable, robust, secure and maintainable.
-                </p>
-              </div>
-              <div className="col-5 mb-3">
-                <Image
-                  alt="Innovative accelerators icon"
-                  width={50}
-                  height={50}
-                  src="/images/svg/Innovative.svg"
-                  className="mb-3"
-                  priority
-                />
-                <h4 className="service-title mb-3">Innovative accelerators</h4>
-                <p className="service-description">
-                  Our investments in innovative solutions ensure you benefit
-                  from the latest accelerators, methodologies and engagement
-                  models tailored to meet your evolving needs.
-                </p>
-              </div>
-              <div className="col-5 mb-3">
-                <Image
-                  alt="Advanced methodologies icon"
-                  width={50}
-                  height={50}
-                  src="/images/svg/Innovative_.svg"
-                  className="mb-3"
-                  priority
-                />
-                <h4 className="service-title mb-3">Innovative accelerators</h4>
-                <p className="service-description">
-                  Our investments in innovative solutions ensure you benefit
-                  from the latest accelerators, methodologies and engagement
-                  models tailored to meet your evolving needs.
-                </p>
+
+              <div className="col-lg-7 col-md-6 col-12 ">
+                <div className=" row mb-5 d-flex justify-content-between p-0">
+                  <div className="col-6">
+                    <div className="mb-3">
+                      <Image
+                        alt="Comprehensive application services icon"
+                        width={50}
+                        height={50}
+                        src="/images/svg/comprehencive.svg"
+                        className="mb-4"
+                        priority
+                      />
+                      <h4 className="service-title mb-3">Comprehensive application<br/>
+services</h4>
+                      <p className="service-description">
+                      We deliver a full range of change- the-business, run-the-business and cross-functional IT application services that are scalable, robust, secure and maintainable.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="col-6">
+                    <div className="mb-3">
+                      <Image
+                        alt="Harnessing technology icon"
+                        width={50}
+                        height={50}
+                        src="/images/svg/Harnesing.svg"
+                        className="mb-4"
+                        priority
+                      />
+                      <h4 className="service-title mb-3">Harnessing industry expertise</h4>
+                      <p className="service-description">
+                      Our deep industry domain knowledge and technical expertise enable us to deliver transformational results. Our industrialized approach reduces costs, boosts predictability and enhances agility.
+                      </p>
+                    </div>
+                  </div>
+                </div>
+                <div className=" row mb-4 d-flex justify-content-between p-0">
+                  <div className="col-6">
+                    <div className="mb-3">
+                      <Image
+                        alt="Comprehensive application services icon"
+                        width={50}
+                        height={50}
+                        src="/images/svg/Innovative_.svg"
+                        className="mb-4"
+                        priority
+                      />
+                      <h4 className="service-title mb-3">Innovative accelerators
+</h4>
+                      <p className="service-description">
+                      Our investments in innovative solutions ensure you benefit from the latest accelerators, methodologies and engagement models tailored to meet your evolving needs.
+                      </p>
+                    </div>
+                  </div>
+                  <div className="col-6">
+                    <div className="mb-3">
+                      <Image
+                        alt="Harnessing technology icon"
+                        width={50}
+                        height={50}
+                        src="/images/svg/Innovative_.svg"
+                        className="mb-4"
+                        priority
+                      />
+                      <h4 className="service-title mb-3">Innovative accelerators</h4>
+                      <p className="service-description">
+                      Our investments in innovative solutions ensure you benefit from the latest accelerators, methodologies and engagement models tailored to meet your evolving needs.
+                      </p>
+                    </div>
+                  </div>
+                </div>
               </div>
             </div>
           </div>
