@@ -14,26 +14,28 @@ const Index: React.FC = () => {
           <div className="row my-4 d-flex justify-content-between">
             <div className="col-md-6 col-md-4 mb-5">
               <div className="soctor-logo d-flex text-center mb-5">
-                <img src="/images/svg/Brewcode.svg" alt="Brewcode Logo" />
+                <img src="/images/svg/soctor.svg" alt="Soctor Logo" />
               </div>
-              <div className="healthcare-text-container">
-                <div className="reflect stroke-text mb-5">
-                  <h2>Information Techmology</h2>
+             <div className="healthcare-text-container" >
+             <div className="reflect stroke-text mb-5">
+                  <h2> Information Techmology</h2>
                 </div>
                 <div className="percentage-container">
-                  <div className="list-page-description text-center">
-                    Brewcode Meet – Setting New Standards in Enterprise
-                    <br /> Communication  
-                  </div>
+                <div className="list-page-description">
+                Brewcode Meet – Setting New Standards in Enterprise<br/> Communication  
+             
                 </div>
-              </div>
+                </div>
+             </div>
             </div>
             <div className="col-md-5">
-              <img
-                src="/images/brewcode-enterprise-meeting-platform.png"
-                alt="Brewcode Enterprise Meeting Platform"
-                className="health-care-img"
-              />
+              <div className="socoter-img">
+                <img
+                  src="/images/health-care-img.jpeg"
+                  alt="health care image"
+                  className="health-care-img"
+                />
+              </div>
             </div>
           </div>
 
@@ -43,7 +45,10 @@ const Index: React.FC = () => {
               <div className="about-content">
                 <h2>About Project</h2>
                 <p>
-                Brewcode Technologies took on the ambitious project of developing Brewcode Meet, an advanced enterprise meeting platform designed to cater to the growing needs for reliable digital communication in businesses.
+                  Soctor helps in manage minor health problems like cold, cough,
+                  fever, loose motions and many more conditions with commonly
+                  available medicines using self-treatment advice developed by
+                  doctors. It's easy. It's free.
                 </p>
               </div>
             </div>
@@ -58,10 +63,14 @@ const Index: React.FC = () => {
                     <span className="icon">📄</span> Problem Statement
                   </h2>
                   <p className="section-description">
-                 <b> Device and Browser Compatibility:</b> Achieved universal compatibility through extensive testing and optimization.
-                  </p>
-                  <p className="section-description">
-                  <b>Load Management:</b> Implemented dynamic scaling of backend resources to manage peak usage efficiently.
+                    Irresponsible self-medication is a significant issue in
+                    India, with 52% of individuals relying on previous
+                    experiences, unqualified neighborhood pharmacists, and
+                    online information, leading to serious health risks and
+                    contributing to antibiotic resistance. There is a clear need
+                    for a trusted, accessible platform to provide accurate,
+                    personalized medical advice to promote safe self-care and
+                    mitigate these risks.
                   </p>
                 </div>
               </div>
@@ -73,8 +82,13 @@ const Index: React.FC = () => {
                     <span className="icon">🎯</span> Business Goal
                   </h2>
                   <p className="section-description">
-                  Business Goal for Brewcode Meet: “To establish Brewcode Meet as the premier enterprise communication platform that enhances collaboration and productivity by delivering a seamless, secure, and user-centric experience, thereby driving digital transformation and fostering a connected business environment.”
-This goal aligns with Brewcode Technologies’ dedication to innovation and excellence, aiming to set a new standard in enterprise communication solutions.
+                    Our business goal is to establish Soctor as the leading
+                    platform for safe and responsible self-medication. We aim to
+                    provide accurate, personalized medical advice and
+                    professional consultations to millions of users. By
+                    promoting educated and informed healthcare decisions, we
+                    seek to reduce health risks and combat antibiotic
+                    resistance.
                   </p>
                 </div>
               </div>
@@ -98,21 +112,28 @@ This goal aligns with Brewcode Technologies’ dedication to innovation and exce
           </div>
 
           <div className="row mb-4">
-            <div className="col-md-4">
+            <div className="col-md-3">
               <strong className="audience-list-heading genarl-padding">
-                Businesses and
-                <br /> Corporations{" "}
+                General Public
               </strong>
             </div>
-            <div className="col-md-8">
+            <div className="col-md-9">
               <li className="target-audience-item">
                 <div className="d-flex flex-column">
                   <div className="d-flex">
                     <span className="icon">➡</span>
                     <p>
-                      Organizations seeking to enhance internal communication
-                      and collaboration among
-                      <br /> employees.{" "}
+                      Individuals who frequently self-medicate based on past
+                      experiences, advice from unqualified sources, or online
+                      information.
+                    </p>
+                  </div>
+                  <div className="d-flex">
+                    <span className="icon">➡</span>
+
+                    <p>
+                      People looking for reliable health information and
+                      guidance to manage common health issues safely.
                     </p>
                   </div>
                 </div>
@@ -120,18 +141,26 @@ This goal aligns with Brewcode Technologies’ dedication to innovation and exce
             </div>
           </div>
           <div className="row mb-4">
-            <div className="col-md-4">
-              <strong className="audience-list-heading">Remote Teams</strong>
+            <div className="col-md-3">
+              <strong className="audience-list-heading">General Public</strong>
             </div>
-            <div className="col-md-8">
+            <div className="col-md-9">
               <li className="target-audience-item">
                 <div className="d-flex flex-column">
                   <div className="d-flex">
                     <span className="icon">➡</span>
                     <p>
-                      Teams that operate remotely and require reliable tools for
-                      daily communication and
-                      <br /> project management.
+                      Individuals who frequently self-medicate based on past
+                      experiences, advice from unqualified sources, or online
+                      information.
+                    </p>
+                  </div>
+                  <div className="d-flex">
+                    <span className="icon">➡</span>
+
+                    <p>
+                      People looking for reliable health information and
+                      guidance to manage common health issues safely.
                     </p>
                   </div>
                 </div>
@@ -139,20 +168,20 @@ This goal aligns with Brewcode Technologies’ dedication to innovation and exce
             </div>
           </div>
           <div className="row mb-4">
-            <div className="col-md-4">
+            <div className="col-md-3">
               <strong className="audience-list-heading">
-                Educational Institutions
+                Chronic Disease Patients
               </strong>
             </div>
-            <div className="col-md-8">
+            <div className="col-md-9">
               <li className="target-audience-item">
                 <div className="d-flex flex-column">
                   <div className="d-flex">
                     <span className="icon">➡</span>
                     <p>
-                      Schools and universities that need a platform for virtual
-                      classrooms, meetings, and
-                      <br /> seminars.
+                      Patients with chronic conditions who require ongoing
+                      medication management and often self-medicate to manage
+                      symptoms.
                     </p>
                   </div>
                 </div>
@@ -160,18 +189,26 @@ This goal aligns with Brewcode Technologies’ dedication to innovation and exce
             </div>
           </div>
           <div className="row mb-4">
-            <div className="col-md-4">
-              <strong className="audience-list-heading">IT Departments</strong>
+            <div className="col-md-3">
+              <strong className="audience-list-heading">Young Adults</strong>
             </div>
-            <div className="col-md-8">
+            <div className="col-md-9">
               <li className="target-audience-item">
                 <div className="d-flex flex-column">
                   <div className="d-flex">
                     <span className="icon">➡</span>
                     <p>
-                       IT professionals who require a secure and efficient means
-                      to support and manage their
-                      <br /> company’s technology infrastructure.
+                      Tech-savvy individuals who are comfortable using digital
+                      platforms for health information and advice.
+                    </p>
+                  </div>
+                  <div className="d-flex">
+                    <span className="icon">➡</span>
+
+                    <p>
+                      This group often turns to the internet for quick health
+                      solutions and may benefit from a reliable, personalized
+                      platform.
                     </p>
                   </div>
                 </div>
@@ -179,20 +216,18 @@ This goal aligns with Brewcode Technologies’ dedication to innovation and exce
             </div>
           </div>
           <div className="row mb-4">
-            <div className="col-md-4">
-              <strong className="audience-list-heading">
-                Project Managers
-              </strong>
+            <div className="col-md-3">
+              <strong className="audience-list-heading">Caregivers</strong>
             </div>
-            <div className="col-md-8">
+            <div className="col-md-9">
               <li className="target-audience-item">
                 <div className="d-flex flex-column">
                   <div className="d-flex">
                     <span className="icon">➡</span>
                     <p>
-                      Individuals responsible for coordinating and overseeing
-                      projects that involve multiple
-                      <br /> stakeholders.
+                      Family members or caregivers responsible for the health
+                      and medication of others who need trustworthy advice to
+                      ensure safe practices.
                     </p>
                   </div>
                 </div>
@@ -200,20 +235,20 @@ This goal aligns with Brewcode Technologies’ dedication to innovation and exce
             </div>
           </div>
           <div className="row">
-            <div className="col-md-4">
+            <div className="col-md-3">
               <strong className="audience-list-heading">
-                HR Professionals
+                Rural and Semi-Urban Population
               </strong>
             </div>
-            <div className="col-md-8">
+            <div className="col-md-9">
               <li className="target-audience-item">
                 <div className="d-flex flex-column">
                   <div className="d-flex">
                     <span className="icon">➡</span>
                     <p>
-                      Human resources departments that conduct virtual
-                      interviews, training sessions, and company-wide
-                      announcements.
+                      Communities with limited access to healthcare facilities
+                      and professionals, who often rely on local, unqualified
+                      pharmacists or online sources for medical advice.{" "}
                     </p>
                   </div>
                 </div>
@@ -231,14 +266,12 @@ This goal aligns with Brewcode Technologies’ dedication to innovation and exce
               <div className="about-content">
                 <span className="icon text-center">👥</span>
                 <h2 className=" text-center">Descover</h2>
-                <div className="col-12">
-                  <p className="text-center">
-                    We worked with different stakeholders to understand product,
-                    and a regular connect with
-                    <br /> them helped us understand user stories and needs
-                  </p>
-                </div>
 
+                <p className="text-center">
+                  We worked with different stakeholders to understand product,
+                  and a regular connect with them <br />
+                  helped us understand user stories and needs
+                </p>
                 <div>
                   <hr className="col-md-4 mx-auto" />
                   <div className="col-12">
@@ -256,9 +289,8 @@ This goal aligns with Brewcode Technologies’ dedication to innovation and exce
                   <span className="step-number">1</span>
                 </p>
                 <p className="gap-description">
-                  Performance Analysis: Assessing whether the platform can
-                  handle a high volume of users without compromising speed or
-                  reliability
+                  Lack of a trusted, user-friendly platform for accurate and
+                  personalized self-medication advice.
                 </p>
               </div>
               <div className="d-flex p-4">
@@ -267,8 +299,8 @@ This goal aligns with Brewcode Technologies’ dedication to innovation and exce
                   <span className="step-number">2</span>
                 </p>
                 <p className="gap-description">
-                  User Feedback: Gathering and analyzing user feedback to
-                  identify areas where the user experience may be lacking.
+                  Reliance on unqualified sources due to the unavailability of
+                  easily accessible professional medical guidance.
                 </p>
               </div>
               <div className="d-flex p-4">
@@ -277,9 +309,8 @@ This goal aligns with Brewcode Technologies’ dedication to innovation and exce
                   <span className="step-number">3</span>
                 </p>
                 <p className="gap-description">
-                  Feature Comparison: Comparing Brewcode Meet’s features with
-                  those of leading competitors to spot functionalities that
-                  might be missing or underdeveloped.
+                  Misuse and health risks stemming from improper
+                  self-medication.
                 </p>
               </div>
             </div>
@@ -290,9 +321,7 @@ This goal aligns with Brewcode Technologies’ dedication to innovation and exce
                   <span className="step-number">4</span>
                 </p>
                 <p className="gap-description">
-                  Security Evaluation: Ensuring that all communication and data
-                  storage is secure against potential breaches or
-                  vulnerabilities.{" "}
+                  Insufficient regulation of online medical information.
                 </p>
               </div>
               <div className="d-flex p-4">
@@ -301,18 +330,8 @@ This goal aligns with Brewcode Technologies’ dedication to innovation and exce
                   <span className="step-number">5</span>
                 </p>
                 <p className="gap-description">
-                  Integration Capabilities: Checking if the platform integrates
-                  smoothly with other enterprise tools and systems.
-                </p>
-              </div>
-              <div className="d-flex p-4">
-                <p>
-                  {" "}
-                  <span className="step-number">6</span>
-                </p>
-                <p className="gap-description">
-                  Accessibility: Making sure the platform is accessible to all
-                  users, including those with disabilities.{" "}
+                  Need for better integration of technology and healthcare to
+                  provide real-time, reliable, and tailored advice.
                 </p>
               </div>
             </div>
@@ -337,12 +356,12 @@ This goal aligns with Brewcode Technologies’ dedication to innovation and exce
               </div>
             </div>
           </div>
-          <div className="soctor-about-section my-4">
+          <div className="soctor-about-section">
             <div className="about-introduction">Process</div>
             <div className="process-image-container">
               <img
-                src="/images/discovery-design-delivery-img.png"
-                alt="Discovery, Design, and Delivery Process"
+                src="/images/human.jpg"
+                alt="Human"
                 className="process-image"
               />
             </div>
@@ -351,11 +370,39 @@ This goal aligns with Brewcode Technologies’ dedication to innovation and exce
           <div className="soctor-about-section">
             <div className="about-introduction">Plan Of Action</div>
             <div className="row d-flex flex-wrap justify-content-center g-4">
-              <div className="col-6">
+              <div className="col-md-4">
                 <img
-                  src="/images/brewcode-who-we-are-laptop-image.png"
-                  alt="Brewcode Who We Are image"
+                  src="/images/take-medicines.png"
+                  alt="Take Medicines"
                   className="process-image"
+                />
+              </div>
+              <div className="col-md-4">
+                <img
+                  src="/images/take-medicines.png"
+                  alt="Take Medicines"
+                  className="process-image"
+                />
+              </div>
+              <div className="col-md-4">
+                <img
+                  src="/images/take-medicines-small-img.png"
+                  alt="Take Medicines Small Image"
+                  className="process-image"
+                />
+              </div>
+              <div className="col-md-5">
+                <img
+                  src="/images/grab-medicine.png"
+                  alt="Grab Medicine"
+                  className="process-image"
+                />
+              </div>
+              <div className="col-md-5">
+                <img
+                  src="/images/take-medicines-img.png"
+                  alt="Take Medicines Image"
+                  className="process-image take-medicines-img"
                 />
               </div>
             </div>

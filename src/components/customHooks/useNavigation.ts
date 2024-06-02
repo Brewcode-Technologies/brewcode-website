@@ -29,6 +29,7 @@ export const routeMap: Record<Route, string> = {
   health: "/services/health",
   "high-tech": "/services/high-tech",
   "vr-application": "/case-studies/vr-application",
+  "information-technology":"/case-studies/information-technology",
   "soctor-healthcare": "/case-studies/soctor-healthcare",
   "digital-transformation": "/case-studies/digital-transformation",
   "dhanika-solutions": "/case-studies/dhanika-solutions",
@@ -37,6 +38,7 @@ export const routeMap: Record<Route, string> = {
   "soctor": "/case-studies/soctor",
   "case-studies": "/case-studies",
   "ar-vr-development": "/services/ar-vr-development",
+  "at-&-t":"/case-studies/at-&-t",
   "contact-us": "/contact-us",
 };
 

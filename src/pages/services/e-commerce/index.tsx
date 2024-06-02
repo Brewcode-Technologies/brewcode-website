@@ -1,7 +1,7 @@
 import BlackLayer from "@component/components/blackLayer";
 import Layout from "@component/components/layouts/layout";
 import React from "react";
-import { IoMdArrowDropdown } from "react-icons/io";
+import { IoMdArrowDropdown, IoMdArrowDropup } from 'react-icons/io';
 import { useState } from "react";
 
 import Head from "next/head";
@@ -25,6 +25,13 @@ export interface EcommerceService {
 
 const Index: React.FC = () => {
   const { navigate } = useNavigation();
+
+  const [openAccordionIndex, setOpenAccordionIndex] = useState<number | null>(null);
+
+  const toggleAccordion = (index: number) => {
+    setOpenAccordionIndex(openAccordionIndex === index ? null : index);
+  };
+
   const data = [
     {
       title: "May 1940",
@@ -230,19 +237,25 @@ const Index: React.FC = () => {
               </div>
             </div>
 
-            <div className="col-md-7  accordion-container">
-              {ecommerceItems.map((item, index) => (
-                <div className="d-flex flex-column mt-5" key={index}>
-                  <div className="e-commerce-accordion d-flex justify-content-between">
-                    <p className="accordion-title">{item.title}</p>
-                    <span className="icon-border">
-                      <IoMdArrowDropdown fontSize={40} />
-                    </span>
-                  </div>
-                  <hr className="accordion-divider" />
-                </div>
-              ))}
+            <div className="col-md-7 accordion-container">
+      {ecommerceItems.map((item, index) => (
+        <div className="d-flex flex-column mt-5" key={index}>
+          <div className="e-commerce-accordion d-flex justify-content-between" onClick={() => toggleAccordion(index)}>
+            <p className="accordion-title">{item.title}</p>
+            <span className="icon-border">
+              {openAccordionIndex === index ? <IoMdArrowDropup fontSize={40} /> : <IoMdArrowDropdown fontSize={40} />}
+            </span>
+          </div>
+          <hr className="accordion-divider" />
+          {openAccordionIndex === index && (
+            <div>
+             
+           
             </div>
+          )}
+        </div>
+      ))}
+    </div>
           </div>
           <div className="row my-5">
             <div className="col-md-5">

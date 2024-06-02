@@ -103,7 +103,7 @@ const Index: React.FC = () => {
         "The AT&T Collaborate app is a comprehensive SIP and Team Collaboration client connected to the Internet and AT&T Cloud. It integrates seamlessly with AT&T's server platform, offering a wide range of calling and collaboration features.",
       imageUrl: "/images/svg/AT-T.svg",
       buttonText: "#IT service ",
-      buttonUrl: "/case-study-3",
+      buttonUrl: routeMap["at-&-t"],
       read: ". 4 Min Read",
       colImageUrl: "/images/at-t-collaborate-app-img.jpeg",
       colImageName: "at&t collaborate app development   image",

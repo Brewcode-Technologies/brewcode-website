@@ -34,6 +34,8 @@ export type Route =
   | "contact-us"
   | "soctor"
   |"infrastructure"
+  |"information-technology"
+  |"at-&-t"
   | "ar-vr-development";
 
   export interface ReusableButtonProps {

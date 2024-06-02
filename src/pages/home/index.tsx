@@ -392,7 +392,7 @@ const Home: React.FC = () => {
                   >
                     <div className="insight-card card-body mb-3">
                       <p className="insight-card-category">{blog.category}</p>
-                      <h5 className="pt-2 insight-card-title card-title">
+                      <h5 className="pt-2 insight-card-title">
                         {blog.title}
                       </h5>
                       <p className="insight-card-description card-text">
