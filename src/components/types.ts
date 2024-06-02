@@ -33,4 +33,10 @@ export type Route =
   | "our-work"
   | "contact-us"
   | "soctor"
+  |"infrastructure"
   | "ar-vr-development";
+
+  export interface ReusableButtonProps {
+    label: string;
+    navigateTo: () => void;
+  }

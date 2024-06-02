@@ -6,6 +6,7 @@ import { useState } from "react";
 
 import Head from "next/head";
 import useNavigation from "@component/components/customHooks/useNavigation";
+import ReusableButton from "@component/components/customHooks/reusableContactButton";
 
 type Technology =
   | "AR/VR"
@@ -308,22 +309,21 @@ const Index: React.FC = () => {
               )}
             </div>
           </div>
-       
-       
         </div>
-        <div className="contact-bg my-5" >
-           <div className="d-flex justify-content-between" style={{height:'100px', width:'88%', margin:'0 auto'}}>
-           <h1 className="text-white connect-with-brewcode p-1">Connect With Brewcode</h1>
-            <div className="">
-              <button
-                className="contact-us-btn"
-                onClick={() => navigate("contact-us")}
-              >
-                Contact Us
-              </button>
-            </div>
-           </div>
+        <div className="contact-bg my-5">
+          <div
+            className="d-flex justify-content-between"
+            style={{ height: "100px", width: "88%", margin: "0 auto" }}
+          >
+            <h1 className="text-white connect-with-brewcode p-1">
+              Connect With Brewcode
+            </h1>
+            <ReusableButton
+              label="Contact Us"
+              navigateTo={() => navigate("contact-us")}
+            />
           </div>
+        </div>
       </div>
     </Layout>
   );

@@ -11,7 +11,7 @@ const Career: React.FC = () => {
       </Head>
       <div className="bg-black py-5">
         <div className="container">
-          <div className="socoter-hero-section-container" >
+          <div className="socoter-hero-section-container my-5">
             <div className="col-md-6 ">
               <div className="soctor-logo d-flex text-center mb-5">
                 <img src="/images/svg/soctor.svg" alt="Soctor Logo" />

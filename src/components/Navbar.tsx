@@ -4,6 +4,7 @@ import { Navbar, Nav } from "react-bootstrap";
 import Link from "next/link";
 import Image from "next/image";
 import useNavigation, { routeMap } from "./customHooks/useNavigation";
+import ReusableButton from "./customHooks/reusableContactButton";
 
 type HeaderProps = {
   scroll?: boolean;
@@ -402,12 +403,10 @@ const Header: React.FC<HeaderProps> = () => {
               </Link>
             </li>
           </Nav>
-          <button
-            className="contact-us-btn"
-            onClick={() => navigate("contact-us")}
-          >
-            Contact Us
-          </button>
+          <ReusableButton
+            label="Contact Us"
+            navigateTo={() => navigate("contact-us")}
+          />
         </Navbar.Collapse>
       </div>
     </Navbar>

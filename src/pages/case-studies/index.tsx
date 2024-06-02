@@ -77,7 +77,7 @@ const Index: React.FC = () => {
         "Brewcode Technologies took on the ambitious project of developing Brewcode Meet...",
       imageUrl: "/images/svg/Brewcode.svg",
       buttonText: "#IT service ",
-      buttonUrl: "/case-study-1",
+      buttonUrl: routeMap["brewcode-meet"],
       read: ". 2 Min Read",
       colImageUrl: "/images/who-we-are-img.jpeg",
       colImageName: "who we are image",
@@ -131,7 +131,7 @@ const Index: React.FC = () => {
           <div className="container case-study-container">
             <div className="case-study-content">
               <h1 className="case-study-heading mb-5 text-center ">
-                Case Study
+                Case Studies
               </h1>
               <p className="case-study-description">
                 Case studies are a great way to exhibit real-case scenarios and
@@ -170,7 +170,7 @@ const Index: React.FC = () => {
                   <button className="health-care-button">
                     {study.buttonText}
                   </button>
-                  <button className="view-detais-sotry-button" onClick={() => router.push(study.buttonUrl)}>
+                  <button className="view-detais-sotry-button mb-4" onClick={() => router.push(study.buttonUrl)}>
                     VIEW DETAILED STORY
                   </button>
                 </div>
