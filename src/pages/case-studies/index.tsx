@@ -131,7 +131,7 @@ const Index: React.FC = () => {
           <div className="container case-study-container">
             <div className="case-study-content">
               <h1 className="case-study-heading mb-5 text-center ">
-                Case Study
+                Case Studies
               </h1>
               <p className="case-study-description">
                 Case studies are a great way to exhibit real-case scenarios and
