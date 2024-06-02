@@ -2,7 +2,7 @@ import Layout from "@component/components/layouts/layout";
 import Head from "next/head";
 import React from "react";
 
-const Career: React.FC = () => {
+const Index: React.FC = () => {
   return (
     <Layout>
       <Head>
@@ -10,23 +10,25 @@ const Career: React.FC = () => {
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <div className="bg-black py-5">
-        <div className="container">
-          <div className="socoter-hero-section-container" >
-            <div className="col-md-6 ">
+        <div className="container py-5">
+          <div className="row my-4 d-flex justify-content-between">
+            <div className="col-md-6 col-md-4 mb-5">
               <div className="soctor-logo d-flex text-center mb-5">
                 <img src="/images/svg/soctor.svg" alt="Soctor Logo" />
               </div>
-
-              <div className="healthcare-text-container">
-              <div className="reflect stroke-text ">
-                <h2>Healthcare</h2>
-              </div>
-                <span className="user-adoption">
+             <div className="healthcare-text-container" >
+             <div className="reflect stroke-text mb-5">
+                  <h2>Healthcare</h2>
+                </div>
+                <div className="percentage-container">
+                <div className="percentage">
                   80% Increase In User Adoption
-                </span>
-              </div>
+                  <p className="line"></p>
+                </div>
+                </div>
+             </div>
             </div>
-            <div className="col-md-6 socoter-img-container">
+            <div className="col-md-5">
               <div className="socoter-img">
                 <img
                   src="/images/health-care-img.jpeg"
@@ -36,6 +38,7 @@ const Career: React.FC = () => {
               </div>
             </div>
           </div>
+
           <div className="soctor-about-section">
             <div className="about-introduction">Introduction</div>
             <div className="col-md-8">
@@ -258,7 +261,7 @@ const Career: React.FC = () => {
       <div className="discover-bg">
         <div className="container">
           <div className="soctor-about-section">
-            <div className="about-introduction">Audience</div>
+            <div className="about-introduction">Gap In Market</div>
             <div className="col-12">
               <div className="about-content">
                 <span className="icon text-center">👥</span>
@@ -280,37 +283,52 @@ const Career: React.FC = () => {
           </div>
           <div className="row gap-that-container">
             <div className="d-flex col-md-5 flex-column">
-              <div className="d-flex  p-4">
-                <span className="step-number">1</span>
+              <div className="d-flex p-4">
+                <p>
+                  {" "}
+                  <span className="step-number">1</span>
+                </p>
                 <p className="gap-description">
                   Lack of a trusted, user-friendly platform for accurate and
                   personalized self-medication advice.
                 </p>
               </div>
-              <div className="d-flex  p-4">
-                <span className="step-number">2</span>
+              <div className="d-flex p-4">
+                <p>
+                  {" "}
+                  <span className="step-number">2</span>
+                </p>
                 <p className="gap-description">
                   Reliance on unqualified sources due to the unavailability of
                   easily accessible professional medical guidance.
                 </p>
               </div>
-              <div className="d-flex  p-4">
-                <span className="step-number">3</span>
+              <div className="d-flex p-4">
+                <p>
+                  {" "}
+                  <span className="step-number">3</span>
+                </p>
                 <p className="gap-description">
                   Misuse and health risks stemming from improper
                   self-medication.
                 </p>
               </div>
             </div>
-            <div className="d-flex flex-column col-md-5">
-              <div className="d-flex  p-4">
-                <span className="step-number">4</span>
+            <div className="d-flex col-md-5 flex-column">
+              <div className="d-flex p-4">
+                <p>
+                  {" "}
+                  <span className="step-number">4</span>
+                </p>
                 <p className="gap-description">
                   Insufficient regulation of online medical information.
                 </p>
               </div>
-              <div className="d-flex  p-4">
-                <span className="step-number">5</span>
+              <div className="d-flex p-4">
+                <p>
+                  {" "}
+                  <span className="step-number">5</span>
+                </p>
                 <p className="gap-description">
                   Need for better integration of technology and healthcare to
                   provide real-time, reliable, and tailored advice.
@@ -340,48 +358,56 @@ const Career: React.FC = () => {
           </div>
           <div className="soctor-about-section">
             <div className="about-introduction">Process</div>
-            <div className="">
-              <div className="process-image-container">
-                <img src="/images/human.jpg" className="process-image" />
-              </div>
+            <div className="process-image-container">
+              <img
+                src="/images/human.jpg"
+                alt="Human"
+                className="process-image"
+              />
             </div>
           </div>
           <h2 className="text-center final-ui-screens">How It Works</h2>
           <div className="soctor-about-section">
-            <div className="about-introduction">Process</div>
+            <div className="about-introduction">Plan Of Action</div>
             <div className="row d-flex flex-wrap justify-content-center g-4">
               <div className="col-md-4">
                 <img
                   src="/images/take-medicines.png"
+                  alt="Take Medicines"
                   className="process-image"
                 />
               </div>
               <div className="col-md-4">
                 <img
                   src="/images/take-medicines.png"
+                  alt="Take Medicines"
                   className="process-image"
                 />
               </div>
               <div className="col-md-4">
                 <img
                   src="/images/take-medicines-small-img.png"
+                  alt="Take Medicines Small Image"
                   className="process-image"
                 />
               </div>
               <div className="col-md-5">
                 <img
                   src="/images/grab-medicine.png"
+                  alt="Grab Medicine"
                   className="process-image"
                 />
               </div>
               <div className="col-md-5">
                 <img
                   src="/images/take-medicines-img.png"
+                  alt="Take Medicines Image"
                   className="process-image take-medicines-img"
                 />
               </div>
             </div>
           </div>
+
           <div>
             <div className="col-12">
               <h2 className="text-center my-5 final-ui-screens">
@@ -392,18 +418,21 @@ const Career: React.FC = () => {
               <div className="col-md-3">
                 <img
                   src="/images/soctor-register.png"
+                  alt="Soctor Register"
                   className="process-image"
                 />
               </div>
               <div className="col-md-3">
                 <img
                   src="/images/soctor-symptoms.png"
+                  alt="Soctor Symptoms"
                   className="process-image"
                 />
               </div>
               <div className="col-md-3">
                 <img
                   src="/images/soctor-medical-history.png"
+                  alt="Soctor Medical History"
                   className="process-image"
                 />
               </div>
@@ -411,6 +440,7 @@ const Career: React.FC = () => {
               <div className="col-md-3">
                 <img
                   src="/images/soctor-travel-sickness-personaldetails.png"
+                  alt="Soctor Travel Sickness Personal Details"
                   className="process-image"
                 />
               </div>
@@ -419,28 +449,31 @@ const Career: React.FC = () => {
               <div className="col-md-3">
                 <img
                   src="/images/soctor-safe-self-medication-advice.png"
-                  className="process-image"
+                  alt="Soctor Safe Self Medication Advice"
+                  className="process-image-design"
                 />
               </div>
               <div className="col-md-3">
                 <img
                   src="/images/soctor-travel-sleep.png"
-                  className="process-image"
+                  alt="Soctor Travel Sleep"
+                  className="process-image-design"
                 />
               </div>
               <div className="col-md-3">
                 <img
                   src="/images/soctor-symptoms.png"
-                  className="process-image"
+                  alt="Soctor Symptoms"
+                  className="process-image-design"
                 />
               </div>
               <div className="col-md-3">
                 <img
                   src="/images/soctor-medical-history.png"
-                  className="process-image"
+                  alt="Soctor Medical History"
+                  className="process-image-design"
                 />
               </div>
-            
             </div>
           </div>
         </div>
@@ -449,4 +482,4 @@ const Career: React.FC = () => {
   );
 };
 
-export default Career;
+export default Index;

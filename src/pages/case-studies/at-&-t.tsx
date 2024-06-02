@@ -14,7 +14,7 @@ const Index: React.FC = () => {
           <div className="row my-4 d-flex justify-content-between">
             <div className="col-md-6 col-md-4 mb-5">
               <div className="soctor-logo d-flex text-center mb-5">
-                <img src="/images/svg/Brewcode.svg" alt="Brewcode Logo" />
+                <img src="/images/svg/AT-T.svg" alt="AT&T Logo" />
               </div>
               <div className="healthcare-text-container">
                 <div className="reflect stroke-text mb-5">
@@ -22,18 +22,19 @@ const Index: React.FC = () => {
                 </div>
                 <div className="percentage-container">
                   <div className="list-page-description text-center">
-                    Brewcode Meet – Setting New Standards in Enterprise
-                    <br /> Communication  
+                  AT&T Collaborate App Development   
                   </div>
                 </div>
               </div>
             </div>
-            <div className="col-md-5">
-              <img
-                src="/images/brewcode-enterprise-meeting-platform.png"
-                alt="Brewcode Enterprise Meeting Platform"
-                className="health-care-img"
+            <div className="col-6">
+             <div className="image-container-at">
+             <img
+                src="/images/at-&-t-collaborate-app-development.png"
+                alt="AT&T Collaborate App Development"
+                className="at-t-image"
               />
+             </div>
             </div>
           </div>
 
@@ -43,7 +44,7 @@ const Index: React.FC = () => {
               <div className="about-content">
                 <h2>About Project</h2>
                 <p>
-                Brewcode Technologies took on the ambitious project of developing Brewcode Meet, an advanced enterprise meeting platform designed to cater to the growing needs for reliable digital communication in businesses.
+                Brewcode Technologies played a pivotal role in the success of the AT&T Collaborate app by providing expertise in agile development and microservices architecture. Their contribution ensured that the app could offer a comprehensive suite of features, including advanced calling and collaboration tools, while maintaining high performance and reliability. Brewcode’s focus on user experience and technical excellence helped to create a platform that not only met but exceeded the expectations of enterprise users, solidifying AT&T Collaborate’s position in the marke
                 </p>
               </div>
             </div>
@@ -58,10 +59,12 @@ const Index: React.FC = () => {
                     <span className="icon">📄</span> Problem Statement
                   </h2>
                   <p className="section-description">
-                 <b> Device and Browser Compatibility:</b> Achieved universal compatibility through extensive testing and optimization.
+                    <b> Device and Browser Compatibility:</b> Achieved universal
+                    compatibility through extensive testing and optimization.
                   </p>
                   <p className="section-description">
-                  <b>Load Management:</b> Implemented dynamic scaling of backend resources to manage peak usage efficiently.
+                    <b>Load Management:</b> Implemented dynamic scaling of
+                    backend resources to manage peak usage efficiently.
                   </p>
                 </div>
               </div>
@@ -73,8 +76,15 @@ const Index: React.FC = () => {
                     <span className="icon">🎯</span> Business Goal
                   </h2>
                   <p className="section-description">
-                  Business Goal for Brewcode Meet: “To establish Brewcode Meet as the premier enterprise communication platform that enhances collaboration and productivity by delivering a seamless, secure, and user-centric experience, thereby driving digital transformation and fostering a connected business environment.”
-This goal aligns with Brewcode Technologies’ dedication to innovation and excellence, aiming to set a new standard in enterprise communication solutions.
+                    Business Goal for Brewcode Meet: “To establish Brewcode Meet
+                    as the premier enterprise communication platform that
+                    enhances collaboration and productivity by delivering a
+                    seamless, secure, and user-centric experience, thereby
+                    driving digital transformation and fostering a connected
+                    business environment.” This goal aligns with Brewcode
+                    Technologies’ dedication to innovation and excellence,
+                    aiming to set a new standard in enterprise communication
+                    solutions.
                   </p>
                 </div>
               </div>
