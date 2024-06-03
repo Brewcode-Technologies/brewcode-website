@@ -4,7 +4,7 @@ import Layout from "@component/components/layouts/layout";
 import Image from "next/image";
 import React from "react";
 
-const index: React.FC = () => {
+const Index: React.FC = () => {
   const { navigate } = useNavigation();
   return (
     <Layout>
@@ -314,4 +314,4 @@ services</h4>
   );
 };
 
-export default index;
+export default Index;

@@ -2,7 +2,7 @@ import Layout from "@component/components/layouts/layout";
 import Image from "next/image";
 import React from "react";
 
-const CyberSecurity: React.FC = () => {
+const Index: React.FC = () => {
   return (
     <Layout>
       <div
@@ -236,4 +236,4 @@ const CyberSecurity: React.FC = () => {
   );
 };
 
-export default CyberSecurity;
+export default Index;

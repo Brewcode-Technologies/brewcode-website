@@ -20,7 +20,7 @@ interface ClientLogo {
   url: string;
 }
 
-const Home: React.FC = () => {
+const Index: React.FC = () => {
   const [isBrowser, setIsBrowser] = useState<boolean>(false);
   useEffect(() => {
     setIsBrowser(true);
@@ -452,4 +452,4 @@ const Home: React.FC = () => {
   );
 };
 
-export default Home;
+export default Index;

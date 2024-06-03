@@ -1,7 +1,7 @@
 import Layout from "@component/components/layouts/layout";
 import React from "react";
 
-const Career: React.FC = () => {
+const Index: React.FC = () => {
   return (
     <Layout>
     <div
@@ -37,4 +37,4 @@ const Career: React.FC = () => {
   );
 };
 
-export default Career;
+export default Index;

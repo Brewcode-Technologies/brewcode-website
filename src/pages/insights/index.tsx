@@ -2,7 +2,7 @@
 import Layout from "@component/components/layouts/layout";
 import React from "react";
 
-const index: React.FC = () => {
+const Index: React.FC = () => {
   return (
     <Layout>
     <div
@@ -38,4 +38,4 @@ const index: React.FC = () => {
   );
 };
 
-export default index;
+export default Index;

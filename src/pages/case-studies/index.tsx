@@ -49,13 +49,8 @@ const Index: React.FC = () => {
       description:
         "St. Jude India ChildCare Centres, a premier NGO based in Mumbai, embarked on a critical journey of digital transformation to amplify their online presence and enhance donation facilitation.",
       imageUrl: "/images/svg/st-jude.svg",
-<<<<<<< Updated upstream
-      buttonText: "#ITService ",
-      buttonUrl: routeMap["brewcode-meet"],
-=======
       buttonText: "#IT service ",
       buttonUrl: routeMap["digital-transformation"],
->>>>>>> Stashed changes
       read: ". 3 Min Read",
       colImageUrl: "/images/st-jude-india-childCare.jpeg",
       colImageName: "st jude india childCare image",
@@ -67,13 +62,8 @@ const Index: React.FC = () => {
       description:
         "Dhanika Solutions, a leading player in the IT services industry, aimed to elevate their digital presence and streamline the career opportunity process.",
       imageUrl: "/images/svg/dhanika.svg",
-<<<<<<< Updated upstream
-      buttonText: "#ITService ",
-      buttonUrl: routeMap["brewcode-meet"],
-=======
       buttonText: "#IT service ",
       buttonUrl: routeMap["dhanika-solutions"],
->>>>>>> Stashed changes
       read: ". 4 Min Read",
       colImageUrl: "/images/dhanika-solutions.jpeg",
       colImageName: "dhanika solutions image",
@@ -99,13 +89,8 @@ const Index: React.FC = () => {
       description:
         "The Vodafone Italia Collaborate App is a sophisticated business messaging application designed to streamline corporate communication.",
       imageUrl: "/images/svg/Vodafone.svg",
-<<<<<<< Updated upstream
-      buttonText: "#ITService ",
-      buttonUrl:routeMap["brewcode-meet"],
-=======
       buttonText: "#IT service ",
       buttonUrl:routeMap["vodafone-ialia-collaborate-app"],
->>>>>>> Stashed changes
       read: ". 3 Min Read",
       colImageUrl: "/images/vodafone-Italia-img.jpeg",
       colImageName: "vodafone italia collaborate app   image",
@@ -117,13 +102,8 @@ const Index: React.FC = () => {
       description:
         "The AT&T Collaborate app is a comprehensive SIP and Team Collaboration client connected to the Internet and AT&T Cloud. It integrates seamlessly with AT&T's server platform, offering a wide range of calling and collaboration features.",
       imageUrl: "/images/svg/AT-T.svg",
-<<<<<<< Updated upstream
-      buttonText: "#ITService ",
-      buttonUrl: routeMap["at-&-t"],
-=======
       buttonText: "#IT service ",
       buttonUrl: routeMap["at-t"],
->>>>>>> Stashed changes
       read: ". 4 Min Read",
       colImageUrl: "/images/at-t-collaborate-app-img.jpeg",
       colImageName: "at&t collaborate app development   image",
