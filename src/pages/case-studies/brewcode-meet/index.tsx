@@ -17,15 +17,15 @@ const Index: React.FC = () => {
                 <img src="/images/svg/Brewcode.svg" alt="Brewcode Logo" />
               </div>
               <div className="healthcare-text-container">
-                <div className="reflect stroke-text mb-5">
-                  <h2>Information Techmology</h2>
+                <div className="information-technology information-technology-stoke-text mb-5">
+                  <h2>Information Technology</h2>
                 </div>
-                <div className="percentage-container">
-                  <div className="list-page-description text-center">
+              
+                  <h2 className="iformation-description">
                     Brewcode Meet – Setting New Standards in Enterprise
                     <br /> Communication  
-                  </div>
-                </div>
+                  </h2>
+             
               </div>
             </div>
             <div className="col-md-5">
