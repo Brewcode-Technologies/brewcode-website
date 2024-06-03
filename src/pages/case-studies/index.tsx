@@ -35,7 +35,7 @@ const Index: React.FC = () => {
       description:
         "Universiti Malaya aimed to enhance its educational offerings by incorporating advanced technologies to create more immersive and interactive learning environments.",
       imageUrl: "/images/svg/soctor.svg",
-      buttonText: "#Helthcare",
+      buttonText: "#Healthcare",
       read: ". 2 Min Read",
       colImageUrl: "/images/health-care-img.jpeg",
       colImageName: "health care",
@@ -49,7 +49,7 @@ const Index: React.FC = () => {
       description:
         "St. Jude India ChildCare Centres, a premier NGO based in Mumbai, embarked on a critical journey of digital transformation to amplify their online presence and enhance donation facilitation.",
       imageUrl: "/images/svg/st-jude.svg",
-      buttonText: "#IT service ",
+      buttonText: "#ITService ",
       buttonUrl: routeMap["brewcode-meet"],
       read: ". 3 Min Read",
       colImageUrl: "/images/st-jude-india-childCare.jpeg",
@@ -62,7 +62,7 @@ const Index: React.FC = () => {
       description:
         "Dhanika Solutions, a leading player in the IT services industry, aimed to elevate their digital presence and streamline the career opportunity process.",
       imageUrl: "/images/svg/dhanika.svg",
-      buttonText: "#IT service ",
+      buttonText: "#ITService ",
       buttonUrl: routeMap["brewcode-meet"],
       read: ". 4 Min Read",
       colImageUrl: "/images/dhanika-solutions.jpeg",
@@ -76,7 +76,7 @@ const Index: React.FC = () => {
       description:
         "Brewcode Technologies took on the ambitious project of developing Brewcode Meet...",
       imageUrl: "/images/svg/Brewcode.svg",
-      buttonText: "#IT service ",
+      buttonText: "#ITService ",
       buttonUrl: routeMap["brewcode-meet"],
       read: ". 2 Min Read",
       colImageUrl: "/images/who-we-are-img.jpeg",
@@ -89,7 +89,7 @@ const Index: React.FC = () => {
       description:
         "The Vodafone Italia Collaborate App is a sophisticated business messaging application designed to streamline corporate communication.",
       imageUrl: "/images/svg/Vodafone.svg",
-      buttonText: "#IT service ",
+      buttonText: "#ITService ",
       buttonUrl:routeMap["brewcode-meet"],
       read: ". 3 Min Read",
       colImageUrl: "/images/vodafone-Italia-img.jpeg",
@@ -102,7 +102,7 @@ const Index: React.FC = () => {
       description:
         "The AT&T Collaborate app is a comprehensive SIP and Team Collaboration client connected to the Internet and AT&T Cloud. It integrates seamlessly with AT&T's server platform, offering a wide range of calling and collaboration features.",
       imageUrl: "/images/svg/AT-T.svg",
-      buttonText: "#IT service ",
+      buttonText: "#ITService ",
       buttonUrl: routeMap["at-&-t"],
       read: ". 4 Min Read",
       colImageUrl: "/images/at-t-collaborate-app-img.jpeg",
