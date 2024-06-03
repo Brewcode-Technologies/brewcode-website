@@ -35,6 +35,7 @@ export const routeMap: Record<Route, string> = {
   "dhanika-solutions": "/case-studies/dhanika-solutions",
   "brewcode-meet": "/case-studies/brewcode-meet",
   "vodafone-italia": "/case-studies/vodafone-italia",
+  "universiti-malaya": "/case-studies/universiti-malaya",
   "soctor": "/case-studies/soctor",
   "case-studies": "/case-studies",
   "ar-vr-development": "/services/ar-vr-development",

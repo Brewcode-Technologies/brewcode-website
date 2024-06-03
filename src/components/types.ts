@@ -33,12 +33,13 @@ export type Route =
   | "our-work"
   | "contact-us"
   | "soctor"
-  |"infrastructure"
-  |"information-technology"
-  |"at-&-t"
+  | "infrastructure"
+  | "information-technology"
+  | "at-&-t"
+  | "universiti-malaya"
   | "ar-vr-development";
 
-  export interface ReusableButtonProps {
-    label: string;
-    navigateTo: () => void;
-  }
+export interface ReusableButtonProps {
+  label: string;
+  navigateTo: () => void;
+}

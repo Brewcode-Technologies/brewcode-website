@@ -2646,7 +2646,7 @@ footer {
     -webkit-text-stroke: 1px #555;
     font-size: 100px;
     z-index: -20;
-    /* text-align: center; */
+    
   }
 }
 
@@ -2668,6 +2668,37 @@ footer {
   font-weight: bold;
   font-family: "Inter";
   font-size: 64px;
+}
+
+
+
+
+.malaya-education {
+  position: relative;
+  display: inline-block;
+  font-size: 50px;
+}
+
+.malaya-education::after {
+  content: "Education";
+  position: absolute;
+  top: 37%;
+  left: 14%;
+  z-index: 100;
+  color: transparent;
+  text-shadow: 0 0 1px white;
+  font-weight: bold;
+  font-family: "Inter";
+  font-size: 64px;
+}
+
+.education-description{
+  color: #ffffff;
+  font-family: "Lato";
+  position: relative;
+ 
+  
+  
 }
 
 .iformation-description{
