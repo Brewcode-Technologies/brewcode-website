@@ -28,15 +28,18 @@ export type Route =
   | "digital-transformation"
   | "dhanika-solutions"
   | "brewcode-meet"
-  | "vodafone-italia"
+  | "vodafone-ialia-collaborate-app"
   | "case-studies"
   | "our-work"
   | "contact-us"
   | "soctor"
   | "infrastructure"
   | "information-technology"
-  | "at-&-t"
+  | "at-t"
   | "universiti-malaya"
+  |"resource-planning"
+  |"industries"
+  |"automotive"
   | "ar-vr-development";
 
 export interface ReusableButtonProps {

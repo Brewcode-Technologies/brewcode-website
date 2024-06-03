@@ -743,9 +743,7 @@ video {
 
 .insight-card {
   background-color: #151515;
-  height: 200px;
-  padding: 10px 12px;
-  border-bottom: 2px solid #ffffff;
+  height: 330px;
   color: #ffffff;
   display: flex;
   flex-direction: column;
@@ -775,7 +773,10 @@ video {
   color: #ffffff !important;
   font-family: "Inter";
   font-size: 14px;
-  font-weight: bold;
+  /* font-weight: bold; */
+  margin-top: 30px;
+  line-height: 18px;
+
 }
 
 /* our-clients styles -------------------start */
@@ -1224,9 +1225,19 @@ footer {
   height: auto;
 }
 
+.insight-card-image-container{
+  width: 100%;
+  height: auto;
+}
+
 .card-img-top {
   width: 100%;
   height: auto;
+}
+
+.insight-card-img{
+  width: 100%;
+  height: 150px;
 }
 
 .innovation-text-card {
@@ -2495,14 +2506,18 @@ footer {
   color: #04caa8;
   margin-right: 20px;
   margin-top: -100px;
+  font-weight: 500;
+  font-family: "Lato";
+ 
 }
 .about-introduction {
   writing-mode: tb-rl;
   transform: rotate(-180deg);
-
+  font-family: "Lato";
   color: #04caa8;
   margin-right: 20px;
   margin-top: -15px;
+  font-weight: 500;
 }
 
 .target-audience-about-introduction {
@@ -2626,6 +2641,8 @@ footer {
 
 .process-image {
   width: 100%;
+  height: auto;
+  border-radius: 4px;
 }
 
 .process-image-design {

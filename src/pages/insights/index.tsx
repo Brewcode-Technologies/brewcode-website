@@ -1,12 +1,41 @@
+
 import Layout from "@component/components/layouts/layout";
 import React from "react";
 
-const Insights: React.FC = () => {
+const Index: React.FC = () => {
   return (
     <Layout>
-      <h1 className="text-center mt-5">InSights</h1>
+    <div
+        style={{
+          position: "relative",
+          width: "100%",
+          height: "100vh",
+        }}
+      >
+        <div className="cloud-image">
+          <img
+            alt="Comprehensive application services icon"
+            src="/images/img.jpg"
+            className="mb-3 hero-cloud"
+           
+          />
+        </div>
+        <div className="container">
+          <div className="row">
+            <div className="services-content">
+              <h1 className="services-header">
+              Insights
+              </h1>
+              <p className=" services-description text-center">
+                Harness the Power of IaaS for Seamless Scalability and
+                <br /> Enhanced Performance
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
     </Layout>
   );
 };
 
-export default Insights;
+export default Index;

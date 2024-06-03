@@ -11,6 +11,8 @@ interface Blog {
   category: string;
   description: string;
   link: string;
+  img:string;
+  imgAlt:string;
 }
 
 interface ClientLogo {
@@ -18,7 +20,7 @@ interface ClientLogo {
   url: string;
 }
 
-const Home: React.FC = () => {
+const Index: React.FC = () => {
   const [isBrowser, setIsBrowser] = useState<boolean>(false);
   useEffect(() => {
     setIsBrowser(true);
@@ -27,6 +29,8 @@ const Home: React.FC = () => {
     {
       id: 1,
       title: "Exploring Alternative JavaScript Frameworks",
+      img: "/images/performance-optimized-framework.webp",
+      imgAlt: "Performance optimized JavaScript framework",
       description:
         "JavaScript frameworks have become an integral part of web development, empowering developers to build robust and efficient applications. Amongst these frameworks, React has emerged as the go-to choice for many developers due to its flexibility, performance, and the extensive community support it enjoys.",
       category: "Blog",
@@ -36,6 +40,8 @@ const Home: React.FC = () => {
       id: 2,
       title:
         "Server Side Rendering vs Client Side Rendering: Unveiling the Key Differences",
+      img: "/images/server-side-rendering.webp",
+      imgAlt: "Server side rendering vs client side rendering",
       description:
         "Server-side rendering and client-side rendering are two prominent techniques used in web development to display content to users. Understanding the basics of rendering is essential to grasp the nuances of these approaches.",
       category: "Blog",
@@ -45,6 +51,8 @@ const Home: React.FC = () => {
       id: 3,
       title:
         "Optimizing Technology Strategies: Brewcode’s Guide to Microservices and Monolithic Architectures",
+      img: "/images/optimizing-technology.webp",
+      imgAlt: "Optimizing technology strategies",
       description:
         "Choosing between microservices and monolithic architectures involves weighing various factors, as each approach has distinct advantages and challenges. Below is an explanation of why organizations might favor microservices over monolithic architectures, and how Brewcode Technologies Private Limited (Brewcode) can assist in navigating these architectural choices.",
       category: "Blog",
@@ -52,14 +60,16 @@ const Home: React.FC = () => {
     },
     {
       id: 4,
-      title:
-        "The cube interview series: Driving enhanced security and higher value in Financial services generative Ai",
+      title: "Exploring AR Technologies: Use Cases and Benefits",
+      img: "/images/exploring-ar-technologies.webp",
+      imgAlt: "Exploring AR technologies",
       description:
         "Financial services are increasingly turning to generative AI to enhance security measures and drive higher value. In this interview series, we explore how AI is transforming the financial sector and the benefits it brings.",
       category: "Blog",
       link: "https://brewcode.medium.com/beyond-react-exploring-alternative-javascript-frameworks-4ff7d960dcc9",
     },
   ];
+  
 
   const OurClientlogos: ClientLogo[][] = [
     [
@@ -370,41 +380,39 @@ const Home: React.FC = () => {
         </section>
         <div className="bg-blind"></div>
         <section className="insights-section">
-          <div className="container my-4">
-            <div className="row">
-              <h1 className=" my-2 insights-heading mt-2">Insights</h1>
-              <p className=" insights-description my-2">
-                Design and deliver new digital experiences, revenue streams and
-                business models to <br /> meet rising customer expectations and
-                accelerate your growth
-              </p>
-            </div>
-            <div className="row my-5">
-              {blogs.map((blog) => (
-                <div
-                  key={blog.id}
-                  className="col-12 col-sm-6 col-md-4 col-lg-3"
-                >
-                  <Link
-                    href={blog.link}
-                    target="_blank"
-                    className="insight-card-link"
-                  >
-                    <div className="insight-card card-body mb-3">
-                      <p className="insight-card-category">{blog.category}</p>
-                      <h5 className="pt-2 insight-card-title">
-                        {blog.title}
-                      </h5>
-                      <p className="insight-card-description card-text">
-                        {truncateText(blog.description, 3)}
-                      </p>
-                    </div>
-                  </Link>
+  <div className="container my-4">
+    <div className="row">
+      <h1 className="my-2 insights-heading mt-2">Insights</h1>
+      <p className="insights-description my-2">
+        Design and deliver new digital experiences, revenue streams and
+        business models to <br /> meet rising customer expectations and
+        accelerate your growth
+      </p>
+    </div>
+    <div className="row my-5">
+      {blogs.map((blog) => (
+        <div key={blog.id} className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
+          <div className="insight-card h-100">
+            <Link href={blog.link} target="_blank" className="insight-card-link">
+              <div className="card-body mb-3">
+                <p className="insight-card-category">{blog.category}</p>
+                <div className="insight-card-image-container">
+                  <img
+                    src={blog.img}
+                    className="insight-card-img"
+                    alt={blog.imgAlt}
+                  />
                 </div>
-              ))}
-            </div>
+                <h5 className="insight-card-title pt-1">{blog.title}</h5>
+              </div>
+            </Link>
           </div>
-        </section>
+        </div>
+      ))}
+    </div>
+  </div>
+</section>
+
 
         <section className="clients-section">
           <div className="container my-4 py-4">
@@ -444,4 +452,4 @@ const Home: React.FC = () => {
   );
 };
 
-export default Home;
+export default Index;

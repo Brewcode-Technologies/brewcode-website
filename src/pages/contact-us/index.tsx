@@ -3,7 +3,7 @@ import React, { useState } from "react";
 import { FaCheck } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa6";
 
-const Contact: React.FC = () => {
+const Index: React.FC = () => {
   const [isChecked, setIsChecked] = useState(false);
 
   const handleCheckboxChange = () => {
@@ -153,4 +153,4 @@ const Contact: React.FC = () => {
   );
 };
 
-export default Contact;
+export default Index;

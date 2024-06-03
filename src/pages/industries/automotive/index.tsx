@@ -1,7 +1,7 @@
 import Layout from "@component/components/layouts/layout";
 import React from "react";
 
-const Index: React.FC = () => {
+const index: React.FC = () => {
   return (
     <Layout>
     <div
@@ -23,7 +23,7 @@ const Index: React.FC = () => {
           <div className="row">
             <div className="services-content">
               <h1 className="services-header">
-           Who We Are
+              Automotive
               </h1>
               <p className=" services-description text-center">
                 Harness the Power of IaaS for Seamless Scalability and
@@ -37,4 +37,4 @@ const Index: React.FC = () => {
   );
 };
 
-export default Index;
+export default index;
