@@ -1,7 +1,7 @@
 import BlackLayer from "@component/components/blackLayer";
 import Layout from "@component/components/layouts/layout";
 import React from "react";
-import { IoMdArrowDropdown, IoMdArrowDropup } from 'react-icons/io';
+import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
 import { useState } from "react";
 
 import Head from "next/head";
@@ -21,15 +21,18 @@ interface Description {
 
 export interface EcommerceService {
   title: string;
+  description: string;
 }
 
 const Index: React.FC = () => {
   const { navigate } = useNavigation();
 
-  const [openAccordionIndex, setOpenAccordionIndex] = useState<number | null>(null);
+  const [openAccordionIndex, setOpenAccordionIndex] = useState<number | null>(
+    null
+  );
 
   const toggleAccordion = (index: number) => {
-    setOpenAccordionIndex(openAccordionIndex === index ? null : index);
+    setOpenAccordionIndex((prevIndex) => (prevIndex === index ? null : index));
   };
 
   const data = [
@@ -142,12 +145,36 @@ const Index: React.FC = () => {
     },
   ];
   const ecommerceItems: EcommerceService[] = [
-    { title: "Custom Ecommerce Development" },
-    { title: "Ecommerce Platform Integration" },
-    { title: "Mobile E-Commerce Solution" },
-    { title: "E-Commerce Analytics" },
-    { title: "E-Commerce Security" },
-    { title: "E-Commerce SEO & Digital Marketing" },
+    {
+      title: "Custom E-Commerce Website Development",
+      description:
+        "Tailored development of e-commerce websites to meet unique business needs.",
+    },
+    {
+      title: "E-Commerce Platform Integration Services",
+      description:
+        "Seamless integration of e-commerce platforms with existing systems.",
+    },
+    {
+      title: "Mobile E-Commerce Solutions",
+      description:
+        "Comprehensive mobile solutions for e-commerce, including apps and mobile-optimized websites.",
+    },
+    {
+      title: "E-Commerce Data Analytics",
+      description:
+        "Advanced analytics solutions to drive business insights and growth.",
+    },
+    {
+      title: "E-Commerce Security Solutions",
+      description:
+        "Robust security measures to protect e-commerce platforms and customer data.",
+    },
+    {
+      title: "E-Commerce SEO and Digital Marketing Services",
+      description:
+        "Effective SEO and digital marketing strategies to boost online visibility and sales.",
+    },
   ];
 
   const descriptions: Record<Technology, Description> = {
@@ -238,24 +265,32 @@ const Index: React.FC = () => {
             </div>
 
             <div className="col-md-7 accordion-container">
-      {ecommerceItems.map((item, index) => (
-        <div className="d-flex flex-column mt-5" key={index}>
-          <div className="e-commerce-accordion d-flex justify-content-between" onClick={() => toggleAccordion(index)}>
-            <p className="accordion-title">{item.title}</p>
-            <span className="icon-border">
-              {openAccordionIndex === index ? <IoMdArrowDropup fontSize={40} /> : <IoMdArrowDropdown fontSize={40} />}
-            </span>
-          </div>
-          <hr className="accordion-divider" />
-          {openAccordionIndex === index && (
-            <div>
-             
-           
+              {ecommerceItems.map((item, index) => (
+                <div className="d-flex flex-column mt-5" key={index}>
+                  <div
+                    className="e-commerce-accordion d-flex justify-content-between"
+                    onClick={() => toggleAccordion(index)}
+                  >
+                    <p className="accordion-title">{item.title}</p>
+                    <span className="icon-border">
+                      {openAccordionIndex === index ? (
+                        <IoMdArrowDropup fontSize={40} />
+                      ) : (
+                        <IoMdArrowDropdown fontSize={40} />
+                      )}
+                    </span>
+                  </div>
+                  <hr className="accordion-divider" />
+                  {openAccordionIndex === index && (
+                    <div className="e-commerce-content">
+                      <p className="e-commerce-description">
+                        {item.description}
+                      </p>
+                    </div>
+                  )}
+                </div>
+              ))}
             </div>
-          )}
-        </div>
-      ))}
-    </div>
           </div>
           <div className="row my-5">
             <div className="col-md-5">
@@ -322,6 +357,93 @@ const Index: React.FC = () => {
               )}
             </div>
           </div>
+          <div className="container stepperContainer">
+          <div className="row my-5">
+  <div className="col-12 col-md-6 col-lg-3 step mb-4">
+    <div className="stepHeader">
+      <span className="stepNumber">1</span>
+      <p className="stepTitle">Planning</p>
+    </div>
+    <div className="stepProgress">
+      <div className="circle"></div>
+      <div className="line-steper"></div>
+    </div>
+    <div className="stepDescription">
+      Definition of requirements for the future ecommerce solution
+    </div>
+  </div>
+  <div className="col-12 col-md-6 col-lg-3 step mb-4">
+    <div className="stepHeader">
+      <span className="stepNumber">2</span>
+      <p className="stepTitle">Design</p>
+    </div>
+    <div className="stepProgress">
+      <div className="circle"></div>
+      <div className="line-steper"></div>
+    </div>
+    <div className="stepDescription">
+      Hands-on prototyping, specification review and technical sketching, UI/UX design
+    </div>
+  </div>
+  <div className="col-12 col-md-6 col-lg-3 step mb-4">
+    <div className="stepHeader">
+      <span className="stepNumber">3</span>
+      <p className="stepTitle">Development</p>
+    </div>
+    <div className="stepProgress">
+      <div className="circle"></div>
+      <div className="line-steper"></div>
+    </div>
+    <div className="stepDescription">
+      Coding, front-end and back-end development, integration with other systems and tools
+    </div>
+  </div>
+  <div className="col-12 col-md-6 col-lg-3 step mb-4">
+    <div className="stepHeader">
+      <span className="stepNumber">4</span>
+      <p className="stepTitle">Acceptance Testing</p>
+    </div>
+    <div className="stepProgress">
+      <div className="circle"></div>
+      <div className="line-steper"></div>
+   
+    </div>
+    <div className="stepDescription">
+      End-to-end acceptance testing and expert supervision
+    </div>
+  </div>
+  <div className="col-12 col-md-6 col-lg-3 step mb-4">
+    <div className="stepHeader">
+      <span className="stepNumber">5</span>
+      <p className="stepTitle">Deployment</p>
+    </div>
+    <div className="stepProgress">
+      <div className="circle"></div>
+      <div className="line-steper"></div>
+  
+    </div>
+    <div className="stepDescription">
+      Deployment to production environment
+    </div>
+  </div>
+  <div className="col-12 col-md-6 col-lg-3 step mb-4">
+    <div className="stepHeader">
+      <span className="stepNumber">6</span>
+      <p className="stepTitle">Maintenance</p>
+    </div>
+    <div className="stepProgress">
+      <div className="circle"></div>
+      <div className="line-steper"></div>
+    
+    </div>
+    <div className="stepDescription">
+      Ongoing support and maintenance
+    </div>
+  </div>
+</div>
+
+</div>
+
         </div>
         <div className="contact-bg my-5">
           <div

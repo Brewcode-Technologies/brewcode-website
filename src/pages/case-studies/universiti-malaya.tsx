@@ -11,29 +11,32 @@ const Index: React.FC = () => {
       </Head>
       <div className="bg-black py-5">
         <div className="container py-5">
+        <div className="soctor-logo mb-2 col-5">
+                <img src="/images/svg/Malaya.svg" alt="Soctor Logo" />
+              </div>
           <div className="row my-4 d-flex justify-content-between">
-            <div className="col-md-6 col-md-4 mb-5">
-              <div className="soctor-logo d-flex text-center mb-5">
-                <img src="/images/svg/Brewcode.svg" alt="Brewcode Logo" />
-              </div>
-              <div className="healthcare-text-container">
-                <div className="information-technology information-technology-stoke-text mb-5">
-                  <h2>Information Technology</h2>
-                </div>
-              
-                  <h2 className="iformation-description">
-                    Brewcode Meet – Setting New Standards in Enterprise
-                    <br /> Communication  
-                  </h2>
+          <div className="col-md-6 col-md-4 mb-5">
              
-              </div>
+             <div className="healthcare-text-container" >
+             <div className="malaya-education stroke-text mb-5">
+                  <h2>Education</h2>
+                </div>
+                
+                <p className="education-description text-center">
+                VR Application for Universiti Malaya by<br/> Brewcode Technologies  
+               
+                </p>
+              
+             </div>
             </div>
             <div className="col-md-5">
-              <img
-                src="/images/brewcode-enterprise-meeting-platform.png"
-                alt="Brewcode Enterprise Meeting Platform"
-                className="health-care-img"
-              />
+              <div className="socoter-img">
+                <img
+                  src="/images/health-care-img.jpeg"
+                  alt="health care image"
+                  className="health-care-img"
+                />
+              </div>
             </div>
           </div>
 

@@ -2264,8 +2264,21 @@ footer {
 }
 
 .accordion-divider {
-  margin-top: 1px;
+  margin: 0px;
   color: #ffffff;
+}
+
+.e-commerce-content{
+  transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
+  overflow: hidden;
+  max-height: 1000px;
+  opacity: 1;
+ padding: 30px 0px;
+}
+.e-commerce-content.collapsed {
+  max-height: 0;
+  opacity: 0;
+  transition: max-height 0.3s ease-in, opacity 0.3s ease-in;
 }
 
 .accordion-title {
@@ -2405,6 +2418,7 @@ footer {
 }
 .percentage-container{
   margin-left: 80px;
+
 }
 
 
@@ -2632,9 +2646,10 @@ footer {
     -webkit-text-stroke: 1px #555;
     font-size: 100px;
     z-index: -20;
-    /* text-align: center; */
+    
   }
 }
+
 
 .reflect {
   position: relative;
@@ -2655,8 +2670,278 @@ footer {
   font-size: 64px;
 }
 
+
+
+
+.malaya-education {
+  position: relative;
+  display: inline-block;
+  font-size: 50px;
+}
+
+.malaya-education::after {
+  content: "Education";
+  position: absolute;
+  top: 37%;
+  left: 14%;
+  z-index: 100;
+  color: transparent;
+  text-shadow: 0 0 1px white;
+  font-weight: bold;
+  font-family: "Inter";
+  font-size: 64px;
+}
+
+.education-description{
+  color: #ffffff;
+  font-family: "Lato";
+  position: relative;
+ 
+  
+  
+}
+
+.iformation-description{
+  color: #ffffff;
+  font-size: 18px;
+  text-align: center;
+  font-style: "Inter";
+  margin: 40px 0px;
+  
+}
+
+.information-technology-stoke-text {
+  h2 {
+    color: transparent;
+    -webkit-text-stroke: 1px #555;
+    font-size: 100px;
+    z-index: -20;
+    font-weight: 600;
+    /* text-align: center; */
+  }
+}
+
+
+.information-technology {
+  position: relative;
+  display: inline-block;
+  font-size: 50px;
+}
+
+.information-technology::after {
+  content: "Information Technology";
+  position: absolute;
+  top: 9%;
+  left: -2%;
+  z-index: 27;
+  color: transparent;
+  text-shadow: 0 0 1px white;
+  font-weight: 600;
+  font-family: "Inter";
+  font-size: 96px;
+  text-align: center;
+  line-height: 128px;
+}
+
 .list-page-description{
   font-size: 12px;
   font-family: "Inter";
   color: #fff;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* .stepperContainer {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: flex-start;
+  justify-content: center;
+  color: white;
+  padding: 20px 0px;
+}
+
+.step {
+  flex: 1;
+  min-width: 200px;
+  text-align: center;
+}
+
+.stepHeader {
+  display: flex;
+  margin-left: 10px;
+  padding-bottom: 0px;
+  margin-bottom: 0px;
+  font-size: 18px;
+  font-weight: bold;
+ 
+}
+
+.stepNumber {
+
+  font-size: 16px;
+  font-family: "Inter";
+  margin-right: 5px;
+}
+
+.stepTitle {
+
+  font-size: 16px;
+  font-family: "Inter";
+}
+
+.stepProgress {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 300px;
+}
+
+.circle,.last-circle {
+  width: 30px;
+  height: 30px;
+  background-color: white;
+  color: black;
+  border-radius: 50%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0 5px;
+}
+
+.last-circle{
+  margin-left: -5px;
+  margin-right: 30px;
+}
+
+
+.line-steper {
+  flex: 1;
+  height: 2px;
+  background-color: white;
+  width: 100% !important;
+  margin-left: -5px;
+}
+
+.stepDescription {
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+
+@media (max-width: 768px) {
+  .step {
+    flex: 1 1 100%;
+    margin: 10px 0;
+  }
+
+  .stepHeader {
+    flex-direction: column;
+  }
+
+  .stepProgress {
+    flex-direction: column;
+  }
+
+  .circle {
+    margin: 5px 0;
+  }
+
+  .line-steper {
+    width: 50%;
+  }
+} */
+
+
+.stepperContainer {
+  color: white;
+}
+
+.step {
+  position: relative;
+text-align: center;
+  padding: 20px 0px;
+
+  
+}
+
+.stepHeader {
+
+  font-family: "Inter";
+  display: flex;
+}
+
+.stepNumber {
+  font-size: 16px;
+  font-family: "Inter";
+  margin-right: 5px;
+  font-weight: bold;
+}
+
+.stepTitle {
+  font-size: 16px;
+  font-weight: bold;
+}
+
+.stepProgress {
+  position: relative;
+  width: 289px;
+
+}
+
+.circle {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  color: black;
+  border-radius: 50%;
+  display: flex;
+  position: relative;
+}
+
+.line-steper {
+  position: absolute;
+    top: 50%;
+    left: 10px;
+    right: 10px;
+    height: 2px;
+    background-color: white;
+    z-index: 0;
+}
+
+.stepDescription {
+  font-size: 0.9em;
+  margin-top: 5px;
+}
+
+.last-circle {
+  width: 20px;
+  height: 20px;
+  background-color: white;
+  border-radius: 50%;
 }

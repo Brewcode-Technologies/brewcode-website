@@ -113,10 +113,11 @@ const Services: React.FC = () => {
               </div>
 
               <div className="col-lg-7 col-md-6 col-12">
-                <div className="row mb-4 d-flex justify-content-between">
+                <div className="row mb-4 d-flex  justify-content-between">
                   <div className="col-6">
-                    <div className="mb-4">
-                      <div className="mb-3">
+                   <div className="d-flex flex-column justify-content-between">
+                   <div className="mb-5">
+                      <div className="">
                         <div className="image-icon-container">
                           <Image
                             alt="Comprehensive application services icon"
@@ -142,8 +143,8 @@ const Services: React.FC = () => {
                         </p>
                       </div>
                     </div>
-                    <div className="">
-                      <div className="mb-4">
+                    <div>
+                     
                         <div className="image-icon-container">
                           <Image
                             alt="Harnessing technology icon"
@@ -168,8 +169,9 @@ const Services: React.FC = () => {
                           situations that require fast, efficient and reliable
                           data transportation
                         </p>
-                      </div>
+                     
                     </div>
+                   </div>
                   </div>
                   <div className="col-6">
                     <div className="mb-3">

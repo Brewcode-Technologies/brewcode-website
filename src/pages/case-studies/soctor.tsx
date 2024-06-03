@@ -11,11 +11,12 @@ const Index: React.FC = () => {
       </Head>
       <div className="bg-black py-5">
         <div className="container py-5">
-          <div className="row my-4 d-flex justify-content-between">
-            <div className="col-md-6 col-md-4 mb-5">
-              <div className="soctor-logo d-flex text-center mb-5">
+        <div className="soctor-logo mb-2 col-5">
                 <img src="/images/svg/soctor.svg" alt="Soctor Logo" />
               </div>
+          <div className="row my-4 d-flex justify-content-between">
+            <div className="col-md-6 col-md-4 mb-5">
+             
              <div className="healthcare-text-container" >
              <div className="reflect stroke-text mb-5">
                   <h2>Healthcare</h2>
