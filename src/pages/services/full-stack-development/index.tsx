@@ -1,7 +1,7 @@
 import Layout from "@component/components/layouts/layout";
 import React from "react";
 
-const index: React.FC = () => {
+const Career: React.FC = () => {
   return (
     <Layout>
     <div
@@ -23,7 +23,7 @@ const index: React.FC = () => {
           <div className="row">
             <div className="services-content">
               <h1 className="services-header">
-           Who We Are
+              Full Stack Development
               </h1>
               <p className=" services-description text-center">
                 Harness the Power of IaaS for Seamless Scalability and
@@ -37,4 +37,4 @@ const index: React.FC = () => {
   );
 };
 
-export default index;
+export default Career;

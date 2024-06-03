@@ -4,7 +4,7 @@ import Layout from "@component/components/layouts/layout";
 import Image from "next/image";
 import React from "react";
 
-const Services: React.FC = () => {
+const index: React.FC = () => {
   const { navigate } = useNavigation();
   return (
     <Layout>
@@ -28,8 +28,8 @@ const Services: React.FC = () => {
           <div className="row">
             <div className="services-content">
               <h1 className="services-header">
-                Application Development and
-                <br /> Maintainance Services
+              Enterprise Application Development
+               
               </h1>
               <p className=" services-description text-center">
                 Enhancing business resilience by addressing the complexity{" "}
@@ -245,7 +245,7 @@ services</h4>
                     alt="application support and services Image"
                     width={200}
                     height={200}
-                    priority
+                    
                   />
                   <div className="card-body">
                     <h5 className="card-title my-4">
@@ -314,4 +314,4 @@ services</h4>
   );
 };
 
-export default Services;
+export default index;

@@ -23,7 +23,7 @@ const index: React.FC = () => {
           <div className="row">
             <div className="services-content">
               <h1 className="services-header">
-           Who We Are
+              High Tech
               </h1>
               <p className=" services-description text-center">
                 Harness the Power of IaaS for Seamless Scalability and
