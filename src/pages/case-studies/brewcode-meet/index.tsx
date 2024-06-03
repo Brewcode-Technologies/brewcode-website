@@ -341,7 +341,7 @@ This goal aligns with Brewcode Technologies’ dedication to innovation and exce
             <div className="about-introduction">Process</div>
             <div className="process-image-container">
               <img
-                src="/images/discovery-design-delivery-img.png"
+                 src="/images/process-image.jpg"
                 alt="Discovery, Design, and Delivery Process"
                 className="process-image"
               />

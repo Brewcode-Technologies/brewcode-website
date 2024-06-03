@@ -16,17 +16,17 @@ const Index: React.FC = () => {
               <div className="soctor-logo d-flex text-center mb-5">
                 <img src="/images/svg/soctor.svg" alt="Soctor Logo" />
               </div>
-             <div className="healthcare-text-container" >
-             <div className="reflect stroke-text mb-5">
+              <div className="healthcare-text-container">
+                <div className="reflect stroke-text mb-5">
                   <h2> Information Techmology</h2>
                 </div>
                 <div className="percentage-container">
-                <div className="list-page-description">
-                Brewcode Meet – Setting New Standards in Enterprise<br/> Communication  
-             
+                  <div className="list-page-description">
+                    Brewcode Meet – Setting New Standards in Enterprise
+                    <br /> Communication  
+                  </div>
                 </div>
-                </div>
-             </div>
+              </div>
             </div>
             <div className="col-md-5">
               <div className="socoter-img">
@@ -360,7 +360,7 @@ const Index: React.FC = () => {
             <div className="about-introduction">Process</div>
             <div className="process-image-container">
               <img
-                src="/images/human.jpg"
+                src="/images/process-image.jpg"
                 alt="Human"
                 className="process-image"
               />
