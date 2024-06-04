@@ -4,6 +4,7 @@ import Image from "next/image";
 import SwiperComponent from "@component/components/Carousel";
 import ImageIcon from "@component/components/ImageIcon";
 import Layout from "@component/components/layouts/layout";
+import useNavigation, { routeMap } from "@component/components/customHooks/useNavigation";
 
 interface Blog {
   id: number;
@@ -20,7 +21,15 @@ interface ClientLogo {
   url: string;
 }
 
+interface SolutionItem {
+  title: string;
+  icon: string;
+  href: string;
+}
+
 const Index: React.FC = () => {
+
+  const { navigate } = useNavigation();
   const [isBrowser, setIsBrowser] = useState<boolean>(false);
   useEffect(() => {
     setIsBrowser(true);
@@ -69,6 +78,52 @@ const Index: React.FC = () => {
       link: "https://brewcode.medium.com/beyond-react-exploring-alternative-javascript-frameworks-4ff7d960dcc9",
     },
   ];
+
+
+  const solutions: SolutionItem[] = [
+    {
+      title: "Cloud Security",
+      icon: "bi-arrow-up-right",
+      href: "cloud-services",
+    },
+    {
+      title: "Cyber Security",
+      icon: "bi-arrow-up-right",
+      href: "cyber-security",
+    },
+    {
+      title: "E-commerce Solution",
+      icon: "bi-arrow-up-right",
+      href: "e-commerce",
+    },
+    {
+      title: "Software Development",
+      icon: "bi-arrow-up-right",
+      href: "web-development",
+    },
+    {
+      title: "Robotic Process Automation (RPA)",
+      icon: "bi-arrow-up-right",
+      href: "robotic-process-automation",
+    },
+    {
+      title: "Software Audits/Testing as-a-service",
+      icon: "bi-arrow-up-right",
+      href: "at-t",
+    },
+    {
+      title: "Resource Planning",
+      icon: "bi-arrow-up-right",
+      href: "resource-planning",
+    },
+    {
+      title: "Infrastructure Solution",
+      icon: "bi-arrow-up-right",
+      href: "infrastructure",
+    },
+  ];
+  
+  
   
 
   const OurClientlogos: ClientLogo[][] = [
@@ -158,7 +213,7 @@ const Index: React.FC = () => {
             <div className="container social-media-icons-section">
               <div className="col-12 social-media-icons-main d-flex flex-column justify-content-between">
                 <Link
-                  href="https://brewcode.medium.com"
+                  href="https://brewcode.medium.com/"
                   target="_blank"
                   passHref
                 >
@@ -168,7 +223,7 @@ const Index: React.FC = () => {
                     className="social-icon instagram  mb-2"
                   />
                 </Link>
-                <Link href="https://www.linkedin.com" passHref target="_blank">
+                <Link href="https://www.linkedin.com/company/brewcode/" passHref target="_blank">
                   <ImageIcon
                     src="/images/svg/LinkedIn_svg.svg"
                     alt="Linkedin-icon"
@@ -228,78 +283,36 @@ const Index: React.FC = () => {
         </section>
 
         <section className="solutions-section">
-          <div className="container my-5">
-            <div className="row">
-              <div className="col-12">
-                <h1 className="solutions-heading mb-3">Our Solutions</h1>
-                <p className=" solutions-description ">
-                  Design and deliver new digital experiences, revenue streams
-                  and business models to <br />
-                  meet rising customer expectations and accelerate your growth
-                </p>
-              </div>
-              <div className="row d-flex justify-content-between solutions-list mt-2">
-                {[
-                  {
-                    title: "Cloud Security",
-                    icon: "bi-arrow-up-right",
-                    link: "/cloud-security",
-                  },
-                  {
-                    title: "Cyber Security",
-                    icon: "bi-arrow-up-right",
-                    link: "/Cyber Security",
-                  },
-                  {
-                    title: "E-commerce Solution",
-                    icon: "bi-arrow-up-right",
-                    link: "/E-commerce Solution",
-                  },
-                  {
-                    title: "Software Development",
-                    icon: "bi-arrow-up-right fa-5x",
-                    link: "/Software Development",
-                  },
-                  {
-                    title: "Robotic Process Automation (RPA)",
-                    icon: "bi-arrow-up-right",
-                    link: "/Robotic Process Automation (RPA)",
-                  },
-                  {
-                    title: "Software Audits/Testing as-a-service",
-                    icon: "bi-arrow-up-right",
-                    link: "/services",
-                  },
-                  {
-                    title: "Resource Staffing",
-                    icon: "bi-arrow-up-right",
-                    link: "/Resource Staffing",
-                  },
-                  {
-                    title: "Infrastructure Solution",
-                    icon: "bi-arrow-up-right fa-5x",
-                    link: "/Infrastructure Solution",
-                  },
-                ].map((item, index) => (
-                  <div
-                    className="col-12 mt-3 solutions-item-section"
-                    key={index}
-                  >
-                    <div className="d-flex flex-column mb-3 solutions-item">
-                      <Link
-                        href={item.link}
-                        className="d-flex justify-content-between border-bottom pb-1 solutions-item-header"
-                      >
-                        <h1 className="solutions-title">{item.title}</h1>
-                        <i className={`bi ${item.icon} mt-0`}></i>
-                      </Link>
-                    </div>
-                  </div>
-                ))}
-              </div>
-            </div>
+      <div className="container my-5">
+        <div className="row">
+          <div className="col-12">
+            <h1 className="solutions-heading mb-3">Our Solutions</h1>
+            <p className="solutions-description">
+              Design and deliver new digital experiences, revenue streams and
+              business models to <br />
+              meet rising customer expectations and accelerate your growth
+            </p>
           </div>
-        </section>
+          <div className="row d-flex justify-content-between solutions-list mt-2">
+            {solutions.map((item, index) => (
+              <div className="col-12 mt-3 solutions-item-section" key={index}>
+                <div className="d-flex flex-column mb-3 solutions-item">
+                  <a
+                    href="#"
+                    onClick={() => navigate(item.href)}
+                    className="d-flex justify-content-between border-bottom pb-1 solutions-item-header"
+                  >
+                    <h1 className="solutions-title">{item.title}</h1>
+                    <i className={`bi ${item.icon} mt-0`}></i>
+                  </a>
+                </div>
+              </div>
+            ))}
+          </div>
+        </div>
+      </div>
+    </section>
+
         <section className="industries-section">
           <div className="container my-5">
             <div className="row">

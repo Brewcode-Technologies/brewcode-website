@@ -146,6 +146,16 @@ const Header: React.FC<HeaderProps> = () => {
                 Home
               </Link>
             </li>
+            <li className="nav-item">
+              <Link
+                className="nav-link active"
+                aria-current="page"
+                href={routeMap["about-us"]}
+                passHref
+              >
+                About Us
+              </Link>
+            </li>
             <li
               className="nav-item dropdown dropdown-mega position-static"
               onMouseEnter={handleMouseEnterWhatWeDo}
@@ -382,16 +392,7 @@ const Header: React.FC<HeaderProps> = () => {
                 Case Studies
               </Link>
             </li>
-            <li className="nav-item">
-              <Link
-                className="nav-link active"
-                aria-current="page"
-                href={routeMap["who-we-are"]}
-                passHref
-              >
-                Who We Are
-              </Link>
-            </li>
+          
             <li className="nav-item">
               <Link
                 className="nav-link active"

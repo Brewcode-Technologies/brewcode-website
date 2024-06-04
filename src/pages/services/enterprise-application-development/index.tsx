@@ -28,8 +28,7 @@ const Index: React.FC = () => {
           <div className="row">
             <div className="services-content">
               <h1 className="services-header">
-              Enterprise Application Development
-               
+                Enterprise Application Development
               </h1>
               <p className=" services-description text-center">
                 Enhancing business resilience by addressing the complexity{" "}
@@ -134,10 +133,16 @@ const Index: React.FC = () => {
                         className="mb-4"
                         priority
                       />
-                      <h4 className="service-title mb-3">Comprehensive application<br/>
-services</h4>
+                      <h4 className="service-title mb-3">
+                        Comprehensive application
+                        <br />
+                        services
+                      </h4>
                       <p className="service-description">
-                      We deliver a full range of change- the-business, run-the-business and cross-functional IT application services that are scalable, robust, secure and maintainable.
+                        We deliver a full range of change- the-business,
+                        run-the-business and cross-functional IT application
+                        services that are scalable, robust, secure and
+                        maintainable.
                       </p>
                     </div>
                   </div>
@@ -151,9 +156,14 @@ services</h4>
                         className="mb-4"
                         priority
                       />
-                      <h4 className="service-title mb-3">Harnessing industry expertise</h4>
+                      <h4 className="service-title mb-3">
+                        Harnessing industry expertise
+                      </h4>
                       <p className="service-description">
-                      Our deep industry domain knowledge and technical expertise enable us to deliver transformational results. Our industrialized approach reduces costs, boosts predictability and enhances agility.
+                        Our deep industry domain knowledge and technical
+                        expertise enable us to deliver transformational results.
+                        Our industrialized approach reduces costs, boosts
+                        predictability and enhances agility.
                       </p>
                     </div>
                   </div>
@@ -169,10 +179,13 @@ services</h4>
                         className="mb-4"
                         priority
                       />
-                      <h4 className="service-title mb-3">Innovative accelerators
-</h4>
+                      <h4 className="service-title mb-3">
+                        Innovative accelerators
+                      </h4>
                       <p className="service-description">
-                      Our investments in innovative solutions ensure you benefit from the latest accelerators, methodologies and engagement models tailored to meet your evolving needs.
+                        Our investments in innovative solutions ensure you
+                        benefit from the latest accelerators, methodologies and
+                        engagement models tailored to meet your evolving needs.
                       </p>
                     </div>
                   </div>
@@ -186,9 +199,13 @@ services</h4>
                         className="mb-4"
                         priority
                       />
-                      <h4 className="service-title mb-3">Innovative accelerators</h4>
+                      <h4 className="service-title mb-3">
+                        Innovative accelerators
+                      </h4>
                       <p className="service-description">
-                      Our investments in innovative solutions ensure you benefit from the latest accelerators, methodologies and engagement models tailored to meet your evolving needs.
+                        Our investments in innovative solutions ensure you
+                        benefit from the latest accelerators, methodologies and
+                        engagement models tailored to meet your evolving needs.
                       </p>
                     </div>
                   </div>
@@ -245,7 +262,6 @@ services</h4>
                     alt="application support and services Image"
                     width={200}
                     height={200}
-                    
                   />
                   <div className="card-body">
                     <h5 className="card-title my-4">

@@ -737,10 +737,169 @@ video {
 
 .insights-description {
   color: #ffffff;
-  font-family: "Inter";
-  font-size: 12px;
+  font-family: "Lato";
+  font-size: 20px;
+  margin-top: 20px;
+  word-spacing: 4px;
 }
 
+.insights-line{
+  background-color:#fff;
+  border-width: 0;
+  height: 2px;
+  color: #fff;
+}
+
+.insight-imag-container{
+  width: 100%;
+  height: auto;
+
+}
+
+.insigts-image{
+  width: 100%;
+  height: 200px;
+}
+
+.explore-our-insigts-image{
+  width: 100%;
+  height: 100vh;
+  background-image: url("/images/the-great-reimagination.jpg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  overflow: hidden;
+  background-position: center;
+  padding: 40px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  position: relative;
+ 
+}
+
+.date-text{
+  font-size: 12px;
+  font-family: "Inter";
+}
+
+.online-bookkeeping-software-heading{
+  font-size: 28px;
+  font-family: "Lato";
+}
+
+.fa-arrow-long{
+  color: #04CAA8;
+  margin-top: 20px;
+  cursor: pointer;
+}
+
+.health-text{
+  font-size: 12px;
+  font-family: "Lato";
+  color: #04CAA8;
+}
+
+.by-alex-glen-text{
+  font-size: 12px;
+  font-family: "Lato";
+}
+
+.insight-top-image{
+  border-top-left-radius: 5px;
+  border-top-right-radius: 5px;
+}
+
+.insight-success-stories-card{
+  background-color: #fff !important;
+  color:#000;
+  height:380px;
+  border-radius: 5px;
+}
+
+.insight-card-heading{
+  font-family: "Inter";
+  font-size: 14px;
+  font-weight: bold;
+  margin-top: 20px;
+}
+
+.see-all-tech-industry-case-studies-link{
+  color: #ffffff;
+  text-decoration: none;
+  border-bottom: 1px solid #ffffff;
+  font-size: 14px;
+}
+
+.insight-card-text{
+  margin: 40px 0px 10px 0px;
+  font-size: 12px;
+}
+.explore-our-insigts-heading{
+  font-family: "Lato";
+  font-size: 24px;
+  line-height: 30px;
+  font-weight: 500;
+  margin-bottom: 30px;
+}
+
+.read-more-button-arrow{
+  border-radius: 50%;
+  background-color: #ffffff;
+  color: #000;
+  border: none;
+  font-weight: bold;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: absolute;
+  left: 180px;
+  top: 93px;
+}
+
+.read-more-button{
+  width: 120px;
+  height: 40px;
+  border-radius: 20px;
+  background-color: #ffffff;
+  color: #000;
+  border: none;
+  font-weight: bold;
+  padding: 8px 16px;
+  cursor: pointer;
+}
+
+.insight-explore-card{
+  background-color: #151515;
+  color: #ffffff;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+padding:  30px 5px;
+border: 1px solid #373737;
+position: relative;
+margin-bottom: 20px;
+}
+
+.insight-explore-card:hover{
+  border: 1px solid #ffffff;
+}
+
+.insight-explore-card-heading{
+  font-size: 18px;
+  font-family: "Lato";
+  margin-bottom: 30px;
+  color: #373737;
+
+}
+
+.insight-explore-card-heading, p{
+  font-size: 16px;
+  font-family: "Inter";
+ 
+}
 .insight-card {
   background-color: #151515;
   height: 330px;
@@ -1156,6 +1315,7 @@ footer {
   font-size: 26px;
   font-weight: 500;
   font-family: "Lato";
+  line-height: 40px;
 }
 
 .overview-short-description,
@@ -1197,10 +1357,19 @@ footer {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
+.full-stack-card{
+  height: 340px !important;
+  
+}
+
+.ui-ux-heading{
+  font-size: 14px !important;
+}
+
 .card-title {
   font-size: 16px;
   font-family: "Inter";
-  /* margin: 20px 0px; */
+  margin: 20px 0px;
 }
 
 .card-body {
@@ -1672,6 +1841,8 @@ footer {
   font-family: "Inter";
   margin-bottom: 100px;
 }
+
+
 .form-control {
   background-color: transparent;
   color: #fff;
@@ -2795,104 +2966,7 @@ footer {
 
 
 
-/* .stepperContainer {
-  display: flex;
-  flex-wrap: wrap;
-  align-items: flex-start;
-  justify-content: center;
-  color: white;
-  padding: 20px 0px;
-}
 
-.step {
-  flex: 1;
-  min-width: 200px;
-  text-align: center;
-}
-
-.stepHeader {
-  display: flex;
-  margin-left: 10px;
-  padding-bottom: 0px;
-  margin-bottom: 0px;
-  font-size: 18px;
-  font-weight: bold;
- 
-}
-
-.stepNumber {
-
-  font-size: 16px;
-  font-family: "Inter";
-  margin-right: 5px;
-}
-
-.stepTitle {
-
-  font-size: 16px;
-  font-family: "Inter";
-}
-
-.stepProgress {
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  width: 300px;
-}
-
-.circle,.last-circle {
-  width: 30px;
-  height: 30px;
-  background-color: white;
-  color: black;
-  border-radius: 50%;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  margin: 0 5px;
-}
-
-.last-circle{
-  margin-left: -5px;
-  margin-right: 30px;
-}
-
-
-.line-steper {
-  flex: 1;
-  height: 2px;
-  background-color: white;
-  width: 100% !important;
-  margin-left: -5px;
-}
-
-.stepDescription {
-  font-size: 0.9em;
-  margin-top: 5px;
-}
-
-@media (max-width: 768px) {
-  .step {
-    flex: 1 1 100%;
-    margin: 10px 0;
-  }
-
-  .stepHeader {
-    flex-direction: column;
-  }
-
-  .stepProgress {
-    flex-direction: column;
-  }
-
-  .circle {
-    margin: 5px 0;
-  }
-
-  .line-steper {
-    width: 50%;
-  }
-} */
 
 
 .stepperContainer {
@@ -2961,4 +3035,112 @@ text-align: center;
   height: 20px;
   background-color: white;
   border-radius: 50%;
+}
+
+
+
+
+/* full stack bg-image */
+.our-suite-of-full-stack-bg{
+  background-image: url("/images/our-suite-of-full-stack-bg.jpg");
+  height: auto;
+  width: 100%;
+  padding: 32px 0px !important;
+}
+
+.full-stack-section-heading{
+  font-family: "Inter";
+  font-weight: bold;
+}
+
+.full-stack-ul{
+  display: flex;
+  margin: 60px 0px 30px 0px;
+}
+
+.full-stack-list-item{
+  font-family: "Inter";
+  padding: 10px 0px;
+  font-size: 14px;
+}
+
+
+/* about us styles----------------- */
+
+.about-us-description{
+  font-family: "Inter";
+  font-size: 14px;
+}
+
+.about-us-heading{
+  font-size: 70px;
+  font-weight: 700;
+  margin: 100px 0px;
+  font-family: "Inter";
+}
+
+.about-us-card-heading{
+  font-size: 18px;
+}
+
+.our-history{
+  margin: 150px 0px;
+  display: flex !important;
+  justify-content: space-between !important;
+}
+
+.about-us-icon{
+  display: flex;
+  justify-content: flex-start !important;
+  align-self: flex-start !important;
+
+}
+
+
+
+.image-icon-container{
+  width: 100%;
+  height: auto;
+  text-align: center;
+}
+
+.problem-statemt-icon{
+  width: 50px;
+  margin-right: 15px;
+}
+.business-goal-icon{
+  width: 50px;
+  margin-right: 15px;
+}
+
+.list-page-arrow-icon{
+  height: 12px;
+  margin-right: 5px;
+}
+
+.image-icon{
+  width: 50px;
+  height: 50px;
+}
+
+.our-history-heading{
+  font-family: "Inter";
+  font-weight: bold;
+  font-size: 66px;
+  text-align: center;
+  margin-bottom: 60px !important;
+}
+
+.about-us-description{
+  font-family: "Inter";
+  font-size: 16px;
+
+}
+
+.about-us-card-container{
+  margin: 150px 0px;
+}
+
+.about-us-card-body{
+  background-color:#D9D9D9 ;
 }
