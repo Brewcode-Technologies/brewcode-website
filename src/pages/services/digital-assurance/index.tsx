@@ -1,6 +1,7 @@
 import ReusableButton from "@component/components/customHooks/reusableContactButton";
 import useNavigation from "@component/components/customHooks/useNavigation";
 import Layout from "@component/components/layouts/layout";
+import Head from "next/head";
 import Image from "next/image";
 import React from "react";
 
@@ -8,6 +9,11 @@ const Index: React.FC = () => {
   const { navigate } = useNavigation();
   return (
     <Layout>
+             <Head>
+     
+     <title> Digital Assurance | Brewcode Technology Private Limited</title>
+     <meta name="description" content="Immersive AR/VR Solutions to Elevate Your Business" />
+   </Head>
     <div
         style={{
           position: "relative",
@@ -118,7 +124,7 @@ const Index: React.FC = () => {
                    <div className="d-flex flex-column justify-content-between">
                    <div className="mb-5">
                       <div className="">
-                        <div className="image-icon-container">
+                        <div className="">
                           <Image
                             alt="Comprehensive application services icon"
                             width={50}
@@ -145,7 +151,7 @@ const Index: React.FC = () => {
                     </div>
                     <div>
                      
-                        <div className="image-icon-container">
+                        <div className="">
                           <Image
                             alt="Harnessing technology icon"
                             width={50}
@@ -175,7 +181,7 @@ const Index: React.FC = () => {
                   </div>
                   <div className="col-6">
                     <div className="mb-3">
-                      <div className="image-icon-container">
+                      <div className="">
                         <Image
                           alt="Harnessing technology icon"
                           width={50}

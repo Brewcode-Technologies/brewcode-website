@@ -221,13 +221,14 @@ const Index: React.FC = () => {
   const detailsChunks = chunkArray(descriptions[selectedTech].details, 3);
   return (
     <Layout>
+     
       <Head>
-        <title>Ecommerce</title>
+        <title>Ecommerce | Brewcode Technology Private Limited</title>
         <meta
           name="description"
           content="Project Timeline using Next.js and Bootstrap"
         />
-        <link rel="icon" href="/favicon.ico" />
+       
       </Head>
       <div className="e-commerce-hero-section">
         <div className="overlay-ar-vr">

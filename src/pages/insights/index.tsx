@@ -1,4 +1,5 @@
 import Layout from "@component/components/layouts/layout";
+import Head from "next/head";
 import Image from "next/image";
 import React from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
@@ -8,6 +9,12 @@ import { MdKeyboardArrowRight } from "react-icons/md";
 const Index: React.FC = () => {
   return (
     <Layout>
+      <Head>
+       
+        <title>Insights | Brewcode Technology Private Limited</title>
+        <meta name="description" content="Description of your insights page" />
+      
+      </Head>
       <div
         style={{
           position: "relative",

@@ -76,13 +76,17 @@ const Index: React.FC = () => {
             <div className="col-md-6">
               <div className="soctor-about-section">
                 <div className="d-flex flex-column">
-                <h2 className="section-title mb-3">
+                  <div className="d-flex">
                   <img
                       src="/images/business-goal.svg"
-                      className="business-goal-icon"
+                      className="business-goal-icon mb-3"
                       alt=""
-                    /> Business Goal
+                    />
+                      <h2 className="section-title mb-3">
+                 Business Goal
                   </h2>
+                  </div>
+              
                   <p className="section-description">
                     Business Goal for Brewcode Meet: “To establish Brewcode Meet
                     as the premier enterprise communication platform that

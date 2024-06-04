@@ -1,6 +1,7 @@
 import ReusableButton from "@component/components/customHooks/reusableContactButton";
 import useNavigation from "@component/components/customHooks/useNavigation";
 import Layout from "@component/components/layouts/layout";
+import Head from "next/head";
 import Image from "next/image";
 import React from "react";
 
@@ -8,6 +9,10 @@ const Index: React.FC = () => {
   const { navigate } = useNavigation();
   return (
     <Layout>
+       <Head>
+        <title>UX/UI designing | Brewcode Technology Private Limited</title>
+        <meta name="description" content="Harness the power of IaaS for seamless scalability and enhanced performance. Learn how Brewcode leverages IaaS to optimize costs, ensure robust operations, and drive business growth." />
+      </Head>
       <div
         style={{
           position: "relative",

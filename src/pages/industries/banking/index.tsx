@@ -1,9 +1,17 @@
 import Layout from "@component/components/layouts/layout";
+import Head from "next/head";
 import React from "react";
 
 const Index: React.FC = () => {
   return (
     <Layout>
+       <Head>
+        <title>Banking Services | Brewcode Technology Private Limited</title>
+        <meta
+          name="description"
+          content="Harness the Power of IaaS for Seamless Scalability and Enhanced Performance in Banking Services."
+        />
+      </Head>
     <div
         style={{
           position: "relative",

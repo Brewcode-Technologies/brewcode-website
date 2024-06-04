@@ -4,6 +4,7 @@ import Image from "next/image";
 import BlackLayer from "@component/components/blackLayer";
 import { routeMap } from "@component/components/customHooks/useNavigation";
 import { useRouter } from "next/router";
+import Head from "next/head";
 
 interface CaseStudy {
   id: number;
@@ -126,6 +127,11 @@ const Index: React.FC = () => {
   ];
   return (
     <Layout>
+        <Head>
+
+        <title>Case Studies | Brewcode Technology Private Limited</title>
+        <meta name="description" content="Description of your Case Studies page" />
+      </Head>
       <div className="case-studies-hero-section">
         <div className="overlay-case-studies">
           <div className="container case-study-container">
