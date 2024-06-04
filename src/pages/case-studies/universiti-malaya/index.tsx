@@ -6,7 +6,7 @@ const Index: React.FC = () => {
   return (
     <Layout>
       <Head>
-        <title>Soctor Healthcare</title>
+        <title>Universiti Malaya</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <div className="bg-black py-5">
@@ -30,7 +30,7 @@ const Index: React.FC = () => {
             <div className="col-md-5">
               <div className="socoter-img">
                 <img
-                  src="/images/health-care-img.jpeg"
+                  src="/images/vr-application-for-universiti-img.jpeg"
                   alt="health care image"
                   className="health-care-img"
                 />
