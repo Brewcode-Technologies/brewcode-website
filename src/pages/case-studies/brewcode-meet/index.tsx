@@ -55,7 +55,11 @@ const Index: React.FC = () => {
 
                 <div className="d-flex flex-column">
                   <h2 className="section-title mb-3">
-                    <span className="icon">📄</span> Problem Statement
+                  <img
+                      src="/images/problem-statement.svg"
+                      className="problem-statemt-icon"
+                      alt=""
+                    />Problem Statement
                   </h2>
                   <p className="section-description">
                  <b> Device and Browser Compatibility:</b> Achieved universal compatibility through extensive testing and optimization.
@@ -70,7 +74,11 @@ const Index: React.FC = () => {
               <div className="soctor-about-section">
                 <div className="d-flex flex-column">
                   <h2 className="section-title mb-3">
-                    <span className="icon">🎯</span> Business Goal
+                  <img
+                      src="/images/business-goal.svg"
+                      className="business-goal-icon"
+                      alt=""
+                    /> Business Goal
                   </h2>
                   <p className="section-description">
                   Business Goal for Brewcode Meet: “To establish Brewcode Meet as the premier enterprise communication platform that enhances collaboration and productivity by delivering a seamless, secure, and user-centric experience, thereby driving digital transformation and fostering a connected business environment.”
@@ -85,7 +93,13 @@ This goal aligns with Brewcode Technologies’ dedication to innovation and exce
             <div className="about-introduction">Audience</div>
             <div className="col-12">
               <div className="about-content">
-                <span className="icon text-center">👥</span>
+              <div className="image-icon-container">
+                  <img
+                    src="/images/target-audience-icon.svg"
+                    alt="Target Audience icon"
+                    className="image-icon"
+                  />
+                </div>
                 <h2 className=" text-center"> Target Audience</h2>
 
                 <p className="text-center">
@@ -108,7 +122,8 @@ This goal aligns with Brewcode Technologies’ dedication to innovation and exce
               <li className="target-audience-item">
                 <div className="d-flex flex-column">
                   <div className="d-flex">
-                    <span className="icon">➡</span>
+                  <img src="/images/list-page-arrow.svg" alt="" className="list-page-arrow-icon mt-2 "/>
+
                     <p>
                       Organizations seeking to enhance internal communication
                       and collaboration among
@@ -127,7 +142,8 @@ This goal aligns with Brewcode Technologies’ dedication to innovation and exce
               <li className="target-audience-item">
                 <div className="d-flex flex-column">
                   <div className="d-flex">
-                    <span className="icon">➡</span>
+                  <img src="/images/list-page-arrow.svg" alt="" className="list-page-arrow-icon mt-2 "/>
+
                     <p>
                       Teams that operate remotely and require reliable tools for
                       daily communication and
@@ -148,7 +164,8 @@ This goal aligns with Brewcode Technologies’ dedication to innovation and exce
               <li className="target-audience-item">
                 <div className="d-flex flex-column">
                   <div className="d-flex">
-                    <span className="icon">➡</span>
+                  <img src="/images/list-page-arrow.svg" alt="" className="list-page-arrow-icon mt-2 "/>
+
                     <p>
                       Schools and universities that need a platform for virtual
                       classrooms, meetings, and
@@ -167,7 +184,8 @@ This goal aligns with Brewcode Technologies’ dedication to innovation and exce
               <li className="target-audience-item">
                 <div className="d-flex flex-column">
                   <div className="d-flex">
-                    <span className="icon">➡</span>
+                  <img src="/images/list-page-arrow.svg" alt="" className="list-page-arrow-icon mt-2 "/>
+
                     <p>
                        IT professionals who require a secure and efficient means
                       to support and manage their
@@ -188,7 +206,8 @@ This goal aligns with Brewcode Technologies’ dedication to innovation and exce
               <li className="target-audience-item">
                 <div className="d-flex flex-column">
                   <div className="d-flex">
-                    <span className="icon">➡</span>
+                  <img src="/images/list-page-arrow.svg" alt="" className="list-page-arrow-icon mt-2 "/>
+
                     <p>
                       Individuals responsible for coordinating and overseeing
                       projects that involve multiple
@@ -209,7 +228,8 @@ This goal aligns with Brewcode Technologies’ dedication to innovation and exce
               <li className="target-audience-item">
                 <div className="d-flex flex-column">
                   <div className="d-flex">
-                    <span className="icon">➡</span>
+                  <img src="/images/list-page-arrow.svg" alt="" className="list-page-arrow-icon mt-2 "/>
+
                     <p>
                       Human resources departments that conduct virtual
                       interviews, training sessions, and company-wide
@@ -229,7 +249,13 @@ This goal aligns with Brewcode Technologies’ dedication to innovation and exce
             <div className="about-introduction">Gap In Market</div>
             <div className="col-12">
               <div className="about-content">
-                <span className="icon text-center">👥</span>
+              <div className="text-center">
+                  <img
+                    src="/images/discover.svg "
+                    className="business-goal-icon text-center"
+                    alt=""
+                  />
+                </div>
                 <h2 className=" text-center">Descover</h2>
                 <div className="col-12">
                   <p className="text-center">
@@ -325,7 +351,6 @@ This goal aligns with Brewcode Technologies’ dedication to innovation and exce
             <div className="about-introduction">Design Method</div>
             <div className="col-12">
               <div className="about-content">
-                <span className="icon text-center mb-1">👥</span>
                 <h2 className="text-center">Design Thinking Process</h2>
 
                 <p className="text-center">

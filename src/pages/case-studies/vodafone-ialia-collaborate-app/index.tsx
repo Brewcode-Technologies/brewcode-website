@@ -60,7 +60,12 @@ const Index: React.FC = () => {
 
                 <div className="d-flex flex-column">
                   <h2 className="section-title mb-3">
-                    <span className="icon">📄</span> Problem Statement
+                    <img
+                      src="/images/problem-statement.svg"
+                      className="problem-statemt-icon"
+                      alt=""
+                    />
+                    Problem Statement
                   </h2>
                   <p className="section-description">
                     Irresponsible self-medication is a significant issue in
@@ -79,7 +84,12 @@ const Index: React.FC = () => {
               <div className="soctor-about-section">
                 <div className="d-flex flex-column">
                   <h2 className="section-title mb-3">
-                    <span className="icon">🎯</span> Business Goal
+                    <img
+                      src="/images/business-goal.svg"
+                      className="business-goal-icon"
+                      alt=""
+                    />
+                    Business Goal
                   </h2>
                   <p className="section-description">
                     Our business goal is to establish Soctor as the leading
@@ -99,7 +109,13 @@ const Index: React.FC = () => {
             <div className="about-introduction">Audience</div>
             <div className="col-12">
               <div className="about-content">
-                <span className="icon text-center">👥</span>
+                <div className="image-icon-container">
+                  <img
+                    src="/images/target-audience-icon.svg"
+                    alt="Target Audience icon"
+                    className="image-icon"
+                  />
+                </div>
                 <h2 className=" text-center"> Target Audience</h2>
 
                 <p className="text-center">
@@ -121,7 +137,7 @@ const Index: React.FC = () => {
               <li className="target-audience-item">
                 <div className="d-flex flex-column">
                   <div className="d-flex">
-                    <span className="icon">➡</span>
+                  <img src="/images/list-page-arrow.svg" alt="" className="list-page-arrow-icon mt-2 "/>
                     <p>
                       Individuals who frequently self-medicate based on past
                       experiences, advice from unqualified sources, or online
@@ -129,7 +145,7 @@ const Index: React.FC = () => {
                     </p>
                   </div>
                   <div className="d-flex">
-                    <span className="icon">➡</span>
+                  <img src="/images/list-page-arrow.svg" alt="" className="list-page-arrow-icon mt-2 "/>
 
                     <p>
                       People looking for reliable health information and
@@ -148,7 +164,7 @@ const Index: React.FC = () => {
               <li className="target-audience-item">
                 <div className="d-flex flex-column">
                   <div className="d-flex">
-                    <span className="icon">➡</span>
+                  <img src="/images/list-page-arrow.svg" alt="" className="list-page-arrow-icon mt-2 "/>
                     <p>
                       Individuals who frequently self-medicate based on past
                       experiences, advice from unqualified sources, or online
@@ -156,7 +172,7 @@ const Index: React.FC = () => {
                     </p>
                   </div>
                   <div className="d-flex">
-                    <span className="icon">➡</span>
+                  <img src="/images/list-page-arrow.svg" alt="" className="list-page-arrow-icon mt-2 "/>
 
                     <p>
                       People looking for reliable health information and
@@ -177,7 +193,7 @@ const Index: React.FC = () => {
               <li className="target-audience-item">
                 <div className="d-flex flex-column">
                   <div className="d-flex">
-                    <span className="icon">➡</span>
+                  <img src="/images/list-page-arrow.svg" alt="" className="list-page-arrow-icon mt-2 "/>
                     <p>
                       Patients with chronic conditions who require ongoing
                       medication management and often self-medicate to manage
@@ -196,14 +212,15 @@ const Index: React.FC = () => {
               <li className="target-audience-item">
                 <div className="d-flex flex-column">
                   <div className="d-flex">
-                    <span className="icon">➡</span>
+                  
+                    <img src="/images/list-page-arrow.svg" alt="" className="list-page-arrow-icon mt-2 "/>
                     <p>
                       Tech-savvy individuals who are comfortable using digital
                       platforms for health information and advice.
                     </p>
                   </div>
                   <div className="d-flex">
-                    <span className="icon">➡</span>
+                  <img src="/images/list-page-arrow.svg" alt="" className="list-page-arrow-icon mt-2 "/>
 
                     <p>
                       This group often turns to the internet for quick health
@@ -223,7 +240,7 @@ const Index: React.FC = () => {
               <li className="target-audience-item">
                 <div className="d-flex flex-column">
                   <div className="d-flex">
-                    <span className="icon">➡</span>
+                  <img src="/images/list-page-arrow.svg" alt="" className="list-page-arrow-icon mt-2 "/>
                     <p>
                       Family members or caregivers responsible for the health
                       and medication of others who need trustworthy advice to
@@ -244,7 +261,7 @@ const Index: React.FC = () => {
               <li className="target-audience-item">
                 <div className="d-flex flex-column">
                   <div className="d-flex">
-                    <span className="icon">➡</span>
+                  <img src="/images/list-page-arrow.svg" alt="" className="list-page-arrow-icon mt-2 "/>
                     <p>
                       Communities with limited access to healthcare facilities
                       and professionals, who often rely on local, unqualified
@@ -264,7 +281,13 @@ const Index: React.FC = () => {
             <div className="about-introduction">Gap In Market</div>
             <div className="col-12">
               <div className="about-content">
-                <span className="icon text-center">👥</span>
+                <div className="text-center">
+                  <img
+                    src="/images/discover.svg "
+                    className="business-goal-icon text-center"
+                    alt=""
+                  />
+                </div>
                 <h2 className=" text-center">Descover</h2>
 
                 <p className="text-center">
@@ -344,7 +367,6 @@ const Index: React.FC = () => {
             <div className="about-introduction">Design Method</div>
             <div className="col-12">
               <div className="about-content">
-                <span className="icon text-center mb-1">👥</span>
                 <h2 className="text-center">Design Thinking Process</h2>
 
                 <p className="text-center">

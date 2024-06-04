@@ -40,6 +40,7 @@ export type Route =
   |"resource-planning"
   |"industries"
   |"automotive"
+  |"about-us"
   | "ar-vr-development";
 
 export interface ReusableButtonProps {
