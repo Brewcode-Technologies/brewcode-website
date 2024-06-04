@@ -55,11 +55,12 @@ const Footer: React.FC = () => {
                 className="footer-icon"
               />
             </Link>
-            <Link href="https://www.linkedin.com/company/brewcode/">
+            <Link href="https://www.linkedin.com/company/brewcode/" target="_blank">
               <ImageIcon
                 src="/images/svg/LinkedIn_svg.svg"
                 alt="LinkedIn icon"
                 className="footer-icon"
+                
               />
             </Link>
           </div>

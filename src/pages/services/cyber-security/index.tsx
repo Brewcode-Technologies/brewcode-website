@@ -1,10 +1,16 @@
 import Layout from "@component/components/layouts/layout";
+import Head from "next/head";
 import Image from "next/image";
 import React from "react";
 
 const Index: React.FC = () => {
   return (
     <Layout>
+          <Head>
+     
+     <title> Cyber Security | Brewcode Technology Private Limited</title>
+     <meta name="description" content="Immersive AR/VR Solutions to Elevate Your Business" />
+   </Head>
       <div
         style={{
           position: "relative",

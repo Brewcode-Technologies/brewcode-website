@@ -1,4 +1,5 @@
 import Layout from "@component/components/layouts/layout";
+import Head from "next/head";
 import React, { useState } from "react";
 import { FaCheck } from "react-icons/fa";
 import { FaArrowRight } from "react-icons/fa6";
@@ -12,6 +13,11 @@ const Index: React.FC = () => {
 
   return (
     <Layout>
+       <Head>
+       
+        <title>Contact Us | Brewcode Technology Private Limited</title>
+        <meta name="description" content="Contact us page description" />
+      </Head>
       <div className="contact-us-bg">
         <div className="container contact-form text-light">
           <h1 className="text-center contact-us-heading">{`{ Contact Us }`}</h1>

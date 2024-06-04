@@ -1,6 +1,7 @@
 import ReusableButton from "@component/components/customHooks/reusableContactButton";
 import useNavigation from "@component/components/customHooks/useNavigation";
 import Layout from "@component/components/layouts/layout";
+import Head from "next/head";
 import Image from "next/image";
 import React from "react";
 
@@ -8,6 +9,15 @@ const Index: React.FC = () => {
   const { navigate } = useNavigation();
   return (
     <Layout>
+
+<Head>
+        <title> Enterprise Application Development | Brewcode Technology Private Limited</title>
+        <meta
+          name="description"
+          content="Project Timeline using Next.js and Bootstrap"
+        />
+       
+      </Head>
       <div
         style={{
           position: "relative",

@@ -5,6 +5,7 @@ import SwiperComponent from "@component/components/Carousel";
 import ImageIcon from "@component/components/ImageIcon";
 import Layout from "@component/components/layouts/layout";
 import useNavigation, { routeMap } from "@component/components/customHooks/useNavigation";
+import Head from "next/head";
 
 interface Blog {
   id: number;
@@ -24,7 +25,7 @@ interface ClientLogo {
 interface SolutionItem {
   title: string;
   icon: string;
-  href: string;
+ href: keyof typeof routeMap; 
 }
 
 const Index: React.FC = () => {
@@ -180,6 +181,12 @@ const Index: React.FC = () => {
   }, []);
   return (
     <Layout>
+      <Head>
+      
+        <title>Brewcode Technology Private Limited</title>
+        <meta name="description" content="Description of your home page" />
+     
+      </Head>
       <div className="fullpage-container">
         <div className="hero-image">
           <video

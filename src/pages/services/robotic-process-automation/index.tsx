@@ -1,6 +1,7 @@
 import ReusableButton from "@component/components/customHooks/reusableContactButton";
 import useNavigation from "@component/components/customHooks/useNavigation";
 import Layout from "@component/components/layouts/layout";
+import Head from "next/head";
 import Image from "next/image";
 import React from "react";
 
@@ -8,6 +9,13 @@ const Index: React.FC = () => {
   const { navigate } = useNavigation();
   return (
     <Layout>
+         <Head>
+        <title>Robotic Process Automation| Brewcode Technology</title>
+        <meta
+          name="description"
+          content="Harness the Power of IaaS for Seamless Scalability and Enhanced Performance. Learn how Brewcode leverages IaaS to optimize costs, ensure robust operations, and drive business growth."
+        />
+      </Head>
     <div
         style={{
           position: "relative",
@@ -115,7 +123,7 @@ const Index: React.FC = () => {
                    <div className="d-flex flex-column justify-content-between">
                    <div className="mb-5">
                       <div className="">
-                        <div className="image-icon-container">
+                        <div className="">
                           <Image
                             alt="Comprehensive application services icon"
                             width={50}

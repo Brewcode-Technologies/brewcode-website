@@ -3,6 +3,7 @@ import React, { useState } from "react";
 import { IoMdArrowDropright } from "react-icons/io";
 
 import BlackLayer from "@component/components/blackLayer";
+import Head from "next/head";
 
 interface ArVr {
   id: number;
@@ -198,6 +199,11 @@ const Index: React.FC = () => {
 
   return (
     <Layout>
+       <Head>
+     
+        <title>AR/VR Development | Brewcode Technology Private Limited</title>
+        <meta name="description" content="Immersive AR/VR Solutions to Elevate Your Business" />
+      </Head>
       <div className="ar-vr-hero-section">
         <div className="overlay-ar-vr">
           <div className="container case-study-container">
