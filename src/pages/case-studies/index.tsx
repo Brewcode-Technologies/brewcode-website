@@ -154,7 +154,7 @@ const Index: React.FC = () => {
       <BlackLayer />
       <div className="case-studies-black-container container-fluid">
         <div className="container">
-          {caseStudies.map((study) => (
+          {caseStudies.map((study,) => (
             <>
               <div
                 key={study.id}

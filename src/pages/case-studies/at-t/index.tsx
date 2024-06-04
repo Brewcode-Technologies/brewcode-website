@@ -12,10 +12,12 @@ const Index: React.FC = () => {
       <div className="bg-black py-5">
         <div className="container py-5">
           <div className="row my-4 d-flex justify-content-between">
-            <div className="col-md-6 col-md-4 mb-5">
-              <div className="soctor-logo d-flex text-center mb-5">
+          <div className="col-md-6 col-md-4 mb-5">
+          <div className="soctor-logo">
                 <img src="/images/svg/AT-T.svg" alt="AT&T Logo" />
               </div>
+           
+             
               <div className="healthcare-text-container">
                 <div className="reflect stroke-text mb-5">
                   <h2>Information Techmology</h2>
@@ -27,7 +29,7 @@ const Index: React.FC = () => {
                 </div>
               </div>
             </div>
-            <div className="col-6">
+            <div className="col-6 mt-5">
              <div className="image-container-at">
              <img
                 src="/images/at-&-t-collaborate-app-development.png"

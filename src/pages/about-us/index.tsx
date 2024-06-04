@@ -95,7 +95,7 @@ const Index: React.FC = () => {
             </div>
           </div>
           <div className="row our-history mt-5">
-            <div className="col-md-4 mb-4">
+            <div className="col-md-4">
               <img
                 src="/images/about-us-image-icon.svg"
                 className="about-us-icon img-fluid"
