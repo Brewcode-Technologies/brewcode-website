@@ -118,6 +118,7 @@ input {
   font-weight: 500;
   font-family: "Inter";
   margin-right: 10px !important;
+  margin-bottom: 5px;
 }
 
 .navbar-toggle-white {
@@ -3111,6 +3112,10 @@ text-align: center;
 .business-goal-icon{
   width: 50px;
   margin-right: 15px;
+}
+
+.email-text{
+  text-decoration: none;
 }
 
 .list-page-arrow-icon{
