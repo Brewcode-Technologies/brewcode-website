@@ -759,7 +759,7 @@ video {
 
 .insigts-image{
   width: 100%;
-  height: 200px;
+
 }
 
 .explore-our-insigts-image{
@@ -790,7 +790,7 @@ video {
 
 .fa-arrow-long{
   color: #04CAA8;
-  margin-top: 20px;
+  /* margin-top: 20px; */
   cursor: pointer;
 }
 
@@ -813,7 +813,7 @@ video {
 .insight-success-stories-card{
   background-color: #fff !important;
   color:#000;
-  height:380px;
+  /* height:380px; */
   border-radius: 5px;
 }
 
