@@ -6,6 +6,7 @@ import ImageIcon from "@component/components/ImageIcon";
 import Layout from "@component/components/layouts/layout";
 import useNavigation, { routeMap } from "@component/components/customHooks/useNavigation";
 import Head from "next/head";
+import { useRouter } from "next/router";
 import { Route } from "next";
 
 interface Blog {
@@ -297,22 +298,29 @@ const Index: React.FC = () => {
       <div className="col-12">
         <h1 className="solutions-heading mb-3">Our Solutions</h1>
         <p className="solutions-description">
-          Design and deliver new digital experiences, revenue streams and
+          Design and deliver new digital experiences, revenue streams, and
           business models to <br />
           meet rising customer expectations and accelerate your growth
         </p>
       </div>
       <div className="row d-flex justify-content-between solutions-list mt-2">
         {solutions.map((item, index) => (
-          <div className="col-12 mt-3 solutions-item-section" key={index}>
+          <div className="col-12 col-md-6 col-lg-4 mt-3 solutions-item-section" key={index}>
             <div className="d-flex flex-column mb-3 solutions-item">
-              <a
-                href={routeMap[item.href]}
-                className="d-flex justify-content-between border-bottom pb-1 solutions-item-header"
-              >
-                <h1 className="solutions-title">{item.title}</h1>
-                <i className={`bi ${item.icon} mt-0`}></i>
-              </a>
+              {item.href !== undefined && item.href !== null ? (
+                item.href in routeMap ? (
+                  <Link href={routeMap[item.href as keyof typeof routeMap]} passHref className="our-solution-link">
+                  <div className="d-flex justify-content-between border-bottom pb-1 solutions-item-header">
+                    <h1 className="solutions-title">{item.title}</h1>
+                    <i className={`bi ${item.icon} mt-0`}></i>
+                  </div>
+                </Link>
+                ) : (
+                  <p>Route {item.href} not found in routeMap</p>
+                )
+              ) : (
+                <p>item.href is undefined or null</p>
+              )}
             </div>
           </div>
         ))}
@@ -320,6 +328,9 @@ const Index: React.FC = () => {
     </div>
   </div>
 </section>
+
+
+
 
 
         <section className="industries-section">
