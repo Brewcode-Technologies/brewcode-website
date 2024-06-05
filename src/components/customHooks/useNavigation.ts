@@ -1,6 +1,7 @@
 import { useRouter } from "next/router";
 import { Route } from "../types";
 
+
 export const routeMap: Record<Route, string> = {
   "/": "/",
   login: "/login",
