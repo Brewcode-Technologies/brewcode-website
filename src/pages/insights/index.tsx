@@ -5,6 +5,8 @@ import React from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { MdKeyboardArrowRight } from "react-icons/md";
 
+
+
 const Index: React.FC = () => {
   return (
     <Layout>

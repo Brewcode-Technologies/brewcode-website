@@ -751,6 +751,10 @@ video {
   color: #fff;
 }
 
+.our-solution-link{
+  text-decoration: none;
+}
+
 .insight-imag-container{
   width: 100%;
   height: auto;
