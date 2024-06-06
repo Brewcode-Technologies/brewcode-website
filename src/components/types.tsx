@@ -1,4 +1,4 @@
-// types/index.ts
+
 export type Route =
   | "/"
   | "login"
@@ -41,9 +41,26 @@ export type Route =
   |"industries"
   |"automotive"
   |"about-us"
+  |"cookie-policy"
+  |"privacy-policy"
+  |"terms-of-services"
   | "ar-vr-development";
 
 export interface ReusableButtonProps {
   label: string;
   navigateTo: () => void;
+}
+
+
+export interface CaseStudy {
+  id: number;
+  title: string;
+  description: string;
+  imageUrl: string;
+  buttonText: string;
+  buttonUrl: string;
+  read: string;
+  colImageUrl: string;
+  colImageName: string;
+  size: "small" | "medium" | "large";
 }

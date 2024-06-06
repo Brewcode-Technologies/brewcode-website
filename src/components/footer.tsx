@@ -71,48 +71,32 @@ const Footer: React.FC = () => {
               <Link href="/" passHref className="footer-link footer-link-home">
                 Home
               </Link>
-              <Link href="/about" passHref className="footer-link">
+              <Link href="/about-us"  passHref className="footer-link">
                 About
               </Link>
 
-              <Link href="/contact" passHref className="footer-link">
-                Contact
-              </Link>
-              <Link href="/contact" passHref className="footer-link">
+              <Link href="/cookie-policy" passHref  className="footer-link">
                 Cookie Policy
+              </Link>
+              <Link href="/privacy-policy" passHref  className="footer-link">
+              Privacy Policy
+              </Link>
+              <Link href="/terms-of-services" passHref  className="footer-link">
+              Terms of Services
               </Link>
             </div>
           </div>
           <div className="row d-flex justify-content-center mb-4">
-            <div className="col-12 col-md-8 col-lg-6 d-flex justify-content-between px-4">
+            <div className="col-12 col-md-8 col-lg-6 d-flex justify-content-center px-4">
               <Link
                 href="/privacy-policy"
                 passHref
                 className="footer-link-policy text-center"
               >
-                © 2024 Brewcode
+                All Rights Reserved © 2024 Brewcode
               </Link>
-              <Link
-                href="/privacy-policy"
-                passHref
-                className="footer-link-policy text-center"
-              >
-                Privacy Policy
-              </Link>
-              <Link
-                href="/privacy-policy"
-                passHref
-                className="footer-link-policy text-center"
-              >
-                Terms of Services
-              </Link>
-              <Link
-                href="/privacy-policy"
-                passHref
-                className="footer-link-policy text-center"
-              >
-                All Rights Reserved
-              </Link>
+           
+            
             </div>
           </div>
         </div>
