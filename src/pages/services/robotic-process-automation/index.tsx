@@ -10,7 +10,7 @@ const Index: React.FC = () => {
   return (
     <Layout>
          <Head>
-        <title>Robotic Process Automation| Brewcode Technology</title>
+        <title>Robotic Process Automation | Brewcode Technology</title>
         <meta
           name="description"
           content="Harness the Power of IaaS for Seamless Scalability and Enhanced Performance. Learn how Brewcode leverages IaaS to optimize costs, ensure robust operations, and drive business growth."

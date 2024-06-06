@@ -7,16 +7,14 @@ import "bootstrap-icons/font/bootstrap-icons.css";
 import "swiper/css/bundle";
 import "../styles/index.css";
 import Loader from "@component/components/Loader";
-import { GoogleAnalytics } from '@next/third-parties/google'
+import GoogleAnalytics from "@component/components/GoogleAnalytics"; 
 
 function MyApp({ Component, pageProps }: AppProps) {
-
   return (
     <Provider store={store}>
-       <Loader/>
+      <Loader />
       <Component {...pageProps} />
       <GoogleAnalytics gaId="G-59FC9R45R5" />
-   
     </Provider>
   );
 }
