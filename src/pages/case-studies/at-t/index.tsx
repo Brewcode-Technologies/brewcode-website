@@ -6,7 +6,7 @@ const Index: React.FC = () => {
   return (
     <Layout>
       <Head>
-        <title>Soctor Healthcare</title>
+        <title>Information Technology</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <div className="bg-black py-5">
@@ -19,8 +19,8 @@ const Index: React.FC = () => {
            
              
               <div className="healthcare-text-container">
-                <div className="reflect stroke-text mb-5">
-                  <h2>Information Techmology</h2>
+              <div className="information-technology information-technology-stoke-text mb-5">
+                  <h2>Information Technology</h2>
                 </div>
                 <div className="percentage-container">
                   <div className="list-page-description text-center">
@@ -30,7 +30,7 @@ const Index: React.FC = () => {
               </div>
             </div>
             <div className="col-6 mt-5">
-             <div className="image-container-at">
+             <div className="image-container-at mt-3">
              <img
                 src="/images/at-&-t-collaborate-app-development.png"
                 alt="AT&T Collaborate App Development"

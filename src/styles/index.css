@@ -2931,7 +2931,8 @@ footer {
     font-size: 100px;
     z-index: -20;
     font-weight: 600;
-    /* text-align: center; */
+    text-align: center;
+    line-height: 120px;
   }
 }
 
@@ -2946,24 +2947,53 @@ footer {
   content: "Information Technology";
   position: absolute;
   top: 9%;
-  left: -2%;
-  z-index: 27;
   color: transparent;
   text-shadow: 0 0 1px white;
   font-weight: 600;
   font-family: "Inter";
   font-size: 96px;
   text-align: center;
-  line-height: 128px;
+  line-height: 122px;
 }
 
 .list-page-description{
-  font-size: 12px;
+  font-size: 18px;
   font-family: "Inter";
   color: #fff;
 }
 
 
+
+/* Privacy Policy styles--------------------------------------------------start */
+.privacy-policy-container{
+  color: #ffffff;
+  text-align: center;
+  font-family: "Inter";
+}
+
+.privacy-policy-heading{
+  font-size: 16px;
+  font-weight: 400;
+  letter-spacing: 2x;
+  font-family: "Inter";
+}
+
+.privacy-policy-description{
+  font-weight: 500;
+  font-family: "Inter";
+}
+
+.last-updated{
+  font-weight: 500;
+  font-family: "Inter";
+  font-size: 17px;
+}
+
+.privacy-policy-text{
+  font-size: 15px;
+  font-family: "Inter";
+}
+/* Privacy Policy styles--------------------------------------------------End */
 
 
 
