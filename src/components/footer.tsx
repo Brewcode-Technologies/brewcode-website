@@ -78,7 +78,7 @@ const Footer: React.FC = () => {
               <Link href="/cookie-policy" passHref  className="footer-link">
               Cookie Policy
               </Link>
-              cookie policy and cookie policy and 
+            
               <Link href="/cookie-policy" passHref  className="footer-link">
               Privacy Policy
               </Link>
