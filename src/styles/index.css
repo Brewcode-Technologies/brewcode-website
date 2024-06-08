@@ -2971,11 +2971,17 @@ footer {
   font-family: "Inter";
 }
 
-.privacy-policy-heading{
+.privacy-policy-heading ,.privacy-notice-heading{
   font-size: 16px;
   font-weight: 400;
   letter-spacing: 2x;
   font-family: "Inter";
+}
+
+.privacy-notice-heading{
+  margin-bottom: 30px;
+  font-size: 20px;
+  letter-spacing: 2px;
 }
 
 .privacy-policy-description{
@@ -2992,6 +2998,36 @@ footer {
 .privacy-policy-text{
   font-size: 15px;
   font-family: "Inter";
+}
+
+.privacy-notice-sub-heading{
+  font-size: 18px;
+  margin-bottom: 10px;
+  font-family: "Inter";
+}
+
+.privacy-notice-sub-heading-description{
+  font-size: 14px;
+  margin-bottom: 10px;
+  font-family: "Inter";
+}
+
+.table-of-content-link{
+  margin-bottom: 15px;
+  text-decoration: none;
+  color: #74a8ff;
+  font-family: "Inter";
+  font-size: 14px;
+}
+
+.privacy-notice-sub-heading-first{
+  font-size: 18px;
+  margin-bottom: 10px;
+}
+
+.text-decoration-none{
+  list-style-type: none;
+
 }
 /* Privacy Policy styles--------------------------------------------------End */
 

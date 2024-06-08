@@ -78,24 +78,24 @@ const Footer: React.FC = () => {
               <Link href="/cookie-policy" passHref  className="footer-link">
               Cookie Policy
               </Link>
-              <Link href="/privacy-policy" passHref  className="footer-link">
+              cookie policy and cookie policy and 
+              <Link href="/cookie-policy" passHref  className="footer-link">
               Privacy Policy
               </Link>
-              <Link href="/terms-of-services" passHref  className="footer-link">
+              <Link href="/terms-conditions" passHref  className="footer-link">
               Terms & Conditions
               </Link>
             </div>
           </div>
           <div className="row d-flex justify-content-center mb-4">
             <div className="col-12 col-md-8 col-lg-6 d-flex justify-content-center px-4">
-              <Link
-                href="/privacy-policy"
-                passHref
+              <p
+             
                 className="footer-link-policy text-center"
               >
             
                 © 2024 Brewcode Technologies Private Limited. All Rights Reserved.
-              </Link>
+              </p>
            
             
             </div>
