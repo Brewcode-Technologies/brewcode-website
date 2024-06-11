@@ -807,8 +807,11 @@ const Index: React.FC = () => {
               Bidar, Karnataka 585401<br />
               India<br />
               Phone: __________<br />
-              Email: contact@brewcode.co
+              
             </p>
+            <p className="email-text-container">Email:  <a href="mailto:contact@brewcode.co" className="text-white email-text">
+                    contact@brewcode.co
+                  </a></p>
             
           
           </div>

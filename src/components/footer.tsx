@@ -40,7 +40,7 @@ const Footer: React.FC = () => {
                 className="footer-icon"
               />
             </Link>
-            <Link href="/">
+            <Link href="https://x.com/ibrewcode" target="_blank">
               <ImageIcon
                 src="/images/svg/x_svg.svg"
                 alt="twitter icon"

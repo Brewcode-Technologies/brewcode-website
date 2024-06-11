@@ -6,33 +6,32 @@ const Index: React.FC = () => {
   return (
     <Layout>
       <Head>
-        <title>Soctor Healthcare</title>
+        <title>Dhnaika solutions | Brewcode Technology Private Limited</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <div className="bg-black py-5">
         <div className="container py-5">
-          <div className="soctor-logo mb-2 col-5">
-            <img src="/images/svg/soctor.svg" alt="Soctor Logo" />
+          <div className="soctor-logo col-5 d-flex text-center">
+            <img src="/images/svg/dhanika.svg" alt="dhanika solution Logo" />
           </div>
-          <div className="row my-4 d-flex justify-content-between">
-            <div className="col-md-6 col-md-4 mb-5">
+          <div className="row my-4 d-flex justify-content-between mb-5">
+            <div className="col-md-6 col-md-4">
               <div className="healthcare-text-container">
-                <div className="reflect stroke-text mb-5">
-                  <h2>Healthcare</h2>
+                <div className="information-technology information-technology-stoke-text">
+                  <h2>Information Technology</h2>
                 </div>
-                <div className="percentage-container">
-                  <div className="percentage">
-                    80% Increase In User Adoption
-                    <p className="line"></p>
-                  </div>
-                </div>
+
+                <h2 className="iformation-description">
+                Dhanika Solutions – Revolutionizing Career<br/> Opportunities  
+                </h2>
               </div>
             </div>
-            <div className="col-md-5">
+           
+            <div className="col-md-5 mt-5">
               <div className="socoter-img">
                 <img
-                  src="/images/health-care-img.jpeg"
-                  alt="health care image"
+                  src="/images/dhanika-solutions.jpeg"
+                  alt="dhanika solution image"
                   className="health-care-img"
                 />
               </div>
@@ -41,14 +40,11 @@ const Index: React.FC = () => {
 
           <div className="soctor-about-section">
             <div className="about-introduction">Introduction</div>
-            <div className="col-md-8">
+            <div className="col-12">
               <div className="about-content">
                 <h2>About Project</h2>
                 <p>
-                  Soctor helps in manage minor health problems like cold, cough,
-                  fever, loose motions and many more conditions with commonly
-                  available medicines using self-treatment advice developed by
-                  doctors. It's easy. It's free.
+                Brewcode developed a cutting-edge website for Dhanika Solutions, enhancing their digital presence and streamlining the job application process. The site features a sleek design, optimized career portal, and robust CMS, reflecting Dhanika Solutions' innovative ethos. This project positions Dhanika Solutions to attract top talent and elevate their status in the IT services industry.
                 </p>
               </div>
             </div>
@@ -68,14 +64,7 @@ const Index: React.FC = () => {
                     Problem Statement
                   </h2>
                   <p className="section-description">
-                    Irresponsible self-medication is a significant issue in
-                    India, with 52% of individuals relying on previous
-                    experiences, unqualified neighborhood pharmacists, and
-                    online information, leading to serious health risks and
-                    contributing to antibiotic resistance. There is a clear need
-                    for a trusted, accessible platform to provide accurate,
-                    personalized medical advice to promote safe self-care and
-                    mitigate these risks.
+                  Dhanika Solutions, a leader in IT services, struggled with an outdated digital presence and a cumbersome job application process. Their existing website failed to engage users and attract top talent efficiently. They needed a modern, user-friendly platform to enhance their brand and streamline recruitment.
                   </p>
                 </div>
               </div>
@@ -87,18 +76,12 @@ const Index: React.FC = () => {
                     <img
                       src="/images/business-goal.svg"
                       className="business-goal-icon"
-                      alt=""
+                      alt="business-goal icon"
                     />
                     Business Goal
                   </h2>
                   <p className="section-description">
-                    Our business goal is to establish Soctor as the leading
-                    platform for safe and responsible self-medication. We aim to
-                    provide accurate, personalized medical advice and
-                    professional consultations to millions of users. By
-                    promoting educated and informed healthcare decisions, we
-                    seek to reduce health risks and combat antibiotic
-                    resistance.
+                  The business goal was to enhance Dhanika Solutions' digital presence and create a streamlined, user-friendly job application process. They aimed to attract top talent and effectively showcase their innovative services. The objective was to develop a modern website that embodies their brand ethos and improves operational efficiency.
                   </p>
                 </div>
               </div>
@@ -119,154 +102,139 @@ const Index: React.FC = () => {
                 <h2 className=" text-center"> Target Audience</h2>
 
                 <p className="text-center">
-                  Below these groups are most at risk from self-medication due
-                  to reliance on unqualified sources and lack of access to
-                  reliable medical advice.
+                Dhanika Solutions’ revamped website caters to tech-savvy job seekers and IT professionals, showcasing an<br/> optimized career portal and a modern user experience to attract industry-leading talent.
                 </p>
               </div>
             </div>
           </div>
 
           <div className="row mb-4">
-            <div className="col-md-3">
+            <div className="col-md-4">
               <strong className="audience-list-heading genarl-padding">
-                General Public
+              Job Seekers
               </strong>
             </div>
-            <div className="col-md-9">
+            <div className="col-md-8">
               <li className="target-audience-item">
                 <div className="d-flex flex-column">
                   <div className="d-flex">
-                  <img src="/images/list-page-arrow.svg" alt="" className="list-page-arrow-icon mt-2 "/>
-                    <p>
-                      Individuals who frequently self-medicate based on past
-                      experiences, advice from unqualified sources, or online
-                      information.
-                    </p>
-                  </div>
-                  <div className="d-flex">
-                  <img src="/images/list-page-arrow.svg" alt="" className="list-page-arrow-icon mt-2 "/>
+                    <img
+                      src="/images/list-page-arrow.svg"
+                      alt=""
+                      className="list-page-arrow-icon mt-2 "
+                    />
 
                     <p>
-                      People looking for reliable health information and
-                      guidance to manage common health issues safely.
-                    </p>
+                    Individuals looking for career opportunities in the IT services sector. The revamped website aims to simplify their job search and application process.                    </p>
                   </div>
                 </div>
               </li>
             </div>
           </div>
           <div className="row mb-4">
-            <div className="col-md-3">
-              <strong className="audience-list-heading">General Public</strong>
+            <div className="col-md-4">
+              <strong className="audience-list-heading">Clients and Partners</strong>
             </div>
-            <div className="col-md-9">
+            <div className="col-md-8">
               <li className="target-audience-item">
                 <div className="d-flex flex-column">
                   <div className="d-flex">
-                  <img src="/images/list-page-arrow.svg" alt="" className="list-page-arrow-icon mt-2 "/>
-                    <p>
-                      Individuals who frequently self-medicate based on past
-                      experiences, advice from unqualified sources, or online
-                      information.
-                    </p>
-                  </div>
-                  <div className="d-flex">
-                  <img src="/images/list-page-arrow.svg" alt="" className="list-page-arrow-icon mt-2 "/>
+                    <img
+                      src="/images/list-page-arrow.svg"
+                      alt=""
+                      className="list-page-arrow-icon mt-2 "
+                    />
 
                     <p>
-                      People looking for reliable health information and
-                      guidance to manage common health issues safely.
-                    </p>
+                    Businesses and organizations seeking innovative IT solutions. The site provides detailed information about Dhanika Solutions' services and expertise.                    </p>
                   </div>
                 </div>
               </li>
             </div>
           </div>
           <div className="row mb-4">
-            <div className="col-md-3">
+            <div className="col-md-4">
               <strong className="audience-list-heading">
-                Chronic Disease Patients
-              </strong>
+              Industry Professionals              </strong>
             </div>
-            <div className="col-md-9">
+            <div className="col-md-8">
               <li className="target-audience-item">
                 <div className="d-flex flex-column">
                   <div className="d-flex">
-                  <img src="/images/list-page-arrow.svg" alt="" className="list-page-arrow-icon mt-2 "/>
-                    <p>
-                      Patients with chronic conditions who require ongoing
-                      medication management and often self-medicate to manage
-                      symptoms.
-                    </p>
-                  </div>
-                </div>
-              </li>
-            </div>
-          </div>
-          <div className="row mb-4">
-            <div className="col-md-3">
-              <strong className="audience-list-heading">Young Adults</strong>
-            </div>
-            <div className="col-md-9">
-              <li className="target-audience-item">
-                <div className="d-flex flex-column">
-                  <div className="d-flex">
-                  
-                    <img src="/images/list-page-arrow.svg" alt="" className="list-page-arrow-icon mt-2 "/>
-                    <p>
-                      Tech-savvy individuals who are comfortable using digital
-                      platforms for health information and advice.
-                    </p>
-                  </div>
-                  <div className="d-flex">
-                  <img src="/images/list-page-arrow.svg" alt="" className="list-page-arrow-icon mt-2 "/>
+                    <img
+                      src="/images/list-page-arrow.svg"
+                      alt=""
+                      className="list-page-arrow-icon mt-2 "
+                    />
 
                     <p>
-                      This group often turns to the internet for quick health
-                      solutions and may benefit from a reliable, personalized
-                      platform.
-                    </p>
+                    Experts and influencers in the IT industry. The platform showcases Dhanika Solutions' thought leadership and technological advancements.                    </p>
                   </div>
                 </div>
               </li>
             </div>
           </div>
           <div className="row mb-4">
-            <div className="col-md-3">
-              <strong className="audience-list-heading">Caregivers</strong>
+            <div className="col-md-4">
+              <strong className="audience-list-heading">Current Employees</strong>
             </div>
-            <div className="col-md-9">
+            <div className="col-md-8">
               <li className="target-audience-item">
                 <div className="d-flex flex-column">
                   <div className="d-flex">
-                  <img src="/images/list-page-arrow.svg" alt="" className="list-page-arrow-icon mt-2 "/>
+                    <img
+                      src="/images/list-page-arrow.svg"
+                      alt=""
+                      className="list-page-arrow-icon mt-2 "
+                    />
+
                     <p>
-                      Family members or caregivers responsible for the health
-                      and medication of others who need trustworthy advice to
-                      ensure safe practices.
-                    </p>
+                    Team members of Dhanika Solutions who need access to company updates and internal resources. The website ensures they are well-informed and                    </p>
+                  </div>
+                </div>
+              </li>
+            </div>
+          </div>
+          <div className="row mb-4">
+            <div className="col-md-4">
+              <strong className="audience-list-heading">
+              Investors and<br/> Stakeholders
+              </strong>
+            </div>
+            <div className="col-md-8">
+              <li className="target-audience-item">
+                <div className="d-flex flex-column">
+                  <div className="d-flex">
+                    <img
+                      src="/images/list-page-arrow.svg"
+                      alt=""
+                      className="list-page-arrow-icon mt-2 "
+                    />
+
+                    <p>
+                    Individuals and entities interested in the financial and operational performance of Dhanika Solutions. The site offers comprehensive insights into the company’s growth, achievements, and future plans.                    </p>
                   </div>
                 </div>
               </li>
             </div>
           </div>
           <div className="row">
-            <div className="col-md-3">
+            <div className="col-md-4">
               <strong className="audience-list-heading">
-                Rural and Semi-Urban Population
-              </strong>
+              Potential Customers              </strong>
             </div>
-            <div className="col-md-9">
+            <div className="col-md-8">
               <li className="target-audience-item">
                 <div className="d-flex flex-column">
                   <div className="d-flex">
-                  <img src="/images/list-page-arrow.svg" alt="" className="list-page-arrow-icon mt-2 "/>
+                    <img
+                      src="/images/list-page-arrow.svg"
+                      alt=""
+                      className="list-page-arrow-icon mt-2 "
+                    />
+
                     <p>
-                      Communities with limited access to healthcare facilities
-                      and professionals, who often rely on local, unqualified
-                      pharmacists or online sources for medical advice.{" "}
-                    </p>
+                    Individuals and entities interested in the financial and operational performance of Dhanika Solutions. The site offers comprehensive insights into the company’s growth, achievements, and future plans.                    </p>
                   </div>
                 </div>
               </li>
@@ -288,13 +256,12 @@ const Index: React.FC = () => {
                     alt=""
                   />
                 </div>
-                <h2 className=" text-center">Descover</h2>
+                <h2 className=" text-center">Discover</h2>
+                <div className="col-12">
+                  <p className="text-center">
+                  We discovered the need for a modern, user-centric website that effectively represents Dhanika Solutions'<br/> innovative brand. Additionally, a streamlined job application process was essential to attract top<br/> talent and improve overall recruitment efficiency.                  </p>
+                </div>
 
-                <p className="text-center">
-                  We worked with different stakeholders to understand product,
-                  and a regular connect with them <br />
-                  helped us understand user stories and needs
-                </p>
                 <div>
                   <hr className="col-md-4 mx-auto" />
                   <div className="col-12">
@@ -312,9 +279,7 @@ const Index: React.FC = () => {
                   <span className="step-number">1</span>
                 </p>
                 <p className="gap-description">
-                  Lack of a trusted, user-friendly platform for accurate and
-                  personalized self-medication advice.
-                </p>
+                Many IT service providers' websites had overly complex or outdated job portals, making it difficult for candidates to apply.                </p>
               </div>
               <div className="d-flex p-4">
                 <p>
@@ -322,9 +287,7 @@ const Index: React.FC = () => {
                   <span className="step-number">2</span>
                 </p>
                 <p className="gap-description">
-                  Reliance on unqualified sources due to the unavailability of
-                  easily accessible professional medical guidance.
-                </p>
+                Competitor websites often lacked cohesive branding and clear messaging, leading to a fragmented user experience.                </p>
               </div>
               <div className="d-flex p-4">
                 <p>
@@ -332,9 +295,7 @@ const Index: React.FC = () => {
                   <span className="step-number">3</span>
                 </p>
                 <p className="gap-description">
-                  Misuse and health risks stemming from improper
-                  self-medication.
-                </p>
+                Existing sites in the market often lacked interactive elements, reducing user engagement and retention.                </p>
               </div>
             </div>
             <div className="d-flex col-md-5 flex-column">
@@ -344,8 +305,7 @@ const Index: React.FC = () => {
                   <span className="step-number">4</span>
                 </p>
                 <p className="gap-description">
-                  Insufficient regulation of online medical information.
-                </p>
+                Many IT services websites did not perform well on mobile devices, resulting in a poor user experience for mobile users.                </p>
               </div>
               <div className="d-flex p-4">
                 <p>
@@ -353,9 +313,15 @@ const Index: React.FC = () => {
                   <span className="step-number">5</span>
                 </p>
                 <p className="gap-description">
-                  Need for better integration of technology and healthcare to
-                  provide real-time, reliable, and tailored advice.
+                Features such as advanced search filters, personalized user experiences, and real-time application tracking were often missing.                </p>
+              </div>
+              <div className="d-flex p-4">
+                <p>
+                  {" "}
+                  <span className="step-number">6</span>
                 </p>
+                <p className="gap-description">
+                Existing websites frequently lacked robust security measures, putting user data at risk and reducing trust.                </p>
               </div>
             </div>
           </div>
@@ -373,17 +339,18 @@ const Index: React.FC = () => {
                   Design thinking is a methodology that attempts to solve
                   complex problems in a creative and user-centric way. Core
                   features
-                  <br /> of the design thinking methodology include
+                  <br /> of the design thinking methodology include.
                 </p>
               </div>
             </div>
+           
           </div>
-          <div className="soctor-about-section">
+          <div className="soctor-about-section my-4">
             <div className="about-introduction">Process</div>
             <div className="process-image-container">
-              <img
-                src="/images/process-image.jpg"
-                alt="Human"
+            <img
+                src="/images/discovery-design-delivery-img.png"
+                alt="Discovery, Design, and Delivery Process"
                 className="process-image"
               />
             </div>
@@ -392,39 +359,11 @@ const Index: React.FC = () => {
           <div className="soctor-about-section">
             <div className="about-introduction">Plan Of Action</div>
             <div className="row d-flex flex-wrap justify-content-center g-4">
-              <div className="col-md-4">
+              <div className="col-6">
                 <img
-                  src="/images/take-medicines.png"
-                  alt="Take Medicines"
+                  src="/images/brewcode-who-we-are-laptop-image.png"
+                  alt="Brewcode Who We Are image"
                   className="process-image"
-                />
-              </div>
-              <div className="col-md-4">
-                <img
-                  src="/images/take-medicines.png"
-                  alt="Take Medicines"
-                  className="process-image"
-                />
-              </div>
-              <div className="col-md-4">
-                <img
-                  src="/images/take-medicines-small-img.png"
-                  alt="Take Medicines Small Image"
-                  className="process-image"
-                />
-              </div>
-              <div className="col-md-5">
-                <img
-                  src="/images/grab-medicine.png"
-                  alt="Grab Medicine"
-                  className="process-image"
-                />
-              </div>
-              <div className="col-md-5">
-                <img
-                  src="/images/take-medicines-img.png"
-                  alt="Take Medicines Image"
-                  className="process-image take-medicines-img"
                 />
               </div>
             </div>

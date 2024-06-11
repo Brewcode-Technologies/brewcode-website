@@ -1,4 +1,4 @@
-import { routeMap } from "@component/components/customHooks/useNavigation";
+import useNavigation, { routeMap } from "@component/components/customHooks/useNavigation";
 import Layout from "@component/components/layouts/layout";
 import Head from "next/head";
 import Image from "next/image";
@@ -32,6 +32,10 @@ interface CaseStudy {
 
 const Index: React.FC = () => {
   const router = useRouter();
+
+  const handleButtonClick = (buttonUrl: string) => {
+    router.push(buttonUrl);
+  };
   const blogs: Blog[] = [
     {
       id: 1,
@@ -102,7 +106,7 @@ const Index: React.FC = () => {
         "St. Jude India ChildCare Centres, a premier NGO based in Mumbai, embarked on a critical journey of digital transformation to amplify their online presence and enhance donation facilitation.",
       imageUrl: "/images/svg/st-jude.svg",
       buttonText: "#IT service ",
-      buttonUrl: routeMap["digital-transformation"],
+      buttonUrl: routeMap["st-jude"],
       read: ". 3 Min Read",
       colImageUrl: "/images/st-jude-india-childCare.jpeg",
       colImageName: "st jude india childCare image",
@@ -142,7 +146,7 @@ const Index: React.FC = () => {
         "The Vodafone Italia Collaborate App is a sophisticated business messaging application designed to streamline corporate communication.",
       imageUrl: "/images/svg/Vodafone.svg",
       buttonText: "#IT service ",
-      buttonUrl: routeMap["vodafone-ialia-collaborate-app"],
+      buttonUrl: routeMap["vodafone-idea"],
       read: ". 3 Min Read",
       colImageUrl: "/images/vodafone-Italia-img.jpeg",
       colImageName: "vodafone italia collaborate app   image",
@@ -176,6 +180,8 @@ const Index: React.FC = () => {
       size: "medium",
     },
   ];
+
+
   return (
     <Layout>
       <Head>
@@ -276,7 +282,11 @@ const Index: React.FC = () => {
                 className="fa-arrow-long"
               
 
-                onClick={() => router.push(study.buttonUrl)}
+                // onClick={() => router.push(study.buttonUrl)}
+                // onClick={() => handleButtonClick(study.buttonUrl)}
+                onClick={() => handleButtonClick(study.buttonUrl)}
+
+
               />
                 </div>
               </div>

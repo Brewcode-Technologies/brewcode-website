@@ -6,51 +6,46 @@ const Index: React.FC = () => {
   return (
     <Layout>
       <Head>
-        <title>Universiti Malaya | Brewcode Technology Private Limited</title>
+        <title>Vodafone Italia | Brewcode Technology Private Limited</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <div className="bg-black py-5">
         <div className="container py-5">
-          <div className="soctor-logo mb-2 col-5">
-            <img src="/images/svg/Malaya.svg" alt="Soctor Logo" />
+          <div className="soctor-logo col-5 d-flex text-center">
+            <img src="/images/svg/Vodafone.svg" alt="Vodafone Logo" />
           </div>
-          <div className="row my-4 d-flex justify-content-between">
-            <div className="col-md-6 col-md-4 mb-5">
+          <div className="row my-4 d-flex justify-content-between mb-5">
+            <div className="col-md-6 col-md-4">
               <div className="healthcare-text-container">
-                <div className="malaya-education stroke-text mb-5">
-                  <h2>Education</h2>
+                <div className="information-technology information-technology-stoke-text">
+                  <h2>Information Technology</h2>
                 </div>
 
-                <p className="education-description text-center">
-                  VR Application for Universiti Malaya by
-                  <br /> Brewcode Technologies  
-                </p>
+                <h2 className="iformation-description">
+                  Vodafone Italia Collaborate App
+                </h2>
               </div>
             </div>
-            <div className="col-md-5">
-              <div className="socoter-img">
-                <img
-                  src="/images/vr-application-for-universiti-img.jpeg"
-                  alt="health care image"
-                  className="health-care-img"
-                />
-              </div>
+            <div className="col-md-5 mt-5">
+              <img
+                src="/images/vodafone-Italia-img.jpeg"
+                alt="vodafone image logo"
+                className="health-care-img"
+              />
             </div>
           </div>
 
           <div className="soctor-about-section">
             <div className="about-introduction">Introduction</div>
-            <div className="col-11">
+            <div className="col-12">
               <div className="about-content">
                 <h2>About Project</h2>
                 <p>
-                  Universiti Malaya aimed to enhance its educational offerings
-                  by incorporating advanced technologies to create more
-                  immersive and interactive learning environments. Recognizing
-                  the potential of virtual reality (VR) in education, Universiti
-                  Malaya partnered with Brewcode Technologies, known for its
-                  innovative digital solutions, to develop a comprehensive VR
-                  application tailored for their educational needs.
+                  Brewcode Technologies spearheaded a project for Vodafone,
+                  focusing on enhancing customer engagement through a tailored
+                  digital platform, integrating innovative features for improved
+                  user, interaction, and delivering a seamless online experience
+                  to drive Vodafone’s market growth.
                 </p>
               </div>
             </div>
@@ -70,13 +65,14 @@ const Index: React.FC = () => {
                     Problem Statement
                   </h2>
                   <p className="section-description">
-                    Universiti Malaya needed to enhance its digital presence
-                    with a modern, interactive website. Partnering with Brewcode
-                    Technologies, the challenge was to create a platform that
-                    reflected the university's prestige while offering intuitive
-                    navigation and robust functionality. Brewcode developed a
-                    user-friendly, visually appealing website to meet these
-                    diverse needs.
+                    The existing corporate communication infrastructure at
+                    Vodafone Italia lacks efficiency and flexibility, hindering
+                    effective collaboration among employees. Traditional methods
+                    of communication are fragmented and fail to meet the demands
+                    of modern business operations. There is a pressing need for
+                    a solution that streamlines corporate communication while
+                    ensuring seamless integration across diverse platforms and
+                    devices.
                   </p>
                 </div>
               </div>
@@ -88,18 +84,19 @@ const Index: React.FC = () => {
                     <img
                       src="/images/business-goal.svg"
                       className="business-goal-icon"
-                      alt=""
-                    />{" "}
+                      alt="business-goal icon"
+                    />
                     Business Goal
                   </h2>
                   <p className="section-description">
-                    Universiti Malaya aimed to enhance its online presence and
-                    user engagement by partnering with Brewcode Technologies to
-                    develop a modern, interactive website. The goal was to
-                    attract prospective students and global partners while
-                    providing streamlined access to resources for current users.
-                    This initiative sought to bolster the university’s
-                    reputation and support its educational mission.
+                    The business goal for Vodafone Italia is to optimize
+                    corporate communication through a sophisticated messaging
+                    application. This involves seamless integration with the
+                    BroadCloud® service delivery platform, enabling efficient
+                    collaboration across diverse devices and networks. The
+                    objective is to establish the Vodafone Italia Collaborate
+                    App as the leading solution for modernized and streamlined
+                    corporate communication.
                   </p>
                 </div>
               </div>
@@ -120,10 +117,10 @@ const Index: React.FC = () => {
                 <h2 className=" text-center"> Target Audience</h2>
 
                 <p className="text-center">
-                  Understanding these diverse requirements is vital for crafting
-                  a website that effectively meets their expectations
-                  <br /> and facilitates seamless interaction with the
-                  university's offerings.
+                  Vodafone’s target audience includes individual consumers and
+                  businesses, offering services like mobile<br/> connectivity,
+                  broadband, and IoT solutions to meet diverse communication
+                  needs.
                 </p>
               </div>
             </div>
@@ -132,7 +129,7 @@ const Index: React.FC = () => {
           <div className="row mb-4">
             <div className="col-md-4">
               <strong className="audience-list-heading genarl-padding">
-                Prospective Students
+              Corporate Professionals
               </strong>
             </div>
             <div className="col-md-8">
@@ -146,8 +143,29 @@ const Index: React.FC = () => {
                     />
 
                     <p>
-                      High school graduates and transfer students seeking
-                      undergraduate or postgraduate programs.
+                    Executives, managers, and employees in corporate settings who require efficient and secure communication tools.
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </div>
+          </div>
+          <div className="row mb-4">
+            <div className="col-md-4">
+              <strong className="audience-list-heading">Small and Medium<br/>Enterprises (SMEs)</strong>
+            </div>
+            <div className="col-md-8">
+              <li className="target-audience-item">
+                <div className="d-flex flex-column">
+                  <div className="d-flex">
+                    <img
+                      src="/images/list-page-arrow.svg"
+                      alt=""
+                      className="list-page-arrow-icon mt-2 "
+                    />
+
+                    <p>
+                    Business owners and employees in SMEs seeking cost-effective and scalable communication solutions to enhance productivity and collaboration.
                     </p>
                   </div>
                 </div>
@@ -157,7 +175,7 @@ const Index: React.FC = () => {
           <div className="row mb-4">
             <div className="col-md-4">
               <strong className="audience-list-heading">
-                Current Students
+              Remote Workers and<br/> Telecommuters
               </strong>
             </div>
             <div className="col-md-8">
@@ -171,8 +189,29 @@ const Index: React.FC = () => {
                     />
 
                     <p>
-                      Enrolled students requiring easy access to academic
-                      resources, schedules, and support services.
+                    Individuals working remotely or from home who rely on reliable communication platforms to stay connected with colleagues and clients.
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </div>
+          </div>
+          <div className="row mb-4">
+            <div className="col-md-4">
+              <strong className="audience-list-heading">IT Administrators</strong>
+            </div>
+            <div className="col-md-8">
+              <li className="target-audience-item">
+                <div className="d-flex flex-column">
+                  <div className="d-flex">
+                    <img
+                      src="/images/list-page-arrow.svg"
+                      alt=""
+                      className="list-page-arrow-icon mt-2 "
+                    />
+
+                    <p>
+                    Professionals responsible for managing corporate communication infrastructure and ensuring seamless integration with existing systems.
                     </p>
                   </div>
                 </div>
@@ -182,7 +221,7 @@ const Index: React.FC = () => {
           <div className="row mb-4">
             <div className="col-md-4">
               <strong className="audience-list-heading">
-                Faculty and Staff
+              Mobile Workforce
               </strong>
             </div>
             <div className="col-md-8">
@@ -196,54 +235,7 @@ const Index: React.FC = () => {
                     />
 
                     <p>
-                      University employees needing streamlined communication
-                      tools and resource access.
-                    </p>
-                  </div>
-                </div>
-              </li>
-            </div>
-          </div>
-          <div className="row mb-4">
-            <div className="col-md-4">
-              <strong className="audience-list-heading">Alumni</strong>
-            </div>
-            <div className="col-md-8">
-              <li className="target-audience-item">
-                <div className="d-flex flex-column">
-                  <div className="d-flex">
-                    <img
-                      src="/images/list-page-arrow.svg"
-                      alt=""
-                      className="list-page-arrow-icon mt-2 "
-                    />
-
-                    <p>
-                      Graduates interested in staying connected with the
-                      university community and alumni services.
-                    </p>
-                  </div>
-                </div>
-              </li>
-            </div>
-          </div>
-          <div className="row mb-4">
-            <div className="col-md-4">
-              <strong className="audience-list-heading">Global Partners</strong>
-            </div>
-            <div className="col-md-8">
-              <li className="target-audience-item">
-                <div className="d-flex flex-column">
-                  <div className="d-flex">
-                    <img
-                      src="/images/list-page-arrow.svg"
-                      alt=""
-                      className="list-page-arrow-icon mt-2 "
-                    />
-
-                    <p>
-                      Educational and research institutions looking to
-                      collaborate with Universiti Malaya.
+                    Field workers, sales representatives, and on-the-go professionals who need access to business communication tools while away from the office.
                     </p>
                   </div>
                 </div>
@@ -252,7 +244,9 @@ const Index: React.FC = () => {
           </div>
           <div className="row">
             <div className="col-md-4">
-              <strong className="audience-list-heading">General Public</strong>
+              <strong className="audience-list-heading">
+              Vodafone Italia<br/> Subscribers
+              </strong>
             </div>
             <div className="col-md-8">
               <li className="target-audience-item">
@@ -265,8 +259,7 @@ const Index: React.FC = () => {
                     />
 
                     <p>
-                      Individuals seeking information about the university’s
-                      programs, events, and achievements.
+                    Existing customers of Vodafone Italia looking to leverage their mobile services for enhanced corporate communication capabilities.
                     </p>
                   </div>
                 </div>
@@ -277,101 +270,73 @@ const Index: React.FC = () => {
       </div>
 
       <div className="discover-bg">
-        <div className="container">
-          <div className="soctor-about-section">
-            <div className="about-introduction">Gap In Market</div>
-            <div className="col-12">
-              <div className="about-content">
-                <div className="text-center">
-                  <img
-                    src="/images/discover.svg "
-                    className="business-goal-icon text-center"
-                    alt=""
-                  />
-                </div>
-                <h2 className=" text-center">Discover</h2>
-                <div className="col-12">
-                  <p className="text-center">
-                    We worked with different stakeholders to understand product,
-                    and a regular connect with them
-                    <br /> helped us understand user stories and needs.
-                  </p>
-                </div>
-
-                <div>
-                  <hr className="col-md-4 mx-auto" />
-                  <div className="col-12">
-                    <h2 className=" text-center">Gaps That We Identified</h2>
-                  </div>
-                </div>
-              </div>
-            </div>
-          </div>
-          <div className="row gap-that-container">
-            <div className="d-flex col-md-5 flex-column">
-              <div className="d-flex p-4">
-                <p>
-                  {" "}
-                  <span className="step-number">1</span>
-                </p>
-                <p className="gap-description">
-                  Outdated website design lacking modern, visually appealing
-                  elements.
-                </p>
-              </div>
-              <div className="d-flex p-4">
-                <p>
-                  {" "}
-                  <span className="step-number">2</span>
-                </p>
-                <p className="gap-description">
-                  Poor navigation structure making information difficult to
-                  find.
-                </p>
-              </div>
-              <div className="d-flex p-4">
-                <p>
-                  {" "}
-                  <span className="step-number">3</span>
-                </p>
-                <p className="gap-description">
-                  Limited mobile accessibility, leading to a subpar user
-                  experience on smartphones and tablets.
-                </p>
-              </div>
-            </div>
-            <div className="d-flex col-md-5 flex-column">
-              <div className="d-flex p-4">
-                <p>
-                  {" "}
-                  <span className="step-number">4</span>
-                </p>
-                <p className="gap-description">
-                  Inefficient access to academic resources and administrative
-                  information.
-                </p>
-              </div>
-              <div className="d-flex p-4">
-                <p>
-                  <span className="step-number">5</span>
-                </p>
-                <p className="gap-description">
-                  Lack of interactive features to enhance user engagement.
-                </p>
-              </div>
-              <div className="d-flex p-4">
-                <p>
-                  <span className="step-number">6</span>
-                </p>
-                <p className="gap-description">
-                  Insufficient global reach, failing to attract international
-                  students and partners.
-                </p>
-              </div>
+    <div className="container">
+      
+      <div className="soctor-about-section">
+        <div className="about-introduction">Gap In Market</div>
+        <div className="row">
+          <div className="col-12">
+            <div className="about-content text-center">
+              <img
+                src="/images/discover.svg"
+                className="business-goal-icon text-center"
+                alt=""
+              />
+              <h2 className="text-center">Discover</h2>
+              <p className="text-center">
+              In our product exploration, we discovered the Vodafone Italia Collaborate App, seamlessly integrating with BroadCloud® to<br/> unify communication across devices and networks, revolutionizing corporate messaging.
+              </p>
+              <hr className="col-md-4 mx-auto" />
+              <h2 className="text-center">Gaps That We Identified</h2>
             </div>
           </div>
         </div>
       </div>
+      
+      <div className="row gap-that-container">
+        <div className="col-md-6">
+          <div className="d-flex p-4">
+            <span className="step-number">1</span>
+            <p className="gap-description ml-3">
+            Existing communication tools lack integration, leading to inefficiencies and confusion among users.
+            </p>
+          </div>
+          <div className="d-flex p-4">
+            <span className="step-number">2</span>
+            <p className="gap-description ml-3">
+            Current solutions do not adequately support remote work and mobile communication needs, hindering productivity.
+            </p>
+          </div>
+          <div className="d-flex p-4">
+            <span className="step-number">3</span>
+            <p className="gap-description ml-3">
+            There is a lack of robust security features in place to protect sensitive corporate data and communications.
+            </p>
+          </div>
+        </div>
+        <div className="col-md-6">
+          <div className="d-flex p-4">
+            <span className="step-number">4</span>
+            <p className="gap-description ml-3">
+            The absence of advanced collaboration features hampers teamwork and decision-making processes within the organization.
+            </p>
+          </div>
+          <div className="d-flex p-4">
+            <span className="step-number">5</span>
+            <p className="gap-description ml-3">
+            Integrating communication tools with existing systems is cumbersome and time-consuming, causing delays and disruptions.
+            </p>
+          </div>
+          <div className="d-flex p-4">
+            <span className="step-number">6</span>
+            <p className="gap-description ml-3">
+            The current infrastructure does not scale effectively to accommodate growing business needs, limiting future expansion and adaptability.
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+</div>
       <div className="bg-black">
         <div className="container">
           <div className="soctor-about-section">
@@ -384,15 +349,16 @@ const Index: React.FC = () => {
                   Design thinking is a methodology that attempts to solve
                   complex problems in a creative and user-centric way. Core
                   features
-                  <br /> of the design thinking methodology include
+                  <br /> of the design thinking methodology include.
                 </p>
               </div>
             </div>
+           
           </div>
           <div className="soctor-about-section my-4">
             <div className="about-introduction">Process</div>
             <div className="process-image-container">
-            <img
+              <img
                 src="/images/discovery-design-delivery-img.png"
                 alt="Discovery, Design, and Delivery Process"
                 className="process-image"
@@ -400,7 +366,7 @@ const Index: React.FC = () => {
             </div>
           </div>
           <h2 className="text-center final-ui-screens">How It Works</h2>
-          {/* <div className="soctor-about-section">
+          <div className="soctor-about-section">
             <div className="about-introduction">Plan Of Action</div>
             <div className="row d-flex flex-wrap justify-content-center g-4">
               <div className="col-6">
@@ -411,15 +377,15 @@ const Index: React.FC = () => {
                 />
               </div>
             </div>
-          </div> */}
+          </div>
 
           <div>
-            <div className="col-12 py-5">
+            <div className="col-12">
               <h2 className="text-center my-5 final-ui-screens">
                 Final Ui Screens
               </h2>
             </div>
-            {/* <div className="row d-flex flex-wrap justify-content-center g-4 mb-5">
+            <div className="row d-flex flex-wrap justify-content-center g-4 mb-5">
               <div className="col-md-3">
                 <img
                   src="/images/soctor-register.png"
@@ -479,7 +445,7 @@ const Index: React.FC = () => {
                   className="process-image-design"
                 />
               </div>
-            </div> */}
+            </div>
           </div>
         </div>
       </div>

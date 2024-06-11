@@ -2,11 +2,11 @@ import Layout from "@component/components/layouts/layout";
 import Head from "next/head";
 import React from "react";
 
-const Index: React.FC = () => {
+const Soctor: React.FC = () => {
   return (
     <Layout>
       <Head>
-        <title>Soctor Healthcare</title>
+        <title>Soctor Healthcare | Brewcode Technology Private Limited</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <div className="bg-black py-5">
@@ -120,7 +120,7 @@ const Index: React.FC = () => {
 
                 <p className="text-center">
                   Below these groups are most at risk from self-medication due
-                  to reliance on unqualified sources and lack of access to
+                  to reliance on unqualified sources and lack of<br/> access to
                   reliable medical advice.
                 </p>
               </div>
@@ -288,7 +288,7 @@ const Index: React.FC = () => {
                     alt=""
                   />
                 </div>
-                <h2 className=" text-center">Descover</h2>
+                <h2 className="text-center">Discover</h2>
 
                 <p className="text-center">
                   We worked with different stakeholders to understand product,
@@ -504,4 +504,4 @@ const Index: React.FC = () => {
   );
 };
 
-export default Index;
+export default Soctor;

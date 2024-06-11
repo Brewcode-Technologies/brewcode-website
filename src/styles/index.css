@@ -2013,7 +2013,13 @@ footer {
   height: auto;
   margin-left: 6px;
   cursor: pointer;
+
 }
+
+/* .danika-solution-image-border{
+  border: 20px solid #373737;
+  border-radius:10px !important;
+} */
 .min-read-main {
   color: #099217;
   font-size: 1;
@@ -2759,8 +2765,8 @@ footer {
 
 .audience-list-heading {
   color: #ffffff;
-  font-family: "Lato";
-  font-size: 22px;
+  font-family: "Inter";
+  font-size: 20px;
   font-weight: 500;
 }
 
@@ -3029,6 +3035,18 @@ footer {
   list-style-type: none;
 
 }
+
+.email-text-container{
+
+  margin-top: -10px;
+  font-size: 14px;
+  font-family: "Inter";
+}
+.email-text{
+  text-decoration: none;
+  
+ 
+}
 /* Privacy Policy styles--------------------------------------------------End */
 
 
@@ -3197,12 +3215,15 @@ text-align: center;
 }
 
 .problem-statemt-icon{
-  width: 50px;
+  width: 45px;
+  height: 45px;
   margin-right: 15px;
 }
 .business-goal-icon{
-  width: 50px;
-  margin-right: 15px;
+  width: 45px;
+  height: 45px;
+  padding-right: 15px;
+
 }
 
 .email-text{
@@ -3211,12 +3232,20 @@ text-align: center;
 
 .list-page-arrow-icon{
   height: 12px;
-  margin-right: 5px;
+  margin-right: 15px;
+}
+
+.discover-bg-container{
+  position: absolute;
+}
+.discover-bg-icon{
+  width: 100px;
+
 }
 
 .image-icon{
-  width: 50px;
-  height: 50px;
+  width: 40px;
+ 
 }
 
 .our-history-heading{
