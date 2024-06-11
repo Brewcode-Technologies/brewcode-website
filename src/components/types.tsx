@@ -1,4 +1,3 @@
-
 export type Route =
   | "/"
   | "login"
@@ -25,10 +24,9 @@ export type Route =
   | "high-tech"
   | "vr-application"
   | "soctor-healthcare"
-  | "digital-transformation"
   | "dhanika-solutions"
   | "brewcode-meet"
-  | "vodafone-ialia-collaborate-app"
+  | "vodafone-idea"
   | "case-studies"
   | "our-work"
   | "contact-us"
@@ -37,20 +35,20 @@ export type Route =
   | "information-technology"
   | "at-t"
   | "universiti-malaya"
-  |"resource-planning"
-  |"industries"
-  |"automotive"
-  |"about-us"
-  |"cookie-policy"
-  |"privacy-policy"
-  |"terms-of-services"
+  | "resource-planning"
+  | "industries"
+  | "automotive"
+  | "about-us"
+  | "cookie-policy"
+  | "privacy-policy"
+  | "terms-of-services"
+  | "st-jude"
   | "ar-vr-development";
 
 export interface ReusableButtonProps {
   label: string;
   navigateTo: () => void;
 }
-
 
 export interface CaseStudy {
   id: number;

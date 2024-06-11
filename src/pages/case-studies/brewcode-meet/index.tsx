@@ -6,7 +6,7 @@ const Index: React.FC = () => {
   return (
     <Layout>
       <Head>
-        <title>Soctor Healthcare</title>
+      <title> Brewcode Meet | Brewcode Technology Private Limited</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <div className="bg-black py-5">
@@ -20,12 +20,11 @@ const Index: React.FC = () => {
                 <div className="information-technology information-technology-stoke-text mb-5">
                   <h2>Information Technology</h2>
                 </div>
-              
-                  <h2 className="iformation-description">
-                    Brewcode Meet – Setting New Standards in Enterprise
-                    <br /> Communication  
-                  </h2>
-             
+
+                <h2 className="iformation-description">
+                  Brewcode Meet – Setting New Standards in Enterprise
+                  <br /> Communication  
+                </h2>
               </div>
             </div>
             <div className="col-md-5">
@@ -43,7 +42,10 @@ const Index: React.FC = () => {
               <div className="about-content">
                 <h2>About Project</h2>
                 <p>
-                Brewcode Technologies took on the ambitious project of developing Brewcode Meet, an advanced enterprise meeting platform designed to cater to the growing needs for reliable digital communication in businesses.
+                  Brewcode Technologies took on the ambitious project of
+                  developing Brewcode Meet, an advanced enterprise meeting
+                  platform designed to cater to the growing needs for reliable
+                  digital communication in businesses.
                 </p>
               </div>
             </div>
@@ -55,17 +57,20 @@ const Index: React.FC = () => {
 
                 <div className="d-flex flex-column">
                   <h2 className="section-title mb-3">
-                  <img
+                    <img
                       src="/images/problem-statement.svg"
                       className="problem-statemt-icon"
                       alt=""
-                    />Problem Statement
+                    />
+                    Problem Statement
                   </h2>
                   <p className="section-description">
-                 <b> Device and Browser Compatibility:</b> Achieved universal compatibility through extensive testing and optimization.
+                    <b> Device and Browser Compatibility:</b> Achieved universal
+                    compatibility through extensive testing and optimization.
                   </p>
                   <p className="section-description">
-                  <b>Load Management:</b> Implemented dynamic scaling of backend resources to manage peak usage efficiently.
+                    <b>Load Management:</b> Implemented dynamic scaling of
+                    backend resources to manage peak usage efficiently.
                   </p>
                 </div>
               </div>
@@ -74,15 +79,23 @@ const Index: React.FC = () => {
               <div className="soctor-about-section">
                 <div className="d-flex flex-column">
                   <h2 className="section-title mb-3">
-                  <img
+                    <img
                       src="/images/business-goal.svg"
                       className="business-goal-icon"
                       alt=""
-                    /> Business Goal
+                    />{" "}
+                    Business Goal
                   </h2>
                   <p className="section-description">
-                  Business Goal for Brewcode Meet: “To establish Brewcode Meet as the premier enterprise communication platform that enhances collaboration and productivity by delivering a seamless, secure, and user-centric experience, thereby driving digital transformation and fostering a connected business environment.”
-This goal aligns with Brewcode Technologies’ dedication to innovation and excellence, aiming to set a new standard in enterprise communication solutions.
+                    Business Goal for Brewcode Meet: “To establish Brewcode Meet
+                    as the premier enterprise communication platform that
+                    enhances collaboration and productivity by delivering a
+                    seamless, secure, and user-centric experience, thereby
+                    driving digital transformation and fostering a connected
+                    business environment.” This goal aligns with Brewcode
+                    Technologies’ dedication to innovation and excellence,
+                    aiming to set a new standard in enterprise communication
+                    solutions.
                   </p>
                 </div>
               </div>
@@ -93,7 +106,7 @@ This goal aligns with Brewcode Technologies’ dedication to innovation and exce
             <div className="about-introduction">Audience</div>
             <div className="col-12">
               <div className="about-content">
-              <div className="image-icon-container">
+                <div className="image-icon-container">
                   <img
                     src="/images/target-audience-icon.svg"
                     alt="Target Audience icon"
@@ -103,9 +116,10 @@ This goal aligns with Brewcode Technologies’ dedication to innovation and exce
                 <h2 className=" text-center"> Target Audience</h2>
 
                 <p className="text-center">
-                  Below these groups are most at risk from self-medication due
-                  to reliance on unqualified sources and lack of access to
-                  reliable medical advice.
+                  Brewcode Meet targets businesses seeking advanced digital
+                  meeting solutions, including corporations,<br/>SMBs, and remote
+                  teams, as well as educational and healthcare sectors requiring
+                  reliable communication<br/> platforms.
                 </p>
               </div>
             </div>
@@ -122,7 +136,11 @@ This goal aligns with Brewcode Technologies’ dedication to innovation and exce
               <li className="target-audience-item">
                 <div className="d-flex flex-column">
                   <div className="d-flex">
-                  <img src="/images/list-page-arrow.svg" alt="" className="list-page-arrow-icon mt-2 "/>
+                    <img
+                      src="/images/list-page-arrow.svg"
+                      alt=""
+                      className="list-page-arrow-icon mt-2 "
+                    />
 
                     <p>
                       Organizations seeking to enhance internal communication
@@ -142,7 +160,11 @@ This goal aligns with Brewcode Technologies’ dedication to innovation and exce
               <li className="target-audience-item">
                 <div className="d-flex flex-column">
                   <div className="d-flex">
-                  <img src="/images/list-page-arrow.svg" alt="" className="list-page-arrow-icon mt-2 "/>
+                    <img
+                      src="/images/list-page-arrow.svg"
+                      alt=""
+                      className="list-page-arrow-icon mt-2 "
+                    />
 
                     <p>
                       Teams that operate remotely and require reliable tools for
@@ -164,7 +186,11 @@ This goal aligns with Brewcode Technologies’ dedication to innovation and exce
               <li className="target-audience-item">
                 <div className="d-flex flex-column">
                   <div className="d-flex">
-                  <img src="/images/list-page-arrow.svg" alt="" className="list-page-arrow-icon mt-2 "/>
+                    <img
+                      src="/images/list-page-arrow.svg"
+                      alt=""
+                      className="list-page-arrow-icon mt-2 "
+                    />
 
                     <p>
                       Schools and universities that need a platform for virtual
@@ -184,7 +210,11 @@ This goal aligns with Brewcode Technologies’ dedication to innovation and exce
               <li className="target-audience-item">
                 <div className="d-flex flex-column">
                   <div className="d-flex">
-                  <img src="/images/list-page-arrow.svg" alt="" className="list-page-arrow-icon mt-2 "/>
+                    <img
+                      src="/images/list-page-arrow.svg"
+                      alt=""
+                      className="list-page-arrow-icon mt-2 "
+                    />
 
                     <p>
                        IT professionals who require a secure and efficient means
@@ -206,7 +236,11 @@ This goal aligns with Brewcode Technologies’ dedication to innovation and exce
               <li className="target-audience-item">
                 <div className="d-flex flex-column">
                   <div className="d-flex">
-                  <img src="/images/list-page-arrow.svg" alt="" className="list-page-arrow-icon mt-2 "/>
+                    <img
+                      src="/images/list-page-arrow.svg"
+                      alt=""
+                      className="list-page-arrow-icon mt-2 "
+                    />
 
                     <p>
                       Individuals responsible for coordinating and overseeing
@@ -228,7 +262,11 @@ This goal aligns with Brewcode Technologies’ dedication to innovation and exce
               <li className="target-audience-item">
                 <div className="d-flex flex-column">
                   <div className="d-flex">
-                  <img src="/images/list-page-arrow.svg" alt="" className="list-page-arrow-icon mt-2 "/>
+                    <img
+                      src="/images/list-page-arrow.svg"
+                      alt=""
+                      className="list-page-arrow-icon mt-2 "
+                    />
 
                     <p>
                       Human resources departments that conduct virtual
@@ -249,14 +287,14 @@ This goal aligns with Brewcode Technologies’ dedication to innovation and exce
             <div className="about-introduction">Gap In Market</div>
             <div className="col-12">
               <div className="about-content">
-              <div className="text-center">
+                <div className="text-center">
                   <img
                     src="/images/discover.svg "
                     className="business-goal-icon text-center"
                     alt=""
                   />
                 </div>
-                <h2 className=" text-center">Descover</h2>
+                <h2 className=" text-center">Discover</h2>
                 <div className="col-12">
                   <p className="text-center">
                     We worked with different stakeholders to understand product,
@@ -365,8 +403,8 @@ This goal aligns with Brewcode Technologies’ dedication to innovation and exce
           <div className="soctor-about-section my-4">
             <div className="about-introduction">Process</div>
             <div className="process-image-container">
-              <img
-                 src="/images/process-image.jpg"
+            <img
+                src="/images/discovery-design-delivery-img.png"
                 alt="Discovery, Design, and Delivery Process"
                 className="process-image"
               />

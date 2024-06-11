@@ -1,5 +1,6 @@
 import { useRouter } from "next/router";
 import { Route } from "../types";
+import { current } from "@reduxjs/toolkit";
 
 export const routeMap: Record<Route, string> = {
   "/": "/",
@@ -29,13 +30,12 @@ export const routeMap: Record<Route, string> = {
   "vr-application": "/case-studies/vr-application",
   "information-technology": "/case-studies/information-technology",
   "soctor-healthcare": "/case-studies/soctor-healthcare",
-  "digital-transformation": "/case-studies/digital-transformation",
+  "st-jude": "/case-studies/st-jude",
   "dhanika-solutions": "/case-studies/dhanika-solutions",
   "brewcode-meet": "/case-studies/brewcode-meet",
-  "vodafone-ialia-collaborate-app":
-    "/case-studies/vodafone-ialia-collaborate-app",
   "universiti-malaya": "/case-studies/universiti-malaya",
-  soctor: "/case-studies/soctor",
+  soctor: "case-studies/soctor",
+
   "case-studies": "/case-studies",
   "ar-vr-development": "/services/ar-vr-development",
   "at-t": "/case-studies/at-t",
@@ -45,6 +45,7 @@ export const routeMap: Record<Route, string> = {
   "cookie-policy": "cookie-policy",
   "privacy-policy": "privacy-policy",
   "terms-of-services": "terms-of-services",
+  "vodafone-idea": "/case-studies/vodafone-idea",
   automotive: "/industries/automotive",
 };
 
@@ -53,14 +54,27 @@ const useNavigation = () => {
 
   const navigate = (route: Route) => {
     const path = routeMap[route];
+    console.log(path, "PATH");
     if (path) {
-      router.push(path);
+      router.replace(router.asPath + path);
     } else {
       console.error(`Invalid route: ${route}`);
     }
   };
 
-  return { navigate };
+  const navigateToButtonUrl = (buttonUrl: string) => {
+    if (buttonUrl) {
+      if (buttonUrl in routeMap) {
+        router.push(routeMap[buttonUrl as Route]);
+      } else {
+        console.error(`Invalid button URL: ${buttonUrl}`);
+      }
+    } else {
+      console.error(`Invalid button URL: ${buttonUrl}`);
+    }
+  };
+
+  return { navigate, navigateToButtonUrl };
 };
 
 export default useNavigation;

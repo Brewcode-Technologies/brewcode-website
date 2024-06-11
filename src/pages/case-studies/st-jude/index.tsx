@@ -6,33 +6,30 @@ const Index: React.FC = () => {
   return (
     <Layout>
       <Head>
-        <title>Soctor Healthcare</title>
+        <title> Digital Transformation of St. Jude India ChildCare Centres | Brewcode Technology Private Limited</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <div className="bg-black py-5">
         <div className="container py-5">
+          <div className="soctor-logo mb-2 col-5">
+            <img src="/images/svg/st-jude.svg" alt="st-jude  Logo" />
+          </div>
           <div className="row my-4 d-flex justify-content-between">
             <div className="col-md-6 col-md-4 mb-5">
-              <div className="soctor-logo d-flex text-center mb-5">
-                <img src="/images/svg/soctor.svg" alt="Soctor Logo" />
-              </div>
               <div className="healthcare-text-container">
                 <div className="reflect stroke-text mb-5">
-                  <h2> Information Techmology</h2>
+                  <h2>Healthcare</h2>
                 </div>
-                <div className="percentage-container">
-                  <div className="list-page-description">
-                    Brewcode Meet – Setting New Standards in Enterprise
-                    <br /> Communication  
-                  </div>
+                <div className="percentage-container text-white">
+                Digital Transformation of St. Jude India ChildCare Centres
                 </div>
               </div>
             </div>
             <div className="col-md-5">
               <div className="socoter-img">
                 <img
-                  src="/images/health-care-img.jpeg"
-                  alt="health care image"
+                  src="/images/st-jude-india-childCare.jpeg"
+                  alt="st jude india childCare image"
                   className="health-care-img"
                 />
               </div>
@@ -41,14 +38,11 @@ const Index: React.FC = () => {
 
           <div className="soctor-about-section">
             <div className="about-introduction">Introduction</div>
-            <div className="col-md-8">
+            <div className="col-12">
               <div className="about-content">
                 <h2>About Project</h2>
                 <p>
-                  Soctor helps in manage minor health problems like cold, cough,
-                  fever, loose motions and many more conditions with commonly
-                  available medicines using self-treatment advice developed by
-                  doctors. It's easy. It's free.
+                Brewcode proudly partnered with St. Jude India ChildCare Centres to drive their digital transformation by transitioning their .Net website to WordPress. Our team integrated the CCAvenue payment gateway to streamline donations, implemented SEO optimizations to boost online visibility, and developed a custom backup system to ensure data integrity. This project underscores Brewcode's commitment to leveraging technology for impactful social change.
                 </p>
               </div>
             </div>
@@ -60,17 +54,15 @@ const Index: React.FC = () => {
 
                 <div className="d-flex flex-column">
                   <h2 className="section-title mb-3">
-                    <span className="icon">📄</span> Problem Statement
+                    <img
+                      src="/images/problem-statement.svg"
+                      className="problem-statemt-icon"
+                      alt=""
+                    />
+                    Problem Statement
                   </h2>
                   <p className="section-description">
-                    Irresponsible self-medication is a significant issue in
-                    India, with 52% of individuals relying on previous
-                    experiences, unqualified neighborhood pharmacists, and
-                    online information, leading to serious health risks and
-                    contributing to antibiotic resistance. There is a clear need
-                    for a trusted, accessible platform to provide accurate,
-                    personalized medical advice to promote safe self-care and
-                    mitigate these risks.
+                  St. Jude India ChildCare Centres faced significant challenges with their existing .Net website, including limited scalability, a cumbersome donation process, and inadequate online visibility. Additionally, the lack of integrated SEO features and an unreliable backup system hampered their ability to attract and retain donors. In the broader market, many NGOs struggle with outdated websites that impede effective fundraising and outreach, highlighting a pressing need for modern, user-friendly digital solutions.
                   </p>
                 </div>
               </div>
@@ -79,16 +71,15 @@ const Index: React.FC = () => {
               <div className="soctor-about-section">
                 <div className="d-flex flex-column">
                   <h2 className="section-title mb-3">
-                    <span className="icon">🎯</span> Business Goal
+                    <img
+                      src="/images/business-goal.svg"
+                      className="business-goal-icon"
+                      alt=""
+                    />
+                    Business Goal
                   </h2>
                   <p className="section-description">
-                    Our business goal is to establish Soctor as the leading
-                    platform for safe and responsible self-medication. We aim to
-                    provide accurate, personalized medical advice and
-                    professional consultations to millions of users. By
-                    promoting educated and informed healthcare decisions, we
-                    seek to reduce health risks and combat antibiotic
-                    resistance.
+                  The primary business goal of this project was to enhance St. Jude India ChildCare Centres' digital infrastructure to support their mission more effectively. This involved transitioning their website to a scalable and user-friendly WordPress platform, integrating a seamless CCAvenue payment gateway for donations, and implementing robust SEO strategies to improve online visibility.
                   </p>
                 </div>
               </div>
@@ -99,13 +90,17 @@ const Index: React.FC = () => {
             <div className="about-introduction">Audience</div>
             <div className="col-12">
               <div className="about-content">
-                <span className="icon text-center">👥</span>
+                <div className="image-icon-container">
+                  <img
+                    src="/images/target-audience-icon.svg"
+                    alt="Target Audience icon"
+                    className="image-icon"
+                  />
+                </div>
                 <h2 className=" text-center"> Target Audience</h2>
 
                 <p className="text-center">
-                  Below these groups are most at risk from self-medication due
-                  to reliance on unqualified sources and lack of access to
-                  reliable medical advice.
+                St. Jude India ChildCare Centres’ digital transformation targets philanthropists and online donors, focusing<br/> on user-friendly donation processes and enhanced web presence for social impact.
                 </p>
               </div>
             </div>
@@ -114,28 +109,75 @@ const Index: React.FC = () => {
           <div className="row mb-4">
             <div className="col-md-3">
               <strong className="audience-list-heading genarl-padding">
-                General Public
+              Potential Donors
               </strong>
             </div>
             <div className="col-md-9">
               <li className="target-audience-item">
                 <div className="d-flex flex-column">
                   <div className="d-flex">
-                    <span className="icon">➡</span>
+                  <img src="/images/list-page-arrow.svg" alt="" className="list-page-arrow-icon mt-2 "/>
                     <p>
-                      Individuals who frequently self-medicate based on past
-                      experiences, advice from unqualified sources, or online
-                      information.
+                    Individuals and organizations looking to contribute to a worthy cause, seeking a seamless and secure online donation experience.
                     </p>
                   </div>
+               
+                </div>
+              </li>
+            </div>
+          </div>
+          <div className="row mb-4">
+            <div className="col-md-3">
+              <strong className="audience-list-heading">Existing Donors</strong>
+            </div>
+            <div className="col-md-9">
+              <li className="target-audience-item">
+                <div className="d-flex flex-column">
                   <div className="d-flex">
-                    <span className="icon">➡</span>
-
+                  <img src="/images/list-page-arrow.svg" alt="" className="list-page-arrow-icon mt-2 "/>
                     <p>
-                      People looking for reliable health information and
-                      guidance to manage common health issues safely.
+                    Current supporters who require a reliable and user-friendly platform to continue their contributions and stay informed about the organization's impact.
                     </p>
                   </div>
+                  
+                </div>
+              </li>
+            </div>
+          </div>
+          <div className="row mb-4">
+            <div className="col-md-3">
+              <strong className="audience-list-heading">
+              Volunteers and Supporters
+              </strong>
+            </div>
+            <div className="col-md-9">
+              <li className="target-audience-item">
+                <div className="d-flex flex-column">
+                  <div className="d-flex">
+                  <img src="/images/list-page-arrow.svg" alt="" className="list-page-arrow-icon mt-2 "/>
+                    <p>
+                    People interested in volunteering opportunities and updates about St. Jude India ChildCare Centres, who need easy access to information and engagement channels.
+                    </p>
+                  </div>
+                </div>
+              </li>
+            </div>
+          </div>
+          <div className="row mb-4">
+            <div className="col-md-3">
+              <strong className="audience-list-heading">Healthcare and Childcare<br/> Professionals</strong>
+            </div>
+            <div className="col-md-9">
+              <li className="target-audience-item">
+                <div className="d-flex flex-column">
+                  <div className="d-flex">
+                  
+                    <img src="/images/list-page-arrow.svg" alt="" className="list-page-arrow-icon mt-2 "/>
+                    <p>
+                    Professionals seeking collaboration opportunities and insights into the organization's work, requiring detailed and accessible information about initiatives and programs.
+                    </p>
+                  </div>
+                
                 </div>
               </li>
             </div>
@@ -148,113 +190,16 @@ const Index: React.FC = () => {
               <li className="target-audience-item">
                 <div className="d-flex flex-column">
                   <div className="d-flex">
-                    <span className="icon">➡</span>
+                  <img src="/images/list-page-arrow.svg" alt="" className="list-page-arrow-icon mt-2 "/>
                     <p>
-                      Individuals who frequently self-medicate based on past
-                      experiences, advice from unqualified sources, or online
-                      information.
-                    </p>
-                  </div>
-                  <div className="d-flex">
-                    <span className="icon">➡</span>
-
-                    <p>
-                      People looking for reliable health information and
-                      guidance to manage common health issues safely.
+                    Individuals interested in learning more about St. Jude India ChildCare Centres' mission and achievements, looking for engaging and informative content.
                     </p>
                   </div>
                 </div>
               </li>
             </div>
           </div>
-          <div className="row mb-4">
-            <div className="col-md-3">
-              <strong className="audience-list-heading">
-                Chronic Disease Patients
-              </strong>
-            </div>
-            <div className="col-md-9">
-              <li className="target-audience-item">
-                <div className="d-flex flex-column">
-                  <div className="d-flex">
-                    <span className="icon">➡</span>
-                    <p>
-                      Patients with chronic conditions who require ongoing
-                      medication management and often self-medicate to manage
-                      symptoms.
-                    </p>
-                  </div>
-                </div>
-              </li>
-            </div>
-          </div>
-          <div className="row mb-4">
-            <div className="col-md-3">
-              <strong className="audience-list-heading">Young Adults</strong>
-            </div>
-            <div className="col-md-9">
-              <li className="target-audience-item">
-                <div className="d-flex flex-column">
-                  <div className="d-flex">
-                    <span className="icon">➡</span>
-                    <p>
-                      Tech-savvy individuals who are comfortable using digital
-                      platforms for health information and advice.
-                    </p>
-                  </div>
-                  <div className="d-flex">
-                    <span className="icon">➡</span>
-
-                    <p>
-                      This group often turns to the internet for quick health
-                      solutions and may benefit from a reliable, personalized
-                      platform.
-                    </p>
-                  </div>
-                </div>
-              </li>
-            </div>
-          </div>
-          <div className="row mb-4">
-            <div className="col-md-3">
-              <strong className="audience-list-heading">Caregivers</strong>
-            </div>
-            <div className="col-md-9">
-              <li className="target-audience-item">
-                <div className="d-flex flex-column">
-                  <div className="d-flex">
-                    <span className="icon">➡</span>
-                    <p>
-                      Family members or caregivers responsible for the health
-                      and medication of others who need trustworthy advice to
-                      ensure safe practices.
-                    </p>
-                  </div>
-                </div>
-              </li>
-            </div>
-          </div>
-          <div className="row">
-            <div className="col-md-3">
-              <strong className="audience-list-heading">
-                Rural and Semi-Urban Population
-              </strong>
-            </div>
-            <div className="col-md-9">
-              <li className="target-audience-item">
-                <div className="d-flex flex-column">
-                  <div className="d-flex">
-                    <span className="icon">➡</span>
-                    <p>
-                      Communities with limited access to healthcare facilities
-                      and professionals, who often rely on local, unqualified
-                      pharmacists or online sources for medical advice.{" "}
-                    </p>
-                  </div>
-                </div>
-              </li>
-            </div>
-          </div>
+         
         </div>
       </div>
 
@@ -264,8 +209,14 @@ const Index: React.FC = () => {
             <div className="about-introduction">Gap In Market</div>
             <div className="col-12">
               <div className="about-content">
-                <span className="icon text-center">👥</span>
-                <h2 className=" text-center">Descover</h2>
+                <div className="text-center">
+                  <img
+                    src="/images/discover.svg "
+                    className="business-goal-icon text-center"
+                    alt=""
+                  />
+                </div>
+                <h2 className=" text-center">Discover</h2>
 
                 <p className="text-center">
                   We worked with different stakeholders to understand product,
@@ -289,8 +240,7 @@ const Index: React.FC = () => {
                   <span className="step-number">1</span>
                 </p>
                 <p className="gap-description">
-                  Lack of a trusted, user-friendly platform for accurate and
-                  personalized self-medication advice.
+                Existing .Net platform lacked scalability and was difficult to update.
                 </p>
               </div>
               <div className="d-flex p-4">
@@ -299,8 +249,7 @@ const Index: React.FC = () => {
                   <span className="step-number">2</span>
                 </p>
                 <p className="gap-description">
-                  Reliance on unqualified sources due to the unavailability of
-                  easily accessible professional medical guidance.
+                Lack of integrated SEO features resulted in low search engine rankings, reducing website reach and visibility.
                 </p>
               </div>
               <div className="d-flex p-4">
@@ -309,8 +258,7 @@ const Index: React.FC = () => {
                   <span className="step-number">3</span>
                 </p>
                 <p className="gap-description">
-                  Misuse and health risks stemming from improper
-                  self-medication.
+                Absence of a reliable backup system risked data loss and compromised data security.
                 </p>
               </div>
             </div>
@@ -321,8 +269,7 @@ const Index: React.FC = () => {
                   <span className="step-number">4</span>
                 </p>
                 <p className="gap-description">
-                  Insufficient regulation of online medical information.
-                </p>
+                Website lacked interactive features to keep donors informed and attract new supporters, limiting engagement.                </p>
               </div>
               <div className="d-flex p-4">
                 <p>
@@ -330,9 +277,16 @@ const Index: React.FC = () => {
                   <span className="step-number">5</span>
                 </p>
                 <p className="gap-description">
-                  Need for better integration of technology and healthcare to
-                  provide real-time, reliable, and tailored advice.
+                The donation system was cumbersome and not user-friendly, potentially leading to lost contributions.
                 </p>
+              </div>
+              <div className="d-flex p-4">
+                <p>
+                  {" "}
+                  <span className="step-number">6</span>
+                </p>
+                <p className="gap-description">
+                Website lacked interactive features to keep donors informed and attract new supporters, limiting engagement.                </p>
               </div>
             </div>
           </div>
@@ -344,7 +298,6 @@ const Index: React.FC = () => {
             <div className="about-introduction">Design Method</div>
             <div className="col-12">
               <div className="about-content">
-                <span className="icon text-center mb-1">👥</span>
                 <h2 className="text-center">Design Thinking Process</h2>
 
                 <p className="text-center">
@@ -359,9 +312,9 @@ const Index: React.FC = () => {
           <div className="soctor-about-section">
             <div className="about-introduction">Process</div>
             <div className="process-image-container">
-              <img
-                src="/images/process-image.jpg"
-                alt="Human"
+            <img
+                src="/images/discovery-design-delivery-img.png"
+                alt="Discovery, Design, and Delivery Process"
                 className="process-image"
               />
             </div>

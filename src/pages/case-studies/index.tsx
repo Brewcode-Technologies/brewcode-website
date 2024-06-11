@@ -52,7 +52,7 @@ const Index: React.FC = () => {
         "St. Jude India ChildCare Centres, a premier NGO based in Mumbai, embarked on a critical journey of digital transformation to amplify their online presence and enhance donation facilitation.",
       imageUrl: "/images/svg/st-jude.svg",
       buttonText: "#IT service ",
-      buttonUrl: routeMap["digital-transformation"],
+      buttonUrl: routeMap["st-jude"],
       read: ". 3 Min Read",
       colImageUrl: "/images/st-jude-india-childCare.jpeg",
       colImageName: "st jude india childCare image",
@@ -92,10 +92,10 @@ const Index: React.FC = () => {
         "The Vodafone Italia Collaborate App is a sophisticated business messaging application designed to streamline corporate communication.",
       imageUrl: "/images/svg/Vodafone.svg",
       buttonText: "#IT service ",
-      buttonUrl:routeMap["vodafone-ialia-collaborate-app"],
+      buttonUrl:routeMap["vodafone-idea"],
       read: ". 3 Min Read",
       colImageUrl: "/images/vodafone-Italia-img.jpeg",
-      colImageName: "vodafone italia collaborate app   image",
+      colImageName: "vodafone italia collaborate app image",
       size: "small",
     },
     {
@@ -126,6 +126,7 @@ const Index: React.FC = () => {
       size: "medium",
     },
   ];
+
   return (
     <Layout>
         <Head>
@@ -160,7 +161,7 @@ const Index: React.FC = () => {
             key={study.id}
             study={study}
             getClassName={getClassName}
-          />
+            />
         ))}
       </div>
       </div>

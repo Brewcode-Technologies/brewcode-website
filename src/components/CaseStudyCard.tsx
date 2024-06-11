@@ -8,8 +8,13 @@ interface CaseStudyCardProps {
   getClassName: (size: "small" | "medium" | "large") => string;
 }
 
+
 const CaseStudyCard: React.FC<CaseStudyCardProps> = ({ study, getClassName }) => {
   const router = useRouter();
+  const handleButtonClick = (buttonUrl: string) => {
+    router.push(buttonUrl);
+  };
+
 
   return (
     <div key={study.id} className="row" style={{ margin: "80px 0px" }}>
@@ -26,7 +31,8 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({ study, getClassName }) =>
         <button className="health-care-button">{study.buttonText}</button>
         <button
           className="view-detais-sotry-button mb-4"
-          onClick={() => router.push(study.buttonUrl)}
+          onClick={() => handleButtonClick(study.buttonUrl)}
+
         >
           VIEW DETAILED STORY
         </button>
