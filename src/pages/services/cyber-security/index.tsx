@@ -15,7 +15,7 @@ const Index: React.FC = () => {
         style={{
           position: "relative",
           width: "100%",
-          height: "100vh",
+          height: "70vh",
         }}
       >
         <div className="cloud-image p-4">
@@ -24,19 +24,19 @@ const Index: React.FC = () => {
             alt="cyber security image"
             fill
             className="mb-3 hero-cloud"
-            // style={{ objectFit: "cover" }}
+            style={{ objectFit: "cover" }}
           />
         </div>
         <div className="container">
           <div className="row">
-            <div className="d-flex flex-column justify-content-center cyber-security-services-content align-content-center">
+            <div className="hero-section-content">
               <h1 className="cyber-security-services-heading mb-3">
-                Cyber Security
+                Cyber Security Services
               </h1>
-              <h1 className="mb-5">Services</h1>
-              <p className="col-12 cyber-security-services-description">
+             
+              <p className="col-12 text-center">
                 Recover from a breach with speed and precision and get
-                <br /> back to business faster with CrowdStrike®️ Endpoint
+                <br /> back to business faster with Brewcode Endpoint
                 <br />
                 Recovery Services.
               </p>

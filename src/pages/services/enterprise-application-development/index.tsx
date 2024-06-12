@@ -22,7 +22,7 @@ const Index: React.FC = () => {
         style={{
           position: "relative",
           width: "100%",
-          height: "100vh",
+          height: "70vh",
         }}
       >
         <div className="cloud-image">
@@ -36,11 +36,12 @@ const Index: React.FC = () => {
         </div>
         <div className="container">
           <div className="row">
-            <div className="services-content">
+
+            <div className="hero-section-content">
               <h1 className="services-header">
                 Enterprise Application Development
               </h1>
-              <p className=" services-description text-center">
+              <p className="services-description text-center">
                 Enhancing business resilience by addressing the complexity{" "}
                 <br /> of the application landscape
               </p>

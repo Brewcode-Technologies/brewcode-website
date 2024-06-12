@@ -17,31 +17,35 @@ const Index: React.FC = () => {
         style={{
           position: "relative",
           width: "100%",
-          height: "100vh",
+          height: "70vh",
         }}
       >
-        <div className="cloud-image">
-          <img
-            alt="Comprehensive application services icon"
+        <div className="cloud-image p-4">
+          <Image
             src="/images/img.jpg"
+            alt="cyber security image"
+            fill
             className="mb-3 hero-cloud"
+            style={{ objectFit: "cover" }}
           />
         </div>
         <div className="container">
           <div className="row">
-            <div className="services-content">
-              <h1 className="services-header">
-                HumanizingDigital Experiences for <br />
-                Global Businesses{" "}
+            <div className="hero-section-content">
+              <h1 className="cyber-security-services-heading mb-4 text-center">
+              HumanizingDigital Experiences for <br />
+                Global Businesses
               </h1>
+
               <p className=" services-description text-center">
-                10+ Years of Helping Enterprises with <br />
+              10+ Years of Helping Enterprises with <br />
                 Product Strategy | UX Design | Front-End Engineering
               </p>
             </div>
           </div>
         </div>
       </div>
+     
       <div className="overview-main">
         <div className="container">
           <div className="row d-flex justify-content-between my-5">

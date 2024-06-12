@@ -230,15 +230,21 @@ const Index: React.FC = () => {
         />
        
       </Head>
-      <div className="e-commerce-hero-section">
+      <div className="ecommerce-hero-section">
         <div className="overlay-ar-vr">
           <div className="container">
-            <h1 className="e-commerce-short-heading mb-2">Looking For</h1>
-            <h1 className="e-commerce-heading mb-2">EXPERIENCED</h1>
-            <h1 className="e-commerce-short-heading">Team</h1>
+            <div className="row">
+            <div className="hero-section-content">
+            <h1 className="services-header mb-3 text-center">
+            Looking For Experienced Team
+              </h1>
+            
+            </div>
+            </div>
           </div>
         </div>
       </div>
+     
 
       <BlackLayer />
       <div className="case-studies-black-container container-fluid">

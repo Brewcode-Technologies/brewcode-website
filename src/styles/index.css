@@ -1248,14 +1248,7 @@ footer {
 
 /* serviecs section styles start--------------------------------------------- */
 
-.services-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  height: 100vh;
-  color: #ffffff;
-}
+
 
 .services-background-image {
   position: absolute;
@@ -1456,13 +1449,12 @@ footer {
   color: #ffffff;
 }
 
-.could-services-content {
+.hero-section-content {
   display: flex;
   flex-direction: column;
-  justify-content: flex-end;
-  align-items: flex-start;
-  height: 80vh;
-  padding-bottom: 50px;
+  justify-content: center;
+  align-items: center;
+  height: 70vh;
   color: #ffffff;
 }
 
@@ -1687,13 +1679,7 @@ footer {
   font-family: "Inter";
   font-weight: 600;
 }
-.cyber-security-services-content {
-  display: flex;
-  flex-direction: column;
-  justify-content: center;
-  height: 100vh;
-  color: #ffffff;
-}
+
 
 .cyber-security-services-description {
   font-size: 22px;
@@ -1990,7 +1976,7 @@ footer {
 }
 .case-studies-hero-section {
   width: 100%;
-  height: 100vh;
+  height: 70vh;
   background-image: url("/images/case-studies-hero-section-img.jpeg");
   background-position: center;
   background-size: cover;
@@ -2086,15 +2072,21 @@ footer {
 /* Ar VR styles----------------- */
 .ar-vr-hero-section {
   width: 100%;
-  height: 100vh;
+  height: 70vh;
   background-image: url("/images/ar-vr-hero-section-bg.jpeg");
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  text-align: center;
+ 
+}
+.ecommerce-hero-section {
+  width: 100%;
+  height: 70vh;
+  background-image: url("/images/img.jpg");
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+ 
 }
 
 .overlay-ar-vr {
@@ -2104,9 +2096,7 @@ footer {
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.4);
-  display: flex;
-  justify-content: center;
-  align-items: center;
+  
 }
 
 .ar-vr-heading {

@@ -4,6 +4,7 @@ import { IoMdArrowDropright } from "react-icons/io";
 
 import BlackLayer from "@component/components/blackLayer";
 import Head from "next/head";
+import Image from "next/image";
 
 interface ArVr {
   id: number;
@@ -206,18 +207,21 @@ const Index: React.FC = () => {
       </Head>
       <div className="ar-vr-hero-section">
         <div className="overlay-ar-vr">
-          <div className="container case-study-container">
-            <div className="case-study-content">
-              <h1 className="ar-vr-heading mb-5 text-center">
+          <div className="container">
+            <div className="row">
+            <div className="hero-section-content">
+              <h1 className="ar-vr-heading text-center mb-3">
                 AR/VR Development
               </h1>
               <p className="ar-vr-description">
                 Immersive AR/VR Solutions to Elevate Your Business
               </p>
             </div>
+            </div>
           </div>
         </div>
       </div>
+    
       <BlackLayer />
       <div className="case-studies-black-container container-fluid">
         <div className="container">

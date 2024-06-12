@@ -15,7 +15,7 @@ const Index: React.FC = () => {
         style={{
           position: "relative",
           width: "100%",
-          height: "100vh",
+          height: "70vh",
         }}
       >
         <div className="cloud-image cloud-services-image">
@@ -27,12 +27,12 @@ const Index: React.FC = () => {
             style={{ objectFit: "cover" }}
           />
         </div>
-        <div className="colud-content">
+      
           <div className="container">
             <div className="row">
-              <div className="could-services-content">
+              <div className="hero-section-content">
                 <h1 className="services-header">Could Services Platform</h1>
-                <p className="could-services-description">
+                <p className="text-center">
                   Increase agility, modernize SAP and enterprise applications,
                   <br /> and simplify operations with automation, expertise
                   <br /> and cloud-native services.
@@ -40,7 +40,7 @@ const Index: React.FC = () => {
               </div>
             </div>
           </div>
-        </div>
+    
       </div>
       <div className="dark-container pt-5">
         <div className="container">
