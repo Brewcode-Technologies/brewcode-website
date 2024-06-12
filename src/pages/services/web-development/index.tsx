@@ -17,20 +17,25 @@ const Index: React.FC = () => {
         style={{
           position: "relative",
           width: "100%",
-          height: "100vh",
+          height: "70vh",
         }}
       >
-        <div className="cloud-image">
-          <img
-            alt="Comprehensive application services icon"
+        <div className="cloud-image p-4">
+          <Image
             src="/images/img.jpg"
+            alt="cyber security image"
+            fill
             className="mb-3 hero-cloud"
+            style={{ objectFit: "cover" }}
           />
         </div>
         <div className="container">
           <div className="row">
-            <div className="services-content">
-              <h1 className="services-header">Responsive UI Development</h1>
+            <div className="hero-section-content">
+              <h1 className="cyber-security-services-heading mb-3">
+              Responsive UI Development
+              </h1>
+
               <p className=" services-description text-center">
                 Exhibit your digital footprint on various gadgets with a
                 Responsive
@@ -40,6 +45,7 @@ const Index: React.FC = () => {
           </div>
         </div>
       </div>
+    
 
       <div className="overview-main">
         <div className="container">

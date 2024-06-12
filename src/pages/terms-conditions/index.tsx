@@ -16,10 +16,10 @@ const Index: React.FC = () => {
         style={{
           position: "relative",
           width: "100%",
-          height: "100vh",
+          height: "70vh",
         }}
       >
-        <div className="cloud-image">
+     <div className="cloud-image">
           <img
             alt="Comprehensive application services icon"
             src="/images/insight-hero-image.jpg"
@@ -28,16 +28,20 @@ const Index: React.FC = () => {
         </div>
         <div className="container">
           <div className="row">
-            <div className="services-content">
-              <h1 className="services-header">Terms</h1>
+            <div className="hero-section-content">
+           
+              <h1 className="cyber-security-services-heading mb-3">
+              Terms
+              </h1>
+
               <p className="insights-description text-center">
               Terms of use for this website.
-
               </p>
             </div>
           </div>
         </div>
       </div>
+     
       <div className="dark-container py-5">
         <div className="container">
           <div className=" privacy-policy-container mb-5">

@@ -188,14 +188,15 @@ const Index: React.FC = () => {
         <title>Insights | Brewcode Technology Private Limited</title>
         <meta name="description" content="Description of your insights page" />
       </Head>
+
       <div
         style={{
           position: "relative",
           width: "100%",
-          height: "100vh",
+          height: "70vh",
         }}
       >
-        <div className="cloud-image">
+     <div className="cloud-image">
           <img
             alt="Comprehensive application services icon"
             src="/images/insight-hero-image.jpg"
@@ -204,8 +205,9 @@ const Index: React.FC = () => {
         </div>
         <div className="container">
           <div className="row">
-            <div className="services-content">
-              <h1 className="services-header">Insights</h1>
+            <div className="hero-section-content">
+           
+            <h1 className="services-header">Insights</h1>
               <p className="insights-description text-center">
                 We Believe The Exchange Of <br />
                 Knowledge Fuels Collective Growth
@@ -214,6 +216,7 @@ const Index: React.FC = () => {
           </div>
         </div>
       </div>
+     
       <div className="dark-container py-5">
         <div className="container">
           <div className="row">

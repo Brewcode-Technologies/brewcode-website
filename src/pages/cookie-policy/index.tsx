@@ -12,14 +12,15 @@ const Index: React.FC = () => {
           content="Learn about our cookie policy."
         />
       </Head>
+
       <div
         style={{
           position: "relative",
           width: "100%",
-          height: "100vh",
+          height: "70vh",
         }}
       >
-        <div className="cloud-image">
+     <div className="cloud-image">
           <img
             alt="Comprehensive application services icon"
             src="/images/insight-hero-image.jpg"
@@ -28,8 +29,12 @@ const Index: React.FC = () => {
         </div>
         <div className="container">
           <div className="row">
-            <div className="services-content">
-              <h1 className="services-header">COOKIE POLICY</h1>
+            <div className="hero-section-content">
+           
+              <h1 className="cyber-security-services-heading mb-3">
+              COOKIE POLICY
+              </h1>
+
               <p className="insights-description text-center">
               Please read our cookie policy.
               </p>
@@ -37,12 +42,13 @@ const Index: React.FC = () => {
           </div>
         </div>
       </div>
+    
       <div className="dark-container py-5">
         <div className="container">
           <div className=" privacy-policy-container mb-5">
             <h3 className="privacy-policy-heading">COOKIE POLICY</h3>
             <p className="privacy-policy-description">
-            Please read our cookie policy.
+           
             </p>
           </div>
        

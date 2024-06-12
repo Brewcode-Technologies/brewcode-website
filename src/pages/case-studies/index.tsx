@@ -134,9 +134,13 @@ const Index: React.FC = () => {
         <title>Case Studies | Brewcode Technology Private Limited</title>
         <meta name="description" content="Description of your Case Studies page" />
       </Head>
+     
       <div className="case-studies-hero-section">
-        <div className="overlay-case-studies">
-          <div className="container case-study-container">
+        <div className="overlay-ar-vr">
+          <div className="container">
+            <div className="row">
+            <div className="hero-section-content">
+         
             <div className="case-study-content">
               <h1 className="case-study-heading mb-5 text-center ">
                 Case Studies
@@ -149,11 +153,14 @@ const Index: React.FC = () => {
                 <br /> how to use technology as a powerful asset in
                 strengthening your business.
               </p>
+           
+          </div>
+            </div>
             </div>
           </div>
         </div>
       </div>
-      <BlackLayer />
+   
       <div className="case-studies-black-container container-fluid">
       <div className="container">
         {caseStudies.map((study) => (
