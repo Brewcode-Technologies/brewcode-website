@@ -2,9 +2,11 @@ import useNavigation, { routeMap } from "@component/components/customHooks/useNa
 import Layout from "@component/components/layouts/layout";
 import Head from "next/head";
 import Image from "next/image";
-import React from "react";
+import React, { useEffect, useState } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { useRouter } from "next/router";
+import BlogCard from "@component/components/BlogCard";
+import axios from "axios";
 
 interface Blog {
   id: number;
@@ -31,59 +33,68 @@ interface CaseStudy {
 }
 
 const Index: React.FC = () => {
+
+
+  const [blogs, setBlogs] = useState<Blog[]>([]);
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('https://api.rss2json.com/v1/api.json', {
+          params: {
+            rss_url: 'https://medium.com/feed/@brewcode',
+            api_key: 'zzwyppw74s0zayqrgvogmb6qm3fqwu7kuofye0gw',
+            count: 5
+          }
+        });
+
+        console.log('API Response:', response.data);
+
+        if (response.data.status !== 'ok') {
+          throw new Error(response.data.message);
+        }
+
+        const blogItems = response.data.items.map((item: any, index: number) => {
+          const imgMatch = item.description.match(/<img[^>]+src="([^">]+)"/);
+          const imgSrc = imgMatch ? imgMatch[1] : '';
+
+          // Format the date
+          const dateObj = new Date(item.pubDate);
+          const day = dateObj.getDate().toString().padStart(2, '0');
+          const month = (dateObj.getMonth() + 1).toString().padStart(2, '0');
+          const year = dateObj.getFullYear();
+          const hours = dateObj.getHours().toString().padStart(2, '0');
+          const minutes = dateObj.getMinutes().toString().padStart(2, '0');
+          const formattedDate = `${day}-${month}-${year}, ${hours}:${minutes}`;
+
+          return {
+            id: index,
+            title: item.title,
+            category: "Blogs",
+            description: item.description,
+            link: item.link,
+            img: imgSrc,
+            date: formattedDate,
+            imgAlt: item.title
+          };
+        });
+
+        setBlogs(blogItems);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+
   const router = useRouter();
 
   const handleButtonClick = (buttonUrl: string) => {
     router.push(buttonUrl);
   };
-  const blogs: Blog[] = [
-    {
-      id: 1,
-      title: "Exploring Alternative JavaScript Frameworks",
-      img: "/images/performance-optimized-framework.webp",
-      imgAlt: "Performance optimized JavaScript framework",
-      description:
-        "JavaScript frameworks have become an integral part of web development, empowering developers to build robust and efficient applications. Amongst these frameworks, React has emerged as the go-to choice for many developers due to its flexibility, performance, and the extensive community support it enjoys.",
-      category: "Blog",
-      date: "Apr 29, 2024",
-      link: "https://brewcode.medium.com/beyond-react-exploring-alternative-javascript-frameworks-4ff7d960dcc9",
-    },
-    {
-      id: 2,
-      title:
-        "Server Side Rendering vs Client Side Rendering: Unveiling the Key Differences",
-      img: "/images/server-side-rendering.webp",
-      imgAlt: "Server side rendering vs client side rendering",
-      description:
-        "Server-side rendering and client-side rendering are two prominent techniques used in web development to display content to users. Understanding the basics of rendering is essential to grasp the nuances of these approaches.",
-      category: "Blog",
-      date: "Feb 16, 2024",
-      link: "https://brewcode.medium.com/server-side-rendering-vs-client-side-rendering-unveiling-the-key-differences-d182d857cd77",
-    },
-    {
-      id: 3,
-      title:
-        "Optimizing Technology Strategies: Brewcode’s Guide to Microservices and Monolithic Architectures",
-      img: "/images/optimizing-technology.webp",
-      imgAlt: "Optimizing technology strategies",
-      date: "Dec 2, 2023",
-      description:
-        "Choosing between microservices and monolithic architectures involves weighing various factors, as each approach has distinct advantages and challenges. Below is an explanation of why organizations might favor microservices over monolithic architectures, and how Brewcode Technologies Private Limited (Brewcode) can assist in navigating these architectural choices.",
-      category: "Blog",
-      link: "https://brewcode.medium.com/optimizing-technology-strategies-brewcodes-guide-to-microservices-and-monolithic-architectures-2e51925b7456",
-    },
-    {
-      id: 4,
-      title: "Exploring AR Technologies: Use Cases and Benefits",
-      img: "/images/exploring-ar-technologies.webp",
-      imgAlt: "Exploring AR technologies",
-      description:
-        "Financial services are increasingly turning to generative AI to enhance security measures and drive higher value. In this interview series, we explore how AI is transforming the financial sector and the benefits it brings.",
-      category: "Blog",
-      date: "Nov 9, 2023",
-      link: "https://brewcode.medium.com/beyond-react-exploring-alternative-javascript-frameworks-4ff7d960dcc9",
-    },
-  ];
+  
 
   const caseStudies: CaseStudy[] = [
     {
@@ -224,40 +235,12 @@ const Index: React.FC = () => {
               <h2 className="chart-of-heading mb-2">Insights By Interests</h2>
             </div>
           </div>
-          <div>
-            <hr className="insights-line" />
-            {blogs.map((blog, index) => (
-              <a
-                key={blog.id}
-                href={blog.link}
-                target="_blank"
-                rel="noopener noreferrer"
-                className="blog-link"
-              >
-                <div>
-                  <div className="row">
-                    <div className="col-md-5">
-                      <img
-                        src={blog.img}
-                        alt={blog.imgAlt}
-                        className="insigts-image"
-                      />
-                    </div>
-
-                    <div className="col-md-7 my-auto">
-                      <p className="mb-4">{blog.date}</p>
-                      <h4 className="mb-5">{blog.title}</h4>
-                      <div className="d-flex flex-column">
-                        <span>{blog.category.toUpperCase()}</span>
-                        <span>BY AUTHOR BREWCODE</span>
-                      </div>
-                    </div>
-                  </div>
-                  <hr className="insights-line" />
-                </div>
-              </a>
-            ))}
-          </div>
+        
+        <div className="row">
+        {blogs.map((blog) => (
+          <BlogCard key={blog.id} blog={blog}  />
+        ))}
+      </div>
 
           <div className="row my-5">
             <div className="col-12">
