@@ -8,9 +8,9 @@ import useNavigation, {
   routeMap,
 } from "@component/components/customHooks/useNavigation";
 import Head from "next/head";
-import { useRouter } from "next/router";
 import { Route } from "next";
 import BlogCard from "@component/components/BlogCard";
+import axios from 'axios';
 
 interface Blog {
   id: number;
@@ -20,6 +20,7 @@ interface Blog {
   link: string;
   img: string;
   imgAlt: string;
+  date: string;
 }
 
 interface ClientLogo {
@@ -33,57 +34,66 @@ interface SolutionItem {
   href: Route;
 }
 
+
+
 const Index: React.FC = () => {
+
+  const [blog, setBlog] = useState<Blog[]>([]);
+
+
+  useEffect(() => {
+    const fetchData = async () => {
+      try {
+        const response = await axios.get('https://api.rss2json.com/v1/api.json', {
+          params: {
+            rss_url: 'https://medium.com/feed/@brewcode',
+            api_key: 'zzwyppw74s0zayqrgvogmb6qm3fqwu7kuofye0gw',
+            count: 5
+          }
+        });
+
+        console.log('API Response:', response.data);
+
+        if (response.data.status !== 'ok') {
+          throw new Error(response.data.message);
+        }
+
+        const blogItems = response.data.items.map((item: any, index: number) => {
+          const imgMatch = item.description.match(/<img[^>]+src="([^">]+)"/);
+          const imgSrc = imgMatch ? imgMatch[1] : '';
+
+          return {
+            id: index,
+            title: item.title,
+            category: "Blogs",
+            description: item.description,
+            link: item.link,
+            img: imgSrc,
+            date: item.pubDate,
+            imgAlt: item.title
+          };
+        });
+
+        setBlog(blogItems);
+      } catch (error) {
+        console.error('Error fetching data:', error);
+      }
+    };
+
+    fetchData();
+  }, []);
+
+
+
+
+
   const { navigate } = useNavigation();
   const [isBrowser, setIsBrowser] = useState<boolean>(false);
   useEffect(() => {
     setIsBrowser(true);
   }, []);
 
-  const blogs: Blog[] = [
-    {
-      id: 1,
-      title: "Exploring Alternative JavaScript Frameworks",
-      img: "/images/performance-optimized-framework.webp",
-      imgAlt: "Performance optimized JavaScript framework",
-      description:
-        "JavaScript frameworks have become an integral part of web development, empowering developers to build robust and efficient applications. Amongst these frameworks, React has emerged as the go-to choice for many developers due to its flexibility, performance, and the extensive community support it enjoys.",
-      category: "Blog",
-      link: "https://brewcode.medium.com/beyond-react-exploring-alternative-javascript-frameworks-4ff7d960dcc9",
-    },
-    {
-      id: 2,
-      title:
-        "Server Side Rendering vs Client Side Rendering: Unveiling the Key Differences",
-      img: "/images/server-side-rendering.webp",
-      imgAlt: "Server side rendering vs client side rendering",
-      description:
-        "Server-side rendering and client-side rendering are two prominent techniques used in web development to display content to users. Understanding the basics of rendering is essential to grasp the nuances of these approaches.",
-      category: "Blog",
-      link: "https://brewcode.medium.com/server-side-rendering-vs-client-side-rendering-unveiling-the-key-differences-d182d857cd77",
-    },
-    {
-      id: 3,
-      title:
-        "Optimizing Technology Strategies: Brewcode’s Guide to Microservices and Monolithic Architectures",
-      img: "/images/optimizing-technology.webp",
-      imgAlt: "Optimizing technology strategies",
-      description:
-        "Choosing between microservices and monolithic architectures involves weighing various factors, as each approach has distinct advantages and challenges. Below is an explanation of why organizations might favor microservices over monolithic architectures, and how Brewcode Technologies Private Limited (Brewcode) can assist in navigating these architectural choices.",
-      category: "Blog",
-      link: "https://brewcode.medium.com/optimizing-technology-strategies-brewcodes-guide-to-microservices-and-monolithic-architectures-2e51925b7456",
-    },
-    {
-      id: 4,
-      title: "Exploring AR Technologies: Use Cases and Benefits",
-      img: "/images/exploring-ar-technologies.webp",
-      imgAlt: "Exploring AR technologies",
-      description:
-        "Financial services are increasingly turning to generative AI to enhance security measures and drive higher value. In this interview series, we explore how AI is transforming the financial sector and the benefits it brings.",
-      category: "Blog",
-      link: "https://brewcode.medium.com/beyond-react-exploring-alternative-javascript-frameworks-4ff7d960dcc9",
-    },
-  ];
+ 
 
   const solutions: SolutionItem[] = [
     {
@@ -186,7 +196,8 @@ const Index: React.FC = () => {
         <title>Brewcode Technology Private Limited</title>
         <meta name="description" content="Description of your home page" />
       </Head>
-
+      <div>
+    </div>
       <div className="hero-image">
         <video
           src="./videos/hero-section-video.mp4"
@@ -425,9 +436,10 @@ const Index: React.FC = () => {
               accelerate your growth
             </p>
           </div>
-          <div className="row my-5">
-      {blogs.map((blog) => (
-        <BlogCard key={blog.id} blog={blog} />
+       
+          <div className="row">
+      {blog.map((blog) => (
+        <BlogCard key={blog.id} blog={blog} layout="home-page" />
       ))}
     </div>
         

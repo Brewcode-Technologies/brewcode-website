@@ -739,8 +739,8 @@ video {
 .insights-description {
   color: #ffffff;
   font-family: "Lato";
-  font-size: 20px;
-  margin-top: 20px;
+  font-size: 14px;
+  margin-bottom: 50px;
   word-spacing: 4px;
 }
 
@@ -855,6 +855,10 @@ video {
 
 }
 
+.blog-date {
+  margin-bottom: 1rem;
+}
+
 .insight-card-text{
   font-size: 12px;
   padding-top: 10px;
@@ -927,16 +931,20 @@ margin-bottom: 20px;
  
 }
 .insight-card {
-  background-color: #151515;
-  height: 330px;
+  background-color: #151515 !important;
+  height: 330px !important;
   color: #ffffff;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  overflow: hidden;
+  margin-top: 30px;
 }
 
 .insight-card-link {
-  text-decoration: none;
+  display: flex;
+  flex-direction: column;
+  height: 100%;
 }
 
 .insight-card-description {
@@ -986,10 +994,53 @@ margin-bottom: 20px;
 }
 
 .client-logo-card {
+ 
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end !important;
   align-items: center;
+}
+
+@media (max-width: 768px) {
+  .clients-section {
+    padding: 1rem 0;
+  }
+
+  .clients-heading {
+    font-size: 4.5rem;
+  }
+
+  .clients-subtitle {
+    font-size: 2rem;
+  }
+
+  .client-logo-card {
+    margin-bottom: 1rem;
+  }
+}
+
+@media (max-width: 576px) {
+  .client-logo-card {
+    flex: 0 0 100%;
+    max-width: 100%;
+  }
+
+  .clients-heading {
+    text-align: center;
+  }
+
+  .clients-subtitle {
+    text-align: center;
+  }
+}
+
+@media (max-width: 600px) {
+  .client-logo-card {
+    display: flex;
+    justify-content: center !important;
+    align-items: center !important;
+    margin-bottom: 1rem;
+  }
 }
 
 .logo-wrapper {
