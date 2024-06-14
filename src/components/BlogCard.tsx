@@ -34,12 +34,12 @@ const BlogCard: React.FC<BlogCardProps> = ({ blog, layout = 'insight-page' }) =>
               <img
                 src={blog.img}
                 alt={blog.imgAlt}
-                className="insigts-image"
+                className="insigts-image mb-2"
               />
             </div>
             <div className="col-md-7 d-flex flex-column justify-content-between" >
              <div className="d-flex flex-column">
-             <p className="mb-4" >{blog.date}</p>
+             <p className="mb-4 blog-date" >{blog.date}</p>
               <h4 className="mb-5">{blog.title}</h4>
              </div>
               <div className="d-flex flex-column">
@@ -55,7 +55,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ blog, layout = 'insight-page' }) =>
   } else if (layout === 'home-page') {
     return (
       <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-        <div className="card insight-card">
+        <div className=" insight-card">
           <Link href={blog.link} passHref target='_blank' className='blog-link'>
             <div className="insight-card-link">
               <div className="card-body mb-3">
