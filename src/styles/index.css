@@ -1909,7 +1909,7 @@ footer {
 .form-control {
   background-color: transparent;
   color: #fff;
-  border-radius: 0;
+  border-radius: 0 !important;
   border-bottom: 1px solid #a2834b !important;
 }
 
