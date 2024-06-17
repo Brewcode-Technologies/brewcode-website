@@ -38,7 +38,7 @@ export type Route =
   | "resource-planning"
   | "industries"
   | "automotive"
-  | "about-us"
+  // | "about-us"
   | "cookie-policy"
   | "privacy-policy"
   | "terms-of-services"

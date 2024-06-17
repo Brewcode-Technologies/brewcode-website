@@ -41,7 +41,7 @@ export const routeMap: Record<Route, string> = {
   "at-t": "/case-studies/at-t",
   "contact-us": "/contact-us",
   industries: "/industries",
-  "about-us": "about-us",
+  // "about-us": "about-us",
   "cookie-policy": "cookie-policy",
   "privacy-policy": "privacy-policy",
   "terms-of-services": "terms-of-services",

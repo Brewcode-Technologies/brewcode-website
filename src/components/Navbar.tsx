@@ -150,7 +150,7 @@ const Header: React.FC<HeaderProps> = () => {
               <Link
                 className="nav-link active"
                 aria-current="page"
-                href={routeMap["about-us"]}
+                href='/about-us'
                 passHref
               >
                 About Us
