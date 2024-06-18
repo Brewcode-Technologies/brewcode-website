@@ -1,0 +1,149 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+
+/* Hero section home pate Responsive styles start */
+@media (min-width: 1200px) {
+    .hero-section-heading {
+      font-size: 5rem;
+      /* padding-top: 60px; */
+    }
+    .hero-description {
+        font-size: 14px;
+        padding: 0px 14px;
+    }
+  }
+  
+  @media (max-width: 768px) {
+    .hero-section-heading {
+      font-size: 36px;
+    }
+  }
+  
+  @media (max-width: 576px) {
+    .hero-section-heading {
+        font-size: 54px;
+        line-height: 71px;
+    }
+
+    .highlight{
+        font-size: 14px;
+    }
+    .social-media-icons-main{
+        margin-top: 20px;
+    }
+
+    .hero-title{
+        margin-bottom: 10px;
+    }
+  }
+/* Hero section home pate Responsive styles End */
+
+/* .about-heading {
+    font-size: 2rem;
+    text-align: center;
+  }
+  
+  .about-content {
+    text-align: center;
+  }
+  
+  .about-description,
+  .who-about-details {
+    font-size: 1rem;
+  }
+  
+  .about-explore-btn {
+    margin-top: 1rem;
+  } */
+  
+  @media (max-width: 576px) {
+    .about-heading,
+    .innovation-heading
+    .clients-heading {
+        font-size: 3.375rem;
+    }
+  
+    .about-content {
+      text-align: left;
+    }
+  
+    .who-about-details{
+      font-size: 0.625rem !important;
+    }
+  
+    .about-explore-btn {
+      margin-top: 2rem;
+    }
+
+    .innovation-step-border-lined {
+    border: none;
+      }
+
+ 
+  }
+  
+
+  
+
+  /* solution hero section responsive styles start */
+  @media (max-width: 576px) {
+    .solutions-heading,
+    .industries-heading {
+        font-size: 3.4rem
+    }
+
+    .solutions-description
+    .insights-description{
+        font-size: 0.75rem !important;
+    }
+    
+    
+      .our-solution-link {
+        display: flex;
+        flex-direction: column;
+        width: 100%;
+      }
+  .solutions-list{
+    width: 100%;
+    display: flex !important;
+    justify-content: center !important;
+    align-items: center !important;
+  }
+  .solutions-item-section{
+    width: 100% !important;
+    
+    
+  }
+  
+}
+
+  /* solution hero section responsive styles End */
+
+
+  @media (max-width: 576px) {
+    .client-logo-card {
+      flex: 0 0 100%;
+      max-width: 100%;
+    }
+  
+    .clients-heading {
+      text-align: center;
+    }
+  
+    .clients-subtitle {
+      text-align: center;
+    }
+  }
+  
+  @media (max-width: 600px) {
+    .client-logo-card {
+      display: flex;
+      justify-content: center !important;
+      align-items: center !important;
+      margin-bottom: 1rem;
+    }
+  }

@@ -260,101 +260,100 @@ const Index: React.FC = () => {
         </div>
       </div>
       <section className="about-section">
-  <div className="container my-5">
-    <div className="row">
-      <div className="col-12 col-md-6 mb-4 mb-md-0">
-        <h2 className="about-heading mb-5">Who We Are</h2>
-
-        <div className="about-content d-flex flex-column">
-          <p className="about-description mb-5">
-            We Create Unique Enhanced
-            <br /> Experience In
-            <span className="brewcode-link">Brewcode</span>
-          </p>
-          <p className="who-about-details mb-4">
-            Working with Brewcode involves willingness to offer the best
-            immersion
-            <br /> to clients and audiences but also investing in smart
-            solutions to
-            <br /> reduce costs when it comes to finding flexible
-            solutions to refine and
-            <br /> adapt the brand message in different contexts.
-          </p>
-          <div className="d-flex justify-content-start">
-            <button type="button" className="about-explore-btn btn btn-primary">
-              Explore
-            </button>
-          </div>
+      <div className="container my-5">
+  <div className="row">
+    <div className="col-12 col-md-6 mb-4 mb-md-0">
+      <h2 className="about-heading mb-5">Who We Are</h2>
+      <div className="about-content d-flex flex-column">
+        <p className="about-description mb-5">
+          We Create Unique Enhanced
+          <br /> Experience In
+          <span className="brewcode-link">Brewcode</span>
+        </p>
+        <p className="who-about-details mb-4">
+          Working with Brewcode involves willingness to offer the best
+          immersion
+          <br /> to clients and audiences but also investing in smart
+          solutions to
+          <br /> reduce costs when it comes to finding flexible
+          solutions to refine and
+          <br /> adapt the brand message in different contexts.
+        </p>
+        <div className="d-flex justify-content-start">
+          <button type="button" className="about-explore-btn btn btn-primary">
+            Explore
+          </button>
         </div>
       </div>
+    </div>
+    <div className="col-12 col-md-6 d-flex justify-content-center justify-content-md-end">
+      <img
+        src="/images/services-img.png"
+        width="300"
+        height="300"
+        alt="about image"
+        className="about-image img-fluid w-75"
+      />
+    </div>
+  </div>
+</div>
 
-      <div className="col-12 col-md-6 d-flex justify-content-center justify-content-md-end">
-        <Image
-          src="/images/services-img.png"
-          width={300}
-          height={300}
-          objectFit="cover"
-          alt="about image"
-          className="about-image img-fluid w-75"
-        />
+</section>
+
+
+<section className="solutions-section">
+  <div className="container my-5">
+    <div className="row">
+      <div className="col-12">
+        <h1 className="solutions-heading mb-5">Our Solutions</h1>
+        <p className="solutions-description">
+          Design and deliver new digital experiences, revenue streams, and
+          business models to <br />
+          meet rising customer expectations and accelerate your growth
+        </p>
+      </div>
+      <div className="row d-flex justify-content-between solutions-list mt-2" >
+        {solutions.map((item, index) => (
+          <div
+            className="col-12 col-md-6 col-lg-4 mt-3 solutions-item-section"
+            key={index} 
+          >
+            <div className="d-flex flex-column mb-3 solutions-item">
+              {item.href !== undefined && item.href !== null ? (
+                item.href in routeMap ? (
+                  <Link
+                    href={routeMap[item.href as keyof typeof routeMap]}
+                    passHref
+                    className="our-solution-link"
+                  >
+                    <div className="d-flex justify-content-between border-bottom pb-1 solutions-item-header">
+                      <h1 className="solutions-title">{item.title}</h1>
+                      <i className={`bi ${item.icon} mt-0`}></i>
+                    </div>
+                  </Link>
+                ) : (
+                  <p>Route {item.href} not found in routeMap</p>
+                )
+              ) : (
+                <p>item.href is undefined or null</p>
+              )}
+            </div>
+          </div>
+        ))}
       </div>
     </div>
   </div>
 </section>
 
 
-      <section className="solutions-section">
-        <div className="container my-5">
-          <div className="row">
-            <div className="col-12">
-              <h1 className="solutions-heading mb-5">Our Solutions</h1>
-              <p className="solutions-description">
-                Design and deliver new digital experiences, revenue streams, and
-                business models to <br />
-                meet rising customer expectations and accelerate your growth
-              </p>
-            </div>
-            <div className="row d-flex justify-content-between solutions-list mt-2">
-              {solutions.map((item, index) => (
-                <div
-                  className="col-12 col-md-6 col-lg-4 mt-3 solutions-item-section"
-                  key={index}
-                >
-                  <div className="d-flex flex-column mb-3 solutions-item">
-                    {item.href !== undefined && item.href !== null ? (
-                      item.href in routeMap ? (
-                        <Link
-                          href={routeMap[item.href as keyof typeof routeMap]}
-                          passHref
-                          className="our-solution-link"
-                        >
-                          <div className="d-flex justify-content-between border-bottom pb-1 solutions-item-header">
-                            <h1 className="solutions-title">{item.title}</h1>
-                            <i className={`bi ${item.icon} mt-0`}></i>
-                          </div>
-                        </Link>
-                      ) : (
-                        <p>Route {item.href} not found in routeMap</p>
-                      )
-                    ) : (
-                      <p>item.href is undefined or null</p>
-                    )}
-                  </div>
-                </div>
-              ))}
-            </div>
-          </div>
-        </div>
-      </section>
-
       <section className="industries-section">
         <div className="container my-5">
           <div className="row">
             <div className="col-12">
-              <h1 className="industries-heading industries-heading">
+              <h1 className="industries-heading">
                 Industries We Serve
               </h1>
-              <p className="  industries-description pt-2">
+              <p className="industries-description pt-2">
                 Design and deliver new digital experiences, revenue streams and
                 business models to
                 <br /> meet rising customer expectations and accelerate your

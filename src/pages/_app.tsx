@@ -8,8 +8,11 @@ import "swiper/css/bundle";
 import "../styles/index.css";
 import Loader from "@component/components/Loader";
 import GoogleAnalytics from "@component/components/GoogleAnalytics"; 
+import { useState } from "react";
 
 function MyApp({ Component, pageProps }: AppProps) {
+  const [isLoading, setIsLoading] = useState(true);
+
   return (
     <Provider store={store}>
       <Loader />

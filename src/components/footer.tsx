@@ -8,8 +8,8 @@ const Footer: React.FC = () => {
   return (
     <footer>
       <div className="container">
-        <div className="row d-flex justify-content-between mb-5">
-          <div className="col-4 col-md-3 col-lg-1 align-self-center">
+        <div className="row d-flex justify-content-between mb-5" >
+          <div className="col-4 col-md-3 col-lg-1 align-self-center" >
             <Link href="/" passHref>
               <Image
                 src="/images/svg/brewcode_logo_svg.svg"
@@ -33,13 +33,7 @@ const Footer: React.FC = () => {
 
         <div className="d-flex justify-content-center align-items-center">
           <div className="flex-footer-icons">
-            <Link href={routeMap["/"]} passHref>
-              <ImageIcon
-                src="/images/svg/facebook_svg.svg"
-                alt=" facebook icon"
-                className="footer-icon"
-              />
-            </Link>
+          
             <Link href="https://x.com/ibrewcode" target="_blank">
               <ImageIcon
                 src="/images/svg/x_svg.svg"
@@ -48,13 +42,7 @@ const Footer: React.FC = () => {
               />
             </Link>
 
-            <Link href="/">
-              <ImageIcon
-                src="/images/svg/instagram_svg.svg"
-                alt="icon"
-                className="footer-icon"
-              />
-            </Link>
+          
             <Link href="https://www.linkedin.com/company/brewcode/" target="_blank">
               <ImageIcon
                 src="/images/svg/LinkedIn_svg.svg"
@@ -63,6 +51,17 @@ const Footer: React.FC = () => {
                 
               />
             </Link>
+            <Link
+                href="https://brewcode.medium.com/"
+                target="_blank"
+                passHref
+              >
+                <ImageIcon
+                  src="/images/svg/logo-blog.svg"
+                  alt="blogger-icon"
+                  className="footer-icon"
+                />
+              </Link>
           </div>
         </div>
         <div className="container">

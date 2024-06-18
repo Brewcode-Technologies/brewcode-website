@@ -207,20 +207,16 @@ video {
 }
 .solutions-heading,
 .insights-heading,
-.clients-heading {
+.clients-heading,
+.industries-heading,
+.innovation-heading{
   text-align: left;
-  font-size: 70px;
+  font-size:  4.375rem;
   color: #ffffff;
   font-weight: 700;
   font-family: "Inter" !important;
 }
-.solutions-heading {
-  text-align: left;
-  font-size: 70px;
-  color: #ffffff;
-  font-weight: 700;
-  font-family: "Inter" !important;
-}
+
 
 .bg-color-blind {
   /* background-color: red !important; */
@@ -234,28 +230,7 @@ video {
   margin-top: -10px;
 }
 
-@media (max-width: 1200px) {
-  .hero-section-heading {
-    font-size: 50px;
-    /* padding-top: 60px; */
-  }
-  .hero-description {
-    font-size: 16px;
-    padding: 0px;
-  }
-}
 
-@media (max-width: 768px) {
-  .hero-section-heading {
-    font-size: 36px;
-  }
-}
-
-@media (max-width: 576px) {
-  .hero-section-heading {
-    font-size: 30px;
-  }
-}
 
 .hero-section {
   display: flex;
@@ -435,7 +410,7 @@ video {
 }
 .solutions-description {
   font-family: "Inter";
-  font-size: 12px;
+  font-size: 0.75rem;
   color: #ffffff;
 }
 
@@ -468,7 +443,7 @@ video {
 .about-explore-btn {
   width: 120px;
   height: 40px;
-  background-color: #000;
+  background-color: #000 !important;
   color: #ffffff;
   border: none;
   border-radius: 4px;
@@ -516,10 +491,10 @@ video {
 
 .our-solution-description,
 .industries-description,
-.innovation-description {
+.innovation-description{
   color: #ffffff;
   font-family: "Inter";
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 .bi-arrow-up-right {
@@ -680,7 +655,7 @@ video {
 }
 .innovation-sub-heading {
   color: #ffffff;
-  font-size: 24px;
+  font-size: 1.5rem;
   font-family: "Inter";
   font-weight: 500;
 }
@@ -1019,29 +994,7 @@ margin-bottom: 20px;
   }
 }
 
-@media (max-width: 576px) {
-  .client-logo-card {
-    flex: 0 0 100%;
-    max-width: 100%;
-  }
 
-  .clients-heading {
-    text-align: center;
-  }
-
-  .clients-subtitle {
-    text-align: center;
-  }
-}
-
-@media (max-width: 600px) {
-  .client-logo-card {
-    display: flex;
-    justify-content: center !important;
-    align-items: center !important;
-    margin-bottom: 1rem;
-  }
-}
 
 .logo-wrapper {
   width: 34px;
@@ -1141,6 +1094,7 @@ footer {
   .footer-icon {
     width: 50px;
     height: 50px;
+   
   }
   .footer-link,
   .footer-link-policy {
@@ -1160,13 +1114,14 @@ footer {
   width: 40px !important;
   height: auto !important;
   margin-bottom: 10px;
+  margin-right: 20px;
   cursor: pointer;
 }
 
 .flex-footer-icons {
   display: flex !important;
   justify-content: space-between;
-  width: 280px;
+
   margin: 40px 0px 20px 0px;
 }
 
@@ -1913,6 +1868,9 @@ footer {
   border-bottom: 1px solid #a2834b !important;
 }
 
+.robatic-heading{
+  line-height: 34px;
+}
 .form-control::placeholder {
   color: #ccc;
 }
@@ -2443,6 +2401,8 @@ footer {
     transform: rotate(360deg);
   }
 }
+
+
 
 .url-link {
   text-decoration: none;
