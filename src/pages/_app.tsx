@@ -6,6 +6,7 @@ import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "swiper/css/bundle";
 import "../styles/index.css";
+import "../styles/ResponsiveStyles.css";
 import Loader from "@component/components/Loader";
 import GoogleAnalytics from "@component/components/GoogleAnalytics"; 
 import { useEffect, useState } from "react";
