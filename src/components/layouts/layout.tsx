@@ -1,4 +1,4 @@
-import React, { ReactNode } from "react";
+import React, { ReactNode, useState } from "react";
 import Navbar from "../Navbar";
 import Footer from "../footer";
 
@@ -8,9 +8,11 @@ interface LayoutProps {
 }
 
 const Layout: React.FC<LayoutProps> = ({ children }) => {
+  const [isLoading, setIsLoading] = useState(true);
+
   return (
     <div className="site-container">
-      <Navbar />
+      {/* <Navbar isLoading={isLoading} /> */}
       <main className="content">{children}</main>
       <Footer />
     </div>

@@ -5,18 +5,21 @@ import Link from "next/link";
 import Image from "next/image";
 import useNavigation, { routeMap } from "./customHooks/useNavigation";
 import ReusableButton from "./customHooks/reusableContactButton";
+import Loader from "./Loader";
 
 type HeaderProps = {
   scroll?: boolean;
+  isLoading: boolean;
 };
 
-const Header: React.FC<HeaderProps> = () => {
+const Header: React.FC<HeaderProps> = ({isLoading}) => {
   const { navigate } = useNavigation();
   const [isWhatWeDoOpen, setIsWhatWeDoOpen] = useState<boolean>(false);
   const [isOurWorkOpen, setIsOurWorkOpen] = useState<boolean>(false);
   const [dropdownTimeout, setDropdownTimeout] = useState<NodeJS.Timeout | null>(
     null
   );
+
 
   const whatWeDoRef = useRef<HTMLLIElement>(null);
   const ourWorkRef = useRef<HTMLLIElement>(null);
@@ -107,6 +110,10 @@ const Header: React.FC<HeaderProps> = () => {
       };
     }
   }, []);
+
+
+
+
 
   return (
     <Navbar
