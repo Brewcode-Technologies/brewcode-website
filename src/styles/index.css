@@ -361,6 +361,7 @@ video {
   /* background-color: #000; */
   color: #fff;
   z-index: 999;
+  overflow: auto;
 }
 
 @media screen and (max-width: 600px) {
@@ -976,23 +977,6 @@ margin-bottom: 20px;
   align-items: center;
 }
 
-@media (max-width: 768px) {
-  .clients-section {
-    padding: 1rem 0;
-  }
-
-  .clients-heading {
-    font-size: 4.5rem;
-  }
-
-  .clients-subtitle {
-    font-size: 2rem;
-  }
-
-  .client-logo-card {
-    margin-bottom: 1rem;
-  }
-}
 
 
 
@@ -1497,11 +1481,11 @@ footer {
   height: 380px;
 }
 .chart-of-detail {
-  font-size: 12px;
+  font-size: 0.75rem;
 }
 
 .chart-of-heading {
-  font-size: 22px;
+  font-size: 1.375rem;
   font-family: "Lato";
 }
 /* Could Services styles End  */
@@ -1699,18 +1683,20 @@ footer {
   height: auto;
   padding: 0px 30px !important;
   background-color: #151515;
+
+  
 }
 .card-margin-right {
   margin-right: 40px;
 }
 
 .cyber-security-the-challenge-card-title {
-  font-size: 18px;
+  font-size: 1.125rem;
   font-family: "Inter";
 }
 
 .cyber-security-the-challenge-card-description {
-  font-size: 14px;
+  font-size: 0.875rem;
   font-family: "Inter";
   text-align: justify;
 }
@@ -1754,10 +1740,11 @@ footer {
 .card-black,
 .icon {
   margin-right: 20px;
+  margin-bottom: 30px;
 }
 
 .icon-title {
-  font-size: 16px;
+  font-size: 1rem; 
   font-family: "Inter";
   font-weight: 600;
   /* padding-top: 10px; */

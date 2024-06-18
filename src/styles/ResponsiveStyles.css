@@ -6,7 +6,8 @@
 
 
 /* Hero section home pate Responsive styles start */
-@media (min-width: 1200px) {
+
+@media (max-width: 1200px) {
     .hero-section-heading {
       font-size: 5rem;
       /* padding-top: 60px; */
@@ -25,8 +26,8 @@
   
   @media (max-width: 576px) {
     .hero-section-heading {
-        font-size: 54px;
-        line-height: 71px;
+      font-size: 44px;
+      line-height: 54px;
     }
 
     .highlight{
@@ -63,8 +64,12 @@
   @media (max-width: 576px) {
     .about-heading,
     .innovation-heading
-    .clients-heading {
-        font-size: 3.375rem;
+    .clients-heading,
+    .innovation-heading,
+    .insights-heading {
+    
+        font-size: 3rem !important;
+  
     }
   
     .about-content {
@@ -132,10 +137,12 @@
   
     .clients-heading {
       text-align: center;
+      font-size: 3rem;
     }
   
     .clients-subtitle {
       text-align: center;
+      font-size: 1.5rem;
     }
   }
   
@@ -148,5 +155,56 @@
     }
   }
 
+  @media (max-width: 768px) {
+    .clients-section {
+      padding: 1rem 0;
+    }
+  
+   
+  
+    
+  
+    .client-logo-card {
+      margin-bottom: 1rem;
+    }
+  }
+  
 
+
+  /* cyber services styles */
+
+  @media (max-width: 767.98px) {
+    .chart-of-heading {
+      font-size: 1.25rem;
+    }
+  
+    .chart-of-detail {
+      font-size: 0.75rem;     }
+  
+    .cyber-security-the-challenge-card {
+      padding: 15px;
+      margin-bottom: 20px;
+    }
+  
+    .cyber-security-the-challenge-card-title {
+      font-size: 1rem; 
+    }
+  
+    .cyber-security-the-challenge-card-description {
+      font-size: 0.875rem; 
+    }
+  
+    .icon-title {
+      font-size: 0.875rem; 
+    }
+  
+    .experienced-breach-title {
+      font-size: 1.125rem;
+    }
+  
+    .get-assistance {
+      font-size: 0.875rem; 
+      padding: 8px 16px;
+    }
+  }
   

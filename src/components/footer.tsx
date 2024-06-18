@@ -8,8 +8,8 @@ const Footer: React.FC = () => {
   return (
     <footer>
       <div className="container">
-        <div className="row d-flex justify-content-between mb-5" >
-          <div className="col-4 col-md-3 col-lg-1 align-self-center" >
+        <div className="row d-flex justify-content-between mb-5 align-items-center">
+          <div className="col-4 col-md-3 col-lg-1 text-center">
             <Link href="/" passHref>
               <Image
                 src="/images/svg/brewcode_logo_svg.svg"
@@ -17,13 +17,11 @@ const Footer: React.FC = () => {
                 className="footer-logo"
                 width={40}
                 height={40}
-               
               />
             </Link>
           </div>
-
-          {"BREW{CODE}".split("").map((letter, index) => (
-            <div className={`col-2 col-sm-1 col-md-1 col-lg-1`} key={index}>
+          { "BREW{CODE}".split("").map((letter, index) => (
+            <div className="col-2 col-sm-1 col-md-1 col-lg-1 text-center" key={index}>
               <Link href="/" passHref className="brew-code-text">
                 <h3 className="brew-code-letter">{letter}</h3>
               </Link>
@@ -31,9 +29,8 @@ const Footer: React.FC = () => {
           ))}
         </div>
 
-        <div className="d-flex justify-content-center align-items-center">
-          <div className="flex-footer-icons">
-          
+        <div className="d-flex justify-content-center align-items-center mb-5">
+          <div className="flex-footer-icons d-flex justify-content-center">
             <Link href="https://x.com/ibrewcode" target="_blank">
               <ImageIcon
                 src="/images/svg/x_svg.svg"
@@ -41,63 +38,48 @@ const Footer: React.FC = () => {
                 className="footer-icon"
               />
             </Link>
-
-          
             <Link href="https://www.linkedin.com/company/brewcode/" target="_blank">
               <ImageIcon
                 src="/images/svg/LinkedIn_svg.svg"
                 alt="LinkedIn icon"
                 className="footer-icon"
-                
               />
             </Link>
-            <Link
-                href="https://brewcode.medium.com/"
-                target="_blank"
-                passHref
-              >
-                <ImageIcon
-                  src="/images/svg/logo-blog.svg"
-                  alt="blogger-icon"
-                  className="footer-icon"
-                />
-              </Link>
+            <Link href="https://brewcode.medium.com/" target="_blank" passHref>
+              <ImageIcon
+                src="/images/svg/logo-blog.svg"
+                alt="blogger-icon"
+                className="footer-icon"
+              />
+            </Link>
           </div>
         </div>
-        <div className="container">
-          <div className="row d-flex justify-content-center">
-            <div className="col-12 col-md-8 col-lg-6 d-flex justify-content-around mb-3 ">
-              <Link href="/" passHref className="footer-link footer-link-home">
-                Home
-              </Link>
-              <Link href="/about-us"  passHref className="footer-link">
-                About
-              </Link>
 
-              <Link href="/cookie-policy" passHref  className="footer-link">
+        <div className="row d-flex justify-content-center mb-3">
+          <div className="col-12 col-md-8 col-lg-6 d-flex flex-wrap justify-content-around">
+            <Link href="/" passHref className="footer-link footer-link-home">
+              Home
+            </Link>
+            <Link href="/about-us" passHref className="footer-link">
+              About
+            </Link>
+            <Link href="/cookie-policy" passHref className="footer-link">
               Cookie Policy
-              </Link>
-            
-              <Link href="/privacy-policy" passHref  className="footer-link">
+            </Link>
+            <Link href="/privacy-policy" passHref className="footer-link">
               Privacy Policy
-              </Link>
-              <Link href="/terms-conditions" passHref  className="footer-link">
+            </Link>
+            <Link href="/terms-conditions" passHref className="footer-link">
               Terms & Conditions
-              </Link>
-            </div>
+            </Link>
           </div>
-          <div className="row d-flex justify-content-center mb-4">
-            <div className="col-12 col-md-8 col-lg-6 d-flex justify-content-center px-4">
-              <p
-             
-                className="footer-link-policy text-center"
-              >
-            
-                © 2024 Brewcode Technologies Private Limited. All Rights Reserved.
-              </p>
-           
-            
-            </div>
+        </div>
+
+        <div className="row d-flex justify-content-center mb-4">
+          <div className="col-12 col-md-8 col-lg-6 d-flex justify-content-center px-4">
+            <p className="footer-link-policy text-center">
+              © 2024 Brewcode Technologies Private Limited. All Rights Reserved.
+            </p>
           </div>
         </div>
       </div>
