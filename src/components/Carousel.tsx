@@ -1,6 +1,5 @@
 import React from "react";
 import { Swiper, SwiperSlide } from "swiper/react";
-import { IoIosArrowBack, IoIosArrowForward } from "react-icons/io";
 import { FaArrowRightLong, FaArrowLeftLong } from "react-icons/fa6";
 
 import {
@@ -58,7 +57,7 @@ const SwiperComponent = () => {
         {images.map((image, index) => (
           <SwiperSlide key={index}>
             <div className="image-container">
-              <img src={image.url} alt={`Slide ${index + 1}`} />
+              <img src={image.url} alt={`Slide ${index + 1}`}  loading="lazy"/>
               <div className="overlay">
                 <p className="image-caption">{image.caption}</p>
               </div>
@@ -67,7 +66,7 @@ const SwiperComponent = () => {
         ))}
 
         <div>
-          <FaArrowLeftLong className="swiper-button-prev" />
+          <FaArrowLeftLong fontSize={10} className="swiper-button-prev" />
         </div>
         <div>
           <FaArrowRightLong fontSize={10} className="swiper-button-next" />

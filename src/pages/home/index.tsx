@@ -1,16 +1,16 @@
 import React, { useEffect, useState } from "react";
 import Link from "next/link";
-import Image from "next/image";
-import SwiperComponent from "@component/components/Carousel";
 import ImageIcon from "@component/components/ImageIcon";
 import Layout from "@component/components/layouts/layout";
 import useNavigation, {
   routeMap,
 } from "@component/components/customHooks/useNavigation";
 import Head from "next/head";
-import { Route } from "next";
+import { GetStaticProps, Route } from "next";
 import BlogCard from "@component/components/BlogCard";
 import axios from 'axios';
+import dynamic from "next/dynamic";
+const SwiperComponent = dynamic(() => import('@component/components/Carousel'), { ssr: false });
 
 interface Blog {
   id: number;
@@ -31,7 +31,7 @@ interface ClientLogo {
 interface SolutionItem {
   title: string;
   icon: string;
-  href: Route;
+  href:  string;
 }
 
 
@@ -292,7 +292,8 @@ const Index: React.FC = () => {
         width="300"
         height="300"
         alt="about image"
-        className="about-image img-fluid w-75"
+        className="about-image img-fluid"
+        loading="lazy"
       />
     </div>
   </div>
@@ -482,4 +483,49 @@ const Index: React.FC = () => {
   );
 };
 
+export const getStaticProps: GetStaticProps = async () => {
+  try {
+    const response = await axios.get('https://api.rss2json.com/v1/api.json', {
+      params: {
+        rss_url: 'https://medium.com/feed/@brewcode',
+        api_key: 'zzwyppw74s0zayqrgvogmb6qm3fqwu7kuofye0gw',
+        count: 5
+      }
+    });
+
+    if (response.data.status !== 'ok') {
+      throw new Error(response.data.message);
+    }
+
+    const blogItems = response.data.items.map((item: any, index: number) => {
+      const imgMatch = item.description.match(/<img[^>]+src="([^">]+)"/);
+      const imgSrc = imgMatch ? imgMatch[1] : '';
+
+      return {
+        id: index,
+        title: item.title,
+        category: "Blogs",
+        description: item.description,
+        link: item.link,
+        img: imgSrc,
+        date: item.pubDate,
+        imgAlt: item.title
+      };
+    });
+
+    return {
+      props: {
+        blog: blogItems
+      },
+      revalidate: 60, 
+    };
+  } catch (error) {
+    console.error('Error fetching data:', error);
+    return {
+      props: {
+        blog: []
+      }
+    };
+  }
+};
 export default Index;

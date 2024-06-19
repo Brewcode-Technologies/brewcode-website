@@ -5,7 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import useNavigation, { routeMap } from "./customHooks/useNavigation";
 import ReusableButton from "./customHooks/reusableContactButton";
-import Loader from "./Loader";
+
 
 type HeaderProps = {
   scroll?: boolean;
@@ -13,7 +13,16 @@ type HeaderProps = {
 };
 
 const Header: React.FC<HeaderProps> = ({isLoading}) => {
-  const { navigate } = useNavigation();
+ 
+ 
+ 
+
+  
+  
+  
+  const navigate = (url: string) => {
+    router.push(url);
+  };
   const [isWhatWeDoOpen, setIsWhatWeDoOpen] = useState<boolean>(false);
   const [isOurWorkOpen, setIsOurWorkOpen] = useState<boolean>(false);
   const [dropdownTimeout, setDropdownTimeout] = useState<NodeJS.Timeout | null>(
@@ -413,7 +422,7 @@ const Header: React.FC<HeaderProps> = ({isLoading}) => {
           </Nav>
           <ReusableButton
             label="Contact Us"
-            navigateTo={() => navigate("contact-us")}
+            navigateTo={() => navigate("/contact-us")}
           />
         </Navbar.Collapse>
       </div>

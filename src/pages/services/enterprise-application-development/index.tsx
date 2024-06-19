@@ -3,10 +3,16 @@ import useNavigation from "@component/components/customHooks/useNavigation";
 import Layout from "@component/components/layouts/layout";
 import Head from "next/head";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import React from "react";
 
 const Index: React.FC = () => {
-  const { navigate } = useNavigation();
+  const router = useRouter();
+
+  
+  const navigate = (url: string) => {
+    router.push(url);
+  };
   return (
     <Layout>
 
@@ -32,6 +38,7 @@ const Index: React.FC = () => {
             fill
             className="mb-3 hero-cloud"
             style={{ objectFit: "cover" }}
+            loading="lazy"
           />
         </div>
         <div className="container">
@@ -89,7 +96,7 @@ const Index: React.FC = () => {
               </p>
               <ReusableButton
                 label="Contact Us"
-                navigateTo={() => navigate("contact-us")}
+                navigateTo={() => navigate("/contact-us")}
               />
             </div>
             <div className="col-md-4">
@@ -99,7 +106,7 @@ const Index: React.FC = () => {
                 width={300}
                 height={300}
                 className="overview-image"
-                property="true"
+                loading="lazy"
               />
             </div>
           </div>
@@ -247,7 +254,7 @@ const Index: React.FC = () => {
                     alt="application support and services Image"
                     width={200}
                     height={200}
-                    priority
+                    loading="lazy"
                   />
                   <div className="card-body">
                     <h5 className="card-title my-3">
@@ -273,6 +280,7 @@ const Index: React.FC = () => {
                     alt="application support and services Image"
                     width={200}
                     height={200}
+                    loading="lazy"
                   />
                   <div className="card-body">
                     <h5 className="card-title my-4">
@@ -295,7 +303,7 @@ const Index: React.FC = () => {
                     alt="application support and services Image"
                     width={200}
                     height={200}
-                    priority
+                    loading="lazy"
                   />
                   <div className="card-body ">
                     <h5 className="card-title my-3">
@@ -318,7 +326,7 @@ const Index: React.FC = () => {
                     alt="application support and services Image"
                     width={200}
                     height={200}
-                    priority
+                    loading="lazy"
                   />
                   <div className="card-body">
                     <h5 className="card-title my-3">

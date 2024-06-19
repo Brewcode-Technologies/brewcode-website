@@ -12,7 +12,7 @@ const Index: React.FC = () => {
       <div className="bg-black py-5">
         <div className="container py-5">
           <div className="soctor-logo mb-2 col-5">
-            <img src="/images/svg/soctor.svg" alt="Soctor Logo" />
+            <img src="/images/svg/soctor.svg" alt="Soctor Logo"   loading="lazy" />
           </div>
           <div className="row my-4 d-flex justify-content-between">
             <div className="col-md-6 col-md-4 mb-5">

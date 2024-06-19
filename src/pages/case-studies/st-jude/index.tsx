@@ -31,6 +31,7 @@ const Index: React.FC = () => {
                   src="/images/st-jude-india-childCare.jpeg"
                   alt="st jude india childCare image"
                   className="health-care-img"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -58,6 +59,7 @@ const Index: React.FC = () => {
                       src="/images/problem-statement.svg"
                       className="problem-statemt-icon"
                       alt=""
+                      loading="lazy"
                     />
                     Problem Statement
                   </h2>
@@ -75,6 +77,7 @@ const Index: React.FC = () => {
                       src="/images/business-goal.svg"
                       className="business-goal-icon"
                       alt=""
+                      loading="lazy"
                     />
                     Business Goal
                   </h2>
@@ -95,6 +98,7 @@ const Index: React.FC = () => {
                     src="/images/target-audience-icon.svg"
                     alt="Target Audience icon"
                     className="image-icon"
+                    loading="lazy"
                   />
                 </div>
                 <h2 className=" text-center"> Target Audience</h2>
@@ -116,7 +120,7 @@ const Index: React.FC = () => {
               <li className="target-audience-item">
                 <div className="d-flex flex-column">
                   <div className="d-flex">
-                  <img src="/images/list-page-arrow.svg" alt="" className="list-page-arrow-icon mt-2 "/>
+                  <img src="/images/list-page-arrow.svg" alt="" className="list-page-arrow-icon mt-2 "   loading="lazy"/>
                     <p>
                     Individuals and organizations looking to contribute to a worthy cause, seeking a seamless and secure online donation experience.
                     </p>
@@ -134,7 +138,7 @@ const Index: React.FC = () => {
               <li className="target-audience-item">
                 <div className="d-flex flex-column">
                   <div className="d-flex">
-                  <img src="/images/list-page-arrow.svg" alt="" className="list-page-arrow-icon mt-2 "/>
+                  <img src="/images/list-page-arrow.svg" alt="" className="list-page-arrow-icon mt-2 "   loading="lazy"/>
                     <p>
                     Current supporters who require a reliable and user-friendly platform to continue their contributions and stay informed about the organization's impact.
                     </p>
@@ -154,7 +158,7 @@ const Index: React.FC = () => {
               <li className="target-audience-item">
                 <div className="d-flex flex-column">
                   <div className="d-flex">
-                  <img src="/images/list-page-arrow.svg" alt="" className="list-page-arrow-icon mt-2 "/>
+                  <img src="/images/list-page-arrow.svg" alt="" className="list-page-arrow-icon mt-2 "   loading="lazy"/>
                     <p>
                     People interested in volunteering opportunities and updates about St. Jude India ChildCare Centres, who need easy access to information and engagement channels.
                     </p>
@@ -190,7 +194,7 @@ const Index: React.FC = () => {
               <li className="target-audience-item">
                 <div className="d-flex flex-column">
                   <div className="d-flex">
-                  <img src="/images/list-page-arrow.svg" alt="" className="list-page-arrow-icon mt-2 "/>
+                  <img src="/images/list-page-arrow.svg" alt="" className="list-page-arrow-icon mt-2 "   loading="lazy"/>
                     <p>
                     Individuals interested in learning more about St. Jude India ChildCare Centres' mission and achievements, looking for engaging and informative content.
                     </p>
@@ -214,6 +218,7 @@ const Index: React.FC = () => {
                     src="/images/discover.svg "
                     className="business-goal-icon text-center"
                     alt=""
+                    loading="lazy"
                   />
                 </div>
                 <h2 className=" text-center">Discover</h2>
@@ -316,6 +321,7 @@ const Index: React.FC = () => {
                 src="/images/discovery-design-delivery-img.png"
                 alt="Discovery, Design, and Delivery Process"
                 className="process-image"
+                loading="lazy"
               />
             </div>
           </div>
@@ -328,6 +334,7 @@ const Index: React.FC = () => {
                   src="/images/take-medicines.png"
                   alt="Take Medicines"
                   className="process-image"
+                  loading="lazy"
                 />
               </div>
               <div className="col-md-4">
@@ -335,6 +342,7 @@ const Index: React.FC = () => {
                   src="/images/take-medicines.png"
                   alt="Take Medicines"
                   className="process-image"
+                  loading="lazy"
                 />
               </div>
               <div className="col-md-4">
@@ -342,6 +350,7 @@ const Index: React.FC = () => {
                   src="/images/take-medicines-small-img.png"
                   alt="Take Medicines Small Image"
                   className="process-image"
+                  loading="lazy"
                 />
               </div>
               <div className="col-md-5">
@@ -349,6 +358,7 @@ const Index: React.FC = () => {
                   src="/images/grab-medicine.png"
                   alt="Grab Medicine"
                   className="process-image"
+                  loading="lazy"
                 />
               </div>
               <div className="col-md-5">
@@ -356,6 +366,7 @@ const Index: React.FC = () => {
                   src="/images/take-medicines-img.png"
                   alt="Take Medicines Image"
                   className="process-image take-medicines-img"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -373,6 +384,7 @@ const Index: React.FC = () => {
                   src="/images/soctor-register.png"
                   alt="Soctor Register"
                   className="process-image"
+                  loading="lazy"
                 />
               </div>
               <div className="col-md-3">
@@ -380,6 +392,7 @@ const Index: React.FC = () => {
                   src="/images/soctor-symptoms.png"
                   alt="Soctor Symptoms"
                   className="process-image"
+                  loading="lazy"
                 />
               </div>
               <div className="col-md-3">
@@ -387,6 +400,7 @@ const Index: React.FC = () => {
                   src="/images/soctor-medical-history.png"
                   alt="Soctor Medical History"
                   className="process-image"
+                  loading="lazy"
                 />
               </div>
 
@@ -395,6 +409,7 @@ const Index: React.FC = () => {
                   src="/images/soctor-travel-sickness-personaldetails.png"
                   alt="Soctor Travel Sickness Personal Details"
                   className="process-image"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -404,6 +419,7 @@ const Index: React.FC = () => {
                   src="/images/soctor-safe-self-medication-advice.png"
                   alt="Soctor Safe Self Medication Advice"
                   className="process-image-design"
+                  loading="lazy"
                 />
               </div>
               <div className="col-md-3">
@@ -411,6 +427,7 @@ const Index: React.FC = () => {
                   src="/images/soctor-travel-sleep.png"
                   alt="Soctor Travel Sleep"
                   className="process-image-design"
+                  loading="lazy"
                 />
               </div>
               <div className="col-md-3">
@@ -418,6 +435,7 @@ const Index: React.FC = () => {
                   src="/images/soctor-symptoms.png"
                   alt="Soctor Symptoms"
                   className="process-image-design"
+                  loading="lazy"
                 />
               </div>
               <div className="col-md-3">
@@ -425,6 +443,7 @@ const Index: React.FC = () => {
                   src="/images/soctor-medical-history.png"
                   alt="Soctor Medical History"
                   className="process-image-design"
+                  loading="lazy"
                 />
               </div>
             </div>

@@ -25,6 +25,7 @@ const Index: React.FC = () => {
             alt="Comprehensive application services icon"
             src="/images/insight-hero-image.jpg"
             className="mb-3 hero-cloud"
+            loading="lazy"
           />
         </div>
         <div className="container">

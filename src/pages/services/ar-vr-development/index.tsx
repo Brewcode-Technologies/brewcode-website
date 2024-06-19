@@ -248,6 +248,7 @@ const Index: React.FC = () => {
                     src={arvr.imageUrl}
                     alt={arvr.imageUrlName}
                     className="ar-vr-image"
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -310,6 +311,7 @@ const Index: React.FC = () => {
                         src={image.src}
                         alt={image.alt}
                         className="unity-and-unreal-engine-img1"
+                        loading="lazy"
                       />
                     </div>
                   ))}
@@ -368,6 +370,7 @@ const Index: React.FC = () => {
                     src={data.imageUrl}
                     alt={data.title}
                     className="projects-we-like-card-img"
+                    loading="lazy"
                   />
                   <div className="">
                     <h3 className="projects-we-like-card-heading pt-5 pb-5">

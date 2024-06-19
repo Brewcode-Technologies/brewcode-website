@@ -16,7 +16,7 @@ const Index: React.FC = () => {
           <div className="row my-4 d-flex justify-content-between">
             <div className="col-md-6 col-md-4 mb-5">
               <div className="soctor-logo">
-                <img src="/images/svg/AT-T.svg" alt="AT&T Logo" />
+                <img src="/images/svg/AT-T.svg" alt="AT&T Logo"   loading="lazy" />
               </div>
 
               <div className="healthcare-text-container">
@@ -36,6 +36,7 @@ const Index: React.FC = () => {
                   src="/images/at-&-t-collaborate-app-development.png"
                   alt="AT&T Collaborate App Development"
                   className="at-t-image"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -72,6 +73,7 @@ const Index: React.FC = () => {
                       src="/images/problem-statement.svg"
                       className="problem-statemt-icon"
                       alt=""
+                      loading="lazy"
                     />
                     Problem Statement
                   </h2>
@@ -94,6 +96,7 @@ const Index: React.FC = () => {
                       src="/images/business-goal.svg"
                       className="business-goal-icon mb-3"
                       alt=""
+                      loading="lazy"
                     />
                     <h2 className="section-title mb-3">Business Goal</h2>
                   </div>
@@ -123,6 +126,7 @@ const Index: React.FC = () => {
                     src="/images/target-audience-icon.svg"
                     alt="Target Audience icon"
                     className="image-icon"
+                    loading="lazy"
                   />
                 </div>{" "}
                 <h2 className=" text-center"> Target Audience</h2>
@@ -152,6 +156,7 @@ const Index: React.FC = () => {
                       src="/images/list-page-arrow.svg"
                       alt=""
                       className="list-page-arrow-icon mt-2 "
+                      loading="lazy"
                     />
                     <p>
                       Organizations seeking to enhance internal communication
@@ -175,6 +180,7 @@ const Index: React.FC = () => {
                       src="/images/list-page-arrow.svg"
                       alt=""
                       className="list-page-arrow-icon mt-2 "
+                      loading="lazy"
                     />
                     <p>
                       Teams that operate remotely and require reliable tools for
@@ -200,6 +206,7 @@ const Index: React.FC = () => {
                       src="/images/list-page-arrow.svg"
                       alt=""
                       className="list-page-arrow-icon mt-2 "
+                      loading="lazy"
                     />
                     <p>
                       Schools and universities that need a platform for virtual
@@ -223,6 +230,7 @@ const Index: React.FC = () => {
                       src="/images/list-page-arrow.svg"
                       alt=""
                       className="list-page-arrow-icon mt-2 "
+                      loading="lazy"
                     />
                     <p>
                        IT professionals who require a secure and efficient means
@@ -248,6 +256,7 @@ const Index: React.FC = () => {
                       src="/images/list-page-arrow.svg"
                       alt=""
                       className="list-page-arrow-icon mt-2 "
+                      loading="lazy"
                     />
                     <p>
                       Individuals responsible for coordinating and overseeing
@@ -273,6 +282,7 @@ const Index: React.FC = () => {
                       src="/images/list-page-arrow.svg"
                       alt=""
                       className="list-page-arrow-icon mt-2 "
+                      loading="lazy"
                     />
                     <p>
                       Human resources departments that conduct virtual
@@ -298,6 +308,7 @@ const Index: React.FC = () => {
                     src="/images/discover.svg "
                     className="business-goal-icon text-center"
                     alt=""
+                    loading="lazy"
                   />
                 </div>
                 <h2 className=" text-center">Discover</h2>
@@ -413,6 +424,7 @@ const Index: React.FC = () => {
                 src="/images/process-image.jpg"
                 alt="Discovery, Design, and Delivery Process"
                 className="process-image"
+                loading="lazy"
               />
             </div>
           </div>
@@ -425,6 +437,7 @@ const Index: React.FC = () => {
                   src="/images/brewcode-who-we-are-laptop-image.png"
                   alt="Brewcode Who We Are image"
                   className="process-image"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -442,6 +455,7 @@ const Index: React.FC = () => {
                   src="/images/soctor-register.png"
                   alt="Soctor Register"
                   className="process-image"
+                  loading="lazy"
                 />
               </div>
               <div className="col-md-3">
@@ -449,6 +463,7 @@ const Index: React.FC = () => {
                   src="/images/soctor-symptoms.png"
                   alt="Soctor Symptoms"
                   className="process-image"
+                  loading="lazy"
                 />
               </div>
               <div className="col-md-3">
@@ -456,6 +471,7 @@ const Index: React.FC = () => {
                   src="/images/soctor-medical-history.png"
                   alt="Soctor Medical History"
                   className="process-image"
+                  loading="lazy"
                 />
               </div>
 
@@ -464,6 +480,7 @@ const Index: React.FC = () => {
                   src="/images/soctor-travel-sickness-personaldetails.png"
                   alt="Soctor Travel Sickness Personal Details"
                   className="process-image"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -473,6 +490,7 @@ const Index: React.FC = () => {
                   src="/images/soctor-safe-self-medication-advice.png"
                   alt="Soctor Safe Self Medication Advice"
                   className="process-image-design"
+                  loading="lazy"
                 />
               </div>
               <div className="col-md-3">
@@ -480,6 +498,7 @@ const Index: React.FC = () => {
                   src="/images/soctor-travel-sleep.png"
                   alt="Soctor Travel Sleep"
                   className="process-image-design"
+                  loading="lazy"
                 />
               </div>
               <div className="col-md-3">
@@ -487,6 +506,7 @@ const Index: React.FC = () => {
                   src="/images/soctor-symptoms.png"
                   alt="Soctor Symptoms"
                   className="process-image-design"
+                  loading="lazy"
                 />
               </div>
               <div className="col-md-3">
@@ -494,6 +514,7 @@ const Index: React.FC = () => {
                   src="/images/soctor-medical-history.png"
                   alt="Soctor Medical History"
                   className="process-image-design"
+                  loading="lazy"
                 />
               </div>
             </div>
