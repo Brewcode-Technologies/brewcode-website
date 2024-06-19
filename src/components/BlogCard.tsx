@@ -35,6 +35,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ blog, layout = 'insight-page' }) =>
                 src={blog.img}
                 alt={blog.imgAlt}
                 className="insigts-image mb-2"
+                loading="lazy"
               />
             </div>
             <div className="col-md-7 d-flex flex-column justify-content-between" >
@@ -66,6 +67,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ blog, layout = 'insight-page' }) =>
                       src={blog.img}
                       className="insight-card-img"
                       alt={blog.imgAlt}
+                      loading="lazy"
                     />
                   </div>
                 )}

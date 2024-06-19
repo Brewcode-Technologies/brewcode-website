@@ -1,11 +1,9 @@
 import Layout from "@component/components/layouts/layout";
 import React from "react";
-import Image from "next/image";
-import BlackLayer from "@component/components/blackLayer";
-import { routeMap } from "@component/components/customHooks/useNavigation";
 import { useRouter } from "next/router";
 import Head from "next/head";
 import CaseStudyCard from "@component/components/CaseStudyCard";
+import { routeMap } from "@component/components/customHooks/useNavigation";
 
 interface CaseStudy {
   id: number;
@@ -18,11 +16,11 @@ interface CaseStudy {
   colImageUrl: string;
   colImageName: string;
   size: "small" | "medium" | "large";
-
 }
 
 const Index: React.FC = () => {
   const router = useRouter();
+
   const getClassName = (size: "small" | "medium" | "large"): string => {
     return size === "small"
       ? "small-logo"
@@ -30,6 +28,8 @@ const Index: React.FC = () => {
       ? "medium-logo"
       : "large-logo";
   };
+
+
   const caseStudies: CaseStudy[] = [
     {
       id: 1,
@@ -43,7 +43,6 @@ const Index: React.FC = () => {
       colImageName: "health care",
       size: "medium",
       buttonUrl: routeMap["soctor"],
-
     },
     {
       id: 2,
@@ -60,7 +59,7 @@ const Index: React.FC = () => {
     },
     {
       id: 3,
-      title: "Dhanika Solutions – Revolutionizing Career Opportunities  ",
+      title: "Dhanika Solutions – Revolutionizing Career Opportunities",
       description:
         "Dhanika Solutions, a leading player in the IT services industry, aimed to elevate their digital presence and streamline the career opportunity process.",
       imageUrl: "/images/svg/dhanika.svg",
@@ -73,8 +72,7 @@ const Index: React.FC = () => {
     },
     {
       id: 4,
-      title:
-        "Brewcode Meet – Setting New Standards in Enterprise Communication",
+      title: "Brewcode Meet – Setting New Standards in Enterprise Communication",
       description:
         "Brewcode Technologies took on the ambitious project of developing Brewcode Meet...",
       imageUrl: "/images/svg/Brewcode.svg",
@@ -92,7 +90,7 @@ const Index: React.FC = () => {
         "The Vodafone Italia Collaborate App is a sophisticated business messaging application designed to streamline corporate communication.",
       imageUrl: "/images/svg/Vodafone.svg",
       buttonText: "#IT service ",
-      buttonUrl:routeMap["vodafone-idea"],
+      buttonUrl: routeMap["vodafone-idea"],
       read: ". 3 Min Read",
       colImageUrl: "/images/vodafone-Italia-img.jpeg",
       colImageName: "vodafone italia collaborate app image",
@@ -100,7 +98,7 @@ const Index: React.FC = () => {
     },
     {
       id: 6,
-      title: "AT&T Collaborate App Development  ",
+      title: "AT&T Collaborate App Development",
       description:
         "The AT&T Collaborate app is a comprehensive SIP and Team Collaboration client connected to the Internet and AT&T Cloud. It integrates seamlessly with AT&T's server platform, offering a wide range of calling and collaboration features.",
       imageUrl: "/images/svg/AT-T.svg",
@@ -108,7 +106,7 @@ const Index: React.FC = () => {
       buttonUrl: routeMap["at-t"],
       read: ". 4 Min Read",
       colImageUrl: "/images/at-t-collaborate-app-img.jpeg",
-      colImageName: "at&t collaborate app development   image",
+      colImageName: "at&t collaborate app development image",
       size: "medium",
     },
     {
@@ -118,59 +116,55 @@ const Index: React.FC = () => {
         "Universiti Malaya aimed to enhance its educational offerings by incorporating advanced technologies to create more immersive and interactive learning environments.",
       imageUrl: "/images/svg/Malaya.svg",
       buttonText: "#Education",
-      buttonUrl:routeMap["universiti-malaya"],
+      buttonUrl: routeMap["universiti-malaya"],
       read: ". 4 Min Read",
       colImageUrl: "/images/vr-application-for-universiti-img.jpeg",
-      colImageName:
-        "ar application for uiversiti malaya by brewcode technologies image",
+      colImageName: "ar application for uiversiti malaya by brewcode technologies image",
       size: "medium",
     },
   ];
 
   return (
     <Layout>
-        <Head>
-
+      <Head>
         <title>Case Studies | Brewcode Technology Private Limited</title>
         <meta name="description" content="Description of your Case Studies page" />
       </Head>
-     
+
       <div className="case-studies-hero-section">
         <div className="overlay-ar-vr">
           <div className="container">
             <div className="row">
-            <div className="hero-section-content">
-         
-            <div className="case-study-content">
-              <h1 className="case-study-heading mb-5 text-center ">
-                Case Studies
-              </h1>
-              <p className="case-study-description">
-                Case studies are a great way to exhibit real-case scenarios and
-                assist your
-                <br /> customers in accomplishing their goals. These are not
-                just case studies but tips on
-                <br /> how to use technology as a powerful asset in
-                strengthening your business.
-              </p>
-           
-          </div>
-            </div>
+              <div className="hero-section-content">
+                <div className="case-study-content">
+                  <h1 className="case-study-heading mb-5 text-center">
+                    Case Studies
+                  </h1>
+                  <p className="case-study-description">
+                    Case studies are a great way to exhibit real-case scenarios and
+                    assist your
+                    <br /> customers in accomplishing their goals. These are not
+                    just case studies but tips on
+                    <br /> how to use technology as a powerful asset in
+                    strengthening your business.
+                  </p>
+                </div>
+              </div>
             </div>
           </div>
         </div>
       </div>
-   
+
       <div className="case-studies-black-container container-fluid">
-      <div className="container">
-        {caseStudies.map((study) => (
-          <CaseStudyCard
-            key={study.id}
-            study={study}
-            getClassName={getClassName}
+        <div className="container">
+          {caseStudies.map((study) => (
+            <CaseStudyCard
+              key={study.id}
+              study={study}
+              getClassName={getClassName}
             />
-        ))}
-      </div>
+          ))}
+        </div>
       </div>
     </Layout>
   );

@@ -7,6 +7,7 @@ import { useState } from "react";
 import Head from "next/head";
 import useNavigation from "@component/components/customHooks/useNavigation";
 import ReusableButton from "@component/components/customHooks/reusableContactButton";
+import { useRouter } from "next/router";
 
 type Technology =
   | "AR/VR"
@@ -24,9 +25,14 @@ export interface EcommerceService {
   description: string;
 }
 
-const Index: React.FC = () => {
-  const { navigate } = useNavigation();
 
+const Index: React.FC = () => {
+  const router = useRouter();
+
+  
+  const navigate = (url: string) => {
+    router.push(url);
+  };
   const [openAccordionIndex, setOpenAccordionIndex] = useState<number | null>(
     null
   );
@@ -266,6 +272,7 @@ const Index: React.FC = () => {
                     src="/images/e-commerce.jpg"
                     alt="E-Commerce Services"
                     className=" e-commerce-img"
+                    loading="lazy"
                   />
                 </div>
               </div>
@@ -461,9 +468,9 @@ const Index: React.FC = () => {
               Connect With Brewcode
             </h1>
             <ReusableButton
-              label="Contact Us"
-              navigateTo={() => navigate("contact-us")}
-            />
+            label="Contact Us"
+            navigateTo={() => navigate("/contact-us")}
+          />
           </div>
         </div>
       </div>

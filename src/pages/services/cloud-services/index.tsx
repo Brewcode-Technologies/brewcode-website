@@ -25,6 +25,7 @@ const Index: React.FC = () => {
             fill
             className="mb-3 hero-cloud"
             style={{ objectFit: "cover" }}
+            loading="lazy"
           />
         </div>
       
@@ -52,6 +53,7 @@ const Index: React.FC = () => {
               width={300}
               height={300}
               className="img-fluid cloud-card-image"
+              loading="lazy"
             />
           </div>
           <div className="col-12 col-md-6">
@@ -95,7 +97,7 @@ const Index: React.FC = () => {
                 width={50}
                 height={50}
                 className="img-fluid"
-                priority={true}
+                loading="lazy"
               />
               <hr />
               <p className="chart-of-detail">
@@ -109,7 +111,7 @@ const Index: React.FC = () => {
                 height={50}
                 className="img-fluid"
                 src="/images/svg/mission_svg8.svg"
-                priority={true}
+                loading="lazy"
               />
               <hr />
               <p className="chart-of-detail">
@@ -123,7 +125,7 @@ const Index: React.FC = () => {
                 width={50}
                 height={50}
                 className="img-fluid"
-                priority={true}
+                loading="lazy"
               />
               <hr />
               <p className="chart-of-detail">
@@ -134,98 +136,7 @@ const Index: React.FC = () => {
         </div>
       </div>
     </div>
-      {/* <div className="section-capabilities py-5">
-        <div className="container">
-          <div className="row">
-            <div className="section-heading-with-button-flex mb-3">
-              <h2 className="capabilities-heading">Capabilities</h2>
-              <button className="btn-explore-capabilities">
-                Explore All Capabilities
-              </button>
-            </div>
-            <div className="row d-flex justify-content-between my-5">
-              <div className="col-6 d-flex capability-card-img">
-                <Image
-                  src="/images/Cloud-Migration-image.jpeg"
-                  alt="Cloud Migration and Strategy image"
-                  width={20}
-                  height={200}
-                  priority={true}
-                  className="small-colud-img"
-                />
-                <div className="d-flex flex-column">
-                  <h2 className="could-migration-heading">
-                    Cloud Migration and Strategy
-                  </h2>
-                  <p className="could-migration-description">
-                    Seamlessly transition your applications, data, and
-                    processes to the cloud with  our expertise in planning
-                    and executing  migration strategies tailored to your 
-                    business needs
-                  </p>
-                  <div>
-                    <button className="explore-btn">Explore</button>
-                  </div>
-                </div>
-              </div>
-              <div className="col-6 d-flex capability-card-img">
-                <Image
-                  src="/images/Infrastructure-image.jpeg"
-                  alt="capabilities image"
-                  width={100}
-                  height={100}
-                  priority={true}
-                  className="small-colud-img"
-                />
-                <div className="d-flex flex-column">
-                  <h2 className="could-migration-heading">
-                    Infrastructure as a Service (IaaS)
-                  </h2>
-                  <p className="could-migration-description">
-                    Leverage our IaaS solutions to offload the 
-                    burden of infrastructure management, allowing 
-                    your team to focus on innovation and core 
-                    business functions.​ ​
-                  </p>
-                  <button className="explore-btn">Explore</button>
-                </div>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div> */}
-      {/* <div className="related-Service-background py-5">
-        <div className="container">
-          <div className="row">
-            <div className="col-6">
-              <h2 className="related-Service-heading">Related Service</h2>
-              <h2 className="related-Service-sub-heading">
-                Software as Service (SaaS)
-              </h2>
-              <p className="related-Service-description">
-                Access industry-leading software applications without the hassle of 
-                <br />
-                installation and maintenance. Our SaaS solutions enhance collaboration 
-                <br />
-                and productivity
-              </p>
-              <div>
-                <button className="explore-btn">Explore</button>
-              </div>
-            </div>
-            <div className="col-6">
-              <Image
-                src="/images/Software-as-Service.jpeg"
-                alt="related service image"
-                width={300}
-                height={300}
-                className="related-service-image"
-                priority
-              />
-            </div>
-          </div>
-        </div>
-      </div> */}
+    
     </Layout>
   );
 };

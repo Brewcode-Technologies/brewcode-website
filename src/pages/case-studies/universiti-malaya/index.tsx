@@ -12,7 +12,11 @@ const Index: React.FC = () => {
       <div className="bg-black py-5">
         <div className="container py-5">
           <div className="soctor-logo mb-2 col-5">
-            <img src="/images/svg/Malaya.svg" alt="Soctor Logo" />
+            <img
+              src="/images/svg/Malaya.svg"
+              alt="Soctor Logo"
+              loading="lazy"
+            />
           </div>
           <div className="row my-4 d-flex justify-content-between">
             <div className="col-md-6 col-md-4 mb-5">
@@ -33,6 +37,7 @@ const Index: React.FC = () => {
                   src="/images/vr-application-for-universiti-img.jpeg"
                   alt="health care image"
                   className="health-care-img"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -66,6 +71,7 @@ const Index: React.FC = () => {
                       src="/images/problem-statement.svg"
                       className="problem-statemt-icon"
                       alt=""
+                      loading="lazy"
                     />
                     Problem Statement
                   </h2>
@@ -89,6 +95,7 @@ const Index: React.FC = () => {
                       src="/images/business-goal.svg"
                       className="business-goal-icon"
                       alt=""
+                      loading="lazy"
                     />{" "}
                     Business Goal
                   </h2>
@@ -115,6 +122,7 @@ const Index: React.FC = () => {
                     src="/images/target-audience-icon.svg"
                     alt="Target Audience icon"
                     className="image-icon"
+                    loading="lazy"
                   />
                 </div>
                 <h2 className=" text-center"> Target Audience</h2>
@@ -143,6 +151,7 @@ const Index: React.FC = () => {
                       src="/images/list-page-arrow.svg"
                       alt=""
                       className="list-page-arrow-icon mt-2 "
+                      loading="lazy"
                     />
 
                     <p>
@@ -168,6 +177,7 @@ const Index: React.FC = () => {
                       src="/images/list-page-arrow.svg"
                       alt=""
                       className="list-page-arrow-icon mt-2 "
+                      loading="lazy"
                     />
 
                     <p>
@@ -193,6 +203,7 @@ const Index: React.FC = () => {
                       src="/images/list-page-arrow.svg"
                       alt=""
                       className="list-page-arrow-icon mt-2 "
+                      loading="lazy"
                     />
 
                     <p>
@@ -216,6 +227,7 @@ const Index: React.FC = () => {
                       src="/images/list-page-arrow.svg"
                       alt=""
                       className="list-page-arrow-icon mt-2 "
+                      loading="lazy"
                     />
 
                     <p>
@@ -239,6 +251,7 @@ const Index: React.FC = () => {
                       src="/images/list-page-arrow.svg"
                       alt=""
                       className="list-page-arrow-icon mt-2 "
+                      loading="lazy"
                     />
 
                     <p>
@@ -262,6 +275,7 @@ const Index: React.FC = () => {
                       src="/images/list-page-arrow.svg"
                       alt=""
                       className="list-page-arrow-icon mt-2 "
+                      loading="lazy"
                     />
 
                     <p>
@@ -287,6 +301,7 @@ const Index: React.FC = () => {
                     src="/images/discover.svg "
                     className="business-goal-icon text-center"
                     alt=""
+                    loading="lazy"
                   />
                 </div>
                 <h2 className=" text-center">Discover</h2>
@@ -392,10 +407,11 @@ const Index: React.FC = () => {
           <div className="soctor-about-section my-4">
             <div className="about-introduction">Process</div>
             <div className="process-image-container">
-            <img
+              <img
                 src="/images/discovery-design-delivery-img.png"
                 alt="Discovery, Design, and Delivery Process"
                 className="process-image"
+                loading="lazy"
               />
             </div>
           </div>

@@ -100,6 +100,7 @@ const Index: React.FC = () => {
                 src="/images/about-us-image-icon.svg"
                 className="about-us-icon img-fluid"
                 alt="About Us Icon"
+                loading="lazy"
               />
             </div>
             <div className="col-md-8">

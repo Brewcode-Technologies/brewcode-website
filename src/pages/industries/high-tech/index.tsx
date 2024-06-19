@@ -1,5 +1,6 @@
 import Layout from "@component/components/layouts/layout";
 import Head from "next/head";
+import Image from "next/image";
 import React from "react";
 
 const Index: React.FC = () => {
@@ -12,30 +13,34 @@ const Index: React.FC = () => {
           content="Harness the Power of IaaS for Seamless Scalability and Enhanced Performance in High Tech Services."
         />
       </Head>
-    <div
+      <div
         style={{
           position: "relative",
           width: "100%",
-          height: "100vh",
+          height: "70vh",
         }}
       >
-        <div className="cloud-image">
-          <img
-            alt="Comprehensive application services icon"
+        <div className="cloud-image p-4">
+          <Image
             src="/images/img.jpg"
+            alt="cyber security image"
+            fill
             className="mb-3 hero-cloud"
-           
+            style={{ objectFit: "cover" }}
+            loading="lazy"
           />
         </div>
         <div className="container">
           <div className="row">
-            <div className="services-content">
-              <h1 className="services-header">
+            <div className="hero-section-content">
+              <h1 className="cyber-security-services-heading mb-3">
               High Tech
               </h1>
+
               <p className=" services-description text-center">
-                Harness the Power of IaaS for Seamless Scalability and
-                <br /> Enhanced Performance
+                Exhibit your digital footprint on various gadgets with a
+                Responsive
+                <br /> UI development approach.
               </p>
             </div>
           </div>

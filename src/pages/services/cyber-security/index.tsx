@@ -25,6 +25,7 @@ const Index: React.FC = () => {
             fill
             className="mb-3 hero-cloud"
             style={{ objectFit: "cover" }}
+            loading="lazy"
           />
         </div>
         <div className="container">

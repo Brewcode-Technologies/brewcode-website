@@ -3,10 +3,16 @@ import useNavigation from "@component/components/customHooks/useNavigation";
 import Layout from "@component/components/layouts/layout";
 import Head from "next/head";
 import Image from "next/image";
+import { useRouter } from "next/router";
 import React from "react";
 
 const Index: React.FC = () => {
-  const { navigate } = useNavigation();
+  const router = useRouter();
+
+  
+  const navigate = (url: string) => {
+    router.push(url);
+  };
   return (
     <Layout>
        <Head>
@@ -27,6 +33,7 @@ const Index: React.FC = () => {
             fill
             className="mb-3 hero-cloud"
             style={{ objectFit: "cover" }}
+            loading="lazy"
           />
         </div>
         <div className="container">
@@ -67,7 +74,7 @@ const Index: React.FC = () => {
               <div className="">
                 <ReusableButton
                   label="Contact Us"
-                  navigateTo={() => navigate("contact-us")}
+                  navigateTo={() => navigate("/contact-us")}
                 />
               </div>
             </div>
@@ -77,7 +84,7 @@ const Index: React.FC = () => {
                   alt="Detailed view of application service offerings"
                   src="/images/web-development-image.jpg"
                   className="overview-image"
-                  property="true"
+                  loading="lazy"
                 />
               </div>
             </div>
@@ -185,7 +192,7 @@ const Index: React.FC = () => {
                         alt="application support and services Image"
                         width={200}
                         height={200}
-                        priority
+                        loading="lazy"
                       />
                     </div>
                     <div className="card-body">
@@ -208,7 +215,7 @@ const Index: React.FC = () => {
                       alt="application support and services Image"
                       width={200}
                       height={200}
-                      priority
+                      loading="lazy"
                     />
                     <div className="card-body">
                       <h5 className="card-title">
@@ -233,7 +240,7 @@ const Index: React.FC = () => {
                       alt="application support and services Image"
                       width={200}
                       height={200}
-                      priority
+                      loading="lazy"
                     />
                     <div className="card-body">
                       <h5 className="card-title">Result-oriented </h5>
