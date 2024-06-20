@@ -2,32 +2,33 @@ import Link from "next/link";
 import React from "react";
 import ImageIcon from "./ImageIcon";
 import Image from "next/image";
-import { routeMap } from "./customHooks/useNavigation";
 
 const Footer: React.FC = () => {
   return (
     <footer>
       <div className="container">
-        <div className="row d-flex justify-content-between mb-5 align-items-center">
-          <div className="col-4 col-md-3 col-lg-1 text-center">
-            <Link href="/" passHref>
-              <Image
-                src="/images/svg/brewcode_logo_svg.svg"
-                alt="Brewcode logo"
-                className="footer-logo"
-                width={40}
-                height={40}
-              />
-            </Link>
-          </div>
-          { "BREW{CODE}".split("").map((letter, index) => (
-            <div className="col-2 col-sm-1 col-md-1 col-lg-1 text-center" key={index}>
-              <Link href="/" passHref className="brew-code-text">
-                <h3 className="brew-code-letter">{letter}</h3>
-              </Link>
-            </div>
-          ))}
+      <div className="d-flex justify-content-between mb-5 align-items-center">
+     
+        <Link href="/" passHref>
+          <img
+            src="/images/svg/brewcode_logo_svg.svg"
+            alt="Brewcode logo"
+            className="footer-logo"
+            loading="lazy"
+          />
+        </Link>
+     
+      { "BREW{CODE}".split("").map((letter, index) => (
+        <div className="text-center d-flex" key={index} style={{flex: '0 0 auto' }}>
+          <Link href="/" passHref className="brew-code-text">
+            <h3 className="brew-code-letter">{letter}</h3>
+          </Link>
         </div>
+      ))}
+    </div>
+
+       
+
 
         <div className="d-flex justify-content-center align-items-center mb-5">
           <div className="flex-footer-icons d-flex justify-content-center">
