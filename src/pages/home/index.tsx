@@ -287,15 +287,16 @@ const Index: React.FC = () => {
       </div>
     </div>
     <div className="col-12 col-md-6 d-flex justify-content-center justify-content-md-end">
-      <img
-        src="/images/services-img.png"
-        width="300"
-        height="300"
-        alt="about image"
-        className="about-image img-fluid"
-        loading="lazy"
-      />
-    </div>
+  <div className="responsive-image-wrapper">
+    <img
+      src="/images/services-img.png"
+      alt="about image"
+      className="about-image img-fluid"
+      loading="lazy"
+    />
+  </div>
+</div>
+
   </div>
 </div>
 

@@ -62,6 +62,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ blog, layout = 'insight-page' }) =>
               <div className="card-body mb-3">
                 <p className="insight-card-category">{blog.category}</p>
                 {blog.img && (
+                  <div className="insight-card-image-wrapper">
                   <div className="insight-card-image-container">
                     <img
                       src={blog.img}
@@ -70,6 +71,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ blog, layout = 'insight-page' }) =>
                       loading="lazy"
                     />
                   </div>
+                </div>
                 )}
                 <h5 className="insight-card-title pt-1">{blog.title}</h5>
                 {/* <p className="insight-card-description">{blog.description}</p> */}

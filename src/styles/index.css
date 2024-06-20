@@ -209,14 +209,13 @@ video {
 .insights-heading,
 .clients-heading,
 .industries-heading,
-.innovation-heading{
+.innovation-heading {
   text-align: left;
-  font-size:  4.375rem;
+  font-size: 4.375rem;
   color: #ffffff;
   font-weight: 700;
   font-family: "Inter" !important;
 }
-
 
 .bg-color-blind {
   /* background-color: red !important; */
@@ -229,8 +228,6 @@ video {
   background-blend-mode: darken;
   margin-top: -10px;
 }
-
-
 
 .hero-section {
   display: flex;
@@ -464,11 +461,23 @@ video {
   line-height: 20px;
 }
 
-.about-image {
+
+.responsive-image-wrapper {
   width: 100%;
- 
-  cursor: pointer;
+  aspect-ratio: 1 / 1; 
+  overflow: hidden; 
+  display: flex;
+  justify-content: flex-end;
 }
+
+.responsive-image-wrapper img {
+  width: 90%;
+  height: 90%;
+
+}
+
+
+
 
 .about-content {
   display: flex;
@@ -491,7 +500,7 @@ video {
 
 .our-solution-description,
 .industries-description,
-.innovation-description{
+.innovation-description {
   color: #ffffff;
   font-family: "Inter";
   font-size: 0.75rem;
@@ -719,35 +728,33 @@ video {
   word-spacing: 4px;
 }
 
-.insights-line{
-  background-color:#fff;
+.insights-line {
+  background-color: #fff;
   border-width: 0;
   height: 2px;
   color: #fff;
 }
 
-.blog-link{
+.blog-link {
   text-decoration: none;
   color: white;
   font-family: "Inter";
 }
 
-.our-solution-link{
+.our-solution-link {
   text-decoration: none;
 }
 
-.insight-imag-container{
+.insight-imag-container {
   width: 100%;
   height: auto;
-
 }
 
-.insigts-image{
+.insigts-image {
   width: 100%;
-
 }
 
-.explore-our-insigts-image{
+.explore-our-insigts-image {
   width: 100%;
   height: 100vh;
   background-image: url("/images/the-great-reimagination.jpg");
@@ -760,48 +767,45 @@ video {
   flex-direction: column;
   justify-content: center;
   position: relative;
- 
 }
 
-.date-text{
+.date-text {
   font-size: 12px;
   font-family: "Inter";
 }
 
-.online-bookkeeping-software-heading{
+.online-bookkeeping-software-heading {
   font-size: 28px;
   font-family: "Lato";
 }
 
-.fa-arrow-long{
-  color: #04CAA8;
+.fa-arrow-long {
+  color: #04caa8;
   cursor: pointer;
   position: absolute;
   left: 22px;
   bottom: 10px;
- 
 }
 
-.health-text{
+.health-text {
   font-size: 12px;
   font-family: "Lato";
-  color: #04CAA8;
+  color: #04caa8;
 }
 
-.by-alex-glen-text{
+.by-alex-glen-text {
   font-size: 12px;
   font-family: "Lato";
 }
 
-.insight-top-image{
+.insight-top-image {
   border-top-left-radius: 5px;
   border-top-right-radius: 5px;
-  
 }
 
-.insight-success-stories-card{
+.insight-success-stories-card {
   background-color: #fff !important;
-  color:#000;
+  color: #000;
   min-height: 400px;
   border-radius: 5px;
   width: 100%;
@@ -809,7 +813,7 @@ video {
   position: relative;
 }
 
-.insight-card-heading{
+.insight-card-heading {
   font-family: "Inter";
   font-size: 16px;
   font-weight: bold;
@@ -817,29 +821,27 @@ video {
   padding-top: 20px;
 }
 
-.see-all-tech-industry-case-studies-link{
+.see-all-tech-industry-case-studies-link {
   color: #ffffff;
   text-decoration: none;
   border-bottom: 1px solid #ffffff;
   font-size: 14px;
 }
-.insight-card-body{
- display: flex;
- flex-direction: column;
- justify-content: space-between;
-
+.insight-card-body {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
 }
 
 .blog-date {
   margin-bottom: 1rem;
 }
 
-.insight-card-text{
+.insight-card-text {
   font-size: 12px;
   padding-top: 10px;
- 
 }
-.explore-our-insigts-heading{
+.explore-our-insigts-heading {
   font-family: "Lato";
   font-size: 24px;
   line-height: 30px;
@@ -847,7 +849,7 @@ video {
   margin-bottom: 30px;
 }
 
-.read-more-button-arrow{
+.read-more-button-arrow {
   border-radius: 50%;
   background-color: #ffffff;
   color: #000;
@@ -864,7 +866,7 @@ video {
   top: 93px;
 }
 
-.read-more-button{
+.read-more-button {
   width: 120px;
   height: 40px;
   border-radius: 20px;
@@ -876,34 +878,33 @@ video {
   cursor: pointer;
 }
 
-.insight-explore-card{
+.insight-explore-card {
   background-color: #151515;
   color: #ffffff;
   display: flex;
   flex-direction: column;
   justify-content: space-between;
-padding:  30px 5px;
-border: 1px solid #373737;
-position: relative;
-margin-bottom: 20px;
+  padding: 30px 5px;
+  border: 1px solid #373737;
+  position: relative;
+  margin-bottom: 20px;
 }
 
-.insight-explore-card:hover{
+.insight-explore-card:hover {
   border: 1px solid #ffffff;
 }
 
-.insight-explore-card-heading{
+.insight-explore-card-heading {
   font-size: 18px;
   font-family: "Lato";
   margin-bottom: 30px;
   color: #373737;
-
 }
 
-.insight-explore-card-heading, p{
+.insight-explore-card-heading,
+p {
   font-size: 16px;
   font-family: "Inter";
- 
 }
 .insight-card {
   background-color: #151515 !important;
@@ -944,7 +945,6 @@ margin-bottom: 20px;
   /* font-weight: bold; */
   margin-top: 30px;
   line-height: 18px;
-
 }
 
 /* our-clients styles -------------------start */
@@ -969,15 +969,11 @@ margin-bottom: 20px;
 }
 
 .client-logo-card {
- 
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-end !important;
   align-items: center;
 }
-
-
-
 
 .logo-wrapper {
   width: 34px;
@@ -1038,22 +1034,57 @@ footer {
   padding: 40px 0px 10px 0px;
 }
 .footer-logo {
-  width: 70px !important;
-  height: 50px !important;
-  aspect-ratio: 1/1;
+  display: block;
+  max-width: 100%; 
+  height: auto; 
 }
+  
+  @media (max-width: 576px) {
+  .footer-logo{
+    margin-bottom: 6px;
+    width: 40px
+    
+  }
+  }
+   @media (max-width: 993px) {
+    
+    .footer-logo{
+    width: 90px;
+    height: auto;
+    margin-bottom: 5px;
+    }
+  }
+
+  @media (min-width: 1024px) {
+    
+    .footer-logo{
+    width: 100px;
+    height: auto;
+    margin-bottom: 5px;
+    }
+  }
 
 .brew-code-text {
   text-decoration: none;
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .brew-code-letter {
-  font-size: 80px;
+  /* font-size: 80px;
   color: #ffffff;
   font-family: "Inter";
   font-weight: 600;
   text-align: center;
-  margin: 0px 10px;
+  margin: 0px 10px; */
+  --base-font-size: 80px; /* Base font size */
+  font-size: var(--base-font-size); /* Initial font size */
+  color: #ffffff;
+  font-family: "Inter";
+  font-weight: 600;
+  text-align: center;
+  display: flex;
 }
 
 .footer-links-list {
@@ -1073,24 +1104,8 @@ footer {
   font-size: 14px;
 }
 
-@media (max-width: 768px) {
-  .footer-icon {
-    width: 50px;
-    height: 50px;
-   
-  }
-  .footer-link,
-  .footer-link-policy {
-    padding: 10px;
-    font-size: 12px;
-  }
-
-  @media (max-width: 480px) {
-    .company-logo-container {
-      flex-basis: 50%;
-      justify-content: center;
-    }
-  }
+.footer-extra-image{
+  width: 100%;
 }
 
 .footer-icon {
@@ -1108,24 +1123,7 @@ footer {
   margin: 40px 0px 20px 0px;
 }
 
-@media (max-width: 768px) {
-  .footer-link,
-  .footer-link-policy {
-    font-size: 14px;
-    padding: 5px;
-  }
 
-  .footer-icon {
-    width: 24px;
-    height: 24px;
-  }
-}
-
-@media (max-width: 576px) {
-  .brew-code-letter {
-    font-size: 20px;
-  }
-}
 
 /* Base Styles for Swiper Slides */
 .swiper-slide {
@@ -1187,11 +1185,11 @@ footer {
   font-weight: bold;
 }
 
-.image-container-at{
+.image-container-at {
   width: 100%;
   height: auto;
 }
-.at-t-image{
+.at-t-image {
   width: 100%;
   height: auto;
 }
@@ -1236,8 +1234,6 @@ footer {
 }
 
 /* serviecs section styles start--------------------------------------------- */
-
-
 
 .services-background-image {
   position: absolute;
@@ -1365,12 +1361,11 @@ footer {
   box-shadow: rgba(0, 0, 0, 0.1) 0px 4px 12px;
 }
 
-.full-stack-card{
+.full-stack-card {
   height: 340px !important;
-  
 }
 
-.ui-ux-heading{
+.ui-ux-heading {
   font-size: 14px !important;
 }
 
@@ -1402,25 +1397,38 @@ footer {
   /* height: auto; */
 }
 
-.insight-card-image-container{
+.insight-card-image-wrapper {
   width: 100%;
-  height: auto;
+  /* Set the desired aspect ratio using padding-top */
+  padding-top: 56.25%; /* 16:9 aspect ratio (9/16 * 100) */
   position: relative;
-  
+}
 
+.insight-card-image-container {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
   overflow: hidden;
 }
+
+.insight-card-img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
 
 .card-img-top {
   width: 100%;
   height: auto;
 }
 
-.insight-card-img{
-  width: 100%;
-  height: auto;
 
-}
 
 .innovation-text-card {
   width: 33%;
@@ -1674,7 +1682,6 @@ footer {
   font-weight: 600;
 }
 
-
 .cyber-security-services-description {
   font-size: 22px;
   font-family: "Inter";
@@ -1687,8 +1694,6 @@ footer {
   height: auto;
   padding: 0px 30px !important;
   background-color: #151515;
-
-  
 }
 .card-margin-right {
   margin-right: 40px;
@@ -1748,7 +1753,7 @@ footer {
 }
 
 .icon-title {
-  font-size: 1rem; 
+  font-size: 1rem;
   font-family: "Inter";
   font-weight: 600;
   /* padding-top: 10px; */
@@ -1851,7 +1856,6 @@ footer {
   margin-bottom: 100px;
 }
 
-
 .form-control {
   background-color: transparent;
   color: #fff;
@@ -1859,7 +1863,7 @@ footer {
   border-bottom: 1px solid #a2834b !important;
 }
 
-.robatic-heading{
+.robatic-heading {
   line-height: 34px;
 }
 .form-control::placeholder {
@@ -1999,7 +2003,6 @@ footer {
   height: auto;
   margin-left: 6px;
   cursor: pointer;
-
 }
 
 /* .danika-solution-image-border{
@@ -2077,7 +2080,6 @@ footer {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
- 
 }
 .ecommerce-hero-section {
   width: 100%;
@@ -2086,7 +2088,6 @@ footer {
   background-position: center;
   background-size: cover;
   background-repeat: no-repeat;
- 
 }
 
 .overlay-ar-vr {
@@ -2096,7 +2097,6 @@ footer {
   right: 0;
   bottom: 0;
   background-color: rgba(0, 0, 0, 0.4);
-  
 }
 
 .ar-vr-heading {
@@ -2393,15 +2393,13 @@ footer {
   }
 }
 
-
 .navbar-visible {
-  display: block !important; 
+  display: block !important;
 }
 
 .navbar-hidden {
   display: none !important;
 }
-
 
 .url-link {
   text-decoration: none;
@@ -2482,12 +2480,12 @@ footer {
   color: #ffffff;
 }
 
-.e-commerce-content{
+.e-commerce-content {
   transition: max-height 0.3s ease-out, opacity 0.3s ease-out;
   overflow: hidden;
   max-height: 1000px;
   opacity: 1;
- padding: 30px 0px;
+  padding: 30px 0px;
 }
 .e-commerce-content.collapsed {
   max-height: 0;
@@ -2624,18 +2622,15 @@ footer {
 }
 
 .percentage {
-  font-size: 1.5rem; 
-  color: #fff; 
+  font-size: 1.5rem;
+  color: #fff;
   position: relative;
   font-family: "Inter";
   /* margin: 40px 0px; */
 }
-.percentage-container{
+.percentage-container {
   margin-left: 80px;
-
 }
-
-
 
 .percentage::after {
   content: "";
@@ -2649,7 +2644,7 @@ footer {
   width: 48px;
   border-bottom: 2px solid #00aaff;
 }
-.line{
+.line {
   background-color: red;
   width: 47px;
   margin: 0px;
@@ -2657,24 +2652,16 @@ footer {
   margin-top: 3px;
 }
 
-
-
-
-
 .user-adoption {
   font-size: 1.5rem;
   font-family: "Inter";
   color: #ffffff;
   margin: 40px 0px;
- 
 }
-
 
 .user-adoption span {
   text-decoration: none;
 }
-
-
 
 .socoter-img-container {
   display: flex;
@@ -2692,8 +2679,6 @@ footer {
 .healthcare-text-container {
   display: flex;
   flex-direction: column;
-
- 
 }
 
 .soctor-about-section {
@@ -2711,7 +2696,6 @@ footer {
   margin-top: -100px;
   font-weight: 500;
   font-family: "Lato";
- 
 }
 .about-introduction {
   writing-mode: tb-rl;
@@ -2814,13 +2798,12 @@ footer {
   display: inline-block;
   width: 30px;
   height: 30px;
- display: flex;
- justify-content: center;
- align-items: center;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   border: 1.5px solid #fff;
   border-radius: 50%;
   margin-right: 20px;
- 
 }
 
 .gap-that-container {
@@ -2831,11 +2814,9 @@ footer {
 }
 
 .gap-description {
-  font-style: "Inter"; 
+  font-style: "Inter";
   font-size: 14px;
 }
-
-
 
 .process-image-container {
   width: 100%;
@@ -2866,10 +2847,8 @@ footer {
     -webkit-text-stroke: 1px #555;
     font-size: 100px;
     z-index: -20;
-    
   }
 }
-
 
 .reflect {
   position: relative;
@@ -2890,9 +2869,6 @@ footer {
   font-size: 64px;
 }
 
-
-
-
 .malaya-education {
   position: relative;
   display: inline-block;
@@ -2912,22 +2888,18 @@ footer {
   font-size: 64px;
 }
 
-.education-description{
+.education-description {
   color: #ffffff;
   font-family: "Lato";
   position: relative;
- 
-  
-  
 }
 
-.iformation-description{
+.iformation-description {
   color: #ffffff;
   font-size: 18px;
   text-align: center;
   font-style: "Inter";
   margin: 40px 0px;
-  
 }
 
 .information-technology-stoke-text {
@@ -2941,7 +2913,6 @@ footer {
     line-height: 120px;
   }
 }
-
 
 .information-technology {
   position: relative;
@@ -2962,63 +2933,62 @@ footer {
   line-height: 122px;
 }
 
-.list-page-description{
+.list-page-description {
   font-size: 18px;
   font-family: "Inter";
   color: #fff;
 }
 
-
-
 /* Privacy Policy styles--------------------------------------------------start */
-.privacy-policy-container{
+.privacy-policy-container {
   color: #ffffff;
   text-align: center;
   font-family: "Inter";
 }
 
-.privacy-policy-heading ,.privacy-notice-heading{
+.privacy-policy-heading,
+.privacy-notice-heading {
   font-size: 16px;
   font-weight: 400;
   letter-spacing: 2x;
   font-family: "Inter";
 }
 
-.privacy-notice-heading{
+.privacy-notice-heading {
   margin-bottom: 30px;
   font-size: 20px;
   letter-spacing: 2px;
 }
 
-.privacy-policy-description{
+.privacy-policy-description {
   font-weight: 500;
   font-family: "Inter";
 }
 
-.last-updated{
+.last-updated {
   font-weight: 500;
   font-family: "Inter";
   font-size: 17px;
 }
 
-.privacy-policy-text{
+.privacy-policy-text {
   font-size: 15px;
   font-family: "Inter";
 }
 
-.privacy-notice-sub-heading{
+.privacy-notice-sub-heading {
   font-size: 18px;
   margin-bottom: 10px;
   font-family: "Inter";
 }
 
-.privacy-notice-sub-heading-description{
+.privacy-notice-sub-heading-description {
   font-size: 14px;
   margin-bottom: 10px;
   font-family: "Inter";
 }
 
-.table-of-content-link{
+.table-of-content-link {
   margin-bottom: 15px;
   text-decoration: none;
   color: #74a8ff;
@@ -3026,58 +2996,24 @@ footer {
   font-size: 14px;
 }
 
-.privacy-notice-sub-heading-first{
+.privacy-notice-sub-heading-first {
   font-size: 18px;
   margin-bottom: 10px;
 }
 
-.text-decoration-none{
+.text-decoration-none {
   list-style-type: none;
-
 }
 
-.email-text-container{
-
+.email-text-container {
   margin-top: -10px;
   font-size: 14px;
   font-family: "Inter";
 }
-.email-text{
+.email-text {
   text-decoration: none;
-  
- 
 }
 /* Privacy Policy styles--------------------------------------------------End */
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 
 .stepperContainer {
   color: white;
@@ -3085,14 +3021,11 @@ footer {
 
 .step {
   position: relative;
-text-align: center;
+  text-align: center;
   padding: 20px 0px;
-
-  
 }
 
 .stepHeader {
-
   font-family: "Inter";
   display: flex;
 }
@@ -3112,7 +3045,6 @@ text-align: center;
 .stepProgress {
   position: relative;
   width: 289px;
-
 }
 
 .circle {
@@ -3127,12 +3059,12 @@ text-align: center;
 
 .line-steper {
   position: absolute;
-    top: 50%;
-    left: 10px;
-    right: 10px;
-    height: 2px;
-    background-color: white;
-    z-index: 0;
+  top: 50%;
+  left: 10px;
+  right: 10px;
+  height: 2px;
+  background-color: white;
+  z-index: 0;
 }
 
 .stepDescription {
@@ -3147,108 +3079,98 @@ text-align: center;
   border-radius: 50%;
 }
 
-
-
-
 /* full stack bg-image */
-.our-suite-of-full-stack-bg{
+.our-suite-of-full-stack-bg {
   background-image: url("/images/our-suite-of-full-stack-bg.jpg");
   height: auto;
   width: 100%;
   padding: 32px 0px !important;
 }
 
-.full-stack-section-heading{
+.full-stack-section-heading {
   font-family: "Inter";
   font-weight: bold;
 }
 
-.full-stack-ul{
+.full-stack-ul {
   display: flex;
   margin: 60px 0px 30px 0px;
 }
 
-.full-stack-list-item{
+.full-stack-list-item {
   font-family: "Inter";
   padding: 10px 0px;
   font-size: 14px;
 }
 
-
 /* about us styles----------------- */
 
-.about-us-description{
+.about-us-description {
   font-family: "Inter";
   font-size: 14px;
 }
 
-.about-us-heading{
+.about-us-heading {
   font-size: 70px;
   font-weight: 700;
   margin: 100px 0px;
   font-family: "Inter";
 }
 
-.about-us-card-heading{
+.about-us-card-heading {
   font-size: 18px;
 }
 
-.our-history{
+.our-history {
   margin: 150px 0px;
   display: flex !important;
   justify-content: space-between !important;
 }
 
-.about-us-icon{
+.about-us-icon {
   display: flex;
   justify-content: flex-start !important;
   align-self: flex-start !important;
-
 }
 
-
-
-.image-icon-container{
+.image-icon-container {
   width: 100%;
   height: auto;
   text-align: center;
 }
 
-.problem-statemt-icon{
+.problem-statemt-icon {
   width: 45px;
   height: 45px;
   margin-right: 15px;
 }
-.business-goal-icon{
+.business-goal-icon {
   width: 45px;
   height: 45px;
   padding-right: 15px;
-
 }
 
-.email-text{
+.email-text {
   text-decoration: none;
 }
 
-.list-page-arrow-icon{
+.list-page-arrow-icon {
   height: 12px;
   margin-right: 15px;
 }
 
-.discover-bg-container{
+.discover-bg-container {
   position: absolute;
 }
-.discover-bg-icon{
+.discover-bg-icon {
   width: 100px;
-
 }
 
-.image-icon{
+.image-icon {
   width: 40px;
- 
 }
 
-.our-history-heading{
+.our-history-heading {
   font-family: "Inter";
   font-weight: bold;
   font-size: 66px;
@@ -3256,16 +3178,15 @@ text-align: center;
   margin-bottom: 60px !important;
 }
 
-.about-us-description{
+.about-us-description {
   font-family: "Inter";
   font-size: 16px;
-
 }
 
-.about-us-card-container{
+.about-us-card-container {
   margin: 150px 0px;
 }
 
-.about-us-card-body{
-  background-color:#D9D9D9 ;
+.about-us-card-body {
+  background-color: #d9d9d9;
 }
