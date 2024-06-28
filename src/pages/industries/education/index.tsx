@@ -6,14 +6,13 @@ import React from "react";
 const Index: React.FC = () => {
   return (
     <Layout>
-            <Head>
-        <title>Capital Markets Services | Brewcode Technology Private Limited</title>
+      <Head>
+        <title>Education | Brewcode Technology Private Limited</title>
         <meta
           name="description"
-          content="Harness the Power of IaaS for Seamless Scalability and Enhanced Performance in Capital Markets Services."
+          content="Harness the Power of IaaS for Seamless Scalability and Enhanced Performance in Automotive Services."
         />
       </Head>
-
       <div
         style={{
           position: "relative",
@@ -35,13 +34,13 @@ const Index: React.FC = () => {
           <div className="row">
             <div className="hero-section-content">
               <h1 className="cyber-security-services-heading mb-3">
-              Capital Markets
+              Education
               </h1>
 
               <p className=" services-description text-center">
-                Exhibit your digital footprint on various gadgets with a
-                Responsive
-                <br /> UI development approach.
+              Thanks to e-learning web and mobile apps, online education has undergone a remarkable transformation. It is an interactive app that provides learners with expected results after they input their data.
+
+
               </p>
             </div>
           </div>
