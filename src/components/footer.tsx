@@ -11,20 +11,20 @@ const Footer: React.FC = () => {
      
         <Link href="/" passHref>
           <img
-            src="/images/svg/brewcode_logo_svg.svg"
+            src="/images/svg/Brewcode-footer-logo.svg"
             alt="Brewcode logo"
             className="footer-logo"
             loading="lazy"
           />
         </Link>
      
-      { "BREW{CODE}".split("").map((letter, index) => (
+      {/* { "BREW{CODE}".split("").map((letter, index) => (
         <div className="text-center d-flex" key={index} style={{flex: '0 0 auto' }}>
           <Link href="/" passHref className="brew-code-text">
             <h3 className="brew-code-letter">{letter}</h3>
           </Link>
         </div>
-      ))}
+      ))} */}
     </div>
 
        

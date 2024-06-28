@@ -1,6 +1,5 @@
 import { useRouter } from "next/router";
 import { Route } from "../types";
-import { current } from "@reduxjs/toolkit";
 
 export const routeMap: Record<Route, string> = {
   "/": "/",
@@ -13,8 +12,7 @@ export const routeMap: Record<Route, string> = {
   "e-commerce": "/services/e-commerce",
   "cloud-services": "/services/cloud-services",
   "cyber-security": "/services/cyber-security",
-  "enterprise-application-development":
-    "/services/enterprise-application-development",
+  "enterprise-application-development": "/services/enterprise-application-development",
   "resource-planning": "/services/resource-planning",
   infrastructure: "/services/infrastructure",
   "robotic-process-automation": "/services/robotic-process-automation",
@@ -34,19 +32,22 @@ export const routeMap: Record<Route, string> = {
   "dhanika-solutions": "/case-studies/dhanika-solutions",
   "brewcode-meet": "/case-studies/brewcode-meet",
   "universiti-malaya": "/case-studies/universiti-malaya",
-  soctor: "case-studies/soctor",
-
+  soctor: "/case-studies/soctor",
   "case-studies": "/case-studies",
   "ar-vr-development": "/services/ar-vr-development",
   "at-t": "/case-studies/at-t",
   "contact-us": "/contact-us",
   industries: "/industries",
-  // "about-us": "about-us",
-  "cookie-policy": "cookie-policy",
-  "privacy-policy": "privacy-policy",
-  "terms-of-services": "terms-of-services",
+  "cookie-policy": "/cookie-policy",
+  "privacy-policy": "/privacy-policy",
+  "terms-of-services": "/terms-of-services",
   "vodafone-idea": "/case-studies/vodafone-idea",
-  automotive: "/industries/automotive",
+  education: "/industries/education",
+  "hospitality-industry": "/industries/hospitality-industry",
+  logistic: "/industries/logistic",
+  "e-commerce-industry": "/industries/e-commerce-industry",
+  "tourism-industry": "/industries/tourism-industry",
+  healthcare: "/industries/healthcare",
 };
 
 const useNavigation = () => {
@@ -54,21 +55,17 @@ const useNavigation = () => {
 
   const navigate = (route: Route) => {
     const path = routeMap[route];
-    console.log(path, "PATH");
     if (path) {
-      router.replace(router.asPath + path);
+      router.push(path);
     } else {
       console.error(`Invalid route: ${route}`);
     }
   };
 
   const navigateToButtonUrl = (buttonUrl: string) => {
-    if (buttonUrl) {
-      if (buttonUrl in routeMap) {
-        router.push(routeMap[buttonUrl as Route]);
-      } else {
-        console.error(`Invalid button URL: ${buttonUrl}`);
-      }
+    const route = buttonUrl as Route;
+    if (route in routeMap) {
+      router.push(routeMap[route]);
     } else {
       console.error(`Invalid button URL: ${buttonUrl}`);
     }

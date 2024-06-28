@@ -6,20 +6,12 @@ import Image from "next/image";
 import useNavigation, { routeMap } from "./customHooks/useNavigation";
 import ReusableButton from "./customHooks/reusableContactButton";
 
-
 type HeaderProps = {
   scroll?: boolean;
   isLoading: boolean;
 };
 
-const Header: React.FC<HeaderProps> = ({isLoading}) => {
- 
- 
- 
-
-  
-  
-  
+const Header: React.FC<HeaderProps> = ({ isLoading }) => {
   const navigate = (url: string) => {
     router.push(url);
   };
@@ -28,7 +20,6 @@ const Header: React.FC<HeaderProps> = ({isLoading}) => {
   const [dropdownTimeout, setDropdownTimeout] = useState<NodeJS.Timeout | null>(
     null
   );
-
 
   const whatWeDoRef = useRef<HTMLLIElement>(null);
   const ourWorkRef = useRef<HTMLLIElement>(null);
@@ -120,10 +111,6 @@ const Header: React.FC<HeaderProps> = ({isLoading}) => {
     }
   }, []);
 
-
-
-
-
   return (
     <Navbar
       expand="lg"
@@ -166,7 +153,7 @@ const Header: React.FC<HeaderProps> = ({isLoading}) => {
               <Link
                 className="nav-link active"
                 aria-current="page"
-                href='/about-us'
+                href="/about-us"
                 passHref
               >
                 About Us
@@ -245,7 +232,9 @@ const Header: React.FC<HeaderProps> = ({isLoading}) => {
                           <p className="pb-1">
                             <Link
                               className="list-group-item"
-                              href={routeMap["enterprise-application-development"]}
+                              href={
+                                routeMap["enterprise-application-development"]
+                              }
                               passHref
                             >
                               Enterprise Application Development
@@ -334,55 +323,57 @@ const Header: React.FC<HeaderProps> = ({isLoading}) => {
                           <p className="pb-1">
                             <Link
                               className="list-group-item"
-                              href={routeMap.automotive}
+                              href={routeMap.education}
                               passHref
                             >
-                              Automotive
+                              Education
                             </Link>
                           </p>
                           <p className="pb-1">
                             <Link
                               className="list-group-item"
-                              href={routeMap.banking}
+                              href={routeMap.logistic}
                               passHref
                             >
-                              Banking
+                             
+                              Logistic
                             </Link>
                           </p>
                           <p className="pb-1">
                             <Link
                               className="list-group-item"
-                              href={routeMap["capital-markets"]}
+                              href={routeMap["hospitality-industry"]}
                               passHref
                             >
-                              Capital Markets
+                            Hospitality Industry
+
                             </Link>
                           </p>
                           <p className="pb-1">
                             <Link
                               className="list-group-item"
-                              href={routeMap["communication-media"]}
+                              href={routeMap.healthcare}
                               passHref
                             >
-                              Communication & Media
+                             Health care
                             </Link>
                           </p>
                           <p className="pb-1">
                             <Link
                               className="list-group-item"
-                              href={routeMap.health}
+                              href={routeMap["e-commerce-industry"]}
                               passHref
                             >
-                              Health
+                            E-Commerce Industry
                             </Link>
                           </p>
                           <p className="pb-1">
                             <Link
                               className="list-group-item"
-                              href={routeMap["high-tech"]}
+                              href={routeMap["tourism-industry"]}
                               passHref
                             >
-                              High Tech
+                              Tourism Industry
                             </Link>
                           </p>
                         </div>
@@ -408,7 +399,7 @@ const Header: React.FC<HeaderProps> = ({isLoading}) => {
                 Case Studies
               </Link>
             </li>
-          
+
             <li className="nav-item">
               <Link
                 className="nav-link active"

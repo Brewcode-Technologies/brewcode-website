@@ -6,11 +6,11 @@ import React from "react";
 const Index: React.FC = () => {
   return (
     <Layout>
-      <Head>
-        <title>Automotive Services | Brewcode Technology Private Limited</title>
+       <Head>
+        <title>Logistic | Brewcode Technology Private Limited</title>
         <meta
           name="description"
-          content="Harness the Power of IaaS for Seamless Scalability and Enhanced Performance in Automotive Services."
+          content="Harness the Power of IaaS for Seamless Scalability and Enhanced Performance in Banking Services."
         />
       </Head>
       <div
@@ -34,13 +34,11 @@ const Index: React.FC = () => {
           <div className="row">
             <div className="hero-section-content">
               <h1 className="cyber-security-services-heading mb-3">
-              Automotive
+              Logistic
               </h1>
 
               <p className=" services-description text-center">
-                Exhibit your digital footprint on various gadgets with a
-                Responsive
-                <br /> UI development approach.
+              Throughout the industry, people and goods are transported every day via air, sea, and land. The development of logistics apps streamlines business processes to an extent.
               </p>
             </div>
           </div>

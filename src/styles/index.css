@@ -1034,8 +1034,8 @@ footer {
   padding: 40px 0px 10px 0px;
 }
 .footer-logo {
-  display: block;
-  max-width: 100%; 
+
+  width: 100%; 
   height: auto; 
 }
   
@@ -1049,7 +1049,7 @@ footer {
    @media (max-width: 993px) {
     
     .footer-logo{
-    width: 90px;
+    width: 100%;
     height: auto;
     margin-bottom: 5px;
     }
@@ -1058,7 +1058,7 @@ footer {
   @media (min-width: 1024px) {
     
     .footer-logo{
-    width: 100px;
+    width: 100%;
     height: auto;
     margin-bottom: 5px;
     }
@@ -3189,4 +3189,63 @@ footer {
 
 .about-us-card-body {
   background-color: #d9d9d9;
+}
+
+
+
+
+/* industry list styles------------------------------------ */
+
+.industry-heading{
+  font-family: "Inter";
+  font-weight: 400;
+}
+
+.industries-text{
+  color: #ffffff;
+  font-family: "Inter";
+  font-size: 12px;
+  line-height: 20px;
+}
+.industry-healthcare-sub-heading{
+  font-size: 18px;
+  font-family: "Lato";
+  font-weight: 500;
+  padding: 10px 0px;
+}
+
+.health-car-right-arrow-icon-text{
+  font-size: 14px;
+  font-family: "Inter";
+  margin-left: 0px;
+  padding-left: 0px;
+}
+.right-arrow-icon{
+  color: #0CCAFF;
+}
+
+.industry-icon {
+  width: 100%;
+  height: auto;
+  max-width: 100px; 
+  aspect-ratio: 1; 
+  cursor: pointer;
+}
+
+.industry-healthcare-list-items{
+    font-family: "Inter";
+    padding: 5px 0px;
+    font-size: 12px;
+}
+
+@media (max-width: 768px) {
+  .industry-icon {
+    max-width: 75px; 
+  }
+}
+
+@media (max-width: 480px) {
+  .industry-icon {
+    max-width: 50px; 
+  }
 }

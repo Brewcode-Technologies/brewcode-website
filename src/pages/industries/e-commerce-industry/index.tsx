@@ -6,11 +6,11 @@ import React from "react";
 const Index: React.FC = () => {
   return (
     <Layout>
-       <Head>
-        <title>Health Services | Brewcode Technology Private Limited</title>
+        <Head>
+        <title>E-Commerce Industry | Brewcode Technology Private Limited</title>
         <meta
           name="description"
-          content="Harness the Power of IaaS for Seamless Scalability and Enhanced Performance in Health Services."
+          content="Harness the Power of IaaS for Seamless Scalability and Enhanced Performance in High Tech Services."
         />
       </Head>
       <div
@@ -34,7 +34,7 @@ const Index: React.FC = () => {
           <div className="row">
             <div className="hero-section-content">
               <h1 className="cyber-security-services-heading mb-3">
-              Health
+              E-Commerce-Industry
               </h1>
 
               <p className=" services-description text-center">

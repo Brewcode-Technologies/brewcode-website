@@ -6,13 +6,14 @@ import React from "react";
 const Index: React.FC = () => {
   return (
     <Layout>
-       <Head>
-        <title>Communication & Media Services | Brewcode Technology Private Limited</title>
+            <Head>
+        <title>Hospitality Industry | Brewcode Technology Private Limited</title>
         <meta
           name="description"
-          content="Harness the Power of IaaS for Seamless Scalability and Enhanced Performance in Communication & Media Services."
+          content="Harness the Power of IaaS for Seamless Scalability and Enhanced Performance in Capital Markets Services."
         />
       </Head>
+
       <div
         style={{
           position: "relative",
@@ -34,13 +35,11 @@ const Index: React.FC = () => {
           <div className="row">
             <div className="hero-section-content">
               <h1 className="cyber-security-services-heading mb-3">
-              communication & Media
+              Hospitality Industry
               </h1>
 
               <p className=" services-description text-center">
-                Exhibit your digital footprint on various gadgets with a
-                Responsive
-                <br /> UI development approach.
+              As far as design and development are concerned, we are essentially limitless. We develop hospitality applications keeping in mind the real-time needs of the places where they may be used and the latest features.
               </p>
             </div>
           </div>

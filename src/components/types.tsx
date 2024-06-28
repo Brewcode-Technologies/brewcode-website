@@ -1,7 +1,8 @@
-export type Route =
+export type Route = 
   | "/"
   | "login"
   | "career"
+  | "our-work"
   | "insights"
   | "who-we-are"
   | "services"
@@ -16,49 +17,31 @@ export type Route =
   | "digital-assurance"
   | "web-development"
   | "ux-ui-designing"
-  | "automotive"
   | "banking"
   | "capital-markets"
   | "communication-media"
   | "health"
   | "high-tech"
   | "vr-application"
+  | "information-technology"
   | "soctor-healthcare"
+  | "st-jude"
   | "dhanika-solutions"
   | "brewcode-meet"
-  | "vodafone-idea"
-  | "case-studies"
-  | "our-work"
-  | "contact-us"
-  | "soctor"
-  | "infrastructure"
-  | "information-technology"
-  | "at-t"
   | "universiti-malaya"
-  | "resource-planning"
+  | "soctor"
+  | "case-studies"
+  | "ar-vr-development"
+  | "at-t"
+  | "contact-us"
   | "industries"
-  | "automotive"
-  // | "about-us"
   | "cookie-policy"
   | "privacy-policy"
   | "terms-of-services"
-  | "st-jude"
-  | "ar-vr-development";
-
-export interface ReusableButtonProps {
-  label: string;
-  navigateTo: () => void;
-}
-
-export interface CaseStudy {
-  id: number;
-  title: string;
-  description: string;
-  imageUrl: string;
-  buttonText: string;
-  buttonUrl: string;
-  read: string;
-  colImageUrl: string;
-  colImageName: string;
-  size: "small" | "medium" | "large";
-}
+  | "vodafone-idea"
+  | "education"
+  | "hospitality-industry"
+  | "logistic"
+  | "e-commerce-industry"
+  | "tourism-industry"
+  | "healthcare";
