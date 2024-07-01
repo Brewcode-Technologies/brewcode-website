@@ -1,8 +1,10 @@
+import IndustriesList from "@component/components/IndustriesList";
 import Layout from "@component/components/layouts/layout";
 import Head from "next/head";
 import Image from "next/image";
 import React from "react";
-import { IoIosArrowForward } from "react-icons/io";
+
+
 
 const Index: React.FC = () => {
   const fullStackItemsColumn1 = [
@@ -68,7 +70,7 @@ const Index: React.FC = () => {
             <div className="col-md-7">
               <div>
                 <h2 className="industry-healthcare-sub-heading">
-                  IT Souation for Healthcare
+                IT Solutions for Healthcare
                 </h2>
                 <p className="industries-text">
                   Federal, state, EU, HIPAA, and Joint Commission regulations
@@ -84,7 +86,7 @@ const Index: React.FC = () => {
               </div>
               <div>
                 <h2 className="industry-healthcare-sub-heading">
-                  IT Souation for Healthcare
+                Electronic Medical Records (EMR)
                 </h2>
                 <p className="industries-text">
                   As healthcare providers continue to receive incentives for
@@ -97,7 +99,7 @@ const Index: React.FC = () => {
               </div>
               <div>
                 <h2 className="industry-healthcare-sub-heading">
-                  IT Souation for Healthcare
+                Regulation and Compliance
                 </h2>
                 <p className="industries-text">
                   Government and private payer standards have created a daunting
@@ -107,7 +109,7 @@ const Index: React.FC = () => {
               </div>
               <div className="my-5">
                 <h2 className="industry-healthcare-sub-heading">
-                  IT Souation for Healthcare
+                Brewcode offers technology solutions to assist with
                 </h2>
                 <div className="">
                   {fullStackItemsColumn1.map((item, index) => (
@@ -118,51 +120,22 @@ const Index: React.FC = () => {
                 </div>
               </div>
             </div>
-            <div className="col-md-4">
-              <p>Industries</p>
-
-              <p className="d-flex health-car-right-arrow-icon-text">
-                {" "}
-                <IoIosArrowForward className="mt-1 right-arrow-icon" />
-                &nbsp;<span className="">Healthcare</span>
-              </p>
-              <p className="d-flex health-car-right-arrow-icon-text">
-                {" "}
-                <IoIosArrowForward className="mt-1 right-arrow-icon" />
-                &nbsp;<span>Education</span>
-              </p>
-              <p className="d-flex health-car-right-arrow-icon-text">
-                {" "}
-                <IoIosArrowForward className="mt-1 right-arrow-icon" />
-                &nbsp;<span>E-Commerce</span>
-              </p>
-              <p className="d-flex health-car-right-arrow-icon-text">
-                {" "}
-                <IoIosArrowForward className="mt-1 right-arrow-icon" />
-                &nbsp;<span>Logistic</span>
-              </p>
-              <p className="d-flex health-car-right-arrow-icon-text">
-                {" "}
-                <IoIosArrowForward className="mt-1 right-arrow-icon" />
-                &nbsp;<span>Hospital Industry</span>
-              </p>
-              <p className="d-flex health-car-right-arrow-icon-text">
-                {" "}
-                <IoIosArrowForward className="mt-1 right-arrow-icon" />
-                &nbsp;<span>Automotive</span>
-              </p>
-              <p className="d-flex health-car-right-arrow-icon-text">
-                {" "}
-                <IoIosArrowForward className="mt-1 right-arrow-icon" />
-                &nbsp;<span>Communication & Media</span>
-              </p>
-            </div>
+       
+          <IndustriesList/>
           </div>
           <div className="row">
             <div>
-              <h2 className="industry-healthcare-sub-heading">
-                IT Souation for Healthcare
+          <div className="d-flex">
+          <img
+                src="/images/svg/security-icon.svg"
+                alt="security icon image"
+                className="security-icon"
+                loading="lazy"
+              />
+              <h2 className="industry-healthcare-sub-heading mt-2">
+               Security
               </h2>
+          </div>
               <p className="industries-text">
                 The ability to pull archived records for authorized caregivers
                 improves clinical workflow, medical knowledge, and collaboration
@@ -176,9 +149,18 @@ const Index: React.FC = () => {
           </div>
           <div className="row">
             <div>
-              <h2 className="industry-healthcare-sub-heading">
-                IT Souation for Healthcare
+            <div className="d-flex">
+          <img
+                src="/images/svg/storage-icon.svg"
+                alt="security icon image"
+                className="security-icon"
+                loading="lazy"
+              />
+              <h2 className="industry-healthcare-sub-heading mt-2">
+              Storage, Replication, Archiving, and Backup
               </h2>
+          </div>
+           
               <p className="industries-text">
                 Shortening the time to implement a new initiative in the
                 business world means extra profit. In the world of healthcare,
@@ -195,9 +177,18 @@ const Index: React.FC = () => {
           </div>
           <div className="row">
             <div>
-              <h2 className="industry-healthcare-sub-heading">
-                IT Souation for Healthcare
+            <div className="d-flex">
+          <img
+                src="/images/svg/mingcute-time-line-icon.svg"
+                alt="security icon image"
+                className="security-icon"
+                loading="lazy"
+              />
+              <h2 className="industry-healthcare-sub-heading mt-2">
+              Time to Treatment
               </h2>
+          </div>
+          
               <p className="industries-text">
                 As healthcare providers continue to receive incentives for
                 implementing and upgrading their EMR systems, these initiatives
