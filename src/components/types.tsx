@@ -20,7 +20,6 @@ export type Route =
   | "banking"
   | "capital-markets"
   | "communication-media"
-  | "health"
   | "high-tech"
   | "vr-application"
   | "information-technology"

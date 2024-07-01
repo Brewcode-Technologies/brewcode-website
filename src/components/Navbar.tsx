@@ -320,6 +320,15 @@ const Header: React.FC<HeaderProps> = ({ isLoading }) => {
                       <div className="col-lg-3 col-sm-6 py-4 px-xl-5 px-4">
                         <h5 className="mb-3 dropdown-heading">Industries</h5>
                         <div className="">
+                        <p className="pb-1">
+                            <Link
+                              className="list-group-item"
+                              href={routeMap.healthcare}
+                              passHref
+                            >
+                             Health care
+                            </Link>
+                          </p>
                           <p className="pb-1">
                             <Link
                               className="list-group-item"
@@ -349,15 +358,7 @@ const Header: React.FC<HeaderProps> = ({ isLoading }) => {
 
                             </Link>
                           </p>
-                          <p className="pb-1">
-                            <Link
-                              className="list-group-item"
-                              href={routeMap.healthcare}
-                              passHref
-                            >
-                             Health care
-                            </Link>
-                          </p>
+                        
                           <p className="pb-1">
                             <Link
                               className="list-group-item"
@@ -374,6 +375,15 @@ const Header: React.FC<HeaderProps> = ({ isLoading }) => {
                               passHref
                             >
                               Tourism Industry
+                            </Link>
+                          </p>
+                          <p className="pb-1">
+                            <Link
+                              className="list-group-item"
+                              href={routeMap["communication-media"]}
+                              passHref
+                            >
+                            Communication Media
                             </Link>
                           </p>
                         </div>

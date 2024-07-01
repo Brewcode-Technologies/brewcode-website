@@ -23,7 +23,6 @@ export const routeMap: Record<Route, string> = {
   banking: "/industries/banking",
   "capital-markets": "/industries/capital-markets",
   "communication-media": "/industries/communication-media",
-  health: "/industries/health",
   "high-tech": "/industries/high-tech",
   "vr-application": "/case-studies/vr-application",
   "information-technology": "/case-studies/information-technology",

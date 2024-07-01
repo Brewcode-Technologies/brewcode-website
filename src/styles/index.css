@@ -3212,6 +3212,7 @@ footer {
   font-family: "Lato";
   font-weight: 500;
   padding: 10px 0px;
+  white-space: nowrap;
 }
 
 .health-car-right-arrow-icon-text{
@@ -3248,4 +3249,15 @@ footer {
   .industry-icon {
     max-width: 50px; 
   }
+}
+
+
+/* icons imags for healthcare */
+.security-icon {
+  width: 100%;
+  height: auto;
+  max-width: 30px;
+  aspect-ratio: 1 / 1;
+  display: block;
+  margin-right: 10px;
 }
