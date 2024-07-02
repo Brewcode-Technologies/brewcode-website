@@ -57,3 +57,7 @@ export type Route =
     read: string;
     size: "small" | "medium" | "large";
   }
+  export interface ReusableButtonProps {
+    label: string;
+    navigateTo: () => void;
+  }
