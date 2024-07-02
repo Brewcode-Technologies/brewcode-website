@@ -24,9 +24,7 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({ study, getClassName }) =>
           className={`${getClassName(study.size)} case-study-image mb-4`}
           width={100}
           height={100}
-         
           loading="lazy"
-       
         />
         <h3 className="soctor-heading">{study.title}</h3>
         <p className="soctor-description">{study.description}</p>
@@ -47,7 +45,6 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({ study, getClassName }) =>
             height={300}
             className="health-care-img"
             loading="lazy"
-           
           />
           <div className="top-left-text min-2-read">{study.read}</div>
         </div>

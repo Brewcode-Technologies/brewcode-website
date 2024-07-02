@@ -44,3 +44,16 @@ export type Route =
   | "e-commerce-industry"
   | "tourism-industry"
   | "healthcare";
+
+  export interface CaseStudy {
+    id: string;
+    imageUrl: string;
+    title: string;
+    description: string;
+    buttonText: string;
+    buttonUrl: string;
+    colImageUrl: string;
+    colImageName: string;
+    read: string;
+    size: "small" | "medium" | "large";
+  }
