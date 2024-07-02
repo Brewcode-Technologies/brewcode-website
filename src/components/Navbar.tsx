@@ -12,9 +12,12 @@ type HeaderProps = {
 };
 
 const Header: React.FC<HeaderProps> = ({ isLoading }) => {
+
+
   const navigate = (url: string) => {
     router.push(url);
   };
+
   const [isWhatWeDoOpen, setIsWhatWeDoOpen] = useState<boolean>(false);
   const [isOurWorkOpen, setIsOurWorkOpen] = useState<boolean>(false);
   const [dropdownTimeout, setDropdownTimeout] = useState<NodeJS.Timeout | null>(
