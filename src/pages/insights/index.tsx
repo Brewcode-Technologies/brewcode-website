@@ -1,7 +1,6 @@
 import useNavigation, { routeMap } from "@component/components/customHooks/useNavigation";
 import Layout from "@component/components/layouts/layout";
 import Head from "next/head";
-import Image from "next/image";
 import React, { useEffect, useState } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { useRouter } from "next/router";
@@ -270,8 +269,7 @@ const Index: React.FC = () => {
                 className="fa-arrow-long"
               
 
-                // onClick={() => router.push(study.buttonUrl)}
-                // onClick={() => handleButtonClick(study.buttonUrl)}
+              
                 onClick={() => handleButtonClick(study.buttonUrl)}
 
 

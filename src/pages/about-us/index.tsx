@@ -1,9 +1,6 @@
 import Layout from "@component/components/layouts/layout";
 import Head from "next/head";
-import Image from "next/image";
 import React from "react";
-import { FaArrowRightLong } from "react-icons/fa6";
-import { MdKeyboardArrowRight } from "react-icons/md";
 
 const Index: React.FC = () => {
   return (

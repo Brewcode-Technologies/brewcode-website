@@ -5,7 +5,6 @@ import { IoMdArrowDropdown, IoMdArrowDropup } from "react-icons/io";
 import { useState } from "react";
 
 import Head from "next/head";
-import useNavigation from "@component/components/customHooks/useNavigation";
 import ReusableButton from "@component/components/customHooks/reusableContactButton";
 import { useRouter } from "next/router";
 
