@@ -1,5 +1,4 @@
 import ReusableButton from "@component/components/customHooks/reusableContactButton";
-import useNavigation from "@component/components/customHooks/useNavigation";
 import Layout from "@component/components/layouts/layout";
 import Head from "next/head";
 import Image from "next/image";
@@ -9,20 +8,21 @@ import React from "react";
 const Index: React.FC = () => {
   const router = useRouter();
 
-  
   const navigate = (url: string) => {
     router.push(url);
   };
   return (
     <Layout>
-
-<Head>
-        <title> Enterprise Application Development | Brewcode Technology Private Limited</title>
+      <Head>
+        <title>
+          {" "}
+          Enterprise Application Development | Brewcode Technology Private
+          Limited
+        </title>
         <meta
           name="description"
           content="Project Timeline using Next.js and Bootstrap"
         />
-       
       </Head>
       <div
         style={{
@@ -43,7 +43,6 @@ const Index: React.FC = () => {
         </div>
         <div className="container">
           <div className="row">
-
             <div className="hero-section-content">
               <h1 className="services-header">
                 Enterprise Application Development

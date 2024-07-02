@@ -49,7 +49,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ blog, layout = 'insight-page' }) =>
               </div>
             </div>
           </div>
-          {/* <hr className="insights-line" /> */}
+    
         </div>
       </a>
     );
@@ -74,7 +74,6 @@ const BlogCard: React.FC<BlogCardProps> = ({ blog, layout = 'insight-page' }) =>
                 </div>
                 )}
                 <h5 className="insight-card-title pt-1">{blog.title}</h5>
-                {/* <p className="insight-card-description">{blog.description}</p> */}
               </div>
             </div>
           </Link>

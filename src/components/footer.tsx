@@ -7,28 +7,16 @@ const Footer: React.FC = () => {
   return (
     <footer>
       <div className="container">
-      <div className="d-flex justify-content-between mb-5 align-items-center">
-     
-        <Link href="/" passHref>
-          <img
-            src="/images/svg/Brewcode-footer-logo.svg"
-            alt="Brewcode logo"
-            className="footer-logo"
-            loading="lazy"
-          />
-        </Link>
-     
-      {/* { "BREW{CODE}".split("").map((letter, index) => (
-        <div className="text-center d-flex" key={index} style={{flex: '0 0 auto' }}>
-          <Link href="/" passHref className="brew-code-text">
-            <h3 className="brew-code-letter">{letter}</h3>
+        <div className="d-flex justify-content-between mb-5 align-items-center">
+          <Link href="/" passHref>
+            <img
+              src="/images/svg/Brewcode-footer-logo.svg"
+              alt="Brewcode logo"
+              className="footer-logo"
+              loading="lazy"
+            />
           </Link>
         </div>
-      ))} */}
-    </div>
-
-       
-
 
         <div className="d-flex justify-content-center align-items-center mb-5">
           <div className="flex-footer-icons d-flex justify-content-center">
@@ -39,7 +27,10 @@ const Footer: React.FC = () => {
                 className="footer-icon"
               />
             </Link>
-            <Link href="https://www.linkedin.com/company/brewcode/" target="_blank">
+            <Link
+              href="https://www.linkedin.com/company/brewcode/"
+              target="_blank"
+            >
               <ImageIcon
                 src="/images/svg/LinkedIn_svg.svg"
                 alt="LinkedIn icon"

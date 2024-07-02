@@ -3,7 +3,7 @@ import { useRouter } from "next/router";
 import { Navbar, Nav } from "react-bootstrap";
 import Link from "next/link";
 import Image from "next/image";
-import useNavigation, { routeMap } from "./customHooks/useNavigation";
+import  { routeMap } from "./customHooks/useNavigation";
 import ReusableButton from "./customHooks/reusableContactButton";
 
 type HeaderProps = {

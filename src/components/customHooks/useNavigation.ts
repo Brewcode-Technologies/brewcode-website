@@ -49,6 +49,8 @@ export const routeMap: Record<Route, string> = {
   healthcare: "/industries/healthcare",
 };
 
+
+
 const useNavigation = () => {
   const router = useRouter();
 
