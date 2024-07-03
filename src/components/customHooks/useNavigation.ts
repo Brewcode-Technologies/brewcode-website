@@ -21,6 +21,7 @@ export const routeMap: Record<Route, string> = {
   "web-development": "/services/web-development",
   "ux-ui-designing": "/services/ux-ui-designing",
   banking: "/industries/banking",
+  automotive:"/industries/automotive",
   "capital-markets": "/industries/capital-markets",
   "communication-media": "/industries/communication-media",
   "high-tech": "/industries/high-tech",

@@ -16,16 +16,44 @@ import "swiper/css/effect-coverflow";
 
 const SwiperComponent = () => {
   const images = [
-    { url: "/images/banking_slide_image.jpeg", caption: "Banking" },
-    { url: "/images/automotive_slide_image.jpeg", caption: "Automotive" },
-    { url: "/images/hiteck_slide_image.jpeg", caption: "Hiteck" },
+    { url: "/images/banking_slide_image.jpeg", caption: "Banking",
+    imageAlt:'Banking'
+     },
+    { url: "/images/automotive.jpeg", caption: "Automotive",
+    imageAlt:'Automotive'
+     },
+    { url: "/images/education.jpeg", caption: "Education",
+    imageAlt:'Education'
+     },
+    { url: "/images/logistic.jpeg", caption: "Logistic",
+    imageAlt:'Logistic'
+    },
     {
       url: "/images/communication_slide_image.jpeg",
       caption: "Communication",
+      imageAlt:'Communication'
+    },
+   
+  
+    {
+      url: "/images/E-commerce.jpeg",
+      caption: "E-commerce",
+      imageAlt:'E-Commerce'
     },
     {
-      url: "/images/capital_slide_image.jpeg",
-      caption: "Capital",
+      url: "/images/healthcare.jpeg",
+      caption: "Healthcare",
+      imageAlt:'Healthcare'
+    },
+    {
+      url: "/images/hospitality.jpeg",
+      caption: "Hospitality Industry",
+      imageAlt:'Hospitality Industry'
+    },
+    {
+      url: "/images/tourism.jpeg",
+      caption: "Tourism",
+      imageAlt:'Tourism'
     },
   ];
 
