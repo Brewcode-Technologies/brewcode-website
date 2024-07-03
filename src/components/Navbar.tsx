@@ -389,6 +389,15 @@ const Header: React.FC<HeaderProps> = ({ isLoading }) => {
                             Communication Media
                             </Link>
                           </p>
+                          <p className="pb-1">
+                            <Link
+                              className="list-group-item"
+                              href={routeMap.automotive}
+                              passHref
+                            >
+                       Automovite
+                            </Link>
+                          </p>
                         </div>
                       </div>
                     </div>

@@ -3261,3 +3261,36 @@ footer {
   display: block;
   margin-right: 10px;
 }
+
+
+
+.health-insurence-card-heading{
+  color: #ffffff !important;
+  font-family: "Inter";
+  font-size: 18px;
+  /* font-weight: bold; */
+  margin-top: 30px;
+  line-height: 18px;
+}
+
+.health-insurence-card-description{
+  font-size: 12px !important;
+  text-align: justify ;
+}
+
+.expert-perspectives-heading{
+  font-size: 18px;
+  font-family: "Lato";
+  font-weight: 500;
+  padding: 10px 0px;
+  white-space: nowrap;
+}
+
+.automative-healthcare-sub-heading{
+  font-size: 18px;
+  font-family: "Lato";
+  font-weight: 500;
+  padding: 10px 0px;
+  line-height: 26px;
+ 
+}

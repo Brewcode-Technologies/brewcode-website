@@ -6,6 +6,7 @@ export type Route =
   | "insights"
   | "who-we-are"
   | "services"
+  |"automotive"
   | "e-commerce"
   | "cloud-services"
   | "cyber-security"

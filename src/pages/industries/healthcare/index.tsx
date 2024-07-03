@@ -2,12 +2,21 @@ import IndustriesList from "@component/components/IndustriesList";
 import Layout from "@component/components/layouts/layout";
 import Head from "next/head";
 import Image from "next/image";
+import Link from "next/link";
 import React from "react";
 
-
+interface Healthcare {
+  id: number;
+  heading: string;
+  description: string;
+  category: string;
+  img: string;
+  imgAlt: string;
+  link: string;
+}
 
 const Index: React.FC = () => {
-  const fullStackItemsColumn1 = [
+  const fullStackItemsColumn1: string[] = [
     "Backup and recovery",
     "Business continuity",
     "Health Information Exchange (HIE)",
@@ -15,6 +24,39 @@ const Index: React.FC = () => {
     "Records management",
     "Storage, replication, and archiving",
     "Telecommuters and eWorkers",
+  ];
+
+  const healthcare: Healthcare[] = [
+    {
+      id: 1,
+      heading: "Health insurance",
+      description:
+        "In a competitive, highly regulated sector, the focus on digital health, cybersecurity, patient data transparency, and more, is growing. We help you build solutions that address the healthcare sector’s core issues, and help you stay ahead of the competitive curve.",
+      category: "Healthcare",
+      img: "/images/health-insurance-image.jpeg",
+      imgAlt: "Health insurance Image",
+      link: "/blog/1",
+    },
+    {
+      id: 2,
+      heading: "Health and social care",
+      description:
+        "Groundbreaking new technology is positioning the health and social care sector to improve person-centered services along the care pathway. We partner across the industry with community care providers, hospitals, university clinics, and health ministries to help develop personalized care plans, both at home and in medical institutions.",
+      category: "Healthcare",
+      img: "/images/health-and-social-care-image.jpeg",
+      imgAlt: "Health and social care Image",
+      link: "/blog/2",
+    },
+    {
+      id: 3,
+      heading: "Life sciences",
+      description:
+        "Life sciences companies give life to innovation: developing and making accessible new medicines and therapies with the power to save lives, as well as enhance the quality of life itself. Today a rare opportunity faces life sciences organizations, one that transforms their ability to deliver on their missions – exponentially and at scale. With our global breath and expertise, we’re well positioned to help.",
+      category: "Healthcare",
+      img: "/images/life-sciences-image.jpeg",
+      imgAlt: "Life sciences Image",
+      link: "/blog/3",
+    },
   ];
 
   return (
@@ -70,7 +112,7 @@ const Index: React.FC = () => {
             <div className="col-md-7">
               <div>
                 <h2 className="industry-healthcare-sub-heading">
-                IT Solutions for Healthcare
+                  IT Solutions for Healthcare
                 </h2>
                 <p className="industries-text">
                   Federal, state, EU, HIPAA, and Joint Commission regulations
@@ -86,7 +128,7 @@ const Index: React.FC = () => {
               </div>
               <div>
                 <h2 className="industry-healthcare-sub-heading">
-                Electronic Medical Records (EMR)
+                  Electronic Medical Records (EMR)
                 </h2>
                 <p className="industries-text">
                   As healthcare providers continue to receive incentives for
@@ -99,7 +141,7 @@ const Index: React.FC = () => {
               </div>
               <div>
                 <h2 className="industry-healthcare-sub-heading">
-                Regulation and Compliance
+                  Regulation and Compliance
                 </h2>
                 <p className="industries-text">
                   Government and private payer standards have created a daunting
@@ -109,7 +151,7 @@ const Index: React.FC = () => {
               </div>
               <div className="my-5">
                 <h2 className="industry-healthcare-sub-heading">
-                Brewcode offers technology solutions to assist with
+                  Brewcode offers technology solutions to assist with
                 </h2>
                 <div className="">
                   {fullStackItemsColumn1.map((item, index) => (
@@ -120,22 +162,63 @@ const Index: React.FC = () => {
                 </div>
               </div>
             </div>
-       
-          <IndustriesList/>
+
+            <IndustriesList />
+          </div>
+          <div className="row">
+            {healthcare.map((blogItem) => (
+              <div
+                key={blogItem.id}
+                className="col-12 col-sm-6 col-md-4 gap-5 mb-4"
+              >
+                <div className="mt-5">
+                  <Link
+                    href={blogItem.link}
+                    passHref
+                    target="_blank"
+                    className="blog-link"
+                  >
+                    <div className="insight-card-link">
+                      <div className=" mb-3">
+                        {/* <p className="insight-card-category">{blogItem.category}</p> */}
+                        {blogItem.img && (
+                          <div className="insight-card-image-wrapper">
+                            <div className="insight-card-image-container">
+                              <img
+                                src={blogItem.img}
+                                className="insight-card-img"
+                                alt={blogItem.imgAlt}
+                                loading="lazy"
+                              />
+                            </div>
+                          </div>
+                        )}
+                        <h3 className="health-insurence-card-heading px-1">
+                          {blogItem.heading}
+                        </h3>
+                        <p className="health-insurence-card-description health-insurence-card-heading px-1">
+                          {blogItem.description}
+                        </p>
+                      </div>
+                    </div>
+                  </Link>
+                </div>
+              </div>
+            ))}
           </div>
           <div className="row">
             <div>
-          <div className="d-flex">
-          <img
-                src="/images/svg/security-icon.svg"
-                alt="security icon image"
-                className="security-icon"
-                loading="lazy"
-              />
-              <h2 className="industry-healthcare-sub-heading mt-2">
-               Security
-              </h2>
-          </div>
+              <div className="d-flex">
+                <img
+                  src="/images/svg/security-icon.svg"
+                  alt="security icon image"
+                  className="security-icon"
+                  loading="lazy"
+                />
+                <h2 className="industry-healthcare-sub-heading mt-2">
+                  Security
+                </h2>
+              </div>
               <p className="industries-text">
                 The ability to pull archived records for authorized caregivers
                 improves clinical workflow, medical knowledge, and collaboration
@@ -149,18 +232,18 @@ const Index: React.FC = () => {
           </div>
           <div className="row">
             <div>
-            <div className="d-flex">
-          <img
-                src="/images/svg/storage-icon.svg"
-                alt="security icon image"
-                className="security-icon"
-                loading="lazy"
-              />
-              <h2 className="industry-healthcare-sub-heading mt-2">
-              Storage, Replication, Archiving, and Backup
-              </h2>
-          </div>
-           
+              <div className="d-flex">
+                <img
+                  src="/images/svg/storage-icon.svg"
+                  alt="security icon image"
+                  className="security-icon"
+                  loading="lazy"
+                />
+                <h2 className="industry-healthcare-sub-heading mt-2">
+                  Storage, Replication, Archiving, and Backup
+                </h2>
+              </div>
+
               <p className="industries-text">
                 Shortening the time to implement a new initiative in the
                 business world means extra profit. In the world of healthcare,
@@ -177,18 +260,18 @@ const Index: React.FC = () => {
           </div>
           <div className="row">
             <div>
-            <div className="d-flex">
-          <img
-                src="/images/svg/mingcute-time-line-icon.svg"
-                alt="security icon image"
-                className="security-icon"
-                loading="lazy"
-              />
-              <h2 className="industry-healthcare-sub-heading mt-2">
-              Time to Treatment
-              </h2>
-          </div>
-          
+              <div className="d-flex">
+                <img
+                  src="/images/svg/mingcute-time-line-icon.svg"
+                  alt="security icon image"
+                  className="security-icon"
+                  loading="lazy"
+                />
+                <h2 className="industry-healthcare-sub-heading mt-2">
+                  Time to Treatment
+                </h2>
+              </div>
+
               <p className="industries-text">
                 As healthcare providers continue to receive incentives for
                 implementing and upgrading their EMR systems, these initiatives
