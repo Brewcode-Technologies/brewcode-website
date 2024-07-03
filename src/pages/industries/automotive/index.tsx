@@ -3,7 +3,7 @@ import IndustriesList from "@component/components/IndustriesList";
 import Layout from "@component/components/layouts/layout";
 import Head from "next/head";
 import Image from "next/image";
-import Link from "next/link";
+import { FaYoutube } from "react-icons/fa6";
 import React from "react";
 
 interface communicationMedia {
@@ -119,48 +119,46 @@ const Index: React.FC = () => {
             </div>
 
             <IndustriesList />
-            <div className="row mt-3">
-              <div className="col-12">
-                <h3 className="expert-perspectives-heading">
-                  Expert perspectives
-                </h3>
-              </div>
-              {communication.map((Item) => (
-                <div
-                  key={Item.id}
-                  className="col-12 col-sm-6 col-md-4 gap-5 mb-4"
-                >
-                  <div className="">
-                    <div className="insight-card-link">
-                      <div className=" mb-3">
-                        {Item.img && (
-                          <div className="insight-card-image-wrapper">
-                            <div className="insight-card-image-container">
-                              <img
-                                src={Item.img}
-                                className="insight-card-img"
-                                alt={Item.imgAlt}
-                                loading="lazy"
-                              />
-                            </div>
-                          </div>
-                        )}
-                        <p className="insight-card-category pt-3">
-                          --{Item.category}
-                        </p>
-
-                        <p className="health-insurence-card-description health-insurence-card-heading px-1">
-                          {Item.description}
-                        </p>
-                      </div>
-                    </div>
+            <div className="row my-4">
+             
+           
+             
+                  <div className="col-md-4">
+                    <img src="/images/automotive-image.jpeg" alt="Automotive Image" className="automotive-image"/>
+                  </div>
+                  <div className="col-md-6 ml-5">
+                    <h2 className="automative-healthcare-sub-heading">Get beyond the wheel in Automotive</h2>
+                    <h2 className="automative-healthcare-sub-heading">Get beyond the wheel in Automotive</h2>
+                    <p className="industries-text">
+                      The traditional automotive industry has reached a crossroads. We are now operating in a mobility ecosystem, shifting into the next iteration of automotive. To move forward, it's time to embrace the ecosystem, collaborate beyond industry lines, and find new ways of innovating and partnering for success.
+                    </p>
                   </div>
                 </div>
-              ))}
+                <div className="row my-4">
+             
+           
+             
+             <div className="col-md-6">
+            <div className="ways-automotive-image">
+< FaYoutube className="youtube-icon"/>
+
+         </div>
+             </div>
+             <div className="col-md-6 d-flex">
+              <div className="my-auto">
+            
+               <h2 className="automative-healthcare-sub-heading">7 Ways to drive the future in <br/>
+Automotive</h2>
+               
+              </div>
+             </div>
+           </div>
+              </div>
+          
             </div>
           </div>
-        </div>
-      </div>
+        
+      
     </Layout>
   );
 };
