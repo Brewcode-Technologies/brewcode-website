@@ -351,16 +351,7 @@ const Header: React.FC<HeaderProps> = ({ isLoading }) => {
                               Logistic
                             </Link>
                           </p>
-                          <p className="pb-1">
-                            <Link
-                              className="list-group-item"
-                              href={routeMap["hospitality-industry"]}
-                              passHref
-                            >
-                            Hospitality Industry
-
-                            </Link>
-                          </p>
+                         
                         
                           <p className="pb-1">
                             <Link
@@ -383,10 +374,10 @@ const Header: React.FC<HeaderProps> = ({ isLoading }) => {
                           <p className="pb-1">
                             <Link
                               className="list-group-item"
-                              href={routeMap["communication-media"]}
+                              href={routeMap.banking}
                               passHref
                             >
-                            Communication Media
+                           Banking
                             </Link>
                           </p>
                           <p className="pb-1">

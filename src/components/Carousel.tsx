@@ -29,13 +29,6 @@ const SwiperComponent = () => {
     imageAlt:'Logistic'
     },
     {
-      url: "/images/communication_slide_image.jpeg",
-      caption: "Communication",
-      imageAlt:'Communication'
-    },
-   
-  
-    {
       url: "/images/E-commerce.jpeg",
       caption: "E-commerce",
       imageAlt:'E-Commerce'
@@ -46,20 +39,17 @@ const SwiperComponent = () => {
       imageAlt:'Healthcare'
     },
     {
-      url: "/images/hospitality.jpeg",
-      caption: "Hospitality Industry",
-      imageAlt:'Hospitality Industry'
-    },
-    {
       url: "/images/tourism.jpeg",
       caption: "Tourism",
       imageAlt:'Tourism'
     },
+ 
   ];
 
   return (
     <div className="swiper-container">
       <Swiper
+     
         modules={[Navigation, Pagination, EffectCoverflow]}
         effect="coverflow"
         grabCursor={true}
@@ -83,7 +73,7 @@ const SwiperComponent = () => {
         }}
       >
         {images.map((image, index) => (
-          <SwiperSlide key={index}>
+          <SwiperSlide key={index} >
             <div className="image-container">
               <img src={image.url} alt={`Slide ${index + 1}`}  loading="lazy"/>
               <div className="overlay">

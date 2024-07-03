@@ -53,7 +53,7 @@ const Index: React.FC = () => {
     <Layout>
       <Head>
         <title>
-          Communication & Media| Brewcode Technology Private Limited
+          Banking | Brewcode Technology Private Limited
         </title>
         <meta
           name="description"
@@ -80,7 +80,7 @@ const Index: React.FC = () => {
         <div className="container">
           <div className="row">
             <div className="hero-section-content">
-              <h1 className="industry-heading mb-3">Communication & Media</h1>
+              <h1 className="industry-heading mb-3">Banking</h1>
               <img
                 src="/images/svg/media-icon.svg"
                 alt="ecommerce image"
