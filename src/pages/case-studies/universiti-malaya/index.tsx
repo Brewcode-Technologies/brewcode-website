@@ -429,13 +429,13 @@ const Index: React.FC = () => {
             </div>
           </div> */}
 
-          <div>
+          {/* <div>
             <div className="col-12 py-5">
               <h2 className="text-center my-5 final-ui-screens">
                 Final Ui Screens
               </h2>
             </div>
-            {/* <div className="row d-flex flex-wrap justify-content-center g-4 mb-5">
+            <div className="row d-flex flex-wrap justify-content-center g-4 mb-5">
               <div className="col-md-3">
                 <img
                   src="/images/soctor-register.png"
@@ -495,8 +495,8 @@ const Index: React.FC = () => {
                   className="process-image-design"
                 />
               </div>
-            </div> */}
-          </div>
+            </div>
+          </div> */}
         </div>
       </div>
     </Layout>

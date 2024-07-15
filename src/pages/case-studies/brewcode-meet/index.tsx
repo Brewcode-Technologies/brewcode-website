@@ -437,7 +437,7 @@ const Index: React.FC = () => {
             </div>
           </div>
 
-          <div>
+          {/* <div>
             <div className="col-12">
               <h2 className="text-center my-5 final-ui-screens">
                 Final Ui Screens
@@ -512,7 +512,7 @@ const Index: React.FC = () => {
                 />
               </div>
             </div>
-          </div>
+          </div> */}
         </div>
       </div>
     </Layout>
