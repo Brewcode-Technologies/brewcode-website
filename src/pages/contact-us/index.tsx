@@ -147,10 +147,9 @@ const Index: React.FC = () => {
             <p className="hyderabad-line" />
             <div className="d-flex justify-content-between arrow-parent">
               <p className="contact-address">
-                1-62/74/4B, 102, First Floor Behind SaiBaba <br /> Temple, Sri
-                Ranganpuri Colony, Miyapur
-                <br />
-                HYDERABAD, TELANGANA 500049
+              H.No 2-60/48, Plot No 48, #102, Behind SaiBaba
+              Temple, Sri Ranganpuri Colony, Miyapur
+             HYDERABAD, TELANGANA 500049
               </p>
               <span className="FaArrowRight">
                 <FaArrowRight fontSize={25} />
