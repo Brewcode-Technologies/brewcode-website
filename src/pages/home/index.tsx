@@ -209,18 +209,18 @@ const Index: React.FC = () => {
           <div className="row hero-title-section">
             <div className="col-12 hero-title">
               <h1 className="hero-section-heading">
-                <span className="hero-heading-highlight">We're</span> Here To
+               We're Here To
                 Solve Your
                 <br />
                 Critical Challenges
               </h1>
             </div>
             <p className="hero-description text-center mt-3">
-              In today’s <strong className="highlight">fast-paced</strong>{" "}
+              In today’s fast-paced
               climate, companies are required to
               <br />
-              <strong className="highlight"> adapt </strong> more
-              <strong className="highlight"> quickly </strong> than ever before.
+              adapt  more
+              quickly  than ever before.
             </p>
           </div>
 
@@ -257,49 +257,57 @@ const Index: React.FC = () => {
           </div>
         </div>
       </div>
-      <section className="about-section">
-      <div className="container my-5">
-  <div className="row">
-    <div className="col-12 col-md-6 mb-4 mb-md-0">
-      <h2 className="about-heading mb-5">Who We Are</h2>
-      <div className="about-content d-flex flex-column">
-        <p className="about-description mb-5">
-          We Create Unique Enhanced
-          <br /> Experience In
-          <span className="brewcode-link">Brewcode</span>
-        </p>
-        <p className="who-about-details mb-4">
-          Working with Brewcode involves willingness to offer the best
-          immersion
-          <br /> to clients and audiences but also investing in smart
-          solutions to
-          <br /> reduce costs when it comes to finding flexible
-          solutions to refine and
-          <br /> adapt the brand message in different contexts.
-        </p>
-        <div className="d-flex justify-content-start">
-          <button type="button" className="about-explore-btn btn btn-primary">
-            Explore
-          </button>
-        </div>
+  
+<div className="about-section text-white">
+    <div className="container">
+    <div className="row">
+        <div className="col-12">
+          <h2 className="about-heading pt-5">Who We Are?</h2>
+          </div>
+          <div className="stats col-6">
+          <div className="statItem">
+              <div className="d-flex justify-between">
+              <span className="statValue">10</span>
+              <span className="statLabel">
+                <span>Years</span> <br/>
+                <span>Experience</span>
+              </span>
+              </div>
+            </div>
+            <div className="statItem">
+              <div className="d-flex justify-between">
+              <span className="statValue">1M</span>
+              <span className="statLabel">
+                <span>User</span> <br/>
+                <span>Satisfaction</span>
+              </span>
+              </div>
+            </div>
+            <div className="statItem">
+              <div className="d-flex justify-between">
+              <span className="statValue">10K</span>
+              <span className="statLabel">
+                <span>Official</span> <br/>
+                <span>Followers</span>
+              </span>
+              </div>
+            </div>
+            
+            </div>
+          
+       
+      
+          <p className="description">
+            We Create Unique Enhanced Experience In <span className="brewcode" >Brewcode</span>
+          </p>
+          <p className="details">
+            Working with Brewcode involves willingness to offer the best immersion to clients and audiences but also investing<br/> in smart solutions to reduce costs when it comes to finding flexible solutions to refine and adapt the brand<br/> message in different contexts.
+          </p>
+      
       </div>
     </div>
-    <div className="col-12 col-md-6 d-flex justify-content-center justify-content-md-end">
-  <div className="responsive-image-wrapper">
-    <img
-      src="/images/services-img.png"
-      alt="about image"
-      className="about-image img-fluid"
-      loading="lazy"
-    />
-  </div>
-</div>
-
-  </div>
-</div>
-
-</section>
-
+    
+    </div>
 
 <section className="solutions-section">
   <div className="container my-5">
