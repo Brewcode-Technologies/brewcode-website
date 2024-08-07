@@ -196,11 +196,9 @@ const Index: React.FC = () => {
         <title>Brewcode Technology Private Limited</title>
         <meta name="description" content="Description of your home page" />
       </Head>
-      <div>
-    </div>
       <div className="hero-image">
         <video
-          src="./videos/hero-section-video.mp4"
+          src="./videos/hero-section.mp4"
           autoPlay
           loop
           muted
