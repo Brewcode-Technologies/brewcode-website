@@ -1371,7 +1371,21 @@ footer {
   font-size: 16px;
   font-family: "Inter";
   margin: 20px 0px;
+
+   
 }
+
+.vr-card-title{
+  font-size: 18px;
+  font-family: "Inter";
+  font-weight: 400;
+  display: inline-block;
+  text-align: center; 
+  overflow-wrap: break-word; 
+  word-break: break-word; 
+  hyphens: auto;
+}
+
 
 .card-body {
   padding: 10px 20px !important;
@@ -2043,6 +2057,17 @@ footer {
   margin-bottom: 80px;
 }
 
+.arvr-description {
+  color: #ffffff;
+  font-size: 14px;
+  font-family: "Inter";
+  line-height: 22px;
+  margin-bottom: 80px;
+  text-align: start;
+}
+.avr-row-images{
+
+}
 .health-care-button {
   width: 120px;
   height: 28px;
@@ -2163,20 +2188,59 @@ footer {
 
 .ar-vr-image {
   width: 100%;
-  border-radius: 5px;
   height: 100%px;
   cursor: pointer;
 }
-
+.ar-vr-image.even{
+  border-top-left-radius: 10px;
+  border-bottom-left-radius: 10px;
+}
+.ar-vr-image.odd{
+  border-top-right-radius: 10px;
+  border-bottom-right-radius: 10px;
+}
 .ar-vr-left-flex {
   height: 300px;
 }
 
+
+
+/* arver  ever and odd row styles*/
 .arVr-flex-row {
   display: flex;
-  justify-content: space-between;
+  /* position: relative; */
+  width: 100%;
+  height: 100%;
+  padding: 50px 0;
 }
 
+.arVr-flex-row.even {
+  justify-content: flex-end !important;
+  background-color: #151515;
+  margin-left: 11px !important;
+}
+
+.arVr-flex-row.odd {
+  justify-content: flex-start;
+  background-color: #000;
+}
+
+.arVr-text.even {
+  position: absolute;
+  left: 0;
+  margin-top: 40px;
+  margin-left: 62px;
+
+
+}
+.ar-vr-image-div.even{
+ padding: 0;
+}
+
+.arVr-text.odd {
+  margin-left: 50px;
+  order: 1;
+}
 /* case study logo styles--------End */
 
 /* get in touch image styles */
@@ -2335,16 +2399,32 @@ footer {
 }
 
 .projects-we-like-card {
-  border: 1px solid #ffffff;
-  padding: 20px 15px;
-  border-radius: 3px;
-  text-align: center;
+  border-radius: 10px;
+  height: 400px;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  background-size: cover;
+  overflow: hidden;
+  position: relative; 
 }
 
-.projects-we-like-card-img {
+.projects-we-like-card::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
   width: 100%;
-  border: 1px solid #ffffff;
+  height: 100%;
+  background: rgba(0, 0, 0, 0.1);
+  z-index: 1; 
 }
+
+.projects-we-like-card .card-content {
+  position: relative;
+  z-index: 2;
+}
+
 
 .projects-we-like-card-heading {
   font-size: 18px;
@@ -3436,3 +3516,4 @@ margin:60px 0px;
   background-color: #007bff;
   border-color: #007bff;
 }
+
