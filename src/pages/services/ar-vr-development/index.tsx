@@ -50,7 +50,7 @@ const Index: React.FC = () => {
       id: 1,
       title: "Customized AR/VR Experiences",
       description:
-        "Universiti Malaya aimed to enhance its educational offerings by incorporating advanced technologies to create more immersive and interactive learning environments.",
+        "We design and develop tailor-made AR and VR applications that align with your business objectives and cater to your specific needs. Whether it's a VR      training simulation or an AR-enhanced product showcase, we deliver experiences that captivate and convert.",
       imageUrl: "/images/ar-vr-experiences.jpeg",
       imageUrlName: "Customized AR/VR Experiences image",
     },
@@ -181,21 +181,21 @@ const Index: React.FC = () => {
       id: 1,
       title: "VR Industrial Training",
       description: "Safety and Inspection Based Training",
-
       imageUrl: "/images/vr-industrial.jpeg",
     },
     {
       id: 2,
-      title: "Real Estate Visualization",
-      description: "Real Estate Visualization On VR Headset",
-      imageUrl: "/images/real-estate-visualization.jpeg",
-    },
-    {
-      id: 3,
       title: "BIM Visualization",
       description: "BIM Visualization For Industries",
       imageUrl: "/images/bim-visualization.jpeg",
     },
+    {
+      id: 3,
+      title: "Real Estate Visualization",
+      description: "Real Estate Visualization On VR Headset",
+      imageUrl: "/images/real-estate-visualization.jpeg",
+    },
+    
   ];
 
   return (
@@ -224,6 +224,7 @@ const Index: React.FC = () => {
     
       <BlackLayer />
       <div className="case-studies-black-container container-fluid">
+           
         <div className="container">
           <p className="ar-vr-description-brewcode">
             At Brewcode Technologies, we specialize in developing cutting-edge
@@ -232,39 +233,38 @@ const Index: React.FC = () => {
             of expert developers and designers harness the power of AR and VR to
             create immersive experiences that engage, educate, and entertain.
           </p>
-
-          {arVrDevelopment.map((arvr, index) => (
-            <div key={arvr.id} className="row my-5 arVr-flex-row">
-              <div
-                className={`col-md-4 ${index % 2 === 0 ? "" : "order-md-2"}`}
-              >
-                <div
-                  style={{
-                    position: "relative",
-                    width: "100%",
-                  }}
-                >
-                  <img
-                    src={arvr.imageUrl}
-                    alt={arvr.imageUrlName}
-                    className="ar-vr-image"
-                    loading="lazy"
-                  />
-                </div>
-              </div>
-              <div
-                className={`col-md-8 d-flex flex-column justify-content-center ${
-                  index % 2 === 0 ? "" : "order-md-1"
-                }`}
-                style={{ paddingTop: "50px" }}
-              >
-                <h3 className="ar-vr-card-heading mb-4">{arvr.title}</h3>
-                <p className="soctor-description">{arvr.description}</p>
-              </div>
-            </div>
-          ))}
         </div>
       </div>
+      <div style={{ backgroundColor: '#151515' }}>
+  <div className="overflow-x-hidden">
+    {arVrDevelopment.map((arvr, index) => (
+      <div
+        key={arvr.id}
+        className={`row arVr-flex-row ${index % 2 === 0 ? "even" : "odd"}`}
+      >
+  
+        <div
+          className={`col-md-5 d-flex flex-column justify-content-center arVr-text ${index % 2 === 0 ? "even" : "odd"} ${index % 2 !== 0 ? "order-md-2" : ""}`}
+        >
+          <h3 className="ar-vr-card-heading mb-4">{arvr.title}</h3>
+          <p className="arvr-description">{arvr.description}</p>
+        </div>
+
+        <div className={`col-md-5 ${index % 2 === 0 ? "" : "order-md-1"} `}>
+         
+        <img
+  src={arvr.imageUrl}
+  alt={arvr.imageUrlName}
+  className={`ar-vr-image ${index % 2 === 0 ? "even" : "odd"}`}
+  loading="lazy"
+/>
+       
+        </div>
+      </div>
+    ))}
+  </div>
+</div>
+
       <div className="get-in-touch-hero-image container-fluid">
         <div className="get-in-touch-overlay">
           <div className="get-in-touch-main">
@@ -361,27 +361,42 @@ const Index: React.FC = () => {
           </div>
           <div className="container">
             <div className="row d-flex justify-content-between my-5 ">
-              {cardData.map((data) => (
-                <div
-                  key={data.id}
-                  className="projects-we-like-card col-md-3 mb-3"
-                >
-                  <img
-                    src={data.imageUrl}
-                    alt={data.title}
-                    className="projects-we-like-card-img"
-                    loading="lazy"
-                  />
-                  <div className="">
-                    <h3 className="projects-we-like-card-heading pt-5 pb-5">
-                      {data.title}
-                    </h3>
-                    <p className="projects-we-like-card-description">
-                      {data.description}
-                    </p>
-                  </div>
-                </div>
-              ))}
+          
+            {cardData.map((card) => (
+ <div
+ key={card.id}
+ className="projects-we-like-card col-md-4 gap-9"
+ style={{
+   position: "relative",
+   backgroundImage: `url(${card.imageUrl})`,
+   backgroundSize: "cover",
+   textAlign: "center",
+   width:'330px'
+ }}
+>
+
+ <div
+   style={{
+     position: "absolute",
+     top: 0,
+     left: 0,
+     width: "100%",
+     height: "100%",
+     backgroundColor: "rgba(0, 0, 0, 0.3)",
+     zIndex: 1,
+   }}
+ ></div>
+
+
+ <div style={{ position: "relative", zIndex: 2 }}>
+   <h3 className="vr-card-title">{card.title}</h3>
+   <p className="ar-card-description" style={{ color: "#04CAA8", fontSize: "12px" }}>
+     {card.description}
+   </p>
+ </div>
+</div>
+
+))}
             </div>
             <div className="col-12">
               <p className="projects-we-like-description py-5">
