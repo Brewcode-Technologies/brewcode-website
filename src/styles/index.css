@@ -384,8 +384,6 @@ video {
   cursor: pointer;
 }
 
-
-
 .about-heading {
   color: #ffffff;
   font-family: "Inter";
@@ -448,11 +446,10 @@ video {
   line-height: 20px;
 }
 
-
 .responsive-image-wrapper {
   width: 100%;
-  aspect-ratio: 1 / 1; 
-  overflow: hidden; 
+  aspect-ratio: 1 / 1;
+  overflow: hidden;
   display: flex;
   justify-content: flex-end;
 }
@@ -460,11 +457,7 @@ video {
 .responsive-image-wrapper img {
   width: 90%;
   height: 90%;
-
 }
-
-
-
 
 .about-content {
   display: flex;
@@ -474,14 +467,14 @@ video {
 /* our solution styles------------- */
 
 .solutions-section {
-  width: 100%;
-  background-image: url("/images/svg/our-solution-bg.svg");
-  height: 100%;
+  background-image: url("/images/who-we-are-img.jpeg");
   background-color: #000;
   background-repeat: no-repeat;
   background-size: cover;
+  background-position: center top;
+  background-size: 100% 140%;
+  height: 100%;
   overflow: hidden;
-  background-position: center;
   padding: 30px 0px;
 }
 
@@ -534,7 +527,7 @@ video {
   z-index: 1;
   display: flex;
   transition-property: transform;
-  transition-timing-function: ease-in-out !important; 
+  transition-timing-function: ease-in-out !important;
   box-sizing: content-box;
 }
 
@@ -1032,35 +1025,31 @@ footer {
   padding: 40px 0px 10px 0px;
 }
 .footer-logo {
-
-  width: 100%; 
-  height: auto; 
+  width: 100%;
+  height: auto;
 }
-  
-  @media (max-width: 576px) {
-  .footer-logo{
-    margin-bottom: 6px;
-    width: 40px
-    
-  }
-  }
-   @media (max-width: 993px) {
-    
-    .footer-logo{
-    width: 100%;
-    height: auto;
-    margin-bottom: 5px;
-    }
-  }
 
-  @media (min-width: 1024px) {
-    
-    .footer-logo{
+@media (max-width: 576px) {
+  .footer-logo {
+    margin-bottom: 6px;
+    width: 40px;
+  }
+}
+@media (max-width: 993px) {
+  .footer-logo {
     width: 100%;
     height: auto;
     margin-bottom: 5px;
-    }
   }
+}
+
+@media (min-width: 1024px) {
+  .footer-logo {
+    width: 100%;
+    height: auto;
+    margin-bottom: 5px;
+  }
+}
 
 .brew-code-text {
   text-decoration: none;
@@ -1102,7 +1091,7 @@ footer {
   font-size: 14px;
 }
 
-.footer-extra-image{
+.footer-extra-image {
   width: 100%;
 }
 
@@ -1120,8 +1109,6 @@ footer {
 
   margin: 40px 0px 20px 0px;
 }
-
-
 
 /* Base Styles for Swiper Slides */
 .swiper-slide {
@@ -1371,21 +1358,18 @@ footer {
   font-size: 16px;
   font-family: "Inter";
   margin: 20px 0px;
-
-   
 }
 
-.vr-card-title{
+.vr-card-title {
   font-size: 18px;
   font-family: "Inter";
   font-weight: 400;
   display: inline-block;
-  text-align: center; 
-  overflow-wrap: break-word; 
-  word-break: break-word; 
+  text-align: center;
+  overflow-wrap: break-word;
+  word-break: break-word;
   hyphens: auto;
 }
-
 
 .card-body {
   padding: 10px 20px !important;
@@ -1434,13 +1418,10 @@ footer {
   left: 0;
 }
 
-
 .card-img-top {
   width: 100%;
   height: auto;
 }
-
-
 
 .innovation-text-card {
   width: 33%;
@@ -1921,7 +1902,7 @@ footer {
   font-size: 12px;
   text-decoration: none;
   line-height: 20px;
-  width:330px;
+  width: 330px;
 }
 .mgs-label {
   margin-top: -40px;
@@ -2065,8 +2046,7 @@ footer {
   margin-bottom: 80px;
   text-align: start;
 }
-.avr-row-images{
-
+.avr-row-images {
 }
 .health-care-button {
   width: 120px;
@@ -2191,19 +2171,17 @@ footer {
   height: 100%px;
   cursor: pointer;
 }
-.ar-vr-image.even{
+.ar-vr-image.even {
   border-top-left-radius: 10px;
   border-bottom-left-radius: 10px;
 }
-.ar-vr-image.odd{
+.ar-vr-image.odd {
   border-top-right-radius: 10px;
   border-bottom-right-radius: 10px;
 }
 .ar-vr-left-flex {
   height: 300px;
 }
-
-
 
 /* arver  ever and odd row styles*/
 .arVr-flex-row {
@@ -2230,11 +2208,9 @@ footer {
   left: 0;
   margin-top: 40px;
   margin-left: 62px;
-
-
 }
-.ar-vr-image-div.even{
- padding: 0;
+.ar-vr-image-div.even {
+  padding: 0;
 }
 
 .arVr-text.odd {
@@ -2406,25 +2382,24 @@ footer {
   align-items: flex-end;
   background-size: cover;
   overflow: hidden;
-  position: relative; 
+  position: relative;
 }
 
 .projects-we-like-card::before {
-  content: '';
+  content: "";
   position: absolute;
   top: 0;
   left: 0;
   width: 100%;
   height: 100%;
   background: rgba(0, 0, 0, 0.1);
-  z-index: 1; 
+  z-index: 1;
 }
 
 .projects-we-like-card .card-content {
   position: relative;
   z-index: 2;
 }
-
 
 .projects-we-like-card-heading {
   font-size: 18px;
@@ -3270,23 +3245,20 @@ footer {
   background-color: #d9d9d9;
 }
 
-
-
-
 /* industry list styles------------------------------------ */
 
-.industry-heading{
+.industry-heading {
   font-family: "Inter";
   font-weight: 400;
 }
 
-.industries-text{
+.industries-text {
   color: #ffffff;
   font-family: "Inter";
   font-size: 12px;
   line-height: 20px;
 }
-.industry-healthcare-sub-heading{
+.industry-healthcare-sub-heading {
   font-size: 18px;
   font-family: "Lato";
   font-weight: 500;
@@ -3294,42 +3266,41 @@ footer {
   white-space: nowrap;
 }
 
-.health-car-right-arrow-icon-text{
+.health-car-right-arrow-icon-text {
   font-size: 14px;
   font-family: "Inter";
   margin-left: 0px;
   padding-left: 0px;
 }
-.right-arrow-icon{
-  color: #0CCAFF;
+.right-arrow-icon {
+  color: #0ccaff;
 }
 
 .industry-icon {
   width: 100%;
   height: auto;
-  max-width: 100px; 
-  aspect-ratio: 1; 
+  max-width: 100px;
+  aspect-ratio: 1;
   cursor: pointer;
 }
 
-.industry-healthcare-list-items{
-    font-family: "Inter";
-    padding: 5px 0px;
-    font-size: 12px;
+.industry-healthcare-list-items {
+  font-family: "Inter";
+  padding: 5px 0px;
+  font-size: 12px;
 }
 
 @media (max-width: 768px) {
   .industry-icon {
-    max-width: 75px; 
+    max-width: 75px;
   }
 }
 
 @media (max-width: 480px) {
   .industry-icon {
-    max-width: 50px; 
+    max-width: 50px;
   }
 }
-
 
 /* icons imags for healthcare */
 .security-icon {
@@ -3341,9 +3312,7 @@ footer {
   margin-right: 10px;
 }
 
-
-
-.health-insurence-card-heading{
+.health-insurence-card-heading {
   color: #ffffff !important;
   font-family: "Inter";
   font-size: 18px;
@@ -3352,12 +3321,12 @@ footer {
   line-height: 18px;
 }
 
-.health-insurence-card-description{
+.health-insurence-card-description {
   font-size: 12px !important;
-  text-align: justify ;
+  text-align: justify;
 }
 
-.expert-perspectives-heading{
+.expert-perspectives-heading {
   font-size: 18px;
   font-family: "Lato";
   font-weight: 500;
@@ -3365,22 +3334,19 @@ footer {
   white-space: nowrap;
 }
 
-.automative-healthcare-sub-heading{
+.automative-healthcare-sub-heading {
   font-size: 18px;
   font-family: "Lato";
   font-weight: 500;
   padding: 10px 0px;
   line-height: 26px;
- 
 }
 
-
-.automotive-image{
+.automotive-image {
   width: 100%;
-
 }
 
-.ways-automotive-image{
+.ways-automotive-image {
   position: relative;
   width: 100%;
   height: 0;
@@ -3394,54 +3360,44 @@ footer {
   align-items: center;
 }
 
-.youtube-icon{
-color: #fff;
-position: absolute;
-top: 50%;
-left: 50%;
-transform: translate(-50%, -50%);
-width: 50px;
-height: 50px;
-cursor: pointer;
-fill: red;
-/* background-color: red; */
-cursor: pointer;
-
+.youtube-icon {
+  color: #fff;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 50px;
+  height: 50px;
+  cursor: pointer;
+  fill: red;
+  /* background-color: red; */
+  cursor: pointer;
 }
-
 
 /* Banking styles */
-.vertical-line{
-height: 24px;
-width: 5px !important;
-background-color: #0CCAFF;
-margin-top: 8px;
-margin-right: 12px;
+.vertical-line {
+  height: 24px;
+  width: 5px !important;
+  background-color: #0ccaff;
+  margin-top: 8px;
+  margin-right: 12px;
 }
 
-
-
-.banking-now-heading{
-
+.banking-now-heading {
   font-family: "Lato";
   font-weight: 600;
 }
 
-.banking-text{
+.banking-text {
   color: #ffffff;
   font-family: "Inter";
   font-size: 12px;
   line-height: 20px;
   text-align: justify;
   margin-top: 10px;
-
 }
 
-
-
 /* Who we are new styles */
-
-
 
 .about-section {
   width: 100%;
@@ -3457,30 +3413,28 @@ margin-right: 12px;
   padding: 30px 0px;
 }
 
-.nav-item{
+.nav-item {
   margin-top: 8px;
 }
 
-
 .stats {
-display: flex;
-justify-content: space-between;
-color: #fff;
-margin:60px 0px;
+  display: flex;
+  justify-content: space-between;
+  color: #fff;
+  margin: 60px 0px;
 }
 
 .statItem {
   display: flex;
   flex-direction: column;
-  align-items: flex-start; 
+  align-items: flex-start;
   text-align: left;
   font-family: "Inter";
-  line-height: 1.5; 
-
+  line-height: 1.5;
 }
 
 .statValue {
-  font-size: 3rem; 
+  font-size: 3rem;
   font-weight: 400;
   font-family: "Inter";
 }
@@ -3499,13 +3453,13 @@ margin:60px 0px;
 }
 
 .brewcode {
-  color: #74A8FF; 
+  color: #fff;
   cursor: pointer;
   text-decoration: none;
 }
 
 .details {
-  font-size:14px;
+  font-size: 14px;
   line-height: 28px;
   margin-bottom: 20px;
   text-align: justify;
@@ -3516,4 +3470,3 @@ margin:60px 0px;
   background-color: #007bff;
   border-color: #007bff;
 }
-
