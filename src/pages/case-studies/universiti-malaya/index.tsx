@@ -21,7 +21,7 @@ const Index: React.FC = () => {
           <div className="row my-4 d-flex justify-content-between">
             <div className="col-md-6 col-md-4 mb-5">
               <div className="healthcare-text-container">
-                <div className="malaya-education stroke-text mb-5">
+                <div className="stroke-text mb-5">
                   <h2>Education</h2>
                 </div>
 

@@ -23,6 +23,8 @@ export type Route =
   | "communication-media"
   | "high-tech"
   | "vr-application"
+  | "amul-supply-chain"
+  | "fabIndia-supply-chain"
   | "information-technology"
   | "soctor-healthcare"
   | "st-jude"

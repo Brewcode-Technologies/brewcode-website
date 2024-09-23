@@ -90,14 +90,16 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({ study, getClassName }) =>
         <Image
           src={study.imageUrl}
           alt={study.title}
-          className={`${getClassName(study.size)} case-study-image mb-4`}
+          className={`${getClassName(study.size)} case-study-image ammul-logo mb-4`}
           width={100}
           height={100}
           loading="lazy"
         />
         <h3 className="soctor-heading">{study.title}</h3>
         <p className="soctor-description">{study.description}</p>
+      
         <button className="health-care-button">{study.buttonText}</button>
+    
         <button
           className="view-detais-sotry-button mb-4"
           onClick={() => handleButtonClick(study.buttonUrl)}

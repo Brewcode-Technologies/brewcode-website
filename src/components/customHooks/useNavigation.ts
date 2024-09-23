@@ -26,6 +26,8 @@ export const routeMap: Record<Route, string> = {
   "communication-media": "/industries/communication-media",
   "high-tech": "/industries/high-tech",
   "vr-application": "/case-studies/vr-application",
+  "amul-supply-chain": "/case-studies/amul-supply-chain",
+  "fabIndia-supply-chain": "/case-studies/fabIndia-supply-chain",
   "information-technology": "/case-studies/information-technology",
   "soctor-healthcare": "/case-studies/soctor-healthcare",
   "st-jude": "/case-studies/st-jude",

@@ -123,6 +123,40 @@ const Index: React.FC = () => {
         "ar application for uiversiti malaya by brewcode technologies image",
       size: "medium",
     },
+    {
+      id: 8,
+      title: "Amul’s Supply Chain Optimization in Partnership with Efficient Logistics India",
+      description: `Amul, a renowned dairy cooperative in India, partnered with Efficient Logistics India, 
+      a specialist in supply chain and logistics management, to optimize its supply chain. This 
+      collaboration aimed to improve efficiency, reduce costs, and ensure timely delivery of fresh dairy products to consumers.`,
+      imageUrl: "/images/ammul-logo.png",
+      buttonText: "#Dairy Cooperative",
+      buttonUrl: routeMap["amul-supply-chain"],
+      read: ". 4 Min Read",
+      colImageUrl: "/images/vr-application-for-universiti-img.jpeg",
+      colImageName:
+        "ar application for uiversiti malaya by brewcode technologies image",
+      size: "medium",
+    },
+    {
+      id: 9,
+      title: `FabIndia’s Supply Chain Optimization in Partnership with Reliable Logistics India`,
+      description:`FabIndia, a well-known Indian retail company specializing in traditional crafts and
+      garments, partnered with Reliable Logistics India, a logistics and supply chain
+      management company, to optimize its supply chain. This collaboration aimed to
+      improve efficiency, reduce costs, and ensure timely delivery of products across India and
+      internationally.
+      `,
+      imageUrl: "/images/svg/fabindia-logo.svg",
+      buttonText: "#Retail",
+      buttonUrl: routeMap["fabIndia-supply-chain"],
+      read: ". 4 Min Read",
+      colImageUrl: "/images/vr-application-for-universiti-img.jpeg",
+      colImageName:
+        "ar application for uiversiti malaya by brewcode technologies image",
+      size: "medium",
+    },
+ 
   ];
 
   return (

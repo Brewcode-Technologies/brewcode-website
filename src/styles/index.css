@@ -2046,21 +2046,31 @@ footer {
   margin-bottom: 80px;
   text-align: start;
 }
-.avr-row-images {
-}
+
+
 .health-care-button {
-  width: 120px;
-  height: 28px;
+  width:40%;
+  height: 30px;
   border-radius: 20px;
   text-align: center;
   border: 1.5px solid #ffffff;
-  font-family: "Inter";
+  font-family: "Inter", sans-serif; 
   color: #ffffff;
   background-color: #000;
-  margin-bottom: 20px;
+  padding: 0px 20px; 
   font-weight: 500;
   font-size: 14px;
+  cursor: pointer;
+  margin-bottom: 20px;
+  transition: background-color 0.3s ease, color 0.3s ease;
 }
+
+.health-care-button:hover {
+  background-color: #ffffff;
+  color: #000; 
+}
+
+
 
 .view-detais-sotry-button {
   width: 190px;
@@ -2897,49 +2907,26 @@ footer {
 
 .stroke-text {
   h2 {
-    color: transparent;
-    -webkit-text-stroke: 1px #555;
-    font-size: 100px;
-    z-index: -20;
+   color: #ffff !important;
+   text-align: center;
+  text-shadow: 0 0 1px white;
+  font-weight: bold;
+  font-family: "Inter";
+  font-size: 64px;
+  margin: 20px 0px;
+
+
+    
   }
 }
 
-.reflect {
-  position: relative;
-  display: inline-block;
-  font-size: 50px;
-}
 
-.reflect::after {
-  content: "Healthcare";
-  position: absolute;
-  top: 37%;
-  left: 14%;
-  z-index: 100;
-  color: transparent;
-  text-shadow: 0 0 1px white;
-  font-weight: bold;
-  font-family: "Inter";
-  font-size: 64px;
-}
 
-.malaya-education {
-  position: relative;
-  display: inline-block;
-  font-size: 50px;
-}
 
-.malaya-education::after {
-  content: "Education";
-  position: absolute;
-  top: 37%;
-  left: 14%;
-  z-index: 100;
-  color: transparent;
-  text-shadow: 0 0 1px white;
-  font-weight: bold;
-  font-family: "Inter";
-  font-size: 64px;
+
+
+.amul-heading{
+  font-size: 49px !important;
 }
 
 .education-description {
@@ -2958,34 +2945,19 @@ footer {
 
 .information-technology-stoke-text {
   h2 {
-    color: transparent;
-    -webkit-text-stroke: 1px #555;
-    font-size: 100px;
-    z-index: -20;
-    font-weight: 600;
+ 
+    font-size:64px;
     text-align: center;
-    line-height: 120px;
+    font-weight: 600;
+    font-family: "Inter";
+    color: #fff;
+    margin: 20px 0px;
   }
 }
 
-.information-technology {
-  position: relative;
-  display: inline-block;
-  font-size: 50px;
-}
 
-.information-technology::after {
-  content: "Information Technology";
-  position: absolute;
-  top: 9%;
-  color: transparent;
-  text-shadow: 0 0 1px white;
-  font-weight: 600;
-  font-family: "Inter";
-  font-size: 96px;
-  text-align: center;
-  line-height: 122px;
-}
+
+
 
 .list-page-description {
   font-size: 18px;
@@ -3470,3 +3442,5 @@ footer {
   background-color: #007bff;
   border-color: #007bff;
 }
+
+
