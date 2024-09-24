@@ -86,15 +86,20 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({ study, getClassName }) =>
 
   return (
     <div key={study.id} className="row case-study-card" style={{ margin: "80px 0px" }}>
-      <div className="case-studies-icon col-md-5 d-flex flex-column">
+      <div className=" col-md-5 d-flex flex-column">
+        <div className="case-studies-icon-container">
         <Image
           src={study.imageUrl}
           alt={study.title}
-          className={`${getClassName(study.size)} case-study-image ammul-logo mb-4`}
-          width={100}
-          height={100}
+          className={`${getClassName(study.size)}  mb-4`}
+          width={0}
+          height={0}
           loading="lazy"
+          sizes="100vw"
+         
         />
+        </div>
+     
         <h3 className="soctor-heading">{study.title}</h3>
         <p className="soctor-description">{study.description}</p>
       
@@ -112,10 +117,13 @@ const CaseStudyCard: React.FC<CaseStudyCardProps> = ({ study, getClassName }) =>
           <Image
             src={study.colImageUrl}
             alt={study.colImageName}
-            width={300}
-            height={300}
+            width={0}
+            height={0}
             className="health-care-img"
             loading="lazy"
+            sizes="100vw"
+            style={{objectFit:'fill'}}
+
           />
           <div className="top-left-text min-2-read">{study.read}</div>
         </div>

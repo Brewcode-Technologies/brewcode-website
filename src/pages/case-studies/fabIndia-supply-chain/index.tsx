@@ -143,7 +143,7 @@ const Index: React.FC = () => {
   return (
     <Layout>
       <Head>
-        <title>Soctor Healthcare | Brewcode Technology Private Limited</title>
+        <title>Fabindia | Brewcode Technology Private Limited</title>
         <meta name="viewport" content="width=device-width, initial-scale=1.0" />
       </Head>
       <div className="bg-black py-5">
@@ -153,8 +153,8 @@ const Index: React.FC = () => {
                width={100}
                height={100}
                loading="lazy"
-              src="/images/svg/fabindia-logo.svg"
-              alt="Soctor Logo"
+              src="/images/fabindia-logo.jpeg"
+              alt="fabindia Logo"
               className="case-study-image"
             />
           </div>
@@ -169,8 +169,8 @@ const Index: React.FC = () => {
             <div className="col-md-5">
               <div className="socoter-img">
                 <img
-                  src="/images/health-care-img.jpeg"
-                  alt="health care image"
+                  src="/images/fabindia-dashboard.jpeg"
+                  alt="fabindia image"
                   className="health-care-img"
                 />
               </div>

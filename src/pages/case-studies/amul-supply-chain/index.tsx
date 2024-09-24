@@ -154,7 +154,7 @@ const Index: React.FC = () => {
                width={100}
                height={100}
                loading="lazy"
-              src="/images/ammul-logo.png"
+              src="/images/amul-logo.png"
               alt="ammul Logo"
               className="case-study-image"
             />
@@ -170,12 +170,13 @@ const Index: React.FC = () => {
             <div className="col-md-5">
               <div className="socoter-img">
                 <img
-                  src="/images/amul-image.jpg"
-                  alt="health care image"
+                  src="/images/amul-dashboard.jpeg"
+                  alt="amul dashboard image"
                   className="health-care-img"
                 />
               </div>
             </div>
+         
           </div>
 
           <div className="soctor-about-section">

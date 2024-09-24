@@ -129,11 +129,11 @@ const Index: React.FC = () => {
       description: `Amul, a renowned dairy cooperative in India, partnered with Efficient Logistics India, 
       a specialist in supply chain and logistics management, to optimize its supply chain. This 
       collaboration aimed to improve efficiency, reduce costs, and ensure timely delivery of fresh dairy products to consumers.`,
-      imageUrl: "/images/ammul-logo.png",
+      imageUrl: "/images/amul-logo.png",
       buttonText: "#Dairy Cooperative",
       buttonUrl: routeMap["amul-supply-chain"],
       read: ". 4 Min Read",
-      colImageUrl: "/images/vr-application-for-universiti-img.jpeg",
+      colImageUrl: "/images/amul-dashboard.jpeg",
       colImageName:
         "ar application for uiversiti malaya by brewcode technologies image",
       size: "medium",
@@ -147,11 +147,11 @@ const Index: React.FC = () => {
       improve efficiency, reduce costs, and ensure timely delivery of products across India and
       internationally.
       `,
-      imageUrl: "/images/svg/fabindia-logo.svg",
+      imageUrl: "/images/fabindia-logo.jpeg",
       buttonText: "#Retail",
       buttonUrl: routeMap["fabIndia-supply-chain"],
       read: ". 4 Min Read",
-      colImageUrl: "/images/vr-application-for-universiti-img.jpeg",
+      colImageUrl: "/images/fabindia-dashboard.jpeg",
       colImageName:
         "ar application for uiversiti malaya by brewcode technologies image",
       size: "medium",

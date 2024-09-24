@@ -286,11 +286,11 @@ const Index: React.FC = () => {
         <div className="about-introduction">Gap In Market</div>
         <div className="row">
           <div className="col-12">
-            <div className="about-content text-center">
+            <div className="about-content text-center d-flex justify-center align-items-center" >
               <img
                 src="/images/discover.svg"
                 className="business-goal-icon text-center"
-                alt=""
+                alt="discover image"
                 loading="lazy"
               />
               <h2 className="text-center">Discover</h2>
@@ -305,7 +305,7 @@ const Index: React.FC = () => {
       </div>
       
       <div className="row gap-that-container">
-        <div className="col-md-6">
+        <div className="col-md-5">
           <div className="d-flex p-4">
             <span className="step-number">1</span>
             <p className="gap-description ml-3">
@@ -325,7 +325,7 @@ const Index: React.FC = () => {
             </p>
           </div>
         </div>
-        <div className="col-md-6">
+        <div className="col-md-5">
           <div className="d-flex p-4">
             <span className="step-number">4</span>
             <p className="gap-description ml-3">
