@@ -102,6 +102,7 @@ const Index: React.FC = () => {
                     className="checkbox"
                     checked={isChecked}
                     onChange={handleCheckboxChange}
+                    placeholder="Accept terms and conditions"
                   />{" "}
                   &nbsp;&nbsp;
                 </div>
@@ -148,7 +149,7 @@ const Index: React.FC = () => {
             <div className="d-flex justify-content-between arrow-parent">
               <p className="contact-address">
               H.No 2-60/48, Plot No 48, #102, Behind SaiBaba
-              Temple, Sri Ranganpuri Colony, Miyapur
+              Temple, Sri Rangapuri Colony, Miyapur
              HYDERABAD, TELANGANA 500049
               </p>
               <span className="FaArrowRight">
