@@ -1,6 +1,9 @@
 import { AppProps } from "next/app";
 import { Provider } from "react-redux";
 import { store } from "@component/store";
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+
 
 import "bootstrap/dist/css/bootstrap.min.css";
 import "bootstrap-icons/font/bootstrap-icons.css";

@@ -344,6 +344,9 @@ video {
   border: 1.4px solid #ffffff;
   border-radius: 15px;
 }
+.checkbox-main{
+  margin-right: 10px;
+}
 
 .facebook {
   cursor: pointer !important;
@@ -1368,7 +1371,7 @@ footer {
   text-align: center;
   overflow-wrap: break-word;
   word-break: break-word;
-  hyphens: auto;
+
 }
 
 .card-body {

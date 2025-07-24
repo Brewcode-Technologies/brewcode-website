@@ -31,6 +31,7 @@
     "fullpage.js": "^4.0.22",
     "next": "^14.2.3",
     "next-auth": "^4.24.5",
+    "nodemailer": "^6.10.1",
     "patch-package": "^8.0.0",
     "postinstall-postinstall": "^2.1.0",
     "react": "^18.3.1",
@@ -43,6 +44,7 @@
     "react-responsive-carousel": "^3.2.23",
     "react-scroll": "^1.9.0",
     "react-slick": "^0.30.2",
+    "react-toastify": "^11.0.5",
     "sass": "^1.76.0",
     "sharp": "^0.33.3",
     "slick-carousel": "^1.8.1",
@@ -52,6 +54,7 @@
   "devDependencies": {
     "@types/bootstrap": "^5.2.10",
     "@types/node": "20.14.14",
+    "@types/nodemailer": "^6.4.17",
     "@types/react": "18.3.3",
     "@types/react-dom": "^18",
     "autoprefixer": "^10.0.1",
