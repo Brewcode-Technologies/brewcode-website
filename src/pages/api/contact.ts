@@ -1,7 +1,6 @@
 import type { NextApiRequest, NextApiResponse } from 'next';
 import nodemailer from 'nodemailer';
 
-// Define response data shape
 interface ApiResponse {
   success: boolean;
   message?: string;
@@ -29,28 +28,30 @@ export default async function handler(req: NextApiRequest, res: NextApiResponse<
       port: 587,
       secure: false,
       auth: {
-        user: process.env.AWS_SES_ACCESS_KEY,
-        pass: process.env.AWS_SES_SECRET_KEY,
+        user: process.env.AWS_SES_ACCESS_KEY!,
+        pass: process.env.AWS_SES_SECRET_KEY!,
       },
     });
 
     await transporter.sendMail({
-      from: process.env.AWS_SES_SENDER || 'no-reply@yourdomain.com', // Must be a verified sender in AWS SES
-      to: process.env.AWS_SES_RECIPIENT || 'contact@brewcode.co', // Your receiving email
+      from: process.env.AWS_SES_SENDER || 'no-reply@yourdomain.com', // Must be verified in SES
+      to: process.env.AWS_SES_RECIPIENT || 'contact@brewcode.co',
       subject: 'New Contact Form Submission',
       html: `
-        <h3>Contact Request</h3>
+        <h2>New Contact Request</h2>
         <p><strong>Name:</strong> ${name}</p>
-        <p><strong>Mobile:</strong> ${mobile}</p>
         <p><strong>Email:</strong> ${email}</p>
-        <p><strong>Message:</strong></p>
-        <p>${message}</p>
+        <p><strong>Mobile:</strong> ${mobile}</p>
+        <p><strong>Message:</strong><br/>${message.replace(/\n/g, '<br/>')}</p>
       `,
     });
 
-    return res.status(200).json({ success: true });
+    return res.status(200).json({ success: true, message: 'Message sent successfully' });
   } catch (error: any) {
     console.error('Email send error:', error);
-    return res.status(500).json({ success: false, message: `Failed to send email: ${error.message || 'Unknown error'}` });
+    return res.status(500).json({
+      success: false,
+      message: 'Failed to send message. Please try again later.',
+    });
   }
 }

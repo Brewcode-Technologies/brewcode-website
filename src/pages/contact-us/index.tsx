@@ -55,7 +55,7 @@ const Index: React.FC = () => {
       const result = await response.json();
 
       if (result.success) {
-        toast.success('Message sent successfully!');
+        toast.success('Contact Form Submitted Successfully!');
         setFormData({ name: '', mobile: '', email: '', message: '' });
         setIsChecked(false);
       } else {
