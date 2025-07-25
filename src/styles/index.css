@@ -1436,7 +1436,7 @@ footer {
 .could-services-background {
   width: 100%;
   background-color: #000;
-  background-image: url("../../public/images/Hero-cloud.png");
+  background-image: url("/images/Hero-cloud.png");
   border-image: fill O liner-gradient(#0003, #000);
   background: linear-gradient(to right top, #000 80%, #8784843f 100%, #000 10%);
 
