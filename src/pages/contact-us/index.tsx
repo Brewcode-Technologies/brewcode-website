@@ -1,4 +1,3 @@
-
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Layout from '@component/components/layouts/layout';
@@ -35,43 +34,68 @@ const Index: React.FC = () => {
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
+    console.log('Form submission started:', formData); // Log form submission start
 
     const { name, mobile, email, message } = formData;
 
     if (!name || !mobile || !email || !message) {
-      toast.error('Please fill out all fields.');
+      console.log('Validation failed: Missing fields');
+      toast.error('Please fill out all required fields.');
       return;
     }
 
     if (!isChecked) {
+      console.log('Validation failed: Terms not accepted');
       toast.warning('Please accept the terms and conditions.');
       return;
     }
 
     try {
-      const response = await axios.post(
-        'https://ythcjaf9b1.execute-api.us-east-1.amazonaws.com/prod/brewcode-contact-form',
-        { name, email, mobile, message },
-        {
-          headers: {
-            'Content-Type': 'application/json',
-          },
-          maxBodyLength: Infinity,
-        }
-      );
+      console.log('Sending request to API:', formData); // Log before API call
+      const config = {
+        method: 'post',
+        maxBodyLength: Infinity,
+        url: 'https://ythcjaf9b1.execute-api.us-east-1.amazonaws.com/prod/brewcode-contact-form',
+        headers: {
+          'Content-Type': 'application/json',
+        },
+        data: JSON.stringify({ name, email, mobile, message }),
+      };
 
-      console.log('API Response:', response.data);
+      const response = await axios.request(config);
 
-      if (response.data.success) {
+      console.log('API Response:', JSON.stringify(response.data)); // Log response
+
+      if (response.status === 200 && response.data.success) {
         toast.success('Contact Form Submitted Successfully!');
         setFormData({ name: '', mobile: '', email: '', message: '' });
         setIsChecked(false);
       } else {
+        console.error('API returned non-success response:', response.data);
         toast.error(response.data.message || 'Failed to send message. Please try again.');
       }
     } catch (error: any) {
-      console.error('Submission error:', error);
-      toast.error('An error occurred. Please try again later.');
+      console.error('Submission error:', {
+        message: error.message,
+        response: error.response?.data,
+        status: error.response?.status,
+        headers: error.response?.headers,
+      }); // Detailed error logging
+      if (error.response) {
+        // Server responded with a status code outside the 2xx range
+        toast.error(
+          error.response.data.message ||
+            `Server error (${error.response.status}). Please try again later.`
+        );
+      } else if (error.request) {
+        // No response received (network error, CORS, etc.)
+        console.error('No response received. Possible CORS or network issue.');
+        toast.error('Unable to connect to the server. Please check your internet connection.');
+      } else {
+        // Error setting up the request
+        console.error('Request setup error:', error.message);
+        toast.error('An unexpected error occurred. Please try again.');
+      }
     }
   };
 
