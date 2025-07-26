@@ -1,9 +1,11 @@
+
 import { ToastContainer, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import Layout from '@component/components/layouts/layout';
 import Head from 'next/head';
 import React, { useState, FormEvent, ChangeEvent } from 'react';
 import { FaArrowRight } from 'react-icons/fa6';
+import axios from 'axios';
 
 interface FormData {
   name: string;
@@ -19,6 +21,7 @@ const Index: React.FC = () => {
     email: '',
     message: '',
   });
+
   const [isChecked, setIsChecked] = useState<boolean>(false);
 
   const handleCheckboxChange = (): void => {
@@ -46,23 +49,28 @@ const Index: React.FC = () => {
     }
 
     try {
-      const response = await fetch('/api/contact', {
-        method: 'POST',
-        headers: { 'Content-Type': 'application/json' },
-        body: JSON.stringify(formData),
-      });
+      const response = await axios.post(
+        'https://ythcjaf9b1.execute-api.us-east-1.amazonaws.com/prod/brewcode-contact-form',
+        { name, email, mobile, message },
+        {
+          headers: {
+            'Content-Type': 'application/json',
+          },
+          maxBodyLength: Infinity,
+        }
+      );
 
-      const result = await response.json();
+      console.log('API Response:', response.data);
 
-      if (result.success) {
+      if (response.data.success) {
         toast.success('Contact Form Submitted Successfully!');
         setFormData({ name: '', mobile: '', email: '', message: '' });
         setIsChecked(false);
       } else {
-        toast.error(result.message || 'Failed to send message. Please try again.');
+        toast.error(response.data.message || 'Failed to send message. Please try again.');
       }
-    } catch (error) {
-      console.error('Error submitting form:', error);
+    } catch (error: any) {
+      console.error('Submission error:', error);
       toast.error('An error occurred. Please try again later.');
     }
   };
