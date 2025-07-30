@@ -80,7 +80,7 @@ function MyApp({ Component, pageProps }: AppProps) {
       {isLoading ? <Loader /> : <Navbar isLoading />}
 
       <Component {...pageProps} />
-      <GoogleAnalytics gaId="G-59FC9R45R5" />
+      <GoogleAnalytics gaId={GTM_ID} />
       <ToastContainer />
     </Provider>
   );

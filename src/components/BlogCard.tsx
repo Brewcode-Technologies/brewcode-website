@@ -16,9 +16,10 @@ interface Blog {
 interface BlogCardProps {
   blog: Blog;
   layout?: 'insight-page' | 'home-page'; 
+ onClick?: () => void;
 }
 
-const BlogCard: React.FC<BlogCardProps> = ({ blog, layout = 'insight-page' }) => {
+const BlogCard: React.FC<BlogCardProps> = ({ blog, onClick, layout = 'insight-page' }) => {
   if (layout === 'insight-page') {
     return (
       <a
@@ -26,6 +27,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ blog, layout = 'insight-page' }) =>
         target="_blank"
         rel="noopener noreferrer"
         className="blog-link"
+        onClick={onClick}
       >
         <div>
           <hr className="insights-line" />

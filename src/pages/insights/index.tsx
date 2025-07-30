@@ -6,6 +6,7 @@ import { FaArrowRightLong } from "react-icons/fa6";
 import { useRouter } from "next/router";
 import BlogCard from "@component/components/BlogCard";
 import axios from "axios";
+import { trackBlogClick } from "@component/lib/gtm";
 
 interface Blog {
   id: number;
@@ -85,6 +86,13 @@ const Index: React.FC = () => {
     };
 
     fetchData();
+    if (blogs.length > 0) {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push({
+      event: "blog_view",
+      blogs: blogs.map(({ id, title }) => ({ id, title })),
+    });
+  }
   }, []);
 
 
@@ -93,6 +101,8 @@ const Index: React.FC = () => {
   const handleButtonClick = (buttonUrl: string) => {
     router.push(buttonUrl);
   };
+
+
   
 
   const caseStudies: CaseStudy[] = [
@@ -238,7 +248,14 @@ const Index: React.FC = () => {
         
         <div className="row">
         {blogs.map((blog) => (
-          <BlogCard key={blog.id} blog={blog}  />
+          <BlogCard key={blog.id} blog={blog} onClick={() =>
+      trackBlogClick({
+        id: blog.id,
+        title: blog.title,
+        date: blog.date,
+        link: blog.link,
+      })
+    }  />
         ))}
       </div>
 

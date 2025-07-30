@@ -2,13 +2,13 @@ import Link from "next/link";
 import React from "react";
 import ImageIcon from "./ImageIcon";
 import Image from "next/image";
-
+import { trackFooterClick } from "@component/lib/gtm";
 const Footer: React.FC = () => {
   return (
     <footer>
       <div className="container">
         <div className="d-flex justify-content-between mb-5 align-items-center">
-          <Link href="/" passHref>
+          <Link href="/" passHref onClick={() => trackFooterClick("Home Logo")}>
             <img
               src="/images/svg/Brewcode-footer-logo.svg"
               alt="Brewcode logo"
@@ -20,7 +20,11 @@ const Footer: React.FC = () => {
 
         <div className="d-flex justify-content-center align-items-center mb-5">
           <div className="flex-footer-icons d-flex justify-content-center">
-            <Link href="https://x.com/ibrewcode" target="_blank">
+            <Link
+              href="https://x.com/ibrewcode"
+              target="_blank"
+              onClick={() => trackFooterClick("Twitter")}
+            >
               <ImageIcon
                 src="/images/svg/x_svg.svg"
                 alt="twitter icon"
@@ -30,6 +34,7 @@ const Footer: React.FC = () => {
             <Link
               href="https://www.linkedin.com/company/brewcode/"
               target="_blank"
+              onClick={() => trackFooterClick("LinkedIn")}
             >
               <ImageIcon
                 src="/images/svg/LinkedIn_svg.svg"
@@ -37,7 +42,11 @@ const Footer: React.FC = () => {
                 className="footer-icon"
               />
             </Link>
-            <Link href="https://brewcode.medium.com/" target="_blank" passHref>
+            <Link
+              href="https://brewcode.medium.com/"
+              target="_blank"
+              onClick={() => trackFooterClick("Medium Blog")}
+            >
               <ImageIcon
                 src="/images/svg/logo-blog.svg"
                 alt="blogger-icon"
@@ -49,19 +58,44 @@ const Footer: React.FC = () => {
 
         <div className="row d-flex justify-content-center mb-3">
           <div className="col-12 col-md-8 col-lg-6 d-flex flex-wrap justify-content-around">
-            <Link href="/" passHref className="footer-link footer-link-home">
+            <Link
+              href="/"
+              passHref
+              onClick={() => trackFooterClick("/")}
+              className="footer-link footer-link-home"
+            >
               Home
             </Link>
-            <Link href="/about-us" passHref className="footer-link">
+            <Link
+              href="/about-us"
+              onClick={() => trackFooterClick("about-us")}
+              passHref
+              className="footer-link"
+            >
               About
             </Link>
-            <Link href="/cookie-policy" passHref className="footer-link">
+            <Link
+              href="/cookie-policy"
+              onClick={() => trackFooterClick("cookie-policy")}
+              passHref
+              className="footer-link"
+            >
               Cookie Policy
             </Link>
-            <Link href="/privacy-policy" passHref className="footer-link">
+            <Link
+              href="/privacy-policy"
+              onClick={() => trackFooterClick("Privacy Policy")}
+              passHref
+              className="footer-link"
+            >
               Privacy Policy
             </Link>
-            <Link href="/terms-conditions" passHref className="footer-link">
+            <Link
+              href="/terms-conditions"
+              onClick={() => trackFooterClick("terms-conditions")}
+              passHref
+              className="footer-link"
+            >
               Terms & Conditions
             </Link>
           </div>
