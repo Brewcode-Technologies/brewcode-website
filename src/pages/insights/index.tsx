@@ -83,16 +83,21 @@ const Index: React.FC = () => {
       } catch (error) {
         console.error('Error fetching data:', error);
       }
+      
     };
 
     fetchData();
+  }, []);
+
+   useEffect(() => {
     if (blogs.length > 0) {
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push({
-      event: "blog_view",
-      blogs: blogs.map(({ id, title }) => ({ id, title })),
-    });
-  }
+      console.log("Pushing blog_view event to dataLayer:", blogs);
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push({
+        event: "blog_view",
+        blogs: blogs.map(({ id, title }) => ({ id, title })),
+      });
+    }
   }, [blogs]);
 
 
