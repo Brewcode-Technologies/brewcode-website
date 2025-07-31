@@ -93,7 +93,8 @@ const Index: React.FC = () => {
       blogs: blogs.map(({ id, title }) => ({ id, title })),
     });
   }
-  }, []);
+  }, [blogs]);
+
 
 
   const router = useRouter();

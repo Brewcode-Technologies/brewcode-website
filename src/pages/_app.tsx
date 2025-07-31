@@ -1,7 +1,8 @@
+
 import { AppProps } from "next/app";
 import { Provider } from "react-redux";
 import { store } from "@component/store";
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -16,11 +17,11 @@ import { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import { useRouter } from "next/router";
 
-import Script from "next/script"; // ✅ GTM Script
-import { pageview } from "@component/lib/gtm"; // ✅ GTM ID and pageview
+import Script from "next/script";
+import { pageview } from "@component/lib/gtm";
 
-const GTM_ID = "GTM-PNCD8Z53";
-const CLARITY_ID = "smxkah9vx6";
+const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
+
 
 function MyApp({ Component, pageProps }: AppProps) {
   const [isLoading, setIsLoading] = useState<boolean>(true);
@@ -53,11 +54,20 @@ function MyApp({ Component, pageProps }: AppProps) {
     };
   }, [router]);
 
- useEffect(() => {
+useEffect(() => {
   const handleRouteChange = (url: string) => {
-    pageview(url); // Google Analytics or GTM
+    console.log("Page changed to:", url);
+
+    // Google Tag Manager
+    pageview(url);
+    console.log("GTM pageview triggered:", url);
+
+    // Microsoft Clarity
     if ((window as any).clarity) {
-      (window as any).clarity('track', 'PageView'); // For Clarity if needed
+      (window as any).clarity('track', 'PageView');
+      console.log("Microsoft Clarity track event triggered");
+    } else {
+      console.warn("Microsoft Clarity is not available on window");
     }
   };
 
@@ -70,44 +80,18 @@ function MyApp({ Component, pageProps }: AppProps) {
 
   return (
     <Provider store={store}>
-
-<Script
-  id="gtm-script"
-  strategy="afterInteractive"
-  dangerouslySetInnerHTML={{
-    __html: `
-      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','${GTM_ID}');
-    `,
-  }}
-/>
-
-<Script
-  id="clarity-script"
-  strategy="afterInteractive"
-  dangerouslySetInnerHTML={{
-    __html: `
-      (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-      })(window, document, "clarity", "script", "${CLARITY_ID}");
-    `,
-  }}
-/>
-
+      <Script
+        src={`https://www.googletagmanager.com/gtm.js?id=${GTM_ID}`}
+        strategy="afterInteractive"
+      />
 
       {isLoading ? <Loader /> : <Navbar isLoading />}
 
       <Component {...pageProps} />
-      <GoogleAnalytics gaId='GTM-PNCD8Z53' />
+      <GoogleAnalytics gaId={GTM_ID ?? ""} />
       <ToastContainer />
     </Provider>
   );
 }
 
 export default MyApp;
-
