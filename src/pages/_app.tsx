@@ -1,7 +1,121 @@
+// import { AppProps } from "next/app";
+// import { Provider } from "react-redux";
+// import { store } from "@component/store";
+// import { ToastContainer, toast } from 'react-toastify';
+// import 'react-toastify/dist/ReactToastify.css';
+
+// import "bootstrap/dist/css/bootstrap.min.css";
+// import "bootstrap-icons/font/bootstrap-icons.css";
+// import "swiper/css/bundle";
+// import "../styles/index.css";
+// import "../styles/ResponsiveStyles.css";
+
+// import Loader from "@component/components/Loader";
+// import GoogleAnalytics from "@component/components/GoogleAnalytics";
+// import { useEffect, useState } from "react";
+// import Navbar from "../components/Navbar";
+// import { useRouter } from "next/router";
+
+// import Script from "next/script"; // ✅ GTM Script
+// import { pageview } from "@component/lib/gtm"; // ✅ GTM ID and pageview
+
+// const GTM_ID = "GTM-PNCD8Z53";
+// const CLARITY_ID = "smxkah9vx6";
+
+// function MyApp({ Component, pageProps }: AppProps) {
+//   const [isLoading, setIsLoading] = useState<boolean>(true);
+//   const router = useRouter();
+
+//   // Loader logic
+//   useEffect(() => {
+//     const handleRouteChangeStart = (url: string) => {
+//       if (url !== router.asPath) {
+//         setIsLoading(true);
+//       }
+//     };
+
+//     const handleRouteChangeComplete = () => {
+//       setTimeout(() => {
+//         setIsLoading(false);
+//       }, 500);
+//     };
+
+//     handleRouteChangeComplete();
+
+//     router.events.on("routeChangeStart", handleRouteChangeStart);
+//     router.events.on("routeChangeComplete", handleRouteChangeComplete);
+//     router.events.on("routeChangeError", handleRouteChangeComplete);
+
+//     return () => {
+//       router.events.off("routeChangeStart", handleRouteChangeStart);
+//       router.events.off("routeChangeComplete", handleRouteChangeComplete);
+//       router.events.off("routeChangeError", handleRouteChangeComplete);
+//     };
+//   }, [router]);
+
+//  useEffect(() => {
+//   const handleRouteChange = (url: string) => {
+//     pageview(url); // Google Analytics or GTM
+//     if ((window as any).clarity) {
+//       (window as any).clarity('track', 'PageView'); // For Clarity if needed
+//     }
+//   };
+
+//   router.events.on("routeChangeComplete", handleRouteChange);
+//   return () => {
+//     router.events.off("routeChangeComplete", handleRouteChange);
+//   };
+// }, [router.events]);
+
+
+//   return (
+//     <Provider store={store}>
+
+// <Script
+//   id="gtm-script"
+//   strategy="afterInteractive"
+//   dangerouslySetInnerHTML={{
+//     __html: `
+//       (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+//         new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+//         j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+//         'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+//       })(window,document,'script','dataLayer','${GTM_ID}');
+//     `,
+//   }}
+// />
+
+// <Script
+//   id="clarity-script"
+//   strategy="afterInteractive"
+//   dangerouslySetInnerHTML={{
+//     __html: `
+//       (function(c,l,a,r,i,t,y){
+//         c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+//         t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+//         y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+//       })(window, document, "clarity", "script", "${CLARITY_ID}");
+//     `,
+//   }}
+// />
+
+
+//       {isLoading ? <Loader /> : <Navbar isLoading />}
+
+//       <Component {...pageProps} />
+//       <GoogleAnalytics gaId='GTM-PNCD8Z53' />
+//       <ToastContainer />
+//     </Provider>
+//   );
+// }
+
+// export default MyApp;
+
+
 import { AppProps } from "next/app";
 import { Provider } from "react-redux";
 import { store } from "@component/store";
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 import "bootstrap/dist/css/bootstrap.min.css";
@@ -11,22 +125,18 @@ import "../styles/index.css";
 import "../styles/ResponsiveStyles.css";
 
 import Loader from "@component/components/Loader";
-import GoogleAnalytics from "@component/components/GoogleAnalytics";
 import { useEffect, useState } from "react";
 import Navbar from "../components/Navbar";
 import { useRouter } from "next/router";
-
-import Script from "next/script"; // ✅ GTM Script
-import { pageview } from "@component/lib/gtm"; // ✅ GTM ID and pageview
+import Script from "next/script";
 
 const GTM_ID = "GTM-PNCD8Z53";
 const CLARITY_ID = "smxkah9vx6";
 
 function MyApp({ Component, pageProps }: AppProps) {
-  const [isLoading, setIsLoading] = useState<boolean>(true);
+  const [isLoading, setIsLoading] = useState(true);
   const router = useRouter();
 
-  // Loader logic
   useEffect(() => {
     const handleRouteChangeStart = (url: string) => {
       if (url !== router.asPath) {
@@ -34,13 +144,22 @@ function MyApp({ Component, pageProps }: AppProps) {
       }
     };
 
-    const handleRouteChangeComplete = () => {
-      setTimeout(() => {
-        setIsLoading(false);
-      }, 500);
-    };
+    const handleRouteChangeComplete = (url: string) => {
+      setTimeout(() => setIsLoading(false), 500);
 
-    handleRouteChangeComplete();
+      // ✅ Send pageview event to GTM
+      if (window?.dataLayer) {
+        window.dataLayer.push({
+          event: "pageview",
+          page: url,
+        });
+      }
+
+      // ✅ Optional: Microsoft Clarity
+      if ((window as any).clarity) {
+        (window as any).clarity('track', 'PageView');
+      }
+    };
 
     router.events.on("routeChangeStart", handleRouteChangeStart);
     router.events.on("routeChangeComplete", handleRouteChangeComplete);
@@ -53,57 +172,40 @@ function MyApp({ Component, pageProps }: AppProps) {
     };
   }, [router]);
 
- useEffect(() => {
-  const handleRouteChange = (url: string) => {
-    pageview(url); // Google Analytics or GTM
-    if ((window as any).clarity) {
-      (window as any).clarity('track', 'PageView'); // For Clarity if needed
-    }
-  };
-
-  router.events.on("routeChangeComplete", handleRouteChange);
-  return () => {
-    router.events.off("routeChangeComplete", handleRouteChange);
-  };
-}, [router.events]);
-
-
   return (
     <Provider store={store}>
+      {/* ✅ Google Tag Manager */}
+      <Script
+        id="gtm-script"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
+            new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
+            j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
+            'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
+            })(window,document,'script','dataLayer','${GTM_ID}');
+          `,
+        }}
+      />
 
-<Script
-  id="gtm-script"
-  strategy="afterInteractive"
-  dangerouslySetInnerHTML={{
-    __html: `
-      (function(w,d,s,l,i){w[l]=w[l]||[];w[l].push({'gtm.start':
-        new Date().getTime(),event:'gtm.js'});var f=d.getElementsByTagName(s)[0],
-        j=d.createElement(s),dl=l!='dataLayer'?'&l='+l:'';j.async=true;j.src=
-        'https://www.googletagmanager.com/gtm.js?id='+i+dl;f.parentNode.insertBefore(j,f);
-      })(window,document,'script','dataLayer','${GTM_ID}');
-    `,
-  }}
-/>
-
-<Script
-  id="clarity-script"
-  strategy="afterInteractive"
-  dangerouslySetInnerHTML={{
-    __html: `
-      (function(c,l,a,r,i,t,y){
-        c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
-        t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
-        y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
-      })(window, document, "clarity", "script", "${CLARITY_ID}");
-    `,
-  }}
-/>
-
+      {/* ✅ Microsoft Clarity (optional) */}
+      <Script
+        id="clarity-script"
+        strategy="afterInteractive"
+        dangerouslySetInnerHTML={{
+          __html: `
+            (function(c,l,a,r,i,t,y){
+              c[a]=c[a]||function(){(c[a].q=c[a].q||[]).push(arguments)};
+              t=l.createElement(r);t.async=1;t.src="https://www.clarity.ms/tag/"+i;
+              y=l.getElementsByTagName(r)[0];y.parentNode.insertBefore(t,y);
+            })(window, document, "clarity", "script", "${CLARITY_ID}");
+          `,
+        }}
+      />
 
       {isLoading ? <Loader /> : <Navbar isLoading />}
-
       <Component {...pageProps} />
-      <GoogleAnalytics gaId='G-59FC9R45R5' />
       <ToastContainer />
     </Provider>
   );
