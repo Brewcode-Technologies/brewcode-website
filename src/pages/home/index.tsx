@@ -32,6 +32,7 @@ interface SolutionItem {
   title: string;
   icon: string;
   href:  string;
+  value:string;
 }
 
 
@@ -93,48 +94,65 @@ const Index: React.FC = () => {
     setIsBrowser(true);
   }, []);
 
- 
+const handleSolutionClick = (title: string, href: string, value: string) => {
+  if (typeof window !== "undefined" && window.dataLayer) {
+    window.dataLayer.push({
+      event: "solution_click",
+      event_category: "Solutions",
+      event_label: title,
+      value: value,
+    });
+  }
+};
 
   const solutions: SolutionItem[] = [
     {
       title: "Cloud Security",
       icon: "bi-arrow-up-right",
       href: "cloud-services",
+      value:'cloud-services'
     },
     {
       title: "Cyber Security",
       icon: "bi-arrow-up-right",
       href: "cyber-security",
+      value:'cyber-security'
     },
     {
       title: "E-commerce Solution",
       icon: "bi-arrow-up-right",
       href: "e-commerce",
+      value:'e-commerce'
     },
     {
       title: "Software Development",
       icon: "bi-arrow-up-right",
       href: "web-development",
+      value:'web-development'
     },
     {
       title: "Robotic Process Automation (RPA)",
       icon: "bi-arrow-up-right",
       href: "robotic-process-automation",
+      value:'robotic-process-automation'
     },
     {
       title: "Software Audits/Testing as-a-service",
       icon: "bi-arrow-up-right",
       href: "at-t",
+      value:'at-t'
     },
     {
       title: "Resource Planning",
       icon: "bi-arrow-up-right",
       href: "resource-planning",
+      value:'resource-planning'
     },
     {
       title: "Infrastructure Solution",
       icon: "bi-arrow-up-right",
       href: "infrastructure",
+      value:'infrastructure'
     },
   ];
 
@@ -329,16 +347,20 @@ const Index: React.FC = () => {
             <div className="d-flex flex-column mb-3 solutions-item">
               {item.href !== undefined && item.href !== null ? (
                 item.href in routeMap ? (
-                  <Link
-                    href={routeMap[item.href as keyof typeof routeMap]}
-                    passHref
-                    className="our-solution-link"
-                  >
-                    <div className="d-flex justify-content-between border-bottom pb-1 solutions-item-header">
-                      <h1 className="solutions-title">{item.title}</h1>
-                      <i className={`bi ${item.icon} mt-0`}></i>
-                    </div>
-                  </Link>
+                 <Link
+  href={routeMap[item.href as keyof typeof routeMap]}
+  passHref
+  className="our-solution-link"
+  onClick={() =>
+    handleSolutionClick(item.title, item.href, item.value)
+  }
+>
+  <div className="d-flex justify-content-between border-bottom pb-1 solutions-item-header">
+    <h1 className="solutions-title">{item.title}</h1>
+    <i className={`bi ${item.icon} mt-0`}></i>
+  </div>
+</Link>
+
                 ) : (
                   <p>Route {item.href} not found in routeMap</p>
                 )
