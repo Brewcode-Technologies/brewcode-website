@@ -1,9 +1,14 @@
+import ReusableButton from "@component/components/customHooks/reusableContactButton";
 import Layout from "@component/components/layouts/layout";
 import Head from "next/head";
 import Image from "next/image";
+import router, { Router } from "next/router";
 import React from "react";
 
 const Index: React.FC = () => {
+  const navigate = (url: string) => {
+    router.push(url);
+  };
   return (
     <Layout>
           <Head>
@@ -207,7 +212,11 @@ const Index: React.FC = () => {
         <div className="row d-flex justify-content-center">
           <div className="experienced-breach-image">
             <h2 className="experienced-breach-title mb-5">Experienced Breach?</h2>
-            <button className="get-assistance">GET ASSISTANCE</button>
+            {/* <button className="get-assistance"></button> */}
+            <ReusableButton
+              label="GET ASSISTANCE"
+              navigateTo={() => navigate("/contact-us")}
+            />
           </div>
         </div>
       </div>

@@ -5,6 +5,7 @@ import Link from "next/link";
 import Image from "next/image";
 import { routeMap } from "./customHooks/useNavigation";
 import ReusableButton from "./customHooks/reusableContactButton";
+import { trackFooterClick } from "@component/lib/gtm";
 
 type HeaderProps = {
   scroll?: boolean;
@@ -129,7 +130,7 @@ const Header: React.FC<HeaderProps> = ({ isLoading }) => {
     >
       <div className="container d-flex justify-between align-items-center">
         <Navbar.Brand className="d-flex align-items-center">
-          <Link href="/" passHref>
+          <Link href="/" passHref  onClick={() => trackFooterClick("Home Logo")}>
             <Image
               src="/images/svg/brewcode_logo_svg.svg"
               alt="Brewcode logo"

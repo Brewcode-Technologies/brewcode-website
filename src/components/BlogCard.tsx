@@ -16,10 +16,55 @@ interface Blog {
 interface BlogCardProps {
   blog: Blog;
   layout?: 'insight-page' | 'home-page'; 
- onClick?: () => void;
+  onClick?: (blog: Blog) => void; 
 }
 
+interface BlogClickEvent {
+  event: "blog_click";
+  blog_title: string;
+  blog_category: string;
+  blog_url: string;
+  blog_id: number;
+  blog_image: string;
+}
+
+declare global {
+  interface Window {
+    dataLayer: unknown[]; // Use unknown[] for compatibility with GTM
+  }
+}
+
+
+
+
+
 const BlogCard: React.FC<BlogCardProps> = ({ blog, onClick, layout = 'insight-page' }) => {
+
+const handleClick = (e: React.MouseEvent) => {
+  const eventData: BlogClickEvent = {
+    event: 'blog_click',
+    blog_title: blog.title,
+    blog_category: blog.category,
+    blog_url: blog.link,
+    blog_id: blog.id,
+    blog_image: blog.img,
+  };
+
+  if (typeof window !== 'undefined') {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push(eventData);
+  }
+
+  if (onClick) {
+    onClick(blog);
+  }
+
+  e.preventDefault();
+  setTimeout(() => {
+    window.open(blog.link, '_blank');
+  }, 300);
+};
+
   if (layout === 'insight-page') {
     return (
       <a
@@ -27,7 +72,7 @@ const BlogCard: React.FC<BlogCardProps> = ({ blog, onClick, layout = 'insight-pa
         target="_blank"
         rel="noopener noreferrer"
         className="blog-link"
-        onClick={onClick}
+        onClick={handleClick}
       >
         <div>
           <hr className="insights-line" />
@@ -57,9 +102,9 @@ const BlogCard: React.FC<BlogCardProps> = ({ blog, onClick, layout = 'insight-pa
     );
   } else if (layout === 'home-page') {
     return (
-      <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4">
-        <div className=" insight-card">
-          <Link href={blog.link} passHref target='_blank' className='blog-link'>
+      <div className="col-12 col-sm-6 col-md-4 col-lg-3 mb-4" >
+        <div className=" insight-card" onClick={handleClick}>
+          <Link  href={blog.link} passHref target='_blank' className='blog-link'>
             <div className="insight-card-link">
               <div className="card-body mb-3">
                 <p className="insight-card-category">{blog.category}</p>

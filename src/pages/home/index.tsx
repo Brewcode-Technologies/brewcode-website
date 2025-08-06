@@ -10,18 +10,49 @@ import { GetStaticProps, Route } from "next";
 import BlogCard from "@component/components/BlogCard";
 import axios from 'axios';
 import dynamic from "next/dynamic";
+import { trackFooterClick } from "@component/lib/gtm";
 const SwiperComponent = dynamic(() => import('@component/components/Carousel'), { ssr: false });
 
 interface Blog {
   id: number;
   title: string;
   category: string;
-  description: string;
+  description?: string;
   link: string;
   img: string;
   imgAlt: string;
   date: string;
 }
+
+interface BlogCardProps {
+  blog: Blog;
+  layout?: 'insight-page' | 'home-page'; 
+  onClick?: (blog: Blog) => void; 
+}
+
+interface BlogClickEvent {
+  event: "blog_click";
+  blog_title: string;
+  blog_category: string;
+  blog_url: string;
+  blog_id: number;
+  blog_image: string;
+}
+
+interface ClientLogoClickEvent {
+  event: 'client_logo_click';
+  logo_src: string;
+  logo_name: string;
+  logo_url: string;
+}
+
+
+declare global {
+  interface Window {
+    dataLayer: unknown[]; // Use unknown[] for compatibility with GTM
+  }
+}
+
 
 interface ClientLogo {
   src: string;
@@ -40,6 +71,26 @@ interface SolutionItem {
 const Index: React.FC = () => {
 
   const [blog, setBlog] = useState<Blog[]>([]);
+const handleBlogClick = (blog: Blog) => {
+  console.log("Blog clicked:", blog);
+};
+
+const handleClientLogoClick = (logo: ClientLogo) => {
+  const logoName = logo.src.split("/").pop()?.split(".")[0] ?? "unknown";
+
+  const eventData: ClientLogoClickEvent = {
+    event: 'client_logo_click',
+    logo_src: logo.src,
+    logo_name: logoName,
+    logo_url: logo.url,
+  };
+
+  if (typeof window !== 'undefined') {
+    window.dataLayer = window.dataLayer || [];
+    window.dataLayer.push(eventData);
+    console.log('GTM Client Logo Click Event Fired:', eventData);
+  }
+};
 
 
   useEffect(() => {
@@ -248,6 +299,7 @@ const handleSolutionClick = (title: string, href: string, value: string) => {
                 href="https://brewcode.medium.com/"
                 target="_blank"
                 passHref
+                onClick={() => trackFooterClick("Brewcode-Medium")}
               >
                 <ImageIcon
                   src="/images/svg/logo-blog.svg"
@@ -259,6 +311,7 @@ const handleSolutionClick = (title: string, href: string, value: string) => {
                 href="https://www.linkedin.com/company/brewcode/"
                 passHref
                 target="_blank"
+                onClick={() => trackFooterClick("Linkedin")}
               >
                 <ImageIcon
                   src="/images/svg/LinkedIn_svg.svg"
@@ -467,9 +520,9 @@ const handleSolutionClick = (title: string, href: string, value: string) => {
           </div>
        
           <div className="row">
-      {blog.map((blog) => (
-        <BlogCard key={blog.id} blog={blog} layout="home-page" />
-      ))}
+   {blog.map((blogItem) => (
+  <BlogCard key={blogItem.id} blog={blogItem} layout="home-page" onClick={handleBlogClick} />
+))}
     </div>
         
         </div>
@@ -487,7 +540,7 @@ const handleSolutionClick = (title: string, href: string, value: string) => {
                 <div key={idx} className="row mb-4 ">
                   {row.map((logo: ClientLogo, index: number) => (
                     <div key={index} className="col-md-4 client-logo-card">
-                      <Link href={logo.url} passHref>
+                      {/* <Link href={logo.url} passHref>
                         <ImageIcon
                           src={logo.src}
                           alt={
@@ -499,7 +552,25 @@ const handleSolutionClick = (title: string, href: string, value: string) => {
                           }
                           className="client-logo mb-4"
                         />
-                      </Link>
+                      </Link> */}
+                      <div
+  onClick={() => handleClientLogoClick(logo)}
+  role="link"
+  style={{ cursor: "pointer" }}
+>
+  <Link href={logo.url} passHref target="_blank">
+    <ImageIcon
+      src={logo.src}
+      alt={
+        logo.src
+          ? `${logo.src.split("/").pop()?.split(".")[0]} logo`
+          : "Logo"
+      }
+      className="client-logo mb-4"
+    />
+  </Link>
+</div>
+
                     </div>
                   ))}
                 </div>
