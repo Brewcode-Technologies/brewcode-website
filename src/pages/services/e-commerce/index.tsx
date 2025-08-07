@@ -25,6 +25,8 @@ export interface EcommerceService {
 }
 
 
+
+
 const Index: React.FC = () => {
   const router = useRouter();
 
@@ -36,9 +38,21 @@ const Index: React.FC = () => {
     null
   );
 
-  const toggleAccordion = (index: number) => {
-    setOpenAccordionIndex((prevIndex) => (prevIndex === index ? null : index));
-  };
+  // const toggleAccordion = (index: number) => {
+  //   setOpenAccordionIndex((prevIndex) => (prevIndex === index ? null : index));
+  // };
+const toggleAccordion = (index: number) => {
+  setOpenAccordionIndex((prevIndex) => (prevIndex === index ? null : index));
+
+  if (typeof window !== "undefined" && window.dataLayer) {
+    window.dataLayer.push({
+      event: "accordion_click",
+      accordion_title: ecommerceItems[index].title,
+    });
+    console.log("GTM Event Fired: accordion_click", ecommerceItems[index].title);
+  }
+};
+
 
   const data = [
     {
@@ -211,10 +225,21 @@ const Index: React.FC = () => {
 
   const [selectedTech, setSelectedTech] = useState<Technology>("AR/VR");
 
-  const handleButtonClick = (tech: Technology) => {
-    setSelectedTech(tech);
-  };
+  // const handleButtonClick = (tech: Technology) => {
+  //   setSelectedTech(tech);
+  // };
 
+const handleButtonClick = (tech: Technology) => {
+  setSelectedTech(tech);
+
+  if (typeof window !== "undefined" && window.dataLayer) {
+    window.dataLayer.push({
+      event: "tech_button_click",
+      technology: tech,
+    });
+    console.log("GTM Event Fired: tech_button_click", tech);
+  }
+};
   const chunkArray = (arr: string[], size: number) => {
     const result = [];
     for (let i = 0; i < arr.length; i += size) {
@@ -468,7 +493,7 @@ const Index: React.FC = () => {
             </h1>
             <ReusableButton
             label="Contact Us"
-            navigateTo={() => navigate("/contact-us")}
+            navigateTo="/contact-us"
           />
           </div>
         </div>

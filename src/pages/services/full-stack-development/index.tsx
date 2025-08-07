@@ -91,7 +91,7 @@ const Index: React.FC = () => {
 
               <ReusableButton
                 label="Contact Us"
-                navigateTo={() => navigate("/contact-us")}
+                navigateTo="/contact-us"
               />
             </div>
             <div className="col-md-4">

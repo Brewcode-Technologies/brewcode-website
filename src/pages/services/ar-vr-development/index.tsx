@@ -5,6 +5,7 @@ import { IoMdArrowDropright } from "react-icons/io";
 import BlackLayer from "@component/components/blackLayer";
 import Head from "next/head";
 import Image from "next/image";
+import ReusableButton from "@component/components/customHooks/reusableContactButton";
 
 interface ArVr {
   id: number;
@@ -37,13 +38,35 @@ const Index: React.FC = () => {
   const [isVisible, setIsVisible] = useState<boolean>(false);
   const [isVirtualEvents, setIsVirtualEvents] = useState<boolean>(false);
 
-  const toggleVisibility = () => {
-    setIsVisible((prevIsVisible) => !prevIsVisible);
-  };
+ const toggleVisibility = () => {
+  const newState = !isVisible;
+  setIsVisible(newState);
 
-  const toggleVirtualEvents = () => {
-    setIsVirtualEvents((prevIsVirtualEvents) => !prevIsVirtualEvents);
-  };
+  if (typeof window !== "undefined" && window.dataLayer) {
+    window.dataLayer.push({
+      event: "section_toggle_click",
+      section_name: "Virtual Reality",
+      is_expanded: newState,
+    });
+    console.log("GTM Event Fired: section_toggle_click - Virtual Reality", newState);
+  }
+};
+
+
+const toggleVirtualEvents = () => {
+  const newState = !isVirtualEvents;
+  setIsVirtualEvents(newState);
+
+  if (typeof window !== "undefined" && window.dataLayer) {
+    window.dataLayer.push({
+      event: "section_toggle_click",
+      section_name: "Virtual Events",
+      is_expanded: newState,
+    });
+    console.log("GTM Event Fired: section_toggle_click - Virtual Events", newState);
+  }
+};
+
 
   const arVrDevelopment: ArVr[] = [
     {
@@ -278,9 +301,13 @@ const Index: React.FC = () => {
             </p>
 
             <div>
-              <button className="get-assistance connect-with-us-button">
+              {/* <button className="get-assistance connect-with-us-button">
                 CONNECT WITH US
-              </button>
+              </button> */}
+               <ReusableButton
+              label="CONNECT WITH US"
+              navigateTo="/contact-us"
+            />
             </div>
           </div>
         </div>

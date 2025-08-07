@@ -147,6 +147,7 @@ const Header: React.FC<HeaderProps> = ({ isLoading }) => {
 
         <Navbar.Collapse id="navbarSupportedContent">
           <Nav className="mx-auto">
+            
             <li className="nav-item" id="nav-text">
               <Link
                 className="nav-link"
@@ -464,7 +465,7 @@ const Header: React.FC<HeaderProps> = ({ isLoading }) => {
           <div className="d-flex align-items-center">
             <ReusableButton
               label="Contact Us"
-              navigateTo={() => navigate("/contact-us")}
+              navigateTo="/contact-us"
             />
           </div>
         </Navbar.Collapse>

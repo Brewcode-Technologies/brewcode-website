@@ -77,7 +77,11 @@ useEffect(() => {
   };
 }, [router.events]);
 
-
+useEffect(() => {
+  if (typeof window !== "undefined") {
+    window.dataLayer = window.dataLayer || [];
+  }
+}, []);
   return (
     <Provider store={store}>
       <Script
