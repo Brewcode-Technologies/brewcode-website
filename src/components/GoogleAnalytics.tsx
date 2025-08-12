@@ -5,10 +5,11 @@ interface GoogleAnalyticsProps {
   gaId: string;
 }
 
+// Extend Window type without conflicting with existing global types
 declare global {
   interface Window {
-    dataLayer: any[];
-    gtag: (...args: any[]) => void;
+    dataLayer: unknown[];
+    gtag: (...args: unknown[]) => void;
   }
 }
 
@@ -17,7 +18,7 @@ const GoogleAnalytics: React.FC<GoogleAnalyticsProps> = ({ gaId }) => {
 
   useEffect(() => {
     const handleRouteChange = (url: string) => {
-      if (window.gtag) {
+      if (typeof window.gtag === 'function') {
         window.gtag('config', gaId, {
           page_path: url,
         });
@@ -33,8 +34,8 @@ const GoogleAnalytics: React.FC<GoogleAnalyticsProps> = ({ gaId }) => {
   useEffect(() => {
     if (!window.gtag) {
       window.dataLayer = window.dataLayer || [];
-      function gtag(...args: any[]) {
-        window.dataLayer.push(args);
+      function gtag(...args: unknown[]) {
+        (window.dataLayer as unknown[]).push(args);
       }
       window.gtag = gtag;
 
