@@ -1,9 +1,13 @@
 import IndustriesList from "@component/components/IndustriesList";
 import Layout from "@component/components/layouts/layout";
+import Seo from "@component/components/Seo";
 import Head from "next/head";
 import Image from "next/image";
 import Link from "next/link";
 import React from "react";
+
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://brewcode.co";
+
 
 interface Healthcare {
   id: number;
@@ -59,15 +63,46 @@ const Index: React.FC = () => {
     },
   ];
 
+  const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    mainEntity: {
+      "@type": "Service",
+      serviceType: "Healthcare Software Solutions",
+      provider: {
+        "@type": "Organization",
+        name: "Brewcode Technology Private Limited",
+        url: SITE_URL
+      }
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+      { "@type": "ListItem", position: 2, name: "Industries", item: `${SITE_URL}/industries` },
+      { "@type": "ListItem", position: 3, name: "Healthcare", item: `${SITE_URL}/industries/healthcare` }
+    ]
+  }
+];
+
+
   return (
     <Layout>
-      <Head>
+      {/* <Head>
         <title>Health care | Brewcode Technology Private Limited</title>
         <meta
           name="description"
           content="Harness the Power of IaaS for Seamless Scalability and Enhanced Performance in Communication & Media Services."
         />
-      </Head>
+      </Head> */}
+      <Seo
+  title="Healthcare Industry Solutions | Brewcode Technology Private Limited."
+  description="Brewcode delivers innovative healthcare technology solutions, improving patient care, streamlining processes, and ensuring compliance."
+  canonicalPath="/industries/healthcare"
+  jsonLd={jsonLd}/>
       <div
         style={{
           position: "relative",

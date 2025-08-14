@@ -6,6 +6,7 @@ import React, { useState, FormEvent, ChangeEvent } from "react";
 import { FaArrowRight } from "react-icons/fa6";
 import axios from "axios";
 import Link from "next/link";
+import Seo from "@component/components/Seo";
 
 interface FormData {
   name: string;
@@ -20,6 +21,7 @@ interface ContactFormSubmitEvent {
   email: string;
   message: string;
 }
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://brewcode.co";
 
 const Index: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
@@ -161,38 +163,41 @@ const Index: React.FC = () => {
     }
   };
 
-  const schema = {
-    "@context": "https://schema.org",
-    "@type": "ContactPage",
-    "mainEntity": {
-      "@type": "Organization",
-      "name": "Brewcode Technology Private Limited",
-      "url": "https://www.brewcode.com",
-      "logo": "https://www.brewcode.com/logo.png",
-      "sameAs": [
-        "https://www.linkedin.com/company/brewcode",
-        "https://x.com/brewcode"
-      ],
-      "contactPoint": {
-        "@type": "ContactPoint",
-        "telephone": "+91-9876543210", // ✅ Use real number here
-        "contactType": "customer service",
-        "areaServed": "IN",
-        "availableLanguage": ["English", "Hindi"]
+  const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "ContactPage",
+      mainEntity: {
+        "@type": "Organization",
+        name: "Brewcode Technology Private Limited",
+        url: SITE_URL,
+        logo: `${SITE_URL}/logo.png`,
+        contactPoint: {
+          "@type": "ContactPoint",
+          telephone: "+91-XXXXXXXXXX",
+          contactType: "customer service",
+          areaServed: "IN",
+          availableLanguage: ["English"]
+        },
+        sameAs: [
+          "https://www.linkedin.com/company/brewcode",
+          "https://x.com/brewcode"
+        ]
       }
     },
-    "breadcrumb": {
+    {
+      "@context": "https://schema.org",
       "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.brewcode.com" },
-        { "@type": "ListItem", "position": 2, "name": "Contact Us", "item": "https://www.brewcode.com/contact" }
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+        { "@type": "ListItem", position: 2, name: "Contact Us", item: `${SITE_URL}/contact-us` }
       ]
     }
-  };
+  ];
 
   return (
     <Layout>
-    <Head>
+    {/* <Head>
         <title>Contact Us | Brewcode Technology Private Limited</title>
         <meta
           name="description"
@@ -203,7 +208,13 @@ const Index: React.FC = () => {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
         />
-      </Head>
+      </Head> */}
+       <Seo
+        title="Contact Brewcode | Let's Work Together"
+        description="Get in touch with Brewcode for your software development, web design, and IT solutions needs."
+        canonicalPath="/contact-us"
+        jsonLd={jsonLd}
+      />
 
       <div className="contact-us-bg">
         <div className="container contact-form text-light">

@@ -19,6 +19,7 @@ import { useRouter } from "next/router";
 
 import Script from "next/script";
 import { pageview } from "@component/lib/gtm";
+import Layout from "@component/components/layouts/layout";
 
 const GTM_ID = process.env.NEXT_PUBLIC_GTM_ID;
 
@@ -91,7 +92,8 @@ useEffect(() => {
 
       {isLoading ? <Loader /> : <Navbar isLoading />}
 
-      <Component {...pageProps} />
+<Component {...pageProps} />
+      
       <GoogleAnalytics gaId={GTM_ID ?? ""} />
       <ToastContainer />
     </Provider>

@@ -1,23 +1,57 @@
 import ReusableButton from "@component/components/customHooks/reusableContactButton";
 import Layout from "@component/components/layouts/layout";
+import Seo from "@component/components/Seo";
 import Head from "next/head";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import React from "react";
+  const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://brewcode.co";
 
 const Index: React.FC = () => {
   const router = useRouter();
 
   
   const navigate = (url: string) => {
-    router.push(url);
-  };
+    router.push(url);};
+
+        const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "WebPage",
+    mainEntity: {
+      "@type": "Service",
+      serviceType: "Web Development",
+      provider: {
+        "@type": "Organization",
+        name: "Brewcode Technology Private Limited",
+        url: SITE_URL
+      }
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+      { "@type": "ListItem", position: 2, name: "Solutions", item: `${SITE_URL}/solutions` },
+      { "@type": "ListItem", position: 3, name: "Web Development", item: `${SITE_URL}/solutions/web-development` }
+    ]
+  }
+];
   return (
     <Layout>
-       <Head>
+       {/* <Head>
         <title>Web Development | Brewcode Technology Private Limited</title>
         <meta name="description" content="Harness the power of IaaS for seamless scalability and enhanced performance. Learn how Brewcode leverages IaaS to optimize costs, ensure robust operations, and drive business growth." />
-      </Head>
+      </Head> */}
+
+      Brewcode Technology Private Limited
+      <Seo
+  title="Web Development Solutions | Brewcode"
+  description="Brewcode provides cutting-edge web development solutions, building responsive, scalable, and secure websites tailored to your business needs."
+  canonicalPath="/solutions/web-development"
+  jsonLd={jsonLd}/>
+
       <div
         style={{
           position: "relative",

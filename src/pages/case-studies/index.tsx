@@ -4,6 +4,7 @@ import { useRouter } from "next/router";
 import Head from "next/head";
 import CaseStudyCard from "@component/components/CaseStudyCard";
 import { routeMap } from "@component/components/customHooks/useNavigation";
+import Seo from "@component/components/Seo";
 
 interface CaseStudy {
   id: number;
@@ -17,8 +18,11 @@ interface CaseStudy {
   colImageName: string;
   size: "small" | "medium" | "large";
 }
+  const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://brewcode.co";
+
 
 const Index: React.FC = () => {
+
   const router = useRouter();
 
   const getClassName = (size: "small" | "medium" | "large"): string => {
@@ -125,16 +129,42 @@ const Index: React.FC = () => {
     },
   ];
 
+  const jsonLd = [
+  {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    mainEntity: {
+      "@type": "CreativeWork",
+      name: "Brewcode Case Studies",
+      description: "Real-world examples of how Brewcode delivered innovative solutions.",
+      url: `${SITE_URL}/case-studies`
+    }
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+      { "@type": "ListItem", position: 2, name: "Case Studies", item: `${SITE_URL}/case-studies` }
+    ]
+  }
+];
+
+
   return (
     <Layout>
-      <Head>
+      {/* <Head>
         <title>Case Studies | Brewcode Technology Private Limited</title>
         <meta
           name="description"
           content="Description of your Case Studies page"
         />
-      </Head>
-
+      </Head> */}
+<Seo
+  title="Case Studies | BBrewcode Technology Private Limited"
+  description="Explore Brewcode's real-world success stories and innovative solutions across industries, helping clients achieve digital transformation."
+  canonicalPath="/case-studies"
+  jsonLd={jsonLd}/>
       <div className="case-studies-hero-section">
         <div className="overlay-ar-vr">
           <div className="container">

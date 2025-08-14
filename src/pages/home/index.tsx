@@ -11,6 +11,7 @@ import BlogCard from "@component/components/BlogCard";
 import axios from 'axios';
 import dynamic from "next/dynamic";
 import { trackFooterClick } from "@component/lib/gtm";
+import Seo from "@component/components/Seo";
 const SwiperComponent = dynamic(() => import('@component/components/Carousel'), { ssr: false });
 
 interface Blog {
@@ -66,6 +67,7 @@ interface SolutionItem {
   value:string;
 }
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://brewcode.co";
 
 
 const Index: React.FC = () => {
@@ -259,12 +261,49 @@ const handleSolutionClick = (title: string, href: string, value: string) => {
       window.removeEventListener("scroll", handleScroll);
     };
   }, []);
+
+   const org = {
+    "@context": "https://schema.org",
+    "@type": "Organization",
+    name: "Brewcode Technology Private Limited",
+    url: SITE_URL,
+    logo: `${SITE_URL}/logo.png`,
+    sameAs: [
+      "https://www.linkedin.com/company/brewcode",
+      "https://x.com/brewcode"
+    ],
+    contactPoint: [{
+      "@type": "ContactPoint",
+      telephone: "+91-0000000000",
+      contactType: "customer support",
+      areaServed: "IN"
+    }]
+  };
+
+  // Optional: enables Google “Sitelinks search box”
+  const webSite = {
+    "@context": "https://schema.org",
+    "@type": "WebSite",
+    url: SITE_URL,
+    potentialAction: {
+      "@type": "SearchAction",
+      target: `${SITE_URL}/search?q={search_term_string}`,
+      "query-input": "required name=search_term_string"
+    }
+  };
+
   return (
     <Layout>
-      <Head>
+      {/* <Head>
         <title>Brewcode Technology Private Limited</title>
         <meta name="description" content="Description of your home page" />
-      </Head>
+      </Head> */}
+         <Seo
+        title="Brewcode Technology Private Limited."
+        description="Brewcode offers custom web development, full-stack solutions, and digital strategy for businesses."
+        canonicalPath="/"
+        jsonLd={[org, webSite]}
+      />
       <div className="hero-image">
         <video
           src="./videos/hero-section.mp4"

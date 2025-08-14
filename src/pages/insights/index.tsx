@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 import BlogCard from "@component/components/BlogCard";
 import axios from "axios";
 import { trackBlogClick } from "@component/lib/gtm";
+import Seo from "@component/components/Seo";
 
 interface Blog {
   id: number;
@@ -31,6 +32,8 @@ interface CaseStudy {
   colImageName: string;
   size: "small" | "medium" | "large";
 }
+  const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://brewcode.co";
+
 
 const Index: React.FC = () => {
 
@@ -206,32 +209,24 @@ const Index: React.FC = () => {
       size: "medium",
     },
   ];
- const schema = {
+const jsonLd = [
+  {
     "@context": "https://schema.org",
-    "@type": "CollectionPage",
-    "name": "Insights - Brewcode Technology Private Limited",
-    "description": "Explore the latest insights, articles, and updates from Brewcode Technology Private Limited.",
-    "url": "https://www.brewcode.com/insights",
-    "publisher": {
-      "@type": "Organization",
-      "name": "Brewcode Technology Private Limited",
-      "logo": {
-        "@type": "ImageObject",
-        "url": "https://www.brewcode.com/logo.png"
-      },
-      "sameAs": [
-        "https://www.linkedin.com/company/brewcode",
-        "https://x.com/brewcode"
-      ]
-    },
-    "breadcrumb": {
-      "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.brewcode.com" },
-        { "@type": "ListItem", "position": 2, "name": "Insights", "item": "https://www.brewcode.com/insights" }
-      ]
-    }
-  };
+    "@type": "Blog",
+    name: "Brewcode Insights",
+    description: "Latest trends, tips, and updates from Brewcode’s team.",
+    url: `${SITE_URL}/insights`
+  },
+  {
+    "@context": "https://schema.org",
+    "@type": "BreadcrumbList",
+    itemListElement: [
+      { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+      { "@type": "ListItem", position: 2, name: "Insights", item: `${SITE_URL}/insights` }
+    ]
+  }
+];
+
 
   return (
     <Layout>
@@ -240,7 +235,7 @@ const Index: React.FC = () => {
         <meta name="description" content="Description of your insights page" />
       </Head> */}
 
-         <Head>
+         {/* <Head>
         <title>Insights | Brewcode Technology Private Limited</title>
         <meta
           name="description"
@@ -251,7 +246,12 @@ const Index: React.FC = () => {
           type="application/ld+json"
           dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
         />
-      </Head>
+      </Head> */}
+      <Seo
+  title="Insights | Brewcode Technology Private Limited."
+  description="Stay updated with the latest tech trends, insights, and expert tips from Brewcode's team of developers and innovators."
+  canonicalPath="/insights"
+  jsonLd={jsonLd}/>
 
       <div
         style={{

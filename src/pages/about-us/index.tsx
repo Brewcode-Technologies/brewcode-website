@@ -1,42 +1,45 @@
 import Layout from "@component/components/layouts/layout";
+import Seo from "@component/components/Seo";
 import Head from "next/head";
 import React from "react";
 
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://brewcode.co";
 
 const Index: React.FC = () => {
- const schema = {
-    "@context": "https://schema.org",
-    "@type": "AboutPage",
-    "mainEntity": {
-      "@type": "Organization",
-      "name": "Brewcode Technology Private Limited",
-      "url": "https://www.brewcode.com",
-      "logo": "https://www.brewcode.com/logo.png",
-      "sameAs": [
-        "https://www.linkedin.com/company/brewcode",
-        "https://x.com/brewcode"
-      ]
+const jsonLd = [
+    {
+      "@context": "https://schema.org",
+      "@type": "AboutPage",
+      mainEntity: {
+        "@type": "Organization",
+        name: "Brewcode Technology Private Limited",
+        url: SITE_URL,
+        logo: `${SITE_URL}/logo.png`,
+        sameAs: [
+          "https://www.linkedin.com/company/brewcode",
+          "https://x.com/brewcode"
+        ]
+      }
     },
-    "breadcrumb": {
+    {
+      "@context": "https://schema.org",
       "@type": "BreadcrumbList",
-      "itemListElement": [
-        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.brewcode.com" },
-        { "@type": "ListItem", "position": 2, "name": "About Us", "item": "https://www.brewcode.com/about-us" }
+      itemListElement: [
+        { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
+        { "@type": "ListItem", position: 2, name: "About Us", item: `${SITE_URL}/about-us` }
       ]
     }
-  };
+  ];
   return (
     <Layout>
-     <Head>
-        <title>About Us - Brewcode</title>
-        <meta name="description" content="Learn more about Brewcode, our mission, team, and journey in delivering innovative solutions." />
-        <link rel="canonical" href="https://www.brewcode.com/about-us" />
-        <script type="application/ld+json">
-          {JSON.stringify(schema)}
-        </script>
-      </Head>
+    
       
-  
+     <Seo
+        title="About Brewcode | Our Mission & Team"
+        description="Learn about Brewcode's mission, values, and team delivering innovative solutions."
+        canonicalPath="/about-us"
+        jsonLd={jsonLd}
+      />
   <div className="dark-container py-5">
         <div className="container">
           <div className="row">

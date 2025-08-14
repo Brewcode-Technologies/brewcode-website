@@ -13,6 +13,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <div className="site-container">
       {/* <Navbar isLoading={isLoading} /> */}
+      {/* <Header/> */}
       <main className="content">{children}</main>
       <Footer />
     </div>
