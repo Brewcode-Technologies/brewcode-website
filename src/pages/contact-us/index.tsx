@@ -161,11 +161,48 @@ const Index: React.FC = () => {
     }
   };
 
+  const schema = {
+    "@context": "https://schema.org",
+    "@type": "ContactPage",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Brewcode Technology Private Limited",
+      "url": "https://www.brewcode.com",
+      "logo": "https://www.brewcode.com/logo.png",
+      "sameAs": [
+        "https://www.linkedin.com/company/brewcode",
+        "https://x.com/brewcode"
+      ],
+      "contactPoint": {
+        "@type": "ContactPoint",
+        "telephone": "+91-9876543210", // ✅ Use real number here
+        "contactType": "customer service",
+        "areaServed": "IN",
+        "availableLanguage": ["English", "Hindi"]
+      }
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.brewcode.com" },
+        { "@type": "ListItem", "position": 2, "name": "Contact Us", "item": "https://www.brewcode.com/contact" }
+      ]
+    }
+  };
+
   return (
     <Layout>
-      <Head>
+    <Head>
         <title>Contact Us | Brewcode Technology Private Limited</title>
-        <meta name="description" content="Contact us page description" />
+        <meta
+          name="description"
+          content="Contact Brewcode Technology Private Limited for inquiries, partnerships, or support."
+        />
+        <link rel="canonical" href="https://www.brewcode.com/contact" />
+        <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
       </Head>
 
       <div className="contact-us-bg">

@@ -206,13 +206,51 @@ const Index: React.FC = () => {
       size: "medium",
     },
   ];
-
+ const schema = {
+    "@context": "https://schema.org",
+    "@type": "CollectionPage",
+    "name": "Insights - Brewcode Technology Private Limited",
+    "description": "Explore the latest insights, articles, and updates from Brewcode Technology Private Limited.",
+    "url": "https://www.brewcode.com/insights",
+    "publisher": {
+      "@type": "Organization",
+      "name": "Brewcode Technology Private Limited",
+      "logo": {
+        "@type": "ImageObject",
+        "url": "https://www.brewcode.com/logo.png"
+      },
+      "sameAs": [
+        "https://www.linkedin.com/company/brewcode",
+        "https://x.com/brewcode"
+      ]
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.brewcode.com" },
+        { "@type": "ListItem", "position": 2, "name": "Insights", "item": "https://www.brewcode.com/insights" }
+      ]
+    }
+  };
 
   return (
     <Layout>
-      <Head>
+      {/* <Head>
         <title>Insights | Brewcode Technology Private Limited</title>
         <meta name="description" content="Description of your insights page" />
+      </Head> */}
+
+         <Head>
+        <title>Insights | Brewcode Technology Private Limited</title>
+        <meta
+          name="description"
+          content="Explore the latest insights, articles, and updates from Brewcode Technology Private Limited."
+        />
+        <link rel="canonical" href="https://www.brewcode.com/insights" />
+          <script
+          type="application/ld+json"
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
+        />
       </Head>
 
       <div

@@ -2,13 +2,40 @@ import Layout from "@component/components/layouts/layout";
 import Head from "next/head";
 import React from "react";
 
+
 const Index: React.FC = () => {
+ const schema = {
+    "@context": "https://schema.org",
+    "@type": "AboutPage",
+    "mainEntity": {
+      "@type": "Organization",
+      "name": "Brewcode Technology Private Limited",
+      "url": "https://www.brewcode.com",
+      "logo": "https://www.brewcode.com/logo.png",
+      "sameAs": [
+        "https://www.linkedin.com/company/brewcode",
+        "https://x.com/brewcode"
+      ]
+    },
+    "breadcrumb": {
+      "@type": "BreadcrumbList",
+      "itemListElement": [
+        { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://www.brewcode.com" },
+        { "@type": "ListItem", "position": 2, "name": "About Us", "item": "https://www.brewcode.com/about-us" }
+      ]
+    }
+  };
   return (
     <Layout>
-        <Head>
-        <title>About Us | Brewcode Technology Private Limited</title>
-        <meta name="description" content="Description of your About Us page" />
+     <Head>
+        <title>About Us - Brewcode</title>
+        <meta name="description" content="Learn more about Brewcode, our mission, team, and journey in delivering innovative solutions." />
+        <link rel="canonical" href="https://www.brewcode.com/about-us" />
+        <script type="application/ld+json">
+          {JSON.stringify(schema)}
+        </script>
       </Head>
+      
   
   <div className="dark-container py-5">
         <div className="container">
