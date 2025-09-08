@@ -1,5 +1,5 @@
 module.exports = {
-  siteUrl: 'https://www.brewcode.com',
+  siteUrl: 'https://www.brewcode.co',
   generateRobotsTxt: true,
   sitemapSize: 7000,
   changefreq: 'weekly',

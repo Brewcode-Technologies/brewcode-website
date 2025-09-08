@@ -3,7 +3,7 @@ User-agent: *
 Allow: /
 
 # Host
-Host: https://www.brewcode.com
+Host: https://www.brewcode.co
 
 # Sitemaps
-Sitemap: https://www.brewcode.com/sitemap.xml
+Sitemap: https://www.brewcode.co/sitemap.xml
