@@ -1,14 +1,14 @@
-import Layout from "@component/components/layouts/layout";
-import Head from "next/head";
-import React from "react";
+import { Metadata } from 'next';
+import Layout from '@component/components/layouts/layout';
+
+import React from 'react';
+import { pageMetadata } from '@component/lib/metadata';
+
+export const metadata: Metadata = pageMetadata.caseStudies.stJude;
 
 const Index: React.FC = () => {
   return (
     <Layout>
-      <Head>
-        <title> Digital Transformation of St. Jude India ChildCare Centres | Brewcode Technology Private Limited</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </Head>
       <div className="bg-black py-5">
         <div className="container py-5">
           <div className="soctor-logo mb-2 col-5">
@@ -21,7 +21,7 @@ const Index: React.FC = () => {
                   <h2>Healthcare</h2>
                 </div>
                 <div className="percentage-container text-white">
-                Digital Transformation of St. Jude India ChildCare Centres
+                  Digital Transformation of St. Jude India ChildCare Centres
                 </div>
               </div>
             </div>
@@ -43,7 +43,12 @@ const Index: React.FC = () => {
               <div className="about-content">
                 <h2>About Project</h2>
                 <p>
-                Brewcode proudly partnered with St. Jude India ChildCare Centres to drive their digital transformation by transitioning their .Net website to WordPress. Our team integrated the CCAvenue payment gateway to streamline donations, implemented SEO optimizations to boost online visibility, and developed a custom backup system to ensure data integrity. This project underscores Brewcode's commitment to leveraging technology for impactful social change.
+                  Brewcode proudly partnered with St. Jude India ChildCare Centres to drive their
+                  digital transformation by transitioning their .Net website to WordPress. Our team
+                  integrated the CCAvenue payment gateway to streamline donations, implemented SEO
+                  optimizations to boost online visibility, and developed a custom backup system to
+                  ensure data integrity. This project underscores Brewcode's commitment to
+                  leveraging technology for impactful social change.
                 </p>
               </div>
             </div>
@@ -64,7 +69,13 @@ const Index: React.FC = () => {
                     Problem Statement
                   </h2>
                   <p className="section-description">
-                  St. Jude India ChildCare Centres faced significant challenges with their existing .Net website, including limited scalability, a cumbersome donation process, and inadequate online visibility. Additionally, the lack of integrated SEO features and an unreliable backup system hampered their ability to attract and retain donors. In the broader market, many NGOs struggle with outdated websites that impede effective fundraising and outreach, highlighting a pressing need for modern, user-friendly digital solutions.
+                    St. Jude India ChildCare Centres faced significant challenges with their
+                    existing .Net website, including limited scalability, a cumbersome donation
+                    process, and inadequate online visibility. Additionally, the lack of integrated
+                    SEO features and an unreliable backup system hampered their ability to attract
+                    and retain donors. In the broader market, many NGOs struggle with outdated
+                    websites that impede effective fundraising and outreach, highlighting a pressing
+                    need for modern, user-friendly digital solutions.
                   </p>
                 </div>
               </div>
@@ -82,7 +93,12 @@ const Index: React.FC = () => {
                     Business Goal
                   </h2>
                   <p className="section-description">
-                  The primary business goal of this project was to enhance St. Jude India ChildCare Centres' digital infrastructure to support their mission more effectively. This involved transitioning their website to a scalable and user-friendly WordPress platform, integrating a seamless CCAvenue payment gateway for donations, and implementing robust SEO strategies to improve online visibility.
+                    The primary business goal of this project was to enhance St. Jude India
+                    ChildCare Centres' digital infrastructure to support their mission more
+                    effectively. This involved transitioning their website to a scalable and
+                    user-friendly WordPress platform, integrating a seamless CCAvenue payment
+                    gateway for donations, and implementing robust SEO strategies to improve online
+                    visibility.
                   </p>
                 </div>
               </div>
@@ -104,7 +120,10 @@ const Index: React.FC = () => {
                 <h2 className=" text-center"> Target Audience</h2>
 
                 <p className="text-center">
-                St. Jude India ChildCare Centres’ digital transformation targets philanthropists and online donors, focusing<br/> on user-friendly donation processes and enhanced web presence for social impact.
+                  St. Jude India ChildCare Centres’ digital transformation targets philanthropists
+                  and online donors, focusing
+                  <br /> on user-friendly donation processes and enhanced web presence for social
+                  impact.
                 </p>
               </div>
             </div>
@@ -112,20 +131,23 @@ const Index: React.FC = () => {
 
           <div className="row mb-4">
             <div className="col-md-3">
-              <strong className="audience-list-heading genarl-padding">
-              Potential Donors
-              </strong>
+              <strong className="audience-list-heading genarl-padding">Potential Donors</strong>
             </div>
             <div className="col-md-9">
               <li className="target-audience-item">
                 <div className="d-flex flex-column">
                   <div className="d-flex">
-                  <img src="/images/list-page-arrow.svg" alt="" className="list-page-arrow-icon mt-2 "   loading="lazy"/>
+                    <img
+                      src="/images/list-page-arrow.svg"
+                      alt=""
+                      className="list-page-arrow-icon mt-2 "
+                      loading="lazy"
+                    />
                     <p>
-                    Individuals and organizations looking to contribute to a worthy cause, seeking a seamless and secure online donation experience.
+                      Individuals and organizations looking to contribute to a worthy cause, seeking
+                      a seamless and secure online donation experience.
                     </p>
                   </div>
-               
                 </div>
               </li>
             </div>
@@ -138,12 +160,42 @@ const Index: React.FC = () => {
               <li className="target-audience-item">
                 <div className="d-flex flex-column">
                   <div className="d-flex">
-                  <img src="/images/list-page-arrow.svg" alt="" className="list-page-arrow-icon mt-2 "   loading="lazy"/>
+                    <img
+                      src="/images/list-page-arrow.svg"
+                      alt=""
+                      className="list-page-arrow-icon mt-2 "
+                      loading="lazy"
+                    />
                     <p>
-                    Current supporters who require a reliable and user-friendly platform to continue their contributions and stay informed about the organization's impact.
+                      Current supporters who require a reliable and user-friendly platform to
+                      continue their contributions and stay informed about the organization's
+                      impact.
                     </p>
                   </div>
-                  
+                </div>
+              </li>
+            </div>
+          </div>
+          <div className="row mb-4">
+            <div className="col-md-3">
+              <strong className="audience-list-heading">Volunteers and Supporters</strong>
+            </div>
+            <div className="col-md-9">
+              <li className="target-audience-item">
+                <div className="d-flex flex-column">
+                  <div className="d-flex">
+                    <img
+                      src="/images/list-page-arrow.svg"
+                      alt=""
+                      className="list-page-arrow-icon mt-2 "
+                      loading="lazy"
+                    />
+                    <p>
+                      People interested in volunteering opportunities and updates about St. Jude
+                      India ChildCare Centres, who need easy access to information and engagement
+                      channels.
+                    </p>
+                  </div>
                 </div>
               </li>
             </div>
@@ -151,37 +203,25 @@ const Index: React.FC = () => {
           <div className="row mb-4">
             <div className="col-md-3">
               <strong className="audience-list-heading">
-              Volunteers and Supporters
+                Healthcare and Childcare
+                <br /> Professionals
               </strong>
             </div>
             <div className="col-md-9">
               <li className="target-audience-item">
                 <div className="d-flex flex-column">
                   <div className="d-flex">
-                  <img src="/images/list-page-arrow.svg" alt="" className="list-page-arrow-icon mt-2 "   loading="lazy"/>
+                    <img
+                      src="/images/list-page-arrow.svg"
+                      alt=""
+                      className="list-page-arrow-icon mt-2 "
+                    />
                     <p>
-                    People interested in volunteering opportunities and updates about St. Jude India ChildCare Centres, who need easy access to information and engagement channels.
+                      Professionals seeking collaboration opportunities and insights into the
+                      organization's work, requiring detailed and accessible information about
+                      initiatives and programs.
                     </p>
                   </div>
-                </div>
-              </li>
-            </div>
-          </div>
-          <div className="row mb-4">
-            <div className="col-md-3">
-              <strong className="audience-list-heading">Healthcare and Childcare<br/> Professionals</strong>
-            </div>
-            <div className="col-md-9">
-              <li className="target-audience-item">
-                <div className="d-flex flex-column">
-                  <div className="d-flex">
-                  
-                    <img src="/images/list-page-arrow.svg" alt="" className="list-page-arrow-icon mt-2 "/>
-                    <p>
-                    Professionals seeking collaboration opportunities and insights into the organization's work, requiring detailed and accessible information about initiatives and programs.
-                    </p>
-                  </div>
-                
                 </div>
               </li>
             </div>
@@ -194,16 +234,22 @@ const Index: React.FC = () => {
               <li className="target-audience-item">
                 <div className="d-flex flex-column">
                   <div className="d-flex">
-                  <img src="/images/list-page-arrow.svg" alt="" className="list-page-arrow-icon mt-2 "   loading="lazy"/>
+                    <img
+                      src="/images/list-page-arrow.svg"
+                      alt=""
+                      className="list-page-arrow-icon mt-2 "
+                      loading="lazy"
+                    />
                     <p>
-                    Individuals interested in learning more about St. Jude India ChildCare Centres' mission and achievements, looking for engaging and informative content.
+                      Individuals interested in learning more about St. Jude India ChildCare
+                      Centres' mission and achievements, looking for engaging and informative
+                      content.
                     </p>
                   </div>
                 </div>
               </li>
             </div>
           </div>
-         
         </div>
       </div>
 
@@ -224,8 +270,8 @@ const Index: React.FC = () => {
                 <h2 className=" text-center">Discover</h2>
 
                 <p className="text-center">
-                  We worked with different stakeholders to understand product,
-                  and a regular connect with them <br />
+                  We worked with different stakeholders to understand product, and a regular connect
+                  with them <br />
                   helped us understand user stories and needs
                 </p>
                 <div>
@@ -241,57 +287,64 @@ const Index: React.FC = () => {
             <div className="d-flex col-md-5 flex-column">
               <div className="d-flex p-4">
                 <p>
-                  {" "}
+                  {' '}
                   <span className="step-number">1</span>
                 </p>
                 <p className="gap-description">
-                Existing .Net platform lacked scalability and was difficult to update.
+                  Existing .Net platform lacked scalability and was difficult to update.
                 </p>
               </div>
               <div className="d-flex p-4">
                 <p>
-                  {" "}
+                  {' '}
                   <span className="step-number">2</span>
                 </p>
                 <p className="gap-description">
-                Lack of integrated SEO features resulted in low search engine rankings, reducing website reach and visibility.
+                  Lack of integrated SEO features resulted in low search engine rankings, reducing
+                  website reach and visibility.
                 </p>
               </div>
               <div className="d-flex p-4">
                 <p>
-                  {" "}
+                  {' '}
                   <span className="step-number">3</span>
                 </p>
                 <p className="gap-description">
-                Absence of a reliable backup system risked data loss and compromised data security.
+                  Absence of a reliable backup system risked data loss and compromised data
+                  security.
                 </p>
               </div>
             </div>
             <div className="d-flex col-md-5 flex-column">
               <div className="d-flex p-4">
                 <p>
-                  {" "}
+                  {' '}
                   <span className="step-number">4</span>
                 </p>
                 <p className="gap-description">
-                Website lacked interactive features to keep donors informed and attract new supporters, limiting engagement.                </p>
+                  Website lacked interactive features to keep donors informed and attract new
+                  supporters, limiting engagement.{' '}
+                </p>
               </div>
               <div className="d-flex p-4">
                 <p>
-                  {" "}
+                  {' '}
                   <span className="step-number">5</span>
                 </p>
                 <p className="gap-description">
-                The donation system was cumbersome and not user-friendly, potentially leading to lost contributions.
+                  The donation system was cumbersome and not user-friendly, potentially leading to
+                  lost contributions.
                 </p>
               </div>
               <div className="d-flex p-4">
                 <p>
-                  {" "}
+                  {' '}
                   <span className="step-number">6</span>
                 </p>
                 <p className="gap-description">
-                Website lacked interactive features to keep donors informed and attract new supporters, limiting engagement.                </p>
+                  Website lacked interactive features to keep donors informed and attract new
+                  supporters, limiting engagement.{' '}
+                </p>
               </div>
             </div>
           </div>
@@ -306,9 +359,8 @@ const Index: React.FC = () => {
                 <h2 className="text-center">Design Thinking Process</h2>
 
                 <p className="text-center">
-                  Design thinking is a methodology that attempts to solve
-                  complex problems in a creative and user-centric way. Core
-                  features
+                  Design thinking is a methodology that attempts to solve complex problems in a
+                  creative and user-centric way. Core features
                   <br /> of the design thinking methodology include
                 </p>
               </div>
@@ -317,7 +369,7 @@ const Index: React.FC = () => {
           <div className="soctor-about-section">
             <div className="about-introduction">Process</div>
             <div className="process-image-container">
-            <img
+              <img
                 src="/images/discovery-design-delivery-img.png"
                 alt="Discovery, Design, and Delivery Process"
                 className="process-image"

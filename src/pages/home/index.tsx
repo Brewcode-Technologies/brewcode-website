@@ -1,17 +1,15 @@
-import React, { useEffect, useState } from "react";
-import Link from "next/link";
-import ImageIcon from "@component/components/ImageIcon";
-import Layout from "@component/components/layouts/layout";
-import useNavigation, {
-  routeMap,
-} from "@component/components/customHooks/useNavigation";
-import Head from "next/head";
-import { GetStaticProps, Route } from "next";
-import BlogCard from "@component/components/BlogCard";
+import React, { useEffect, useState } from 'react';
+import Link from 'next/link';
+import ImageIcon from '@component/components/ImageIcon';
+import Layout from '@component/components/layouts/layout';
+import useNavigation, { routeMap } from '@component/components/customHooks/useNavigation';
+import Head from 'next/head';
+import { GetStaticProps, Route } from 'next';
+import BlogCard from '@component/components/BlogCard';
 import axios from 'axios';
-import dynamic from "next/dynamic";
-import { trackFooterClick } from "@component/lib/gtm";
-import Seo from "@component/components/Seo";
+import dynamic from 'next/dynamic';
+import { trackFooterClick } from '@component/lib/gtm';
+import Seo from '@component/components/Seo';
 const SwiperComponent = dynamic(() => import('@component/components/Carousel'), { ssr: false });
 
 interface Blog {
@@ -27,12 +25,12 @@ interface Blog {
 
 interface BlogCardProps {
   blog: Blog;
-  layout?: 'insight-page' | 'home-page'; 
-  onClick?: (blog: Blog) => void; 
+  layout?: 'insight-page' | 'home-page';
+  onClick?: (blog: Blog) => void;
 }
 
 interface BlogClickEvent {
-  event: "blog_click";
+  event: 'blog_click';
   blog_title: string;
   blog_category: string;
   blog_url: string;
@@ -47,13 +45,11 @@ interface ClientLogoClickEvent {
   logo_url: string;
 }
 
-
 declare global {
   interface Window {
-    dataLayer: unknown[]; // Use unknown[] for compatibility with GTM
+    dataLayer: unknown[];
   }
 }
-
 
 interface ClientLogo {
   src: string;
@@ -63,37 +59,34 @@ interface ClientLogo {
 interface SolutionItem {
   title: string;
   icon: string;
-  href:  string;
-  value:string;
+  href: string;
+  value: string;
 }
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://brewcode.co";
-
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brewcode.co';
 
 const Index: React.FC = () => {
-
   const [blog, setBlog] = useState<Blog[]>([]);
-const handleBlogClick = (blog: Blog) => {
-  console.log("Blog clicked:", blog);
-};
-
-const handleClientLogoClick = (logo: ClientLogo) => {
-  const logoName = logo.src.split("/").pop()?.split(".")[0] ?? "unknown";
-
-  const eventData: ClientLogoClickEvent = {
-    event: 'client_logo_click',
-    logo_src: logo.src,
-    logo_name: logoName,
-    logo_url: logo.url,
+  const handleBlogClick = (blog: Blog) => {
+    console.log('Blog clicked:', blog);
   };
 
-  if (typeof window !== 'undefined') {
-    window.dataLayer = window.dataLayer || [];
-    window.dataLayer.push(eventData);
-    console.log('GTM Client Logo Click Event Fired:', eventData);
-  }
-};
+  const handleClientLogoClick = (logo: ClientLogo) => {
+    const logoName = logo.src.split('/').pop()?.split('.')[0] ?? 'unknown';
 
+    const eventData: ClientLogoClickEvent = {
+      event: 'client_logo_click',
+      logo_src: logo.src,
+      logo_name: logoName,
+      logo_url: logo.url,
+    };
+
+    if (typeof window !== 'undefined') {
+      window.dataLayer = window.dataLayer || [];
+      window.dataLayer.push(eventData);
+      console.log('GTM Client Logo Click Event Fired:', eventData);
+    }
+  };
 
   useEffect(() => {
     const fetchData = async () => {
@@ -102,8 +95,8 @@ const handleClientLogoClick = (logo: ClientLogo) => {
           params: {
             rss_url: 'https://medium.com/feed/@brewcode',
             api_key: 'zzwyppw74s0zayqrgvogmb6qm3fqwu7kuofye0gw',
-            count: 5
-          }
+            count: 5,
+          },
         });
 
         console.log('API Response:', response.data);
@@ -119,12 +112,12 @@ const handleClientLogoClick = (logo: ClientLogo) => {
           return {
             id: index,
             title: item.title,
-            category: "Blogs",
+            category: 'Blogs',
             description: item.description,
             link: item.link,
             img: imgSrc,
             date: item.pubDate,
-            imgAlt: item.title
+            imgAlt: item.title,
           };
         });
 
@@ -137,112 +130,108 @@ const handleClientLogoClick = (logo: ClientLogo) => {
     fetchData();
   }, []);
 
-
-
-
-
   const { navigate } = useNavigation();
   const [isBrowser, setIsBrowser] = useState<boolean>(false);
   useEffect(() => {
     setIsBrowser(true);
   }, []);
 
-const handleSolutionClick = (title: string, href: string, value: string) => {
-  if (typeof window !== "undefined" && window.dataLayer) {
-    window.dataLayer.push({
-      event: "solution_click",
-      event_category: "Solutions",
-      event_label: title,
-      value: value,
-    });
-  }
-};
+  const handleSolutionClick = (title: string, href: string, value: string) => {
+    if (typeof window !== 'undefined' && window.dataLayer) {
+      window.dataLayer.push({
+        event: 'solution_click',
+        event_category: 'Solutions',
+        event_label: title,
+        value: value,
+      });
+    }
+  };
 
   const solutions: SolutionItem[] = [
     {
-      title: "Cloud Security",
-      icon: "bi-arrow-up-right",
-      href: "cloud-services",
-      value:'cloud-services'
+      title: 'Cloud Security',
+      icon: 'bi-arrow-up-right',
+      href: 'cloud-services',
+      value: 'cloud-services',
     },
     {
-      title: "Cyber Security",
-      icon: "bi-arrow-up-right",
-      href: "cyber-security",
-      value:'cyber-security'
+      title: 'Cyber Security',
+      icon: 'bi-arrow-up-right',
+      href: 'cyber-security',
+      value: 'cyber-security',
     },
     {
-      title: "E-commerce Solution",
-      icon: "bi-arrow-up-right",
-      href: "e-commerce",
-      value:'e-commerce'
+      title: 'E-commerce Solution',
+      icon: 'bi-arrow-up-right',
+      href: 'e-commerce',
+      value: 'e-commerce',
     },
     {
-      title: "Software Development",
-      icon: "bi-arrow-up-right",
-      href: "web-development",
-      value:'web-development'
+      title: 'Software Development',
+      icon: 'bi-arrow-up-right',
+      href: 'web-development',
+      value: 'web-development',
     },
     {
-      title: "Robotic Process Automation (RPA)",
-      icon: "bi-arrow-up-right",
-      href: "robotic-process-automation",
-      value:'robotic-process-automation'
+      title: 'Robotic Process Automation (RPA)',
+      icon: 'bi-arrow-up-right',
+      href: 'robotic-process-automation',
+      value: 'robotic-process-automation',
     },
     {
-      title: "Software Audits/Testing as-a-service",
-      icon: "bi-arrow-up-right",
-      href: "at-t",
-      value:'at-t'
+      title: 'Software Audits/Testing as-a-service',
+      icon: 'bi-arrow-up-right',
+      href: 'at-t',
+      value: 'at-t',
     },
     {
-      title: "Resource Planning",
-      icon: "bi-arrow-up-right",
-      href: "resource-planning",
-      value:'resource-planning'
+      title: 'Resource Planning',
+      icon: 'bi-arrow-up-right',
+      href: 'resource-planning',
+      value: 'resource-planning',
     },
     {
-      title: "Infrastructure Solution",
-      icon: "bi-arrow-up-right",
-      href: "infrastructure",
-      value:'infrastructure'
+      title: 'Infrastructure Solution',
+      icon: 'bi-arrow-up-right',
+      href: 'infrastructure',
+      value: 'infrastructure',
     },
   ];
 
   const OurClientlogos: ClientLogo[][] = [
     [
-      { src: "/images/svg/st-jude.svg", url: "https://stjude.com" },
-      { src: "/images/svg/agilo.svg", url: "https://agilo.com" },
-      { src: "/images/svg/dhanika.svg", url: "https://dhanika.com" },
+      { src: '/images/svg/st-jude.svg', url: 'https://stjude.com' },
+      { src: '/images/svg/agilo.svg', url: 'https://agilo.com' },
+      { src: '/images/svg/dhanika.svg', url: 'https://dhanika.com' },
     ],
     [
-      { src: "/images/svg/soctor.svg", url: "https://soctor.com" },
-      { src: "/images/svg/Oilvebay.svg", url: "https://oilvebay.com" },
-      { src: "/images/corpeq.svg", url: "https://corpeq.com" },
+      { src: '/images/svg/soctor.svg', url: 'https://soctor.com' },
+      { src: '/images/svg/Oilvebay.svg', url: 'https://oilvebay.com' },
+      { src: '/images/corpeq.svg', url: 'https://corpeq.com' },
     ],
     [
       {
-        src: "/images/svg/enpersoll.svg",
-        url: "https://enpersoll.com",
+        src: '/images/svg/enpersoll.svg',
+        url: 'https://enpersoll.com',
       },
-      { src: "/images/svg/ojas.svg", url: "https://ojas.com" },
+      { src: '/images/svg/ojas.svg', url: 'https://ojas.com' },
       {
-        src: "/images/svg/humancloud.svg",
-        url: "https://humancloud.com",
+        src: '/images/svg/humancloud.svg',
+        url: 'https://humancloud.com',
       },
     ],
     [
-      { src: "/images/sarci.svg", url: "https://sarci.com" },
-      { src: "/images/rh.svg", url: "https://rh.com" },
-      { src: "/images/svg/dhanika.svg", url: "https://dhanika.com" },
+      { src: '/images/sarci.svg', url: 'https://sarci.com' },
+      { src: '/images/rh.svg', url: 'https://rh.com' },
+      { src: '/images/svg/dhanika.svg', url: 'https://dhanika.com' },
     ],
   ];
 
   const truncateText = (text: string, lines: number): string => {
-    const textLines = text.split("\n");
-    const truncatedText = textLines.slice(0, lines).join("\n");
+    const textLines = text.split('\n');
+    const truncatedText = textLines.slice(0, lines).join('\n');
     if (textLines.length > lines) {
-      return truncatedText + "...";
+      return truncatedText + '...';
     }
     return truncatedText;
   };
@@ -255,80 +244,66 @@ const handleSolutionClick = (title: string, href: string, value: string) => {
       setScrollPosition(position);
     };
 
-    window.addEventListener("scroll", handleScroll);
+    window.addEventListener('scroll', handleScroll);
 
     return () => {
-      window.removeEventListener("scroll", handleScroll);
+      window.removeEventListener('scroll', handleScroll);
     };
   }, []);
 
-   const org = {
-    "@context": "https://schema.org",
-    "@type": "Organization",
-    name: "Brewcode Technology Private Limited",
+  const org = {
+    '@context': 'https://schema.org',
+    '@type': 'Organization',
+    name: 'Brewcode Technology Private Limited',
     url: SITE_URL,
     logo: `${SITE_URL}/logo.png`,
-    sameAs: [
-      "https://www.linkedin.com/company/brewcode",
-      "https://x.com/brewcode"
+    sameAs: ['https://www.linkedin.com/company/brewcode', 'https://x.com/brewcode'],
+    contactPoint: [
+      {
+        '@type': 'ContactPoint',
+        telephone: '+91-0000000000',
+        contactType: 'customer support',
+        areaServed: 'IN',
+      },
     ],
-    contactPoint: [{
-      "@type": "ContactPoint",
-      telephone: "+91-0000000000",
-      contactType: "customer support",
-      areaServed: "IN"
-    }]
   };
 
   // Optional: enables Google “Sitelinks search box”
   const webSite = {
-    "@context": "https://schema.org",
-    "@type": "WebSite",
+    '@context': 'https://schema.org',
+    '@type': 'WebSite',
     url: SITE_URL,
     potentialAction: {
-      "@type": "SearchAction",
+      '@type': 'SearchAction',
       target: `${SITE_URL}/search?q={search_term_string}`,
-      "query-input": "required name=search_term_string"
-    }
+      'query-input': 'required name=search_term_string',
+    },
   };
 
   return (
     <Layout>
-      {/* <Head>
-        <title>Brewcode Technology Private Limited</title>
-        <meta name="description" content="Description of your home page" />
-      </Head> */}
-         <Seo
+      <Seo
         title="Brewcode Technology Private Limited."
         description="Brewcode offers custom web development, full-stack solutions, and digital strategy for businesses."
         canonicalPath="/"
         jsonLd={[org, webSite]}
       />
       <div className="hero-image">
-        <video
-          src="./videos/hero-section.mp4"
-          autoPlay
-          loop
-          muted
-          className="background-video"
-        />
+        <video src="./videos/hero-section.mp4" autoPlay loop muted className="background-video" />
 
         <div className="hero-section">
           <div className="row hero-title-section">
             <div className="col-12 hero-title">
               <h1 className="hero-section-heading">
-               We're Here To
-                Solve Your
+                We're Here To Solve Your
                 <br />
                 Critical Challenges
               </h1>
             </div>
             <p className="hero-description text-center mt-3">
-              In today’s fast-paced
-              climate, companies are required to
+              In today’s fast-paced climate, companies are required to
               <br />
-              adapt  more
-              quickly  than ever before.
+              adapt more quickly than ever before.
             </p>
           </div>
 
@@ -338,7 +313,7 @@ const handleSolutionClick = (title: string, href: string, value: string) => {
                 href="https://brewcode.medium.com/"
                 target="_blank"
                 passHref
-                onClick={() => trackFooterClick("Brewcode-Medium")}
+                onClick={() => trackFooterClick('Brewcode-Medium')}
               >
                 <ImageIcon
                   src="/images/svg/logo-blog.svg"
@@ -350,7 +325,7 @@ const handleSolutionClick = (title: string, href: string, value: string) => {
                 href="https://www.linkedin.com/company/brewcode/"
                 passHref
                 target="_blank"
-                onClick={() => trackFooterClick("Linkedin")}
+                onClick={() => trackFooterClick('Linkedin')}
               >
                 <ImageIcon
                   src="/images/svg/LinkedIn_svg.svg"
@@ -367,119 +342,107 @@ const handleSolutionClick = (title: string, href: string, value: string) => {
           </div>
         </div>
       </div>
-  
-<div className="about-section text-white">
-    <div className="container">
-    <div className="row">
-        <div className="col-12">
-          <h2 className="about-heading pt-5">Who We Are?</h2>
+
+      <div className="about-section text-white">
+        <div className="container">
+          <div className="row">
+            <div className="col-12">
+              <h2 className="about-heading pt-5">Who We Are?</h2>
+            </div>
+            <div className="stats col-6">
+              <div className="statItem">
+                <div className="d-flex justify-between">
+                  <span className="statValue">10</span>
+                  <span className="statLabel">
+                    <span>Years</span> <br />
+                    <span>Experience</span>
+                  </span>
+                </div>
+              </div>
+              <div className="statItem">
+                <div className="d-flex justify-between">
+                  <span className="statValue">1M</span>
+                  <span className="statLabel">
+                    <span>User</span> <br />
+                    <span>Satisfaction</span>
+                  </span>
+                </div>
+              </div>
+              <div className="statItem">
+                <div className="d-flex justify-between">
+                  <span className="statValue">10K</span>
+                  <span className="statLabel">
+                    <span>Official</span> <br />
+                    <span>Followers</span>
+                  </span>
+                </div>
+              </div>
+            </div>
+
+            <p className="description">
+              We Create Unique Enhanced Experience In <span className="brewcode">Brewcode</span>
+            </p>
+            <p className="details">
+              Working with Brewcode involves willingness to offer the best immersion to clients and
+              audiences but also investing
+              <br /> in smart solutions to reduce costs when it comes to finding flexible solutions
+              to refine and adapt the brand
+              <br /> message in different contexts.
+            </p>
           </div>
-          <div className="stats col-6">
-          <div className="statItem">
-              <div className="d-flex justify-between">
-              <span className="statValue">10</span>
-              <span className="statLabel">
-                <span>Years</span> <br/>
-                <span>Experience</span>
-              </span>
-              </div>
-            </div>
-            <div className="statItem">
-              <div className="d-flex justify-between">
-              <span className="statValue">1M</span>
-              <span className="statLabel">
-                <span>User</span> <br/>
-                <span>Satisfaction</span>
-              </span>
-              </div>
-            </div>
-            <div className="statItem">
-              <div className="d-flex justify-between">
-              <span className="statValue">10K</span>
-              <span className="statLabel">
-                <span>Official</span> <br/>
-                <span>Followers</span>
-              </span>
-              </div>
-            </div>
-            
-            </div>
-          
-       
-      
-          <p className="description">
-            We Create Unique Enhanced Experience In <span className="brewcode" >Brewcode</span>
-          </p>
-          <p className="details">
-            Working with Brewcode involves willingness to offer the best immersion to clients and audiences but also investing<br/> in smart solutions to reduce costs when it comes to finding flexible solutions to refine and adapt the brand<br/> message in different contexts.
-          </p>
-      
+        </div>
       </div>
-    </div>
-    
-    </div>
 
-<section className="solutions-section">
-  <div className="container my-5">
-    <div className="row">
-      <div className="col-12">
-        <h1 className="solutions-heading mb-5">Our Solutions</h1>
-        <p className="solutions-description">
-          Design and deliver new digital experiences, revenue streams, and
-          business models to <br />
-          meet rising customer expectations and accelerate your growth
-        </p>
-      </div>
-      <div className="row d-flex justify-content-between solutions-list mt-2" >
-        {solutions.map((item, index) => (
-          <div
-            className="col-12 col-md-6 col-lg-4 mt-3 solutions-item-section"
-            key={index} 
-          >
-            <div className="d-flex flex-column mb-3 solutions-item">
-              {item.href !== undefined && item.href !== null ? (
-                item.href in routeMap ? (
-                 <Link
-  href={routeMap[item.href as keyof typeof routeMap]}
-  passHref
-  className="our-solution-link"
-  onClick={() =>
-    handleSolutionClick(item.title, item.href, item.value)
-  }
->
-  <div className="d-flex justify-content-between border-bottom pb-1 solutions-item-header">
-    <h1 className="solutions-title">{item.title}</h1>
-    <i className={`bi ${item.icon} mt-0`}></i>
-  </div>
-</Link>
-
-                ) : (
-                  <p>Route {item.href} not found in routeMap</p>
-                )
-              ) : (
-                <p>item.href is undefined or null</p>
-              )}
+      <section className="solutions-section">
+        <div className="container my-5">
+          <div className="row">
+            <div className="col-12">
+              <h1 className="solutions-heading mb-5">Our Solutions</h1>
+              <p className="solutions-description">
+                Design and deliver new digital experiences, revenue streams, and business models to{' '}
+                <br />
+                meet rising customer expectations and accelerate your growth
+              </p>
+            </div>
+            <div className="row d-flex justify-content-between solutions-list mt-2">
+              {solutions.map((item, index) => (
+                <div className="col-12 col-md-6 col-lg-4 mt-3 solutions-item-section" key={index}>
+                  <div className="d-flex flex-column mb-3 solutions-item">
+                    {item.href !== undefined && item.href !== null ? (
+                      item.href in routeMap ? (
+                        <Link
+                          href={routeMap[item.href as keyof typeof routeMap]}
+                          passHref
+                          className="our-solution-link"
+                          onClick={() => handleSolutionClick(item.title, item.href, item.value)}
+                        >
+                          <div className="d-flex justify-content-between border-bottom pb-1 solutions-item-header">
+                            <h1 className="solutions-title">{item.title}</h1>
+                            <i className={`bi ${item.icon} mt-0`}></i>
+                          </div>
+                        </Link>
+                      ) : (
+                        <p>Route {item.href} not found in routeMap</p>
+                      )
+                    ) : (
+                      <p>item.href is undefined or null</p>
+                    )}
+                  </div>
+                </div>
+              ))}
             </div>
           </div>
-        ))}
-      </div>
-    </div>
-  </div>
-</section>
-
+        </div>
+      </section>
 
       <section className="industries-section">
         <div className="container my-5">
           <div className="row">
             <div className="col-12">
-              <h1 className="industries-heading">
-                Industries We Serve
-              </h1>
+              <h1 className="industries-heading">Industries We Serve</h1>
               <p className="industries-description pt-2">
-                Design and deliver new digital experiences, revenue streams and
-                business models to
-                <br /> meet rising customer expectations and accelerate your
-                growth
+                Design and deliver new digital experiences, revenue streams and business models to
+                <br /> meet rising customer expectations and accelerate your growth
               </p>
             </div>
           </div>
@@ -494,17 +457,12 @@ const handleSolutionClick = (title: string, href: string, value: string) => {
         <div className="container my-5">
           <div className="row">
             <div className="col-12d-flex flex-column justify-content-between">
-              <h1 className="my-4 innovation-heading mt-2">
-                Scale Innovatively
-              </h1>
-              <h3 className="innovation-sub-heading mb-3">
-                Solve Problems & Build Solutions
-              </h3>
+              <h1 className="my-4 innovation-heading mt-2">Scale Innovatively</h1>
+              <h3 className="innovation-sub-heading mb-3">Solve Problems & Build Solutions</h3>
             </div>
             <p className="innovation-description mb-4">
-              At scale, for tomorrow. Established enterprises and emerging
-              startups need a perfect balance of strategy, technology,
-              analytics, and knowhow to solve everyday
+              At scale, for tomorrow. Established enterprises and emerging startups need a perfect
+              balance of strategy, technology, analytics, and knowhow to solve everyday
               <br /> business challenges.
             </p>
 
@@ -552,18 +510,250 @@ const handleSolutionClick = (title: string, href: string, value: string) => {
           <div className="row">
             <h1 className="my-2 insights-heading mt-2">Insights</h1>
             <p className="insights-description my-2">
-              Design and deliver new digital experiences, revenue streams and
-              business models to <br /> meet rising customer expectations and
-              accelerate your growth
+              Design and deliver new digital experiences, revenue streams and business models to{' '}
+              <br /> meet rising customer expectations and accelerate your growth
             </p>
           </div>
-       
+
           <div className="row">
-   {blog.map((blogItem) => (
-  <BlogCard key={blogItem.id} blog={blogItem} layout="home-page" onClick={handleBlogClick} />
-))}
-    </div>
-        
+            {blog.map((blogItem) => (
+              <BlogCard
+                key={blogItem.id}
+                blog={blogItem}
+                layout="home-page"
+                onClick={handleBlogClick}
+              />
+            ))}
+          </div>
+          
+          {/* SEO structured data for blogs */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': 'Blog',
+                name: 'Brewcode Insights',
+                description: 'Latest technology insights and articles from Brewcode',
+                url: `${SITE_URL}/insights`,
+                blogPost: blog.map((item) => ({
+                  '@type': 'BlogPosting',
+                  title: item.title,
+                  description: item.description?.replace(/<[^>]*>/g, '').substring(0, 160),
+                  url: item.link,
+                  datePublished: item.date,
+                  author: {
+                    '@type': 'Organization',
+                    name: 'Brewcode Technology Private Limited'
+                  },
+                  publisher: {
+                    '@type': 'Organization',
+                    name: 'Brewcode Technology Private Limited',
+                    logo: {
+                      '@type': 'ImageObject',
+                      url: `${SITE_URL}/images/brewcode-logo.png`
+                    }
+                  },
+                  image: item.img || `${SITE_URL}/images/default-blog.png`
+                }))
+              })
+            }}
+          />
+          
+          {/* Complete website structure as Course List */}
+          <script
+            type="application/ld+json"
+            dangerouslySetInnerHTML={{
+              __html: JSON.stringify({
+                '@context': 'https://schema.org',
+                '@type': 'ItemList',
+                name: 'Brewcode Technology Services & Solutions',
+                description: 'Complete list of services, industries, case studies, and resources offered by Brewcode',
+                itemListElement: [
+                  {
+                    '@type': 'ListItem',
+                    position: 1,
+                    item: {
+                      '@type': 'Course',
+                      url: `${SITE_URL}/about-us`,
+                      name: 'About Brewcode Technology',
+                      description: 'Learn about our mission, values, and team delivering innovative software solutions',
+                      provider: {
+                        '@type': 'Organization',
+                        name: 'Brewcode Technology Private Limited',
+                        sameAs: SITE_URL
+                      }
+                    }
+                  },
+                  {
+                    '@type': 'ListItem',
+                    position: 2,
+                    item: {
+                      '@type': 'Course',
+                      url: `${SITE_URL}/services/web-development`,
+                      name: 'Web Development Solutions',
+                      description: 'Responsive, scalable, and secure websites tailored to your business needs',
+                      provider: {
+                        '@type': 'Organization',
+                        name: 'Brewcode Technology Private Limited',
+                        sameAs: SITE_URL
+                      }
+                    }
+                  },
+                  {
+                    '@type': 'ListItem',
+                    position: 3,
+                    item: {
+                      '@type': 'Course',
+                      url: `${SITE_URL}/services/full-stack-development`,
+                      name: 'Full Stack Development Services',
+                      description: 'Comprehensive full-stack development covering frontend, backend, databases, and APIs',
+                      provider: {
+                        '@type': 'Organization',
+                        name: 'Brewcode Technology Private Limited',
+                        sameAs: SITE_URL
+                      }
+                    }
+                  },
+                  {
+                    '@type': 'ListItem',
+                    position: 4,
+                    item: {
+                      '@type': 'Course',
+                      url: `${SITE_URL}/services/ar-vr-development`,
+                      name: 'AR/VR Development Services',
+                      description: 'Immersive AR/VR experiences and custom augmented reality solutions',
+                      provider: {
+                        '@type': 'Organization',
+                        name: 'Brewcode Technology Private Limited',
+                        sameAs: SITE_URL
+                      }
+                    }
+                  },
+                  {
+                    '@type': 'ListItem',
+                    position: 5,
+                    item: {
+                      '@type': 'Course',
+                      url: `${SITE_URL}/services/cloud-services`,
+                      name: 'Cloud Services & Solutions',
+                      description: 'Scalable cloud infrastructure solutions including IaaS, PaaS, and SaaS',
+                      provider: {
+                        '@type': 'Organization',
+                        name: 'Brewcode Technology Private Limited',
+                        sameAs: SITE_URL
+                      }
+                    }
+                  },
+                  {
+                    '@type': 'ListItem',
+                    position: 6,
+                    item: {
+                      '@type': 'Course',
+                      url: `${SITE_URL}/services/cyber-security`,
+                      name: 'Cyber Security Solutions',
+                      description: 'Comprehensive cybersecurity services with advanced threat detection',
+                      provider: {
+                        '@type': 'Organization',
+                        name: 'Brewcode Technology Private Limited',
+                        sameAs: SITE_URL
+                      }
+                    }
+                  },
+                  {
+                    '@type': 'ListItem',
+                    position: 7,
+                    item: {
+                      '@type': 'Course',
+                      url: `${SITE_URL}/industries/healthcare`,
+                      name: 'Healthcare Technology Solutions',
+                      description: 'Digital healthcare solutions improving patient care and operational efficiency',
+                      provider: {
+                        '@type': 'Organization',
+                        name: 'Brewcode Technology Private Limited',
+                        sameAs: SITE_URL
+                      }
+                    }
+                  },
+                  {
+                    '@type': 'ListItem',
+                    position: 8,
+                    item: {
+                      '@type': 'Course',
+                      url: `${SITE_URL}/industries/banking`,
+                      name: 'Banking & Financial Services',
+                      description: 'Secure and compliant digital solutions for banking and financial institutions',
+                      provider: {
+                        '@type': 'Organization',
+                        name: 'Brewcode Technology Private Limited',
+                        sameAs: SITE_URL
+                      }
+                    }
+                  },
+                  {
+                    '@type': 'ListItem',
+                    position: 9,
+                    item: {
+                      '@type': 'Course',
+                      url: `${SITE_URL}/case-studies/soctor`,
+                      name: 'Soctor Healthcare App Case Study',
+                      description: 'Revolutionary healthcare application development providing personalized medical advice',
+                      provider: {
+                        '@type': 'Organization',
+                        name: 'Brewcode Technology Private Limited',
+                        sameAs: SITE_URL
+                      }
+                    }
+                  },
+                  {
+                    '@type': 'ListItem',
+                    position: 10,
+                    item: {
+                      '@type': 'Course',
+                      url: `${SITE_URL}/case-studies/at-t`,
+                      name: 'AT&T Collaboration Solutions Case Study',
+                      description: 'How Brewcode helped AT&T develop innovative collaboration solutions',
+                      provider: {
+                        '@type': 'Organization',
+                        name: 'Brewcode Technology Private Limited',
+                        sameAs: SITE_URL
+                      }
+                    }
+                  },
+                  {
+                    '@type': 'ListItem',
+                    position: 11,
+                    item: {
+                      '@type': 'Course',
+                      url: `${SITE_URL}/insights`,
+                      name: 'Technology Insights & Blog',
+                      description: 'Latest technology trends, insights, and best practices from our expert team',
+                      provider: {
+                        '@type': 'Organization',
+                        name: 'Brewcode Technology Private Limited',
+                        sameAs: SITE_URL
+                      }
+                    }
+                  },
+                  {
+                    '@type': 'ListItem',
+                    position: 12,
+                    item: {
+                      '@type': 'Course',
+                      url: `${SITE_URL}/contact-us`,
+                      name: 'Contact Brewcode Technology',
+                      description: 'Get in touch for software development, web design, and IT solutions needs',
+                      provider: {
+                        '@type': 'Organization',
+                        name: 'Brewcode Technology Private Limited',
+                        sameAs: SITE_URL
+                      }
+                    }
+                  }
+                ]
+              })
+            }}
+          />
         </div>
       </section>
 
@@ -593,23 +783,20 @@ const handleSolutionClick = (title: string, href: string, value: string) => {
                         />
                       </Link> */}
                       <div
-  onClick={() => handleClientLogoClick(logo)}
-  role="link"
-  style={{ cursor: "pointer" }}
->
-  <Link href={logo.url} passHref target="_blank">
-    <ImageIcon
-      src={logo.src}
-      alt={
-        logo.src
-          ? `${logo.src.split("/").pop()?.split(".")[0]} logo`
-          : "Logo"
-      }
-      className="client-logo mb-4"
-    />
-  </Link>
-</div>
-
+                        onClick={() => handleClientLogoClick(logo)}
+                        role="link"
+                        style={{ cursor: 'pointer' }}
+                      >
+                        <Link href={logo.url} passHref target="_blank">
+                          <ImageIcon
+                            src={logo.src}
+                            alt={
+                              logo.src ? `${logo.src.split('/').pop()?.split('.')[0]} logo` : 'Logo'
+                            }
+                            className="client-logo mb-4"
+                          />
+                        </Link>
+                      </div>
                     </div>
                   ))}
                 </div>
@@ -628,8 +815,8 @@ export const getStaticProps: GetStaticProps = async () => {
       params: {
         rss_url: 'https://medium.com/feed/@brewcode',
         api_key: 'zzwyppw74s0zayqrgvogmb6qm3fqwu7kuofye0gw',
-        count: 5
-      }
+        count: 5,
+      },
     });
 
     if (response.data.status !== 'ok') {
@@ -643,18 +830,18 @@ export const getStaticProps: GetStaticProps = async () => {
       return {
         id: index,
         title: item.title,
-        category: "Blogs",
+        category: 'Blogs',
         description: item.description,
         link: item.link,
         img: imgSrc,
         date: item.pubDate,
-        imgAlt: item.title
+        imgAlt: item.title,
       };
     });
 
     return {
       props: {
-        blog: blogItems
+        blog: blogItems,
       },
       // revalidate: 60,
     };
@@ -662,8 +849,8 @@ export const getStaticProps: GetStaticProps = async () => {
     console.error('Error fetching data:', error);
     return {
       props: {
-        blog: []
-      }
+        blog: [],
+      },
     };
   }
 };

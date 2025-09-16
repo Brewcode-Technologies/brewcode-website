@@ -1,18 +1,12 @@
-import Head from "next/head";
-import Home from "./home";
-import React from "react";
+import { Metadata } from 'next';
+import Home from './home';
+import React from 'react';
+import { pageMetadata } from '@component/lib/metadata';
+
+export const metadata: Metadata = pageMetadata.home;
 
 const Index: React.FC = () => {
-  return (
-    <>
-      <Head>
-      {/* <img src = "/images/svg/brewcode_logo_svg.svg"/> */}
-      <title>Brewcode Technologies</title>
-      </Head>
-
-      <Home />
-    </>
-  );
+  return <Home />;
 };
 
 export default Index;

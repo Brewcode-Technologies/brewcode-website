@@ -1,22 +1,18 @@
-import Layout from "@component/components/layouts/layout";
-import Head from "next/head";
-import React from "react";
+import { Metadata } from 'next';
+import Layout from '@component/components/layouts/layout';
+
+import React from 'react';
+import { pageMetadata } from '@component/lib/metadata';
+
+export const metadata: Metadata = pageMetadata.caseStudies.universitiMalaya;
 
 const Index: React.FC = () => {
   return (
     <Layout>
-      <Head>
-        <title>Universiti Malaya | Brewcode Technology Private Limited</title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </Head>
       <div className="bg-black py-5">
         <div className="container py-5">
           <div className="soctor-logo mb-2 col-5">
-            <img
-              src="/images/svg/Malaya.svg"
-              alt="Soctor Logo"
-              loading="lazy"
-            />
+            <img src="/images/svg/Malaya.svg" alt="Soctor Logo" loading="lazy" />
           </div>
           <div className="row my-4 d-flex justify-content-between">
             <div className="col-md-6 col-md-4 mb-5">
@@ -49,13 +45,12 @@ const Index: React.FC = () => {
               <div className="about-content">
                 <h2>About Project</h2>
                 <p>
-                  Universiti Malaya aimed to enhance its educational offerings
-                  by incorporating advanced technologies to create more
-                  immersive and interactive learning environments. Recognizing
-                  the potential of virtual reality (VR) in education, Universiti
-                  Malaya partnered with Brewcode Technologies, known for its
-                  innovative digital solutions, to develop a comprehensive VR
-                  application tailored for their educational needs.
+                  Universiti Malaya aimed to enhance its educational offerings by incorporating
+                  advanced technologies to create more immersive and interactive learning
+                  environments. Recognizing the potential of virtual reality (VR) in education,
+                  Universiti Malaya partnered with Brewcode Technologies, known for its innovative
+                  digital solutions, to develop a comprehensive VR application tailored for their
+                  educational needs.
                 </p>
               </div>
             </div>
@@ -76,13 +71,11 @@ const Index: React.FC = () => {
                     Problem Statement
                   </h2>
                   <p className="section-description">
-                    Universiti Malaya needed to enhance its digital presence
-                    with a modern, interactive website. Partnering with Brewcode
-                    Technologies, the challenge was to create a platform that
-                    reflected the university's prestige while offering intuitive
-                    navigation and robust functionality. Brewcode developed a
-                    user-friendly, visually appealing website to meet these
-                    diverse needs.
+                    Universiti Malaya needed to enhance its digital presence with a modern,
+                    interactive website. Partnering with Brewcode Technologies, the challenge was to
+                    create a platform that reflected the university's prestige while offering
+                    intuitive navigation and robust functionality. Brewcode developed a
+                    user-friendly, visually appealing website to meet these diverse needs.
                   </p>
                 </div>
               </div>
@@ -96,17 +89,15 @@ const Index: React.FC = () => {
                       className="business-goal-icon"
                       alt=""
                       loading="lazy"
-                    />{" "}
+                    />{' '}
                     Business Goal
                   </h2>
                   <p className="section-description">
-                    Universiti Malaya aimed to enhance its online presence and
-                    user engagement by partnering with Brewcode Technologies to
-                    develop a modern, interactive website. The goal was to
-                    attract prospective students and global partners while
-                    providing streamlined access to resources for current users.
-                    This initiative sought to bolster the university’s
-                    reputation and support its educational mission.
+                    Universiti Malaya aimed to enhance its online presence and user engagement by
+                    partnering with Brewcode Technologies to develop a modern, interactive website.
+                    The goal was to attract prospective students and global partners while providing
+                    streamlined access to resources for current users. This initiative sought to
+                    bolster the university’s reputation and support its educational mission.
                   </p>
                 </div>
               </div>
@@ -128,10 +119,9 @@ const Index: React.FC = () => {
                 <h2 className=" text-center"> Target Audience</h2>
 
                 <p className="text-center">
-                  Understanding these diverse requirements is vital for crafting
-                  a website that effectively meets their expectations
-                  <br /> and facilitates seamless interaction with the
-                  university's offerings.
+                  Understanding these diverse requirements is vital for crafting a website that
+                  effectively meets their expectations
+                  <br /> and facilitates seamless interaction with the university's offerings.
                 </p>
               </div>
             </div>
@@ -139,9 +129,7 @@ const Index: React.FC = () => {
 
           <div className="row mb-4">
             <div className="col-md-4">
-              <strong className="audience-list-heading genarl-padding">
-                Prospective Students
-              </strong>
+              <strong className="audience-list-heading genarl-padding">Prospective Students</strong>
             </div>
             <div className="col-md-8">
               <li className="target-audience-item">
@@ -155,8 +143,8 @@ const Index: React.FC = () => {
                     />
 
                     <p>
-                      High school graduates and transfer students seeking
-                      undergraduate or postgraduate programs.
+                      High school graduates and transfer students seeking undergraduate or
+                      postgraduate programs.
                     </p>
                   </div>
                 </div>
@@ -165,9 +153,7 @@ const Index: React.FC = () => {
           </div>
           <div className="row mb-4">
             <div className="col-md-4">
-              <strong className="audience-list-heading">
-                Current Students
-              </strong>
+              <strong className="audience-list-heading">Current Students</strong>
             </div>
             <div className="col-md-8">
               <li className="target-audience-item">
@@ -181,8 +167,8 @@ const Index: React.FC = () => {
                     />
 
                     <p>
-                      Enrolled students requiring easy access to academic
-                      resources, schedules, and support services.
+                      Enrolled students requiring easy access to academic resources, schedules, and
+                      support services.
                     </p>
                   </div>
                 </div>
@@ -191,9 +177,7 @@ const Index: React.FC = () => {
           </div>
           <div className="row mb-4">
             <div className="col-md-4">
-              <strong className="audience-list-heading">
-                Faculty and Staff
-              </strong>
+              <strong className="audience-list-heading">Faculty and Staff</strong>
             </div>
             <div className="col-md-8">
               <li className="target-audience-item">
@@ -207,8 +191,8 @@ const Index: React.FC = () => {
                     />
 
                     <p>
-                      University employees needing streamlined communication
-                      tools and resource access.
+                      University employees needing streamlined communication tools and resource
+                      access.
                     </p>
                   </div>
                 </div>
@@ -231,8 +215,8 @@ const Index: React.FC = () => {
                     />
 
                     <p>
-                      Graduates interested in staying connected with the
-                      university community and alumni services.
+                      Graduates interested in staying connected with the university community and
+                      alumni services.
                     </p>
                   </div>
                 </div>
@@ -255,8 +239,8 @@ const Index: React.FC = () => {
                     />
 
                     <p>
-                      Educational and research institutions looking to
-                      collaborate with Universiti Malaya.
+                      Educational and research institutions looking to collaborate with Universiti
+                      Malaya.
                     </p>
                   </div>
                 </div>
@@ -279,8 +263,8 @@ const Index: React.FC = () => {
                     />
 
                     <p>
-                      Individuals seeking information about the university’s
-                      programs, events, and achievements.
+                      Individuals seeking information about the university’s programs, events, and
+                      achievements.
                     </p>
                   </div>
                 </div>
@@ -307,8 +291,8 @@ const Index: React.FC = () => {
                 <h2 className=" text-center">Discover</h2>
                 <div className="col-12">
                   <p className="text-center">
-                    We worked with different stakeholders to understand product,
-                    and a regular connect with them
+                    We worked with different stakeholders to understand product, and a regular
+                    connect with them
                     <br /> helped us understand user stories and needs.
                   </p>
                 </div>
@@ -326,44 +310,41 @@ const Index: React.FC = () => {
             <div className="d-flex col-md-5 flex-column">
               <div className="d-flex p-4">
                 <p>
-                  {" "}
+                  {' '}
                   <span className="step-number">1</span>
                 </p>
                 <p className="gap-description">
-                  Outdated website design lacking modern, visually appealing
-                  elements.
+                  Outdated website design lacking modern, visually appealing elements.
                 </p>
               </div>
               <div className="d-flex p-4">
                 <p>
-                  {" "}
+                  {' '}
                   <span className="step-number">2</span>
                 </p>
                 <p className="gap-description">
-                  Poor navigation structure making information difficult to
-                  find.
+                  Poor navigation structure making information difficult to find.
                 </p>
               </div>
               <div className="d-flex p-4">
                 <p>
-                  {" "}
+                  {' '}
                   <span className="step-number">3</span>
                 </p>
                 <p className="gap-description">
-                  Limited mobile accessibility, leading to a subpar user
-                  experience on smartphones and tablets.
+                  Limited mobile accessibility, leading to a subpar user experience on smartphones
+                  and tablets.
                 </p>
               </div>
             </div>
             <div className="d-flex col-md-5 flex-column">
               <div className="d-flex p-4">
                 <p>
-                  {" "}
+                  {' '}
                   <span className="step-number">4</span>
                 </p>
                 <p className="gap-description">
-                  Inefficient access to academic resources and administrative
-                  information.
+                  Inefficient access to academic resources and administrative information.
                 </p>
               </div>
               <div className="d-flex p-4">
@@ -379,8 +360,7 @@ const Index: React.FC = () => {
                   <span className="step-number">6</span>
                 </p>
                 <p className="gap-description">
-                  Insufficient global reach, failing to attract international
-                  students and partners.
+                  Insufficient global reach, failing to attract international students and partners.
                 </p>
               </div>
             </div>
@@ -396,9 +376,8 @@ const Index: React.FC = () => {
                 <h2 className="text-center">Design Thinking Process</h2>
 
                 <p className="text-center">
-                  Design thinking is a methodology that attempts to solve
-                  complex problems in a creative and user-centric way. Core
-                  features
+                  Design thinking is a methodology that attempts to solve complex problems in a
+                  creative and user-centric way. Core features
                   <br /> of the design thinking methodology include
                 </p>
               </div>

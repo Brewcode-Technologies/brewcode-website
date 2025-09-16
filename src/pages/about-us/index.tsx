@@ -1,90 +1,80 @@
-import Layout from "@component/components/layouts/layout";
-import Seo from "@component/components/Seo";
-import Head from "next/head";
-import React from "react";
+import { Metadata } from 'next';
+import Layout from '@component/components/layouts/layout';
+import Seo from '@component/components/Seo';
+import React from 'react';
+import { pageMetadata } from '@component/lib/metadata';
 
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://brewcode.co";
+export const metadata: Metadata = pageMetadata.aboutUs;
+
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brewcode.co';
 
 const Index: React.FC = () => {
-const jsonLd = [
+  const jsonLd = [
     {
-      "@context": "https://schema.org",
-      "@type": "AboutPage",
+      '@context': 'https://schema.org',
+      '@type': 'AboutPage',
       mainEntity: {
-        "@type": "Organization",
-        name: "Brewcode Technology Private Limited",
+        '@type': 'Organization',
+        name: 'Brewcode Technology Private Limited',
         url: SITE_URL,
         logo: `${SITE_URL}/logo.png`,
-        sameAs: [
-          "https://www.linkedin.com/company/brewcode",
-          "https://x.com/brewcode"
-        ]
-      }
+        sameAs: ['https://www.linkedin.com/company/brewcode', 'https://x.com/brewcode'],
+      },
     },
     {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
       itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
-        { "@type": "ListItem", position: 2, name: "About Us", item: `${SITE_URL}/about-us` }
-      ]
-    }
+        { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+        { '@type': 'ListItem', position: 2, name: 'About Us', item: `${SITE_URL}/about-us` },
+      ],
+    },
   ];
   return (
     <Layout>
-    
-      
-     <Seo
+      <Seo
         title="About Brewcode | Our Mission & Team"
         description="Learn about Brewcode's mission, values, and team delivering innovative solutions."
         canonicalPath="/about-us"
         jsonLd={jsonLd}
       />
-  <div className="dark-container py-5">
+      <div className="dark-container py-5">
         <div className="container">
           <div className="row">
             <div className="col-12">
-              <h1 className="services-header about-us-heading mb-5 text-center">
-                About Us
-              </h1>
+              <h1 className="services-header about-us-heading mb-5 text-center">About Us</h1>
               <div className="col-lg-10 col-md-12 mx-auto">
                 <p className="text-center about-us-description mb-3">
-                  The company was established with the sole purpose to digitally
-                  enable companies to grow now and tomorrow. In a nutshell, we
-                  help you decode success! We thrive on delivering intuitive
-                  competitive-edge business solutions in BFSI, Retail, and
+                  The company was established with the sole purpose to digitally enable companies to
+                  grow now and tomorrow. In a nutshell, we help you decode success! We thrive on
+                  delivering intuitive competitive-edge business solutions in BFSI, Retail, and
                   Healthcare domain.
                 </p>
                 <p className="text-center about-us-description mb-3">
                   <b>
-                    We are headquartered in Bidar, Karnataka. We have grown to
-                    become a worldwide presence in countries like the United
-                    States, Canada, Dubai, Singapore, the United Kingdom, and
-                    more.
+                    We are headquartered in Bidar, Karnataka. We have grown to become a worldwide
+                    presence in countries like the United States, Canada, Dubai, Singapore, the
+                    United Kingdom, and more.
                   </b>
                 </p>
                 <p className="text-center about-us-description mb-3">
-                  To enrich digital experiences, brewcode offers innovative and
-                  ingenious solutions to businesses of all sizes. brewcode goes
-                  beyond expectations. Content and communications are our areas
-                  of expertise as a full-service global marketing company. Our
-                  greatest strength is ensuring effective solutions for our
-                  clients based on their needs. We are professional,
-                  experienced, and forward thinking. We are exceptional today
-                  because we create tomorrow's brands, web portals, and mobile
+                  To enrich digital experiences, brewcode offers innovative and ingenious solutions
+                  to businesses of all sizes. brewcode goes beyond expectations. Content and
+                  communications are our areas of expertise as a full-service global marketing
+                  company. Our greatest strength is ensuring effective solutions for our clients
+                  based on their needs. We are professional, experienced, and forward thinking. We
+                  are exceptional today because we create tomorrow's brands, web portals, and mobile
                   apps by creating today's premium brands.
                 </p>
                 <p className="text-center about-us-description">
-                  Marketing and branding are integrated with digital
-                  innovations. Our agency believes in the passion for bringing
-                  more, and we begin where other agencies stop with a relentless
-                  pursuit of success. Using creative innovation and technical
-                  expertise, we combine your brand into something perfect. At
-                  brewcode, we believe in creating a digital experience instead
-                  of just coding a project. We can help you build a more
-                  resilient IT infrastructure by providing you with superior
-                  services and solutions. By optimizing your business
-                  techniques, we can help you enhance your productivity.
+                  Marketing and branding are integrated with digital innovations. Our agency
+                  believes in the passion for bringing more, and we begin where other agencies stop
+                  with a relentless pursuit of success. Using creative innovation and technical
+                  expertise, we combine your brand into something perfect. At brewcode, we believe
+                  in creating a digital experience instead of just coding a project. We can help you
+                  build a more resilient IT infrastructure by providing you with superior services
+                  and solutions. By optimizing your business techniques, we can help you enhance
+                  your productivity.
                 </p>
               </div>
             </div>
@@ -133,10 +123,9 @@ const jsonLd = [
             <div className="col-md-8">
               <h1 className="our-history-heading">Our History</h1>
               <p className="my-4 about-us-description">
-                Founded in 2023, Brewcode Technologies Private Limited is an IT
-                consulting and product development company. An organization with
-                some of the most intellectual minds working together, we started
-                as a provider of
+                Founded in 2023, Brewcode Technologies Private Limited is an IT consulting and
+                product development company. An organization with some of the most intellectual
+                minds working together, we started as a provider of
               </p>
               <p>
                 Our team’s potential pushed us to expand into <b>software development services.</b>

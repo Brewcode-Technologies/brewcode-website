@@ -1,22 +1,20 @@
-import Layout from "@component/components/layouts/layout";
-import Head from "next/head";
-import React from "react";
+import { Metadata } from 'next';
+import Layout from '@component/components/layouts/layout';
+
+import React from 'react';
+import { pageMetadata } from '@component/lib/metadata';
+
+export const metadata: Metadata = pageMetadata.caseStudies.atT;
 
 const Index: React.FC = () => {
   return (
     <Layout>
-      <Head>
-        <title>
-          Information Technology | Brewcode Technology Private Limited
-        </title>
-        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-      </Head>
       <div className="bg-black py-5">
         <div className="container py-5">
           <div className="row my-4 d-flex justify-content-between">
             <div className="col-md-6 col-md-4 mb-5">
               <div className="soctor-logo">
-                <img src="/images/svg/AT-T.svg" alt="AT&T Logo"   loading="lazy" />
+                <img src="/images/svg/AT-T.svg" alt="AT&T Logo" loading="lazy" />
               </div>
 
               <div className="healthcare-text-container">
@@ -48,16 +46,14 @@ const Index: React.FC = () => {
               <div className="about-content">
                 <h2>About Project</h2>
                 <p>
-                  Brewcode Technologies played a pivotal role in the success of
-                  the AT&T Collaborate app by providing expertise in agile
-                  development and microservices architecture. Their contribution
-                  ensured that the app could offer a comprehensive suite of
-                  features, including advanced calling and collaboration tools,
-                  while maintaining high performance and reliability. Brewcode’s
-                  focus on user experience and technical excellence helped to
-                  create a platform that not only met but exceeded the
-                  expectations of enterprise users, solidifying AT&T
-                  Collaborate’s position in the marke{" "}
+                  Brewcode Technologies played a pivotal role in the success of the AT&T Collaborate
+                  app by providing expertise in agile development and microservices architecture.
+                  Their contribution ensured that the app could offer a comprehensive suite of
+                  features, including advanced calling and collaboration tools, while maintaining
+                  high performance and reliability. Brewcode’s focus on user experience and
+                  technical excellence helped to create a platform that not only met but exceeded
+                  the expectations of enterprise users, solidifying AT&T Collaborate’s position in
+                  the marke{' '}
                 </p>
               </div>
             </div>
@@ -78,12 +74,12 @@ const Index: React.FC = () => {
                     Problem Statement
                   </h2>
                   <p className="section-description">
-                    <b> Device and Browser Compatibility:</b> Achieved universal
-                    compatibility through extensive testing and optimization.
+                    <b> Device and Browser Compatibility:</b> Achieved universal compatibility
+                    through extensive testing and optimization.
                   </p>
                   <p className="section-description">
-                    <b>Load Management:</b> Implemented dynamic scaling of
-                    backend resources to manage peak usage efficiently.
+                    <b>Load Management:</b> Implemented dynamic scaling of backend resources to
+                    manage peak usage efficiently.
                   </p>
                 </div>
               </div>
@@ -102,15 +98,12 @@ const Index: React.FC = () => {
                   </div>
 
                   <p className="section-description">
-                    Business Goal for Brewcode Meet: “To establish Brewcode Meet
-                    as the premier enterprise communication platform that
-                    enhances collaboration and productivity by delivering a
-                    seamless, secure, and user-centric experience, thereby
-                    driving digital transformation and fostering a connected
-                    business environment.” This goal aligns with Brewcode
-                    Technologies’ dedication to innovation and excellence,
-                    aiming to set a new standard in enterprise communication
-                    solutions.
+                    Business Goal for Brewcode Meet: “To establish Brewcode Meet as the premier
+                    enterprise communication platform that enhances collaboration and productivity
+                    by delivering a seamless, secure, and user-centric experience, thereby driving
+                    digital transformation and fostering a connected business environment.” This
+                    goal aligns with Brewcode Technologies’ dedication to innovation and excellence,
+                    aiming to set a new standard in enterprise communication solutions.
                   </p>
                 </div>
               </div>
@@ -128,13 +121,13 @@ const Index: React.FC = () => {
                     className="image-icon"
                     loading="lazy"
                   />
-                </div>{" "}
+                </div>{' '}
                 <h2 className=" text-center"> Target Audience</h2>
                 <p className="text-center">
-                  The target audience for AT&T Collaborate, enhanced by Brewcode
-                  Technologies, includes enterprise clients
-                  <br /> seeking advanced calling and collaboration tools, and
-                  professionals prioritizing high performance and user
+                  The target audience for AT&T Collaborate, enhanced by Brewcode Technologies,
+                  includes enterprise clients
+                  <br /> seeking advanced calling and collaboration tools, and professionals
+                  prioritizing high performance and user
                   <br /> experience in communication platforms.
                 </p>
               </div>
@@ -145,7 +138,7 @@ const Index: React.FC = () => {
             <div className="col-md-4">
               <strong className="audience-list-heading genarl-padding">
                 Businesses and
-                <br /> Corporations{" "}
+                <br /> Corporations{' '}
               </strong>
             </div>
             <div className="col-md-8">
@@ -159,9 +152,9 @@ const Index: React.FC = () => {
                       loading="lazy"
                     />
                     <p>
-                      Organizations seeking to enhance internal communication
-                      and collaboration among
-                      <br /> employees.{" "}
+                      Organizations seeking to enhance internal communication and collaboration
+                      among
+                      <br /> employees.{' '}
                     </p>
                   </div>
                 </div>
@@ -183,8 +176,8 @@ const Index: React.FC = () => {
                       loading="lazy"
                     />
                     <p>
-                      Teams that operate remotely and require reliable tools for
-                      daily communication and
+                      Teams that operate remotely and require reliable tools for daily communication
+                      and
                       <br /> project management.
                     </p>
                   </div>
@@ -194,9 +187,7 @@ const Index: React.FC = () => {
           </div>
           <div className="row mb-4">
             <div className="col-md-4">
-              <strong className="audience-list-heading">
-                Educational Institutions
-              </strong>
+              <strong className="audience-list-heading">Educational Institutions</strong>
             </div>
             <div className="col-md-8">
               <li className="target-audience-item">
@@ -209,8 +200,8 @@ const Index: React.FC = () => {
                       loading="lazy"
                     />
                     <p>
-                      Schools and universities that need a platform for virtual
-                      classrooms, meetings, and
+                      Schools and universities that need a platform for virtual classrooms,
+                      meetings, and
                       <br /> seminars.
                     </p>
                   </div>
@@ -233,8 +224,8 @@ const Index: React.FC = () => {
                       loading="lazy"
                     />
                     <p>
-                       IT professionals who require a secure and efficient means
-                      to support and manage their
+                       IT professionals who require a secure and efficient means to support and
+                      manage their
                       <br /> company’s technology infrastructure.
                     </p>
                   </div>
@@ -244,9 +235,7 @@ const Index: React.FC = () => {
           </div>
           <div className="row mb-4">
             <div className="col-md-4">
-              <strong className="audience-list-heading">
-                Project Managers
-              </strong>
+              <strong className="audience-list-heading">Project Managers</strong>
             </div>
             <div className="col-md-8">
               <li className="target-audience-item">
@@ -259,8 +248,8 @@ const Index: React.FC = () => {
                       loading="lazy"
                     />
                     <p>
-                      Individuals responsible for coordinating and overseeing
-                      projects that involve multiple
+                      Individuals responsible for coordinating and overseeing projects that involve
+                      multiple
                       <br /> stakeholders.
                     </p>
                   </div>
@@ -270,9 +259,7 @@ const Index: React.FC = () => {
           </div>
           <div className="row">
             <div className="col-md-4">
-              <strong className="audience-list-heading">
-                HR Professionals
-              </strong>
+              <strong className="audience-list-heading">HR Professionals</strong>
             </div>
             <div className="col-md-8">
               <li className="target-audience-item">
@@ -285,9 +272,8 @@ const Index: React.FC = () => {
                       loading="lazy"
                     />
                     <p>
-                      Human resources departments that conduct virtual
-                      interviews, training sessions, and company-wide
-                      announcements.
+                      Human resources departments that conduct virtual interviews, training
+                      sessions, and company-wide announcements.
                     </p>
                   </div>
                 </div>
@@ -314,8 +300,8 @@ const Index: React.FC = () => {
                 <h2 className=" text-center">Discover</h2>
                 <div className="col-12">
                   <p className="text-center">
-                    We worked with different stakeholders to understand product,
-                    and a regular connect with
+                    We worked with different stakeholders to understand product, and a regular
+                    connect with
                     <br /> them helped us understand user stories and needs
                   </p>
                 </div>
@@ -333,67 +319,64 @@ const Index: React.FC = () => {
             <div className="d-flex col-md-5 flex-column">
               <div className="d-flex p-4">
                 <p>
-                  {" "}
+                  {' '}
                   <span className="step-number">1</span>
                 </p>
                 <p className="gap-description">
-                  Performance Analysis: Assessing whether the platform can
-                  handle a high volume of users without compromising speed or
-                  reliability
+                  Performance Analysis: Assessing whether the platform can handle a high volume of
+                  users without compromising speed or reliability
                 </p>
               </div>
               <div className="d-flex p-4">
                 <p>
-                  {" "}
+                  {' '}
                   <span className="step-number">2</span>
                 </p>
                 <p className="gap-description">
-                  User Feedback: Gathering and analyzing user feedback to
-                  identify areas where the user experience may be lacking.
+                  User Feedback: Gathering and analyzing user feedback to identify areas where the
+                  user experience may be lacking.
                 </p>
               </div>
               <div className="d-flex p-4">
                 <p>
-                  {" "}
+                  {' '}
                   <span className="step-number">3</span>
                 </p>
                 <p className="gap-description">
-                  Feature Comparison: Comparing Brewcode Meet’s features with
-                  those of leading competitors to spot functionalities that
-                  might be missing or underdeveloped.
+                  Feature Comparison: Comparing Brewcode Meet’s features with those of leading
+                  competitors to spot functionalities that might be missing or underdeveloped.
                 </p>
               </div>
             </div>
             <div className="d-flex col-md-5 flex-column">
               <div className="d-flex p-4">
                 <p>
-                  {" "}
+                  {' '}
                   <span className="step-number">4</span>
                 </p>
                 <p className="gap-description">
-                  Security Evaluation: Ensuring that all communication and data
-                  storage is secure against potential breaches or
-                  vulnerabilities.{" "}
+                  Security Evaluation: Ensuring that all communication and data storage is secure
+                  against potential breaches or vulnerabilities.{' '}
                 </p>
               </div>
               <div className="d-flex p-4">
                 <p>
-                  {" "}
+                  {' '}
                   <span className="step-number">5</span>
                 </p>
                 <p className="gap-description">
-                  Integration Capabilities: Checking if the platform integrates
-                  smoothly with other enterprise tools and systems.
+                  Integration Capabilities: Checking if the platform integrates smoothly with other
+                  enterprise tools and systems.
                 </p>
               </div>
               <div className="d-flex p-4">
                 <p>
-                  {" "}
+                  {' '}
                   <span className="step-number">6</span>
                 </p>
                 <p className="gap-description">
-                  Accessibility: Making sure the platform is accessible to all
-                  users, including those with disabilities.{" "}
+                  Accessibility: Making sure the platform is accessible to all users, including
+                  those with disabilities.{' '}
                 </p>
               </div>
             </div>
@@ -409,9 +392,8 @@ const Index: React.FC = () => {
                 <h2 className="text-center">Design Thinking Process</h2>
 
                 <p className="text-center">
-                  Design thinking is a methodology that attempts to solve
-                  complex problems in a creative and user-centric way. Core
-                  features
+                  Design thinking is a methodology that attempts to solve complex problems in a
+                  creative and user-centric way. Core features
                   <br /> of the design thinking methodology include
                 </p>
               </div>
@@ -442,8 +424,6 @@ const Index: React.FC = () => {
               </div>
             </div>
           </div>
-
-        
         </div>
       </div>
     </Layout>

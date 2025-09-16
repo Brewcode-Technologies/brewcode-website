@@ -1,12 +1,15 @@
-import { ToastContainer, toast } from "react-toastify";
-import "react-toastify/dist/ReactToastify.css";
-import Layout from "@component/components/layouts/layout";
-import Head from "next/head";
-import React, { useState, FormEvent, ChangeEvent } from "react";
-import { FaArrowRight } from "react-icons/fa6";
-import axios from "axios";
-import Link from "next/link";
-import Seo from "@component/components/Seo";
+import { Metadata } from 'next';
+import { ToastContainer, toast } from 'react-toastify';
+import 'react-toastify/dist/ReactToastify.css';
+import Layout from '@component/components/layouts/layout';
+import React, { useState, FormEvent, ChangeEvent } from 'react';
+import { pageMetadata } from '@component/lib/metadata';
+
+export const metadata: Metadata = pageMetadata.contactUs;
+import { FaArrowRight } from 'react-icons/fa6';
+import axios from 'axios';
+import Link from 'next/link';
+import Seo from '@component/components/Seo';
 
 interface FormData {
   name: string;
@@ -15,20 +18,20 @@ interface FormData {
   message: string;
 }
 interface ContactFormSubmitEvent {
-  event: "contact_form_submit";
+  event: 'contact_form_submit';
   name: string;
   mobile: string;
   email: string;
   message: string;
 }
-const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://brewcode.co";
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brewcode.co';
 
 const Index: React.FC = () => {
   const [formData, setFormData] = useState<FormData>({
-    name: "",
-    mobile: "",
-    email: "",
-    message: "",
+    name: '',
+    mobile: '',
+    email: '',
+    message: '',
   });
 
   // GTM event data should be pushed on form submit, not here at component render
@@ -39,59 +42,55 @@ const Index: React.FC = () => {
   //   setIsChecked((prev) => !prev);
   // };
 
-  const handleInputChange = (
-    e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>
-  ): void => {
+  const handleInputChange = (e: ChangeEvent<HTMLInputElement | HTMLTextAreaElement>): void => {
     const { id, value } = e.target;
     setFormData((prev) => ({ ...prev, [id]: value }));
   };
 
   const handleSubmit = async (e: FormEvent<HTMLFormElement>) => {
     e.preventDefault();
-    console.log("Form submission started:", formData); // Log form submission start
+    console.log('Form submission started:', formData); // Log form submission start
 
     const { name, mobile, email, message } = formData;
 
     if (!name || !mobile || !email || !message) {
-      console.log("Validation failed: Missing fields");
-      toast.error("Please fill out all required fields.");
+      console.log('Validation failed: Missing fields');
+      toast.error('Please fill out all required fields.');
       return;
     }
 
     if (!isChecked) {
-      console.log("Validation failed: Terms not accepted");
-      toast.warning("Please accept the terms and conditions.");
+      console.log('Validation failed: Terms not accepted');
+      toast.warning('Please accept the terms and conditions.');
       return;
     }
 
     try {
-      console.log("Sending request to API:", formData); // Log before API call
+      console.log('Sending request to API:', formData); // Log before API call
       const config = {
-        method: "post",
+        method: 'post',
         maxBodyLength: Infinity,
-        url: "https://ythcjaf9b1.execute-api.us-east-1.amazonaws.com/prod/brewcode-contact-form",
+        url: 'https://ythcjaf9b1.execute-api.us-east-1.amazonaws.com/prod/brewcode-contact-form',
         headers: {
-          "Content-Type": "application/json",
+          'Content-Type': 'application/json',
         },
         data: JSON.stringify({ name, email, mobile, message }),
       };
 
       const response = await axios.request(config);
 
-      console.log("API Response:", JSON.stringify(response.data)); // Log response
+      console.log('API Response:', JSON.stringify(response.data)); // Log response
 
       if (response.status === 200 && response.data.success) {
-        toast.success("Contact Form Submitted Successfully!");
-        setFormData({ name: "", mobile: "", email: "", message: "" });
+        toast.success('Contact Form Submitted Successfully!');
+        setFormData({ name: '', mobile: '', email: '', message: '' });
         setIsChecked(false);
       } else {
-        console.error("API returned non-success response:", response.data);
-        toast.error(
-          response.data.message || "Failed to send message. Please try again."
-        );
+        console.error('API returned non-success response:', response.data);
+        toast.error(response.data.message || 'Failed to send message. Please try again.');
       }
     } catch (error: any) {
-      console.error("Submission error:", {
+      console.error('Submission error:', {
         message: error.message,
         response: error.response?.data,
         status: error.response?.status,
@@ -105,47 +104,45 @@ const Index: React.FC = () => {
         );
       } else if (error.request) {
         // No response received (network error, CORS, etc.)
-        console.error("No response received. Possible CORS or network issue.");
-        toast.error(
-          "Unable to connect to the server. Please check your internet connection."
-        );
+        console.error('No response received. Possible CORS or network issue.');
+        toast.error('Unable to connect to the server. Please check your internet connection.');
       } else {
         // Error setting up the request
-        console.error("Request setup error:", error.message);
-        toast.error("An unexpected error occurred. Please try again.");
+        console.error('Request setup error:', error.message);
+        toast.error('An unexpected error occurred. Please try again.');
       }
     }
   };
   const handlePhoneClick = () => {
-    if (typeof window !== "undefined") {
+    if (typeof window !== 'undefined') {
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({
-        event: "click_to_call",
-        phoneNumber: "+914035641584",
+        event: 'click_to_call',
+        phoneNumber: '+914035641584',
       });
-      console.log("GTM Event Fired: click_to_call");
+      console.log('GTM Event Fired: click_to_call');
     }
   };
 
   const handleLocationClick = (locationName: string) => {
-    if (typeof window !== "undefined") {
+    if (typeof window !== 'undefined') {
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({
-        event: "location_click",
+        event: 'location_click',
         location_name: locationName,
       });
-      console.log("GTM Event Fired: location_click", locationName);
+      console.log('GTM Event Fired: location_click', locationName);
     }
   };
 
   const handleEmailClick = (email: string) => {
-    if (typeof window !== "undefined") {
+    if (typeof window !== 'undefined') {
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({
-        event: "email_click",
+        event: 'email_click',
         email,
       });
-      console.log("GTM Event Fired: email_click", email);
+      console.log('GTM Event Fired: email_click', email);
     }
   };
 
@@ -153,63 +150,49 @@ const Index: React.FC = () => {
     const newValue = !isChecked;
     setIsChecked(newValue);
 
-    if (typeof window !== "undefined") {
+    if (typeof window !== 'undefined') {
       window.dataLayer = window.dataLayer || [];
       window.dataLayer.push({
-        event: "checkbox_toggle",
+        event: 'checkbox_toggle',
         checked: newValue,
       });
-      console.log("GTM Event Fired: checkbox_toggle", newValue);
+      console.log('GTM Event Fired: checkbox_toggle', newValue);
     }
   };
 
   const jsonLd = [
     {
-      "@context": "https://schema.org",
-      "@type": "ContactPage",
+      '@context': 'https://schema.org',
+      '@type': 'ContactPage',
       mainEntity: {
-        "@type": "Organization",
-        name: "Brewcode Technology Private Limited",
+        '@type': 'Organization',
+        name: 'Brewcode Technology Private Limited',
         url: SITE_URL,
         logo: `${SITE_URL}/logo.png`,
         contactPoint: {
-          "@type": "ContactPoint",
-          telephone: "+91-XXXXXXXXXX",
-          contactType: "customer service",
-          areaServed: "IN",
-          availableLanguage: ["English"]
+          '@type': 'ContactPoint',
+          telephone: '+91-XXXXXXXXXX',
+          contactType: 'customer service',
+          areaServed: 'IN',
+          availableLanguage: ['English'],
         },
-        sameAs: [
-          "https://www.linkedin.com/company/brewcode",
-          "https://x.com/brewcode"
-        ]
-      }
+        sameAs: ['https://www.linkedin.com/company/brewcode', 'https://x.com/brewcode'],
+      },
     },
     {
-      "@context": "https://schema.org",
-      "@type": "BreadcrumbList",
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
       itemListElement: [
-        { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
-        { "@type": "ListItem", position: 2, name: "Contact Us", item: `${SITE_URL}/contact-us` }
-      ]
-    }
+        { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+        { '@type': 'ListItem', position: 2, name: 'Contact Us', item: `${SITE_URL}/contact-us` },
+      ],
+    },
   ];
 
   return (
     <Layout>
-    {/* <Head>
-        <title>Contact Us | Brewcode Technology Private Limited</title>
-        <meta
-          name="description"
-          content="Contact Brewcode Technology Private Limited for inquiries, partnerships, or support."
-        />
-        <link rel="canonical" href="https://www.brewcode.com/contact" />
-        <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-        />
-      </Head> */}
-       <Seo
+      {/*  */}
+      <Seo
         title="Contact Brewcode | Let's Work Together"
         description="Get in touch with Brewcode for your software development, web design, and IT solutions needs."
         canonicalPath="/contact-us"
@@ -275,7 +258,7 @@ const Index: React.FC = () => {
                     htmlFor="terms"
                     onClick={handleCheckboxChange}
                   >
-                    I have read all terms and conditions{" "}
+                    I have read all terms and conditions{' '}
                     <a href="#" className="privacy-policy">
                       Privacy Policy
                     </a>
@@ -307,16 +290,13 @@ const Index: React.FC = () => {
 
           {/* Office Info Section */}
           <div className="row office-info">
-            <div
-              className="col-md-4"
-              onClick={() => handleLocationClick("Hyderabad, India")}
-            >
+            <div className="col-md-4" onClick={() => handleLocationClick('Hyderabad, India')}>
               <h5>Hyderabad, India</h5>
               <p className="hyderabad-line" />
               <div className="d-flex justify-content-between arrow-parent">
                 <p className="contact-address">
-                  H.No 2-60/48, Plot No 48, #102, Behind SaiBaba Temple, Sri
-                  Rangapuri Colony, Miyapur HYDERABAD, TELANGANA 500049
+                  H.No 2-60/48, Plot No 48, #102, Behind SaiBaba Temple, Sri Rangapuri Colony,
+                  Miyapur HYDERABAD, TELANGANA 500049
                 </p>
                 <span className="FaArrowRight">
                   <FaArrowRight fontSize={25} />
@@ -337,11 +317,11 @@ const Index: React.FC = () => {
               <p className="hyderabad-line" />
               <div className="d-flex justify-content-between arrow-parent">
                 <p className="contact-address mt-3">
-                  Email:{" "}
+                  Email:{' '}
                   <a
                     href="mailto:contact@brewcode.co"
                     className="text-white email-text"
-                    onClick={() => handleEmailClick("contact@brewcode.co")}
+                    onClick={() => handleEmailClick('contact@brewcode.co')}
                   >
                     contact@brewcode.co
                   </a>
@@ -353,10 +333,7 @@ const Index: React.FC = () => {
               <p className="hyderabad-line" />
             </div>
 
-            <div
-              className="col-md-4"
-              onClick={() => handleLocationClick("Bangalore, India")}
-            >
+            <div className="col-md-4" onClick={() => handleLocationClick('Bangalore, India')}>
               <h5>Bangalore, India</h5>
               <p className="hyderabad-line" />
               <div className="d-flex justify-content-between arrow-parent">
@@ -387,11 +364,11 @@ const Index: React.FC = () => {
               <p className="hyderabad-line" />
               <div className="d-flex justify-content-between arrow-parent">
                 <p className="contact-address mt-3">
-                  Email:{" "}
+                  Email:{' '}
                   <a
                     href="mailto:contact@brewcode.co"
                     className="text-white email-text"
-                    onClick={() => handleEmailClick("contact@brewcode.co")}
+                    onClick={() => handleEmailClick('contact@brewcode.co')}
                   >
                     contact@brewcode.co
                   </a>
@@ -406,12 +383,7 @@ const Index: React.FC = () => {
         </div>
       </div>
 
-      <ToastContainer
-        position="top-right"
-        autoClose={3000}
-        pauseOnHover
-        theme="dark"
-      />
+      <ToastContainer position="top-right" autoClose={3000} pauseOnHover theme="dark" />
     </Layout>
   );
 };

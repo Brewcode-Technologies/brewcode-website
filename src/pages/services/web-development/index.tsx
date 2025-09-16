@@ -1,62 +1,66 @@
-import ReusableButton from "@component/components/customHooks/reusableContactButton";
-import Layout from "@component/components/layouts/layout";
-import Seo from "@component/components/Seo";
-import Head from "next/head";
-import Image from "next/image";
-import { useRouter } from "next/router";
-import React from "react";
-  const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://brewcode.co";
+import { Metadata } from 'next';
+import ReusableButton from '@component/components/customHooks/reusableContactButton';
+import Layout from '@component/components/layouts/layout';
+import Seo from '@component/components/Seo';
+import Image from 'next/image';
+import { pageMetadata } from '@component/lib/metadata';
+
+export const metadata: Metadata = pageMetadata.services.webDevelopment;
+import { useRouter } from 'next/router';
+import React from 'react';
+const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || 'https://brewcode.co';
 
 const Index: React.FC = () => {
   const router = useRouter();
 
-  
   const navigate = (url: string) => {
-    router.push(url);};
+    router.push(url);
+  };
 
-        const jsonLd = [
-  {
-    "@context": "https://schema.org",
-    "@type": "WebPage",
-    mainEntity: {
-      "@type": "Service",
-      serviceType: "Web Development",
-      provider: {
-        "@type": "Organization",
-        name: "Brewcode Technology Private Limited",
-        url: SITE_URL
-      }
-    }
-  },
-  {
-    "@context": "https://schema.org",
-    "@type": "BreadcrumbList",
-    itemListElement: [
-      { "@type": "ListItem", position: 1, name: "Home", item: SITE_URL },
-      { "@type": "ListItem", position: 2, name: "Solutions", item: `${SITE_URL}/solutions` },
-      { "@type": "ListItem", position: 3, name: "Web Development", item: `${SITE_URL}/solutions/web-development` }
-    ]
-  }
-];
+  const jsonLd = [
+    {
+      '@context': 'https://schema.org',
+      '@type': 'WebPage',
+      mainEntity: {
+        '@type': 'Service',
+        serviceType: 'Web Development',
+        provider: {
+          '@type': 'Organization',
+          name: 'Brewcode Technology Private Limited',
+          url: SITE_URL,
+        },
+      },
+    },
+    {
+      '@context': 'https://schema.org',
+      '@type': 'BreadcrumbList',
+      itemListElement: [
+        { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
+        { '@type': 'ListItem', position: 2, name: 'Solutions', item: `${SITE_URL}/solutions` },
+        {
+          '@type': 'ListItem',
+          position: 3,
+          name: 'Web Development',
+          item: `${SITE_URL}/solutions/web-development`,
+        },
+      ],
+    },
+  ];
   return (
     <Layout>
-       {/* <Head>
-        <title>Web Development | Brewcode Technology Private Limited</title>
-        <meta name="description" content="Harness the power of IaaS for seamless scalability and enhanced performance. Learn how Brewcode leverages IaaS to optimize costs, ensure robust operations, and drive business growth." />
-      </Head> */}
-
+      {/*  */}
       Brewcode Technology Private Limited
       <Seo
-  title="Web Development Solutions | Brewcode"
-  description="Brewcode provides cutting-edge web development solutions, building responsive, scalable, and secure websites tailored to your business needs."
-  canonicalPath="/solutions/web-development"
-  jsonLd={jsonLd}/>
-
+        title="Web Development Solutions | Brewcode"
+        description="Brewcode provides cutting-edge web development solutions, building responsive, scalable, and secure websites tailored to your business needs."
+        canonicalPath="/solutions/web-development"
+        jsonLd={jsonLd}
+      />
       <div
         style={{
-          position: "relative",
-          width: "100%",
-          height: "70vh",
+          position: 'relative',
+          width: '100%',
+          height: '70vh',
         }}
       >
         <div className="cloud-image p-4">
@@ -65,28 +69,23 @@ const Index: React.FC = () => {
             alt="cyber security image"
             fill
             className="mb-3 hero-cloud"
-            style={{ objectFit: "cover" }}
+            style={{ objectFit: 'cover' }}
             loading="lazy"
           />
         </div>
         <div className="container">
           <div className="row">
             <div className="hero-section-content">
-              <h1 className="cyber-security-services-heading mb-3">
-              Responsive UI Development
-              </h1>
+              <h1 className="cyber-security-services-heading mb-3">Responsive UI Development</h1>
 
               <p className=" services-description text-center">
-                Exhibit your digital footprint on various gadgets with a
-                Responsive
+                Exhibit your digital footprint on various gadgets with a Responsive
                 <br /> UI development approach.
               </p>
             </div>
           </div>
         </div>
       </div>
-    
-
       <div className="overview-main">
         <div className="container">
           <div className="row d-flex justify-content-between my-5">
@@ -98,17 +97,13 @@ const Index: React.FC = () => {
                 <br /> Engineering.
               </p>
               <p className="overview-detail mb-5">
-                Collaboration is easy with us. We use tools that you are
-                comfortable with (Slack, Figma, FigJam, Discord, Miro,
-                Abstract). Seamlessly blend with your internal Product and UX
-                teams. Iterate faster with our design team.
+                Collaboration is easy with us. We use tools that you are comfortable with (Slack,
+                Figma, FigJam, Discord, Miro, Abstract). Seamlessly blend with your internal Product
+                and UX teams. Iterate faster with our design team.
               </p>
 
               <div className="">
-                <ReusableButton
-                  label="Contact Us"
-                  navigateTo="/contact-us"
-                />
+                <ReusableButton label="Contact Us" navigateTo="/contact-us" />
               </div>
             </div>
             <div className="col-md-4">
@@ -127,17 +122,16 @@ const Index: React.FC = () => {
               <div className="col-lg-4 col-md-6 col-12 mb-4">
                 <h3 className="our-section-heading mb-5">
                   Need Of A Responsive UI
-                  <br /> Development.{" "}
+                  <br /> Development.{' '}
                 </h3>
                 <p className="our-section-subheading mb-5">
                   Adaptive Design for Every Screen” Crafting Fluid
                   <br /> Experiences Across Devices
                 </p>
                 <p className="our-section-text mb-4">
-                  Robotic Process Automation revolutionizes productivity by
-                  automating routine tasks, enabling a focus on higher-value
-                  work. It ensures accuracy and speed in processes, driving
-                  significant cost savings and operational excellence.
+                  Robotic Process Automation revolutionizes productivity by automating routine
+                  tasks, enabling a focus on higher-value work. It ensures accuracy and speed in
+                  processes, driving significant cost savings and operational excellence.
                 </p>
               </div>
 
@@ -146,25 +140,18 @@ const Index: React.FC = () => {
                   <div className="col-6">
                     <div className="d-flex flex-column justify-content-between">
                       <div className="mb-5">
-                        <h4 className="service-title mb-3">
-                          Visualize yourInnovation
-                        </h4>
+                        <h4 className="service-title mb-3">Visualize yourInnovation</h4>
                         <p className="service-description">
-                          Reduce the time to market. We have the expert team
-                          that helps you hit the ground running. Get to product
-                          market fit as early as possible.
+                          Reduce the time to market. We have the expert team that helps you hit the
+                          ground running. Get to product market fit as early as possible.
                         </p>
                       </div>
                       <div className="mt-4">
-                        <h4 className="service-title mb-3">
-                          Your Trusted Design Partner
-                        </h4>
+                        <h4 className="service-title mb-3">Your Trusted Design Partner</h4>
                         <p className="service-description">
-                          Collaboration is easy with us. We use tools that you
-                          are comfortable with (Slack, Figma, FigJam, Discord,
-                          Miro, Abstract). Seamlessly blend with your internal
-                          Product and UX teams. Iterate faster with our design
-                          team.{" "}
+                          Collaboration is easy with us. We use tools that you are comfortable with
+                          (Slack, Figma, FigJam, Discord, Miro, Abstract). Seamlessly blend with
+                          your internal Product and UX teams. Iterate faster with our design team.{' '}
                         </p>
                       </div>
                     </div>
@@ -172,24 +159,20 @@ const Index: React.FC = () => {
                   <div className="col-6">
                     <div className="d-flex flex-column justify-content-between">
                       <div className="mb-5">
-                        <h4 className="service-title mb-3">
-                          Pixel Perfect Front-End Engineering
-                        </h4>
+                        <h4 className="service-title mb-3">Pixel Perfect Front-End Engineering</h4>
                         <p className="service-description">
-                          Our Front-End Engineering maestros bring your ideas to
-                          life. With a keen eye for detail, flawless execution,
-                          and efficient delivery. These experts always ensure
-                          that the transition from your design to the
-                          application is absolutely pixel perfect.{" "}
+                          Our Front-End Engineering maestros bring your ideas to life. With a keen
+                          eye for detail, flawless execution, and efficient delivery. These experts
+                          always ensure that the transition from your design to the application is
+                          absolutely pixel perfect.{' '}
                         </p>
                       </div>
                       <div className="">
                         <h4 className="service-title mb-3">Boost visibility</h4>
                         <p className="service-description">
-                          When you use responsive design, you can manage one
-                          website from a single set of hyperlinks, minimizing
-                          the amount of time you have to spend maintaining your
-                          site.{" "}
+                          When you use responsive design, you can manage one website from a single
+                          set of hyperlinks, minimizing the amount of time you have to spend
+                          maintaining your site.{' '}
                         </p>
                       </div>
                     </div>
@@ -205,13 +188,11 @@ const Index: React.FC = () => {
                 Empowering Your Infrastructure with IaaS
               </h5>
               <p className="our-section-text col-12">
-                In our design team, we understand the concept of developing
-                Responsive UI Development to allow the layout to adapt according
-                to the resolution of the user's computer screen without
-                diminishing the content. Our designers use CSS and HTML to
-                adjust the size and display of the site. With responsive design,
-                we maintain the key concept that is fluidity and
-                proportionality.
+                In our design team, we understand the concept of developing Responsive UI
+                Development to allow the layout to adapt according to the resolution of the user's
+                computer screen without diminishing the content. Our designers use CSS and HTML to
+                adjust the size and display of the site. With responsive design, we maintain the key
+                concept that is fluidity and proportionality.
               </p>
             </div>
             <div className="container my-4">
@@ -231,10 +212,9 @@ const Index: React.FC = () => {
                     <div className="card-body">
                       <h5 className="card-title">Mobile-first strategy </h5>
                       <p className="card-text">
-                        Mobile devices have a completely different interaction
-                        with software from desktop computers due to content
-                        scaling, touch-screen gestures, and device-specific
-                        keys.{" "}
+                        Mobile devices have a completely different interaction with software from
+                        desktop computers due to content scaling, touch-screen gestures, and
+                        device-specific keys.{' '}
                       </p>
                     </div>
                   </div>
@@ -251,15 +231,12 @@ const Index: React.FC = () => {
                       loading="lazy"
                     />
                     <div className="card-body">
-                      <h5 className="card-title">
-                        Dedicated to your business goals{" "}
-                      </h5>
+                      <h5 className="card-title">Dedicated to your business goals </h5>
                       <p className="card-text">
-                        The design team at brewcode always integrates your
-                        unique requirements with the latest trends in responsive
-                        website design and web portal design. Before launching a
-                        project, we collaborate closely with you to understand
-                        all your workflows and business objectives.{" "}
+                        The design team at brewcode always integrates your unique requirements with
+                        the latest trends in responsive website design and web portal design. Before
+                        launching a project, we collaborate closely with you to understand all your
+                        workflows and business objectives.{' '}
                       </p>
                     </div>
                   </div>
@@ -278,11 +255,10 @@ const Index: React.FC = () => {
                     <div className="card-body">
                       <h5 className="card-title">Result-oriented </h5>
                       <p className="card-text">
-                        Throughout the project, we show you the business
-                        outcomes of our responsive web design services. The data
-                        we provide you, including visitor time, user engagement
-                        rate, and conversions, is based on our extensive market
-                        and business analysis, as well as our user research.{" "}
+                        Throughout the project, we show you the business outcomes of our responsive
+                        web design services. The data we provide you, including visitor time, user
+                        engagement rate, and conversions, is based on our extensive market and
+                        business analysis, as well as our user research.{' '}
                       </p>
                     </div>
                   </div>

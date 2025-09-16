@@ -1,6 +1,7 @@
+import { Metadata } from "next";
 import useNavigation, { routeMap } from "@component/components/customHooks/useNavigation";
 import Layout from "@component/components/layouts/layout";
-import Head from "next/head";
+
 import React, { useEffect, useState } from "react";
 import { FaArrowRightLong } from "react-icons/fa6";
 import { useRouter } from "next/router";
@@ -8,6 +9,9 @@ import BlogCard from "@component/components/BlogCard";
 import axios from "axios";
 import { trackBlogClick } from "@component/lib/gtm";
 import Seo from "@component/components/Seo";
+import { pageMetadata } from "../../lib/metadata";
+
+export const metadata: Metadata = pageMetadata.insights;
 
 interface Blog {
   id: number;
@@ -34,9 +38,7 @@ interface CaseStudy {
 }
   const SITE_URL = process.env.NEXT_PUBLIC_SITE_URL || "https://brewcode.co";
 
-
 const Index: React.FC = () => {
-
 
   const [blogs, setBlogs] = useState<Blog[]>([]);
 
@@ -103,16 +105,11 @@ const Index: React.FC = () => {
     }
   }, [blogs]);
 
-
-
   const router = useRouter();
 
   const handleButtonClick = (buttonUrl: string) => {
     router.push(buttonUrl);
   };
-
-
-  
 
   const caseStudies: CaseStudy[] = [
     {
@@ -227,26 +224,11 @@ const jsonLd = [
   }
 ];
 
-
   return (
     <Layout>
-      {/* <Head>
-        <title>Insights | Brewcode Technology Private Limited</title>
-        <meta name="description" content="Description of your insights page" />
-      </Head> */}
+      {/*  */}
 
-         {/* <Head>
-        <title>Insights | Brewcode Technology Private Limited</title>
-        <meta
-          name="description"
-          content="Explore the latest insights, articles, and updates from Brewcode Technology Private Limited."
-        />
-        <link rel="canonical" href="https://www.brewcode.com/insights" />
-          <script
-          type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(schema) }}
-        />
-      </Head> */}
+         {/*  */}
       <Seo
   title="Insights | Brewcode Technology Private Limited."
   description="Stay updated with the latest tech trends, insights, and expert tips from Brewcode's team of developers and innovators."
@@ -328,11 +310,8 @@ const jsonLd = [
                   <FaArrowRightLong
                 fontSize={18}
                 className="fa-arrow-long"
-              
 
-              
                 onClick={() => handleButtonClick(study.buttonUrl)}
-
 
               />
                 </div>

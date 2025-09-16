@@ -1,17 +1,15 @@
+import { Metadata } from "next";
 import Layout from "@component/components/layouts/layout";
-import Head from "next/head";
+
 import React from "react";
+import { pageMetadata } from "../../lib/metadata";
+
+export const metadata: Metadata = pageMetadata.privacyPolicy;
 
 const Index: React.FC = () => {
   return (
     <Layout>
-      <Head>
-        <title>PRIVACY POLICY | Brewcode Technology Private Limited</title>
-        <meta
-          name="PRIVACY POLICY"
-          content="We take your privacy very seriously."
-        />
-      </Head>
+      
       <div
         style={{
           position: "relative",

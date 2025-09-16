@@ -1,17 +1,15 @@
+import { Metadata } from "next";
 import Layout from "@component/components/layouts/layout";
-import Head from "next/head";
+
 import React from "react";
+import { pageMetadata } from "../../lib/metadata";
+
+export const metadata: Metadata = pageMetadata.termsConditions;
 
 const Index: React.FC = () => {
   return (
     <Layout>
-      <Head>
-        <title> Terms & conditions | Brewcode Technology Private Limited</title>
-        <meta
-          name="Cookie Policy"
-          content="Learn about our cookie policy."
-        />
-      </Head>
+      
       <div
         style={{
           position: "relative",
@@ -384,9 +382,7 @@ const Index: React.FC = () => {
               responsibility and to refrain from any legal action against us
               regarding your Contributions.
             </p>
-         
-            
-           
+
           </div>
           <div className="mb-4">
             <h5 className="privacy-notice-sub-heading">
@@ -447,7 +443,6 @@ const Index: React.FC = () => {
               any way from any Third-Party Content or any contact with
               Third-Party Websites.
 
-             
             </p>
           
           </div>
@@ -525,8 +520,7 @@ const Index: React.FC = () => {
               right to take appropriate legal action, including without
               limitation pursuing civil, criminal, and injunctive redress
             </p>
-         
-          
+
           </div>
           <div className="mb-4">
             <h5 className="privacy-notice-sub-heading">
@@ -612,8 +606,7 @@ const Index: React.FC = () => {
               shall be decided by a court of competent jurisdiction within the
               courts listed for jurisdiction above, and the Parties agree to
               submit to the personal jurisdiction of that court.</p>
-         
-          
+
           </div>
           <div className="mb-4">
             <h5 className="privacy-notice-sub-heading">
@@ -817,8 +810,7 @@ const Index: React.FC = () => {
             <p className="email-text-container">Email:  <a href="mailto:contact@brewcode.co" className="text-white email-text">
                     contact@brewcode.co
                   </a></p>
-            
-          
+
           </div>
         </div>
       </div>

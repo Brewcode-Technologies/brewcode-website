@@ -1,23 +1,22 @@
+import { Metadata } from "next";
 import ReusableButton from "@component/components/customHooks/reusableContactButton";
+import { pageMetadata } from "../../../lib/metadata";
 import Layout from "@component/components/layouts/layout";
-import Head from "next/head";
 import Image from "next/image";
 import { useRouter } from "next/router";
 import React from "react";
 
+export const metadata: Metadata = pageMetadata.services.uxUiDesigning;
+
 const Index: React.FC = () => {
   const router = useRouter();
 
-  
   const navigate = (url: string) => {
     router.push(url);
   };
   return (
     <Layout>
-       <Head>
-        <title>UX/UI designing | Brewcode Technology Private Limited</title>
-        <meta name="description" content="Harness the power of IaaS for seamless scalability and enhanced performance. Learn how Brewcode leverages IaaS to optimize costs, ensure robust operations, and drive business growth." />
-      </Head>
+       
       <div
         style={{
           position: "relative",
@@ -45,7 +44,7 @@ const Index: React.FC = () => {
 
               <p className=" services-description text-center">
               10+ Years of Helping Enterprises with <br />
-                Product Strategy | UX Design | Front-End Engineering
+                Product Strategy | UX Design | Front-End Engineering
               </p>
             </div>
           </div>
@@ -74,7 +73,7 @@ const Index: React.FC = () => {
               <p className="overview-detail mb-3">
                 This content emphasizes the importance of UI/UX design in
                 creating meaningful connections with users and highlights
-                Brewcode Technology’s commitment to excellence in this field.
+                Brewcode Technology's commitment to excellence in this field.
               </p>
               <div className="mt-5">
                 <ReusableButton
@@ -235,7 +234,6 @@ const Index: React.FC = () => {
                   </div>
                 </div>
 
-              
               </div>
             </div>
           </div>

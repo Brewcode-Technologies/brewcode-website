@@ -1,33 +1,26 @@
-import ReusableButton from "@component/components/customHooks/reusableContactButton";
-import Layout from "@component/components/layouts/layout";
-import Head from "next/head";
-import Image from "next/image";
-import { useRouter } from "next/router";
-import React from "react";
+import { Metadata } from 'next';
+import ReusableButton from '@component/components/customHooks/reusableContactButton';
+import Layout from '@component/components/layouts/layout';
+import Image from 'next/image';
+import { pageMetadata } from '@component/lib/metadata';
+
+export const metadata: Metadata = pageMetadata.services.fullStackDevelopment;
+import { useRouter } from 'next/router';
+import React from 'react';
 
 const Index: React.FC = () => {
   const router = useRouter();
 
-  
   const navigate = (url: string) => {
     router.push(url);
   };
   return (
     <Layout>
-      <Head>
-        <title>
-          Full Stack Development | Brewcode Technology Private Limited
-        </title>
-        <meta
-          name="description"
-          content="Comprehensive full-stack development services to empower your digital presence. Partner with us to transform your vision into reality with cutting-edge full-stack solutions."
-        />
-      </Head>
       <div
         style={{
-          position: "relative",
-          width: "100%",
-          height: "70vh",
+          position: 'relative',
+          width: '100%',
+          height: '70vh',
         }}
       >
         <div className="cloud-image p-4">
@@ -36,7 +29,7 @@ const Index: React.FC = () => {
             alt="cyber security image"
             fill
             className="mb-3 hero-cloud"
-            style={{ objectFit: "cover" }}
+            style={{ objectFit: 'cover' }}
             loading="lazy"
           />
         </div>
@@ -48,10 +41,8 @@ const Index: React.FC = () => {
               </h1>
 
               <p className=" services-description text-center">
-                Brewcode Technology Private Limited embodies the pinnacle of
-                full-stack development
-                <br /> merging innovative design with powerful backend systems
-                to bring your digital
+                Brewcode Technology Private Limited embodies the pinnacle of full-stack development
+                <br /> merging innovative design with powerful backend systems to bring your digital
                 <br /> aspirations to life.
               </p>
             </div>
@@ -69,30 +60,23 @@ const Index: React.FC = () => {
                 <br /> Management
               </p>
               <p className="overview-detail mb-3">
-                At Brewcode Technology Private Limited, we are dedicated to
-                accelerating your business growth through comprehensive
-                full-stack development services. Our expertise spans the entire
-                development cycle, from sophisticated front-end design to robust
-                back-end solutions. We ensure seamless integration with
-                databases, servers, and APIs, while our DevOps
-                practices streamline deployment and scalability. With a keen
-                focus on version control systems, we maintain the highest
-                standards of quality and innovation. Partner with us to
-                transform your vision into reality with cutting-edge full-stack
-                solutions.
+                At Brewcode Technology Private Limited, we are dedicated to accelerating your
+                business growth through comprehensive full-stack development services. Our expertise
+                spans the entire development cycle, from sophisticated front-end design to robust
+                back-end solutions. We ensure seamless integration with databases, servers, and
+                APIs, while our DevOps practices streamline deployment and scalability. With a keen
+                focus on version control systems, we maintain the highest standards of quality and
+                innovation. Partner with us to transform your vision into reality with cutting-edge
+                full-stack solutions.
               </p>
               <p className="overview-detail mb-5">
-                We brewcode Technology Private Limited full-stack development
-                company, we cover every aspect of full-stack development -
-                front-end and back-end, databases, servers, APIs, DevOps, and
-                version controlling systems. Set a faster pace for the growth of
+                We brewcode Technology Private Limited full-stack development company, we cover
+                every aspect of full-stack development - front-end and back-end, databases, servers,
+                APIs, DevOps, and version controlling systems. Set a faster pace for the growth of
                 your business with our full-stack development services.
               </p>
 
-              <ReusableButton
-                label="Contact Us"
-                navigateTo="/contact-us"
-              />
+              <ReusableButton label="Contact Us" navigateTo="/contact-us" />
             </div>
             <div className="col-md-4">
               <img
@@ -123,10 +107,9 @@ const Index: React.FC = () => {
                           Frontend and Backend Development
                         </h4>
                         <p className="service-description">
-                          We deliver a full range of change- the-business,
-                          run-the-business and cross-functional IT application
-                          services that are scalable, robust, secure and
-                          maintainable.
+                          We deliver a full range of change- the-business, run-the-business and
+                          cross-functional IT application services that are scalable, robust, secure
+                          and maintainable.
                         </p>
                       </div>
                       <div>
@@ -134,10 +117,9 @@ const Index: React.FC = () => {
                           API Development & Integration Servicess
                         </h4>
                         <p className="service-description">
-                          Our investments in innovative solutions ensure you
-                          benefit from the latest accelerators, methodologies
-                          and engagement models tailored to meet your evolving
-                          needs.
+                          Our investments in innovative solutions ensure you benefit from the latest
+                          accelerators, methodologies and engagement models tailored to meet your
+                          evolving needs.
                         </p>
                       </div>
                     </div>
@@ -145,25 +127,21 @@ const Index: React.FC = () => {
                   <div className="col-6">
                     <div className="d-flex flex-column justify-content-between">
                       <div className="mb-5">
-                        <h4 className="service-title ui-ux-heading mb-3">
-                          Database Management
-                        </h4>
+                        <h4 className="service-title ui-ux-heading mb-3">Database Management</h4>
                         <p className="service-description">
-                          Our deep industry domain knowledge and technical
-                          expertise enable us to deliver transformational
-                          results. Our industrialized approach reduces costs,
-                          boosts predictability and enhances agility.
+                          Our deep industry domain knowledge and technical expertise enable us to
+                          deliver transformational results. Our industrialized approach reduces
+                          costs, boosts predictability and enhances agility.
                         </p>
                       </div>
                       <div className="mb-3">
                         <h4 className="service-title ui-ux-heading mb-3">
-                          Dedicated Full Stack Developers{" "}
+                          Dedicated Full Stack Developers{' '}
                         </h4>
                         <p className="service-description">
-                          Our investments in innovative solutions ensure you
-                          benefit from the latest accelerators, methodologies
-                          and engagement models tailored to meet your evolving
-                          needs.
+                          Our investments in innovative solutions ensure you benefit from the latest
+                          accelerators, methodologies and engagement models tailored to meet your
+                          evolving needs.
                         </p>
                       </div>
                     </div>
@@ -175,9 +153,7 @@ const Index: React.FC = () => {
 
           <div className="row my-5">
             <div className="col-12">
-              <h3 className="our-section-heading mb-4">
-                Why Relevant for full-stack projects?
-              </h3>
+              <h3 className="our-section-heading mb-4">Why Relevant for full-stack projects?</h3>
             </div>
             <div className="container my-3">
               <div className="row">
@@ -196,9 +172,8 @@ const Index: React.FC = () => {
                     <div className="card-body">
                       <h5 className="card-title">Agile methodology</h5>
                       <p className="card-text">
-                        We follow an agile development methodology to bring your
-                        idea to a fully functional product with a rich user
-                        experience at its core.{" "}
+                        We follow an agile development methodology to bring your idea to a fully
+                        functional product with a rich user experience at its core.{' '}
                       </p>
                     </div>
                   </div>
@@ -217,9 +192,8 @@ const Index: React.FC = () => {
                     <div className="card-body">
                       <h5 className="card-title">Strict project management</h5>
                       <p className="card-text">
-                        We assign a project manager to manage tasks, oversee
-                        complex processes, and coordinate collaboration between
-                        team members and clients.{" "}
+                        We assign a project manager to manage tasks, oversee complex processes, and
+                        coordinate collaboration between team members and clients.{' '}
                       </p>
                     </div>
                   </div>
@@ -236,13 +210,10 @@ const Index: React.FC = () => {
                       loading="lazy"
                     />
                     <div className="card-body">
-                      <h5 className="card-title">
-                        80% employee retention rate{" "}
-                      </h5>
+                      <h5 className="card-title">80% employee retention rate </h5>
                       <p className="card-text">
-                        We pay special attention to employee retention because
-                        clients are interested in hiring full-stack developers
-                        for the long term.{" "}
+                        We pay special attention to employee retention because clients are
+                        interested in hiring full-stack developers for the long term.{' '}
                       </p>
                     </div>
                   </div>
@@ -259,13 +230,10 @@ const Index: React.FC = () => {
                       loading="lazy"
                     />
                     <div className="card-body">
-                      <h5 className="card-title my-3">
-                        High customer satisfaction rating{" "}
-                      </h5>
+                      <h5 className="card-title my-3">High customer satisfaction rating </h5>
                       <p className="card-text framework">
-                        Our full-stack development services deliver a high
-                        client retention rate with 100% customer satisfaction
-                        for every project.{" "}
+                        Our full-stack development services deliver a high client retention rate
+                        with 100% customer satisfaction for every project.{' '}
                       </p>
                     </div>
                   </div>
@@ -283,9 +251,8 @@ const Index: React.FC = () => {
                     <div className="card-body">
                       <h5 className="card-title">Experienced developers </h5>
                       <p className="card-text">
-                        Our full-stack developers have proven expertise across
-                        all industry verticals, so you can count on them to
-                        perform numerous tasks.{" "}
+                        Our full-stack developers have proven expertise across all industry
+                        verticals, so you can count on them to perform numerous tasks.{' '}
                       </p>
                     </div>
                   </div>
@@ -304,10 +271,9 @@ const Index: React.FC = () => {
                     <div className="card-body">
                       <h5 className="card-title my-3">Risk handling </h5>
                       <p className="card-text framework">
-                        We are constantly improving our practices of risk
-                        management. It makes us not just a supplier of
-                        top-quality full-stack development services but a
-                        trustworthy partner.{" "}
+                        We are constantly improving our practices of risk management. It makes us
+                        not just a supplier of top-quality full-stack development services but a
+                        trustworthy partner.{' '}
                       </p>
                     </div>
                   </div>
@@ -323,38 +289,20 @@ const Index: React.FC = () => {
             </h3>
             <div className="full-stack-ul">
               <div className="col-md-4">
-                <li className="full-stack-list-item">
-                  Full-Stack Web Development
-                </li>
-                <li className="full-stack-list-item">
-                  Full-Stack Application Development
-                </li>
-                <li className="full-stack-list-item">
-                  Full-Stack Mobile Development
-                </li>
-                <li className="full-stack-list-item">
-                  Full-Stack Software Development
-                </li>
-                <li className="full-stack-list-item">
-                  Server & Hosting Services
-                </li>
-                <li className="full-stack-list-item">
-                  Enterprise Full Stack Solutions
-                </li>
+                <li className="full-stack-list-item">Full-Stack Web Development</li>
+                <li className="full-stack-list-item">Full-Stack Application Development</li>
+                <li className="full-stack-list-item">Full-Stack Mobile Development</li>
+                <li className="full-stack-list-item">Full-Stack Software Development</li>
+                <li className="full-stack-list-item">Server & Hosting Services</li>
+                <li className="full-stack-list-item">Enterprise Full Stack Solutions</li>
               </div>
               <div className="col-md-4">
-                <li className="full-stack-list-item">
-                  Business Process Workflow Automation
-                </li>
-                <li className="full-stack-list-item">
-                  Overall Project Management
-                </li>
+                <li className="full-stack-list-item">Business Process Workflow Automation</li>
+                <li className="full-stack-list-item">Overall Project Management</li>
 
                 <li className="full-stack-list-item">UI/UX Development</li>
                 <li className="full-stack-list-item">Cloud Integration</li>
-                <li className="full-stack-list-item">
-                  App and System Integration
-                </li>
+                <li className="full-stack-list-item">App and System Integration</li>
                 <li className="full-stack-list-item">DevOps</li>
               </div>
             </div>

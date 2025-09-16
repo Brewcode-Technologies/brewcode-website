@@ -1,9 +1,13 @@
-import ReusableButton from "@component/components/customHooks/reusableContactButton";
-import Layout from "@component/components/layouts/layout";
-import Head from "next/head";
-import Image from "next/image";
-import { useRouter } from "next/router";
-import React from "react";
+import { Metadata } from 'next';
+import ReusableButton from '@component/components/customHooks/reusableContactButton';
+import Layout from '@component/components/layouts/layout';
+
+import Image from 'next/image';
+import { useRouter } from 'next/router';
+import React from 'react';
+import { pageMetadata } from '@component/lib/metadata';
+
+export const metadata: Metadata = pageMetadata.services.enterpriseApplication;
 
 const Index: React.FC = () => {
   const router = useRouter();
@@ -13,22 +17,11 @@ const Index: React.FC = () => {
   };
   return (
     <Layout>
-      <Head>
-        <title>
-          {" "}
-          Enterprise Application Development | Brewcode Technology Private
-          Limited
-        </title>
-        <meta
-          name="description"
-          content="Project Timeline using Next.js and Bootstrap"
-        />
-      </Head>
       <div
         style={{
-          position: "relative",
-          width: "100%",
-          height: "70vh",
+          position: 'relative',
+          width: '100%',
+          height: '70vh',
         }}
       >
         <div className="cloud-image">
@@ -37,19 +30,17 @@ const Index: React.FC = () => {
             src="/images/img.jpg"
             fill
             className="mb-3 hero-cloud"
-            style={{ objectFit: "cover" }}
+            style={{ objectFit: 'cover' }}
             loading="lazy"
           />
         </div>
         <div className="container">
           <div className="row">
             <div className="hero-section-content">
-              <h1 className="services-header">
-                Enterprise Application Development
-              </h1>
+              <h1 className="services-header">Enterprise Application Development</h1>
               <p className="services-description text-center">
-                Enhancing business resilience by addressing the complexity{" "}
-                <br /> of the application landscape
+                Enhancing business resilience by addressing the complexity <br /> of the application
+                landscape
               </p>
               <ul className="services-menu">
                 <li>Overview</li>
@@ -74,29 +65,24 @@ const Index: React.FC = () => {
                 <br /> Management
               </p>
               <p className="overview-detail mb-3">
-                As enterprises grapple with the rising complexity of the digital
-                landscape, Brewcode is here to assist. The emergence of
-                cloud-based applications, the proliferation of mobility
-                solutions, and the convergence of AI are driving businesses from
-                all sectors to seek quicker and scalable application development
-                solutions that cater to their unique needs.
+                As enterprises grapple with the rising complexity of the digital landscape, Brewcode
+                is here to assist. The emergence of cloud-based applications, the proliferation of
+                mobility solutions, and the convergence of AI are driving businesses from all
+                sectors to seek quicker and scalable application development solutions that cater to
+                their unique needs.
               </p>
               <p className="overview-detail mb-3">
-                At Brewcode, we specialize in helping organizations effectively
-                manage their application portfolios with flexible and customized
-                solutions. We empower our clients by delivering transformative
-                value through a combination of our proven deployment techniques
-                and industry best practices.
+                At Brewcode, we specialize in helping organizations effectively manage their
+                application portfolios with flexible and customized solutions. We empower our
+                clients by delivering transformative value through a combination of our proven
+                deployment techniques and industry best practices.
               </p>
               <p className="overview-detail mb-3">
-                Our Application Development and Maintenance Services extend
-                beyond cost optimization, focusing on building true value,
-                enhancing customer experiences, and fostering innovation.
+                Our Application Development and Maintenance Services extend beyond cost
+                optimization, focusing on building true value, enhancing customer experiences, and
+                fostering innovation.
               </p>
-              <ReusableButton
-                label="Contact Us"
-                navigateTo="/contact-us"
-              />
+              <ReusableButton label="Contact Us" navigateTo="/contact-us" />
             </div>
             <div className="col-md-4">
               <img
@@ -122,19 +108,16 @@ const Index: React.FC = () => {
                   <br /> Results
                 </p>
                 <p className="our-section-text mb-4">
-                  IaaS architecture comprises several core components that
-                  enable efficient and scalable operations. The primary compute
-                  resources include Virtual Machines (VMs) and containers, which
-                  provide the essential computing power needed for various
-                  applications. Storage solutions in IaaS encompass block
-                  storage for raw volumes, object storage for unstructured data
-                  like files and multimedia, and file storage for shared access
-                  across multiple VMs.
+                  IaaS architecture comprises several core components that enable efficient and
+                  scalable operations. The primary compute resources include Virtual Machines (VMs)
+                  and containers, which provide the essential computing power needed for various
+                  applications. Storage solutions in IaaS encompass block storage for raw volumes,
+                  object storage for unstructured data like files and multimedia, and file storage
+                  for shared access across multiple VMs.
                 </p>
                 <p className="our-section-text">
-                  Networking is facilitated through Virtual Private Clouds
-                  (VPCs), load balancers to ensure high availability, and
-                  firewalls or security groups for traffic control.
+                  Networking is facilitated through Virtual Private Clouds (VPCs), load balancers to
+                  ensure high availability, and firewalls or security groups for traffic control.
                 </p>
               </div>
 
@@ -156,10 +139,9 @@ const Index: React.FC = () => {
                         services
                       </h4>
                       <p className="service-description">
-                        We deliver a full range of change- the-business,
-                        run-the-business and cross-functional IT application
-                        services that are scalable, robust, secure and
-                        maintainable.
+                        We deliver a full range of change- the-business, run-the-business and
+                        cross-functional IT application services that are scalable, robust, secure
+                        and maintainable.
                       </p>
                     </div>
                   </div>
@@ -173,14 +155,11 @@ const Index: React.FC = () => {
                         className="mb-4"
                         priority
                       />
-                      <h4 className="service-title mb-3">
-                        Harnessing industry expertise
-                      </h4>
+                      <h4 className="service-title mb-3">Harnessing industry expertise</h4>
                       <p className="service-description">
-                        Our deep industry domain knowledge and technical
-                        expertise enable us to deliver transformational results.
-                        Our industrialized approach reduces costs, boosts
-                        predictability and enhances agility.
+                        Our deep industry domain knowledge and technical expertise enable us to
+                        deliver transformational results. Our industrialized approach reduces costs,
+                        boosts predictability and enhances agility.
                       </p>
                     </div>
                   </div>
@@ -196,13 +175,11 @@ const Index: React.FC = () => {
                         className="mb-4"
                         priority
                       />
-                      <h4 className="service-title mb-3">
-                        Innovative accelerators
-                      </h4>
+                      <h4 className="service-title mb-3">Innovative accelerators</h4>
                       <p className="service-description">
-                        Our investments in innovative solutions ensure you
-                        benefit from the latest accelerators, methodologies and
-                        engagement models tailored to meet your evolving needs.
+                        Our investments in innovative solutions ensure you benefit from the latest
+                        accelerators, methodologies and engagement models tailored to meet your
+                        evolving needs.
                       </p>
                     </div>
                   </div>
@@ -216,13 +193,11 @@ const Index: React.FC = () => {
                         className="mb-4"
                         priority
                       />
-                      <h4 className="service-title mb-3">
-                        Innovative accelerators
-                      </h4>
+                      <h4 className="service-title mb-3">Innovative accelerators</h4>
                       <p className="service-description">
-                        Our investments in innovative solutions ensure you
-                        benefit from the latest accelerators, methodologies and
-                        engagement models tailored to meet your evolving needs.
+                        Our investments in innovative solutions ensure you benefit from the latest
+                        accelerators, methodologies and engagement models tailored to meet your
+                        evolving needs.
                       </p>
                     </div>
                   </div>
@@ -233,15 +208,12 @@ const Index: React.FC = () => {
           <div className="row my-5">
             <div className="col-12">
               <h3 className="our-section-heading mb-4">Our Services</h3>
-              <h5 className="our-section-subheading mb-4">
-                Your Path to Application Brilliance
-              </h5>
+              <h5 className="our-section-subheading mb-4">Your Path to Application Brilliance</h5>
               <p className="our-section-text col-12">
-                Unlock the potential of your applications and ensure they
-                continue to drive your business forward with exceptional user
-                experiences and unrivaled
-                <br /> performance. Experience the future of application
-                excellence with our innovative services.
+                Unlock the potential of your applications and ensure they continue to drive your
+                business forward with exceptional user experiences and unrivaled
+                <br /> performance. Experience the future of application excellence with our
+                innovative services.
               </p>
             </div>
             <div className="row my-4">
@@ -256,16 +228,13 @@ const Index: React.FC = () => {
                     loading="lazy"
                   />
                   <div className="card-body">
-                    <h5 className="card-title my-3">
-                      Application support and maintenance
-                    </h5>
+                    <h5 className="card-title my-3">Application support and maintenance</h5>
                     <p className="card-text ">
-                      Redefine application support and maintenance with our
-                      innovative solutions that propel your organization forward
-                      with experience-centric and business- aligned outcomes.
-                      Leveraging intelligent automation and contextualized
-                      application support operations, we deliver the results you
-                      need to build your future today.
+                      Redefine application support and maintenance with our innovative solutions
+                      that propel your organization forward with experience-centric and business-
+                      aligned outcomes. Leveraging intelligent automation and contextualized
+                      application support operations, we deliver the results you need to build your
+                      future today.
                     </p>
                   </div>
                 </div>
@@ -282,14 +251,11 @@ const Index: React.FC = () => {
                     loading="lazy"
                   />
                   <div className="card-body">
-                    <h5 className="card-title my-4">
-                      Application Modernization{" "}
-                    </h5>
+                    <h5 className="card-title my-4">Application Modernization </h5>
                     <p className="card-text">
-                      Transform your application ecosystems by harnessing the
-                      power of our Fenix-driven cloud adoption strategy,
-                      strategic consultancy, profound knowledge of legacy
-                      systems and agile development methodologies.
+                      Transform your application ecosystems by harnessing the power of our
+                      Fenix-driven cloud adoption strategy, strategic consultancy, profound
+                      knowledge of legacy systems and agile development methodologies.
                     </p>
                   </div>
                 </div>
@@ -305,14 +271,11 @@ const Index: React.FC = () => {
                     loading="lazy"
                   />
                   <div className="card-body ">
-                    <h5 className="card-title my-3">
-                      Modern Application Development
-                    </h5>
+                    <h5 className="card-title my-3">Modern Application Development</h5>
                     <p className="card-text">
-                      Leveraging Gen Al, we enable quicker development cycles,
-                      fewer human errors and faster time-to- market for your
-                      applications by automating routine and time- consuming
-                      aspects of development.
+                      Leveraging Gen Al, we enable quicker development cycles, fewer human errors
+                      and faster time-to- market for your applications by automating routine and
+                      time- consuming aspects of development.
                     </p>
                   </div>
                 </div>
@@ -328,14 +291,11 @@ const Index: React.FC = () => {
                     loading="lazy"
                   />
                   <div className="card-body">
-                    <h5 className="card-title my-3">
-                      Digital Equality Engineering
-                    </h5>
+                    <h5 className="card-title my-3">Digital Equality Engineering</h5>
                     <p className="card-text framework">
-                      Framework and methodology that enables quality across the
-                      software development lifecycle (SDLC) with test
-                      automation, AI/ML-based testing and shift-left practices,
-                      enabling all stakeholders to contribute to quality.
+                      Framework and methodology that enables quality across the software development
+                      lifecycle (SDLC) with test automation, AI/ML-based testing and shift-left
+                      practices, enabling all stakeholders to contribute to quality.
                     </p>
                   </div>
                 </div>
