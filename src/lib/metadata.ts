@@ -84,12 +84,17 @@ export const pageMetadata = {
 
   // Services
   services: {
-    webDevelopment: createMetadata(
-      "Web Development Solutions | Brewcode",
-      "Brewcode provides cutting-edge web development solutions, building responsive, scalable, and secure websites tailored to your business needs.",
-      "/services/web-development",
-      "web development, responsive web design, website development, frontend development, backend development, React development, Node.js, custom websites, e-commerce websites, CMS development"
-    ),
+    webDevelopment: {
+      ...createMetadata(
+        "Web Development Solutions | Brewcode",
+        "Brewcode provides cutting-edge web development solutions, building responsive, scalable, and secure websites tailored to your business needs.",
+        "/services/web-development",
+        "web development, responsive web design, website development, frontend development, backend development, React development, Node.js, custom websites, e-commerce websites, CMS development"
+      ),
+      verification: {
+        google: "OC7hkket6YUB2PvM38NBIOOODQntIzTmDbscySISoUI",
+      },
+    },
 
     fullStackDevelopment: createMetadata(
       "Full Stack Development Services | Brewcode",

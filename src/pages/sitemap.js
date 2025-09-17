@@ -1,29 +1,65 @@
-import fs from "fs";
-import path from "path";
 import Head from "next/head";
 
 export default function Sitemap({ links }) {
   const siteUrl = "https://www.brewcode.co";
 
-  const siteNavigationJSON = {
+  const structuredData = {
     "@context": "https://schema.org",
-    "@type": "WebSite",
-    "url": siteUrl,
-    "name": "Brewcode",
-    "mainEntity": links.map(link => ({
-      "@type": "SiteNavigationElement",
-      "name": link.name,
-      "url": siteUrl + link.url
-    }))
+    "@graph": [
+      {
+        "@type": "Organization",
+        "@id": siteUrl + "/#organization",
+        "name": "Brewcode",
+        "url": siteUrl,
+        "logo": siteUrl + "/logo.png",
+        "sameAs": [
+          "https://linkedin.com/company/brewcode",
+          "https://twitter.com/brewcode"
+        ]
+      },
+      {
+        "@type": "WebSite",
+        "@id": siteUrl + "/#website",
+        "url": siteUrl,
+        "name": "Brewcode",
+        "description": "Software development and technology solutions",
+        "publisher": {
+          "@id": siteUrl + "/#organization"
+        },
+        "potentialAction": {
+          "@type": "SearchAction",
+          "target": {
+            "@type": "EntryPoint",
+            "urlTemplate": siteUrl + "/?s={search_term_string}"
+          },
+          "query-input": "required name=search_term_string"
+        }
+      },
+      {
+        "@type": "ItemList",
+        "@id": siteUrl + "/#sitelinks",
+        "name": "Brewcode Main Pages",
+        "description": "Primary navigation pages for Brewcode website",
+        "numberOfItems": links.length,
+        "itemListElement": links.map((link, index) => ({
+          "@type": "SiteNavigationElement",
+          "position": index + 1,
+          "name": link.name,
+          "description": link.description,
+          "url": siteUrl + link.url
+        }))
+      }
+    ]
   };
 
   return (
     <div style={{ padding: "20px", fontFamily: "Arial, sans-serif" }}>
       <Head>
         <title>Sitemap | Brewcode</title>
+        <meta name="robots" content="noindex, nofollow" />
         <script
           type="application/ld+json"
-          dangerouslySetInnerHTML={{ __html: JSON.stringify(siteNavigationJSON) }}
+          dangerouslySetInnerHTML={{ __html: JSON.stringify(structuredData) }}
         />
       </Head>
 
@@ -48,23 +84,13 @@ export default function Sitemap({ links }) {
 }
 
 export async function getStaticProps() {
-  const pagesDir = path.join(process.cwd(), "src", "pages"); // 👈 FIXED
-  const files = fs.readdirSync(pagesDir);
-
-  // Filter out Next.js special files
-  const ignore = ["_app.js", "_document.js", "_error.js", "api", "sitemap.js"];
-  
-  const links = files
-    .filter(file => !ignore.includes(file))
-    .map(file => {
-      const name = file
-        .replace(".js", "")
-        .replace("-", " ")
-        .replace(/^\w/, c => c.toUpperCase());
-      const url = "/" + file.replace(".js", "");
-      const description = `Visit our ${name} page`;
-      return { name, url, description };
-    });
+  const links = [
+    { name: "About Us", url: "/about-us", description: "Learn about our team and mission" },
+    { name: "Solutions", url: "/solutions", description: "Explore our technology solutions" },
+    { name: "Case Studies", url: "/case-studies", description: "View our project case studies" },
+    { name: "Insights", url: "/insights", description: "Read our latest insights and articles" },
+    { name: "Contact Us", url: "/contact-us", description: "Get in touch with our team" }
+  ];
 
   return { props: { links } };
 }

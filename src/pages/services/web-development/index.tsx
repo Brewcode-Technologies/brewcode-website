@@ -20,39 +20,68 @@ const Index: React.FC = () => {
   const jsonLd = [
     {
       '@context': 'https://schema.org',
-      '@type': 'WebPage',
-      mainEntity: {
-        '@type': 'Service',
-        serviceType: 'Web Development',
-        provider: {
-          '@type': 'Organization',
-          name: 'Brewcode Technology Private Limited',
-          url: SITE_URL,
-        },
-      },
+      '@type': 'Organization',
+      name: 'Brewcode',
+      legalName: 'Brewcode Technology Private Limited',
+      url: SITE_URL,
+      logo: `${SITE_URL}/images/brewcode-logo.png`,
+      description: 'Brewcode - Leading software development company offering web development, mobile apps, cloud services, and digital solutions.',
+      sameAs: [
+        'https://www.linkedin.com/company/brewcode',
+        'https://twitter.com/brewcode'
+      ],
+      hasOfferCatalog: {
+        '@type': 'OfferCatalog',
+        name: 'Brewcode Services',
+        itemListElement: [
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Web Development',
+              url: `${SITE_URL}/services/web-development`
+            }
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Full Stack Development',
+              url: `${SITE_URL}/services/full-stack-development`
+            }
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Cloud Services',
+              url: `${SITE_URL}/services/cloud-services`
+            }
+          },
+          {
+            '@type': 'Offer',
+            itemOffered: {
+              '@type': 'Service',
+              name: 'Cyber Security',
+              url: `${SITE_URL}/services/cyber-security`
+            }
+          }
+        ]
+      }
     },
     {
       '@context': 'https://schema.org',
-      '@type': 'BreadcrumbList',
-      itemListElement: [
-        { '@type': 'ListItem', position: 1, name: 'Home', item: SITE_URL },
-        { '@type': 'ListItem', position: 2, name: 'Solutions', item: `${SITE_URL}/solutions` },
-        {
-          '@type': 'ListItem',
-          position: 3,
-          name: 'Web Development',
-          item: `${SITE_URL}/solutions/web-development`,
-        },
-      ],
-    },
+      '@type': 'WebPage',
+      name: 'Brewcode Web Development Services',
+      description: 'Brewcode offers professional web development services including responsive design, full-stack development, and custom web applications.'
+    }
   ];
   return (
     <Layout>
       {/*  */}
-      Brewcode Technology Private Limited
       <Seo
-        title="Web Development Solutions | Brewcode"
-        description="Brewcode provides cutting-edge web development solutions, building responsive, scalable, and secure websites tailored to your business needs."
+        title="Brewcode Web Development Services | Professional Web Solutions"
+        description="Brewcode - Expert web development company. Brewcode team delivers responsive websites, web applications, and custom development solutions for businesses worldwide."
         canonicalPath="/solutions/web-development"
         jsonLd={jsonLd}
       />
@@ -76,11 +105,11 @@ const Index: React.FC = () => {
         <div className="container">
           <div className="row">
             <div className="hero-section-content">
-              <h1 className="cyber-security-services-heading mb-3">Responsive UI Development</h1>
+              <h1 className="cyber-security-services-heading mb-3">Brewcode's Responsive UI Development</h1>
 
               <p className=" services-description text-center">
-                Exhibit your digital footprint on various gadgets with a Responsive
-                <br /> UI development approach.
+                Brewcode helps you exhibit your digital footprint on various gadgets with our
+                <br /> expert Responsive UI development approach.
               </p>
             </div>
           </div>
@@ -90,16 +119,16 @@ const Index: React.FC = () => {
         <div className="container">
           <div className="row d-flex justify-content-between my-5">
             <div className="col-md-7">
-              <h3 className="overview-title mb-4">Overview</h3>
+              <h3 className="overview-title mb-4">Brewcode Web Development Overview</h3>
               <p className="overview-short-description mb-5">
-                We help B2B companies in achieving their Engagement and
-                <br /> Conversion goals through our UX Design and Front-End
-                <br /> Engineering.
+                Brewcode helps B2B companies achieve their Engagement and
+                <br /> Conversion goals through expert UX Design and Front-End
+                <br /> Engineering solutions.
               </p>
               <p className="overview-detail mb-5">
-                Collaboration is easy with us. We use tools that you are comfortable with (Slack,
-                Figma, FigJam, Discord, Miro, Abstract). Seamlessly blend with your internal Product
-                and UX teams. Iterate faster with our design team.
+                Brewcode makes collaboration easy. We use tools you're comfortable with (Slack,
+                Figma, FigJam, Discord, Miro, Abstract). Brewcode seamlessly blends with your internal Product
+                and UX teams. Iterate faster with Brewcode's expert design team.
               </p>
 
               <div className="">
@@ -121,8 +150,8 @@ const Index: React.FC = () => {
             <div className="row d-flex  justify-content-between">
               <div className="col-lg-4 col-md-6 col-12 mb-4">
                 <h3 className="our-section-heading mb-5">
-                  Need Of A Responsive UI
-                  <br /> Development.{' '}
+                  Brewcode's Responsive UI
+                  <br /> Development Services{' '}
                 </h3>
                 <p className="our-section-subheading mb-5">
                   Adaptive Design for Every Screen” Crafting Fluid
