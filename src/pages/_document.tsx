@@ -57,6 +57,33 @@ export default function Document() {
                 contactType: 'Customer Support',
                 areaServed: 'IN',
               },
+              potentialAction: {
+                '@type': 'SearchAction',
+                target: 'https://www.brewcode.co/?s={search_term_string}',
+                'query-input': 'required name=search_term_string'
+              },
+              mainEntity: [
+                {
+                  '@type': 'WebPage',
+                  name: 'About Us',
+                  url: 'https://www.brewcode.co/about-us'
+                },
+                {
+                  '@type': 'WebPage',
+                  name: 'Case Studies',
+                  url: 'https://www.brewcode.co/case-studies'
+                },
+                {
+                  '@type': 'WebPage',
+                  name: 'Insights',
+                  url: 'https://www.brewcode.co/insights'
+                },
+                {
+                  '@type': 'WebPage',
+                  name: 'Contact Us',
+                  url: 'https://www.brewcode.co/contact-us'
+                }
+              ]
             }),
           }}
         />
