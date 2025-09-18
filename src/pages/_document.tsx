@@ -6,10 +6,10 @@ export default function Document() {
   return (
     <Html lang="en">
       <Head>
+        <link rel="canonical" href="https://www.brewcode.co" />
         <link rel="icon" href="/favicon.svg" sizes="any" />
 
         {/* SEO Meta Tags */}
-        <title>Brewcode Technology Private Limited</title>
         <meta
           name="description"
           content="We solve critical challenges with solutions in Cloud Security, Cyber Security, E-commerce, Software Development, and Robotic Process Automation."
@@ -22,13 +22,13 @@ export default function Document() {
 
         {/* Open Graph */}
         <meta property="og:type" content="website" />
-        <meta property="og:url" content="https://brewcode.co" />
+        <meta property="og:url" content="https://www.brewcode.co" />
         <meta property="og:title" content="Brewcode Technology Private Limited" />
         <meta
           property="og:description"
           content="Your trusted partner for Cloud Security, Cyber Security, E-commerce, and RPA solutions."
         />
-        <meta property="og:image" content="https://brewcode.co/images/og-image.jpg" />
+        <meta property="og:image" content="https://www.brewcode.co/images/og-image.jpg" />
 
         {/* Twitter */}
         <meta name="twitter:card" content="summary_large_image" />
@@ -48,8 +48,8 @@ export default function Document() {
               '@context': 'https://schema.org',
               '@type': 'Organization',
               name: 'Brewcode Technology Private Limited',
-              url: 'https://brewcode.co',
-              logo: 'https://brewcode.co/images/logo.png',
+              url: 'https://www.brewcode.co',
+              logo: 'https://www.brewcode.co/images/logo.png',
               sameAs: ['https://www.linkedin.com/company/brewcode', 'https://twitter.com/brewcode'],
               contactPoint: {
                 '@type': 'ContactPoint',

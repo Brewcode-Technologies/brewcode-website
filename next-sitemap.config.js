@@ -4,6 +4,7 @@ module.exports = {
   sitemapSize: 7000,
   changefreq: 'weekly',
   priority: 0.7,
+  exclude: ['/product', '/product/*', '/register', '/register/*'],
   additionalPaths: async (config) => {
     const staticPaths = [
       // Main pages
